@@ -1,0 +1,61 @@
+# Stock & fund checker — configuration. Copy to config/app-config.yaml (git-ignored). All values optional.
+app:
+  sampleAsOf: "2026-10-30"            # "today" used whenever any adapter is mock; live-only mode uses the real date (Asia/Kolkata)
+  defaultIllustrativeAmountInr: 100000 # amount used for fund cost when the user does not hold the fund
+  disclaimer: "Information only, not investment advice."
+ports:
+  frontend: 5173
+  java: 8080
+  python: 8000
+services:
+  pythonBaseUrl: "http://localhost:8000"     # Java -> Python
+  frontendBaseUrl: "http://localhost:5173"   # Java redirects here after Kite login; CORS allowed origin
+adapters:
+  broker: mock            # mock | kite_mcp | kite_connect
+  fundamentals: mock      # mock | screener
+  prices: mock            # mock | broker_then_nse_eod | nse_eod
+  surveillance: mock      # mock | nse
+  fundNav: mock           # mock | mfapi
+  fundMeta: mock          # mock | amfi
+  fundHoldings: mock      # mock | mfdata
+  statement: auto         # auto (casparser if installed, else fallback) | casparser | fallback
+kite:
+  mcpUrl: "https://mcp.kite.trade/mcp"
+  apiKey: ""              # kite_connect only
+  apiSecret: ""           # kite_connect only; never commit
+  redirectUrl: "http://localhost:8080/api/connect/kite/callback"  # must match the Kite developer console
+  loginTimeoutSeconds: 300
+screener:
+  baseUrl: "https://www.screener.in"
+  sessionCookie: ""       # optional; never commit
+  minIntervalSeconds: 3
+nse:
+  baseUrl: "https://www.nseindia.com"
+  asmCsvUrl: "https://nsearchives.nseindia.com/content/equities/asm_lt.csv"
+  gsmCsvUrl: "https://nsearchives.nseindia.com/content/equities/gsm.csv"
+  esmCsvUrl: "https://nsearchives.nseindia.com/content/equities/esm.csv"
+  minIntervalSeconds: 2
+mfapi:
+  baseUrl: "https://api.mfapi.in"
+amfi:
+  navAllUrl: "https://www.amfiindia.com/spages/NAVAll.txt"
+mfdata:
+  baseUrl: "https://mfdata.in/api/v1"
+llm:
+  provider: none          # none | anthropic | openai
+  model: ""
+  apiKey: ""              # never commit
+  timeoutSeconds: 20
+cache:
+  dir: ".cache"           # Python disk cache, relative to backend-python
+  fundamentalsHours: 24
+  pricesHours: 12
+  fundDataHours: 24
+  surveillanceHours: 24
+  javaResponseMinutes: 30
+storage:
+  h2Path: "./data/stockanalyzer"   # Java H2 file (without .mv.db), relative to backend-java
+sizeBands:                # live mode only; mock uses the stored band. Approximate cut-offs by market value, in crore
+  largeMinCrore: 100000
+  midMinCrore: 33000
+  smallMinCrore: 6000
