@@ -1,0 +1,25 @@
+CAMS Consolidated Account Statement
+01-Apr-2020 To 15-Oct-2026
+This statement is sent for illustration only.
+Email Id: investor@example.com
+Test Investor
+Mobile: +91 90000 00000
+Sindhu Mutual Fund
+Folio No: 1234567/89 PAN: ABCDE1234F KYC: OK PAN: OK
+SIN700-Sindhu Large Cap Fund - Direct Plan - Growth - ISIN: INFSMP900701(Advisor: DIRECT) Registrar : CAMS
+Opening Unit Balance: 0.000
+Date Transaction Amount Units Price Unit Balance
+01-Apr-2023 Purchase 25,000.00 650.123 38.4500 650.123
+05-Jun-2024 Purchase 10,000.00 162.318 61.6100 812.441
+Closing Unit Balance: 812.441 NAV on 14-Oct-2026: INR 48.2201 Total Cost Value: 35,000.00 Market Value on 14-Oct-2026: INR 39,176.50
+Example Mutual Fund
+Folio No: 7654321 PAN: ABCDE1234F KYC: OK PAN: OK
+EXG1-Example Gilt Fund - Direct Growth - ISIN: INF000X01ABC(Advisor: DIRECT) Registrar : CAMS
+Opening Unit Balance: 100.000
+Closing Unit Balance: 100.000 NAV on 14-Oct-2026: INR 20.0000
+Total Cost Value: 1,900.00 Market Value on 14-Oct-2026: INR 2,000.00
+Ganga Mutual Fund
+Folio No: 5550001 PAN: ABCDE1234F KYC: OK PAN: OK
+GAN100-Ganga Short Duration Fund - Direct Plan - Growth - ISIN: INFSMP900801(Advisor: DIRECT) Registrar : CAMS
+Opening Unit Balance: 0.000
+Closing Unit Balance: 0.000 NAV on 14-Oct-2026: INR 25.3300 Total Cost Value: 0.00 Market Value on 14-Oct-2026: INR 0.00

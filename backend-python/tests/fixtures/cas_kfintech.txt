@@ -1,0 +1,17 @@
+KFINTECH Consolidated Account Statement
+Statement Period: 01-Jan-2020 To 15-Oct-2026
+Investor Name: Test Investor
+Email: investor@example.com
+Ganga Mutual Fund
+Folio No : 9876543210 PAN: ABCDE1234F
+Scheme : Ganga Short Duration Fund - Direct Plan - Growth
+ISIN: INFSMP900801 (Advisor: DIRECT) Registrar: KFINTECH
+Opening Balance: 0.000
+10-Jan-2024 Purchase 30,000.00 1,500.250 20.0000 1,500.250
+Closing Balance: 1,500.250 NAV (14-Oct-2026): INR 25.3300 Total Cost Value: 30,000.00
+Valuation on 14-Oct-2026: INR 38,000.00
+Kaveri Mutual Fund
+Folio No : 1122334455 PAN: ABCDE1234F
+Kaveri Flexi Cap Fund - Regular Plan - Growth ISIN: INFSMP900101 (Advisor: ARN-12345) Registrar: KFINTECH
+Opening Balance: 0.000
+Closing Balance: 250.500 NAV on 14-Oct-2026: INR 62.4012 Valuation: INR 15,631.51
