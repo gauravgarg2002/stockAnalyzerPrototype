@@ -1,0 +1,35 @@
+# Local configuration and secrets (only the example file is committed)
+config/app-config.yaml
+.env
+.env.*
+
+# Build output
+**/target/
+**/dist/
+**/out/
+**/build/
+*.tsbuildinfo
+
+# Dependencies and virtualenvs
+**/node_modules/
+**/.venv/
+**/venv/
+
+# Python
+**/__pycache__/
+*.pyc
+**/.pytest_cache/
+backend-python/.cache/
+
+# H2 database files
+backend-java/data/
+*.mv.db
+*.trace.db
+*.lock.db
+
+# Logs, run state, editors
+*.log
+.run/
+.idea/
+.vscode/
+.DS_Store

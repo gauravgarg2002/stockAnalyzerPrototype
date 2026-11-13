@@ -1,0 +1,38 @@
+# All three services. Runs in mock mode with no keys.
+# Optional: copy config/app-config.example.yaml to config/app-config.yaml to change adapters or add keys.
+services:
+  backend-python:
+    build: ./backend-python
+    environment:
+      APP_CONFIG: /config/app-config.yaml   # missing file -> built-in defaults (all mock)
+      HOST: 0.0.0.0
+    volumes:
+      - ./config:/config:ro
+    ports:
+      - "8000:8000"
+
+  backend-java:
+    build: ./backend-java
+    environment:
+      APP_CONFIG: /config/app-config.yaml
+      SERVICES_PYTHONBASEURL: http://backend-python:8000
+      STORAGE_H2PATH: /data/stockanalyzer
+    volumes:
+      - ./config:/config:ro
+      - h2data:/data
+    ports:
+      - "8080:8080"       # also the Kite Connect redirect target
+    depends_on:
+      - backend-python
+
+  frontend:
+    build: ./frontend
+    environment:
+      VITE_API_TARGET: http://backend-java:8080
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend-java
+
+volumes:
+  h2data:
