@@ -35,6 +35,19 @@ START_TIMEOUT = 30.0
 
 # ---------- pure helpers ----------
 
+def _attr(obj: Any, *names: str) -> Any:
+    """SDK v2 uses snake_case attributes, v1 camelCase; accept both."""
+    for n in names:
+        v = getattr(obj, n, None)
+        if v is not None:
+            return v
+    return None
+
+
+def is_error(result: Any) -> bool:
+    return bool(_attr(result, "is_error", "isError"))
+
+
 def result_text(result: Any) -> str:
     parts = []
     for c in getattr(result, "content", None) or []:
@@ -51,19 +64,25 @@ def first_url(text: str) -> str | None:
 
 def parse_tool_payload(result: Any) -> Any:
     """Prefer structuredContent; else JSON found in the text content; else the raw text."""
-    sc = getattr(result, "structuredContent", None)
+    sc = _attr(result, "structured_content", "structuredContent")
     if sc:
         if isinstance(sc, dict) and set(sc) == {"result"}:
-            return sc["result"]
+            sc = sc["result"]
+        if isinstance(sc, str):  # a tool that returns a JSON string
+            try:
+                return json.loads(sc)
+            except ValueError:
+                return sc
         return sc
     text = result_text(result)
     try:
         return json.loads(text)
     except ValueError:
         pass
-    for opener, closer in (("{", "}"), ("[", "]")):
-        a, b = text.find(opener), text.rfind(closer)
-        if 0 <= a < b:
+    pairs = sorted((text.find(o), o, c) for o, c in (("{", "}"), ("[", "]")) if text.find(o) >= 0)
+    for a, _o, closer in pairs:  # try the earliest opening bracket first
+        b = text.rfind(closer)
+        if a < b:
             try:
                 return json.loads(text[a:b + 1])
             except ValueError:
@@ -173,7 +192,7 @@ class KiteMcpBroker:
                 await session.initialize()
                 try:
                     tools = await session.list_tools()
-                    self._tool_schemas = {t.name: (getattr(t, "inputSchema", None) or {}) for t in tools.tools}
+                    self._tool_schemas = {t.name: (_attr(t, "input_schema", "inputSchema") or {}) for t in tools.tools}
                 except Exception:
                     self._tool_schemas = {}
                 self._session = session
@@ -234,7 +253,7 @@ class KiteMcpBroker:
         res = self._call_tool("login", {})
         text = result_text(res)
         url = first_url(text)
-        if url is None and not getattr(res, "isError", False):
+        if url is None and not is_error(res):
             # already logged in on this MCP session? confirm with the profile
             st = self.login_status()
             if st["status"] == "CONNECTED":
@@ -250,7 +269,7 @@ class KiteMcpBroker:
             return self._info("NOT_CONNECTED", NOT_CONNECTED_MSG, accountLabel=None)
         res = self._call_tool("get_profile", {})
         text = result_text(res)
-        if getattr(res, "isError", False) or (looks_like_auth_error(text) and profile_label(parse_tool_payload(res)) is None):
+        if is_error(res) or (looks_like_auth_error(text) and profile_label(parse_tool_payload(res)) is None):
             if self._login_started is not None and time.monotonic() - self._login_started > self._timeout_s:
                 self._status = "FAILED"
                 return self._info("FAILED", "Login timed out. Please try connecting again.", accountLabel=None)
@@ -275,7 +294,7 @@ class KiteMcpBroker:
 
     def _data_call(self, name: str) -> Any:
         res = self._call_tool(name, {})
-        if getattr(res, "isError", False):
+        if is_error(res):
             if looks_like_auth_error(result_text(res)):
                 self._status = "PENDING_LOGIN"
                 raise ApiError("BROKER_NOT_CONNECTED", "Your Zerodha session has ended. Please connect again.")
