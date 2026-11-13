@@ -165,6 +165,14 @@ public class PythonClient {
         return post(restLong, "/internal/broker/logout", null, BrokerStatus.class);
     }
 
+    /** Live quote for one stock from the connected broker. Never cached: it is the "now" price. */
+    public JsonNode brokerQuote(String symbol) {
+        return get("/internal/broker/quote?symbol={symbol}", JsonNode.class, symbol);
+    }
+
+    /** Today's positions, orders, trades and price triggers from the connected broker (read-only). */
+    public JsonNode brokerActivity() { return get("/internal/broker/activity", JsonNode.class); }
+
     public BrokerPortfolio brokerPortfolio() {
         guard("/internal/broker/portfolio");
         return call(() -> restLong.get().uri("/internal/broker/portfolio").retrieve().body(BrokerPortfolio.class));

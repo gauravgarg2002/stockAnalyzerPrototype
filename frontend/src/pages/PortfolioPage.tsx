@@ -23,6 +23,7 @@ import { ExposureBars } from '../components/charts/ExposureBars';
 import { MixBar } from '../components/charts/MixBar';
 import { PageJump } from '../components/CheckSections';
 import { ExplainScope } from '../context/ExplainContext';
+import { AccountActivity } from '../components/AccountActivity';
 
 type Dimension = 'company' | 'sector' | 'size';
 
@@ -123,6 +124,7 @@ export default function PortfolioPage() {
           { id: 'mix', label: copy.portfolio.jumpMix },
           { id: 'returns', label: copy.portfolio.jumpReturns },
           { id: 'cash', label: copy.portfolio.jumpCash },
+          { id: 'today', label: copy.portfolio.jumpToday },
           { id: 'holdings', label: copy.portfolio.jumpHoldings },
         ]}
       />
@@ -168,7 +170,7 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                     <p className="mt-1 text-xs text-slate-600">
-                      {p.overlap.source} · {copy.common.asOf} {formatDate(p.overlap.asOf)}
+                      {p.overlap.source}, {copy.common.asOf} {formatDate(p.overlap.asOf)}
                     </p>
                     {p.topCommon.length > 0 ? (
                       <ShowDetails>
@@ -252,6 +254,11 @@ export default function PortfolioPage() {
             {cashFact ? <p className="text-slate-800">{cashFact.sentence.text}</p> : null}
             <FigureGrid figures={[totals.idleCash, totals.totalWithCash]} />
           </Card>
+        </section>
+
+        <section aria-labelledby="today" className="scroll-mt-24">
+          <SectionHeading id="today" title={copy.activity.title} hint={copy.activity.hint} />
+          <AccountActivity />
         </section>
 
         <section aria-labelledby="holdings" className="scroll-mt-24">

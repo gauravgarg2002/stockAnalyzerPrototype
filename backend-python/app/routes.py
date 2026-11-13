@@ -30,6 +30,8 @@ ROUTES: list[Route] = [
     Route("POST", "/internal/broker/login/complete", h.broker_login_complete, "json_body"),
     Route("POST", "/internal/broker/logout", h.broker_logout, "query"),
     Route("GET", "/internal/broker/portfolio", h.broker_portfolio, "query"),
+    Route("GET", "/internal/broker/quote", h.broker_quote, "query"),
+    Route("GET", "/internal/broker/activity", h.broker_activity, "query"),
     Route("POST", "/internal/statements/parse", h.statements_parse, "json_body"),
     Route("POST", "/internal/narrate", h.narrate, "json_body"),
 ]

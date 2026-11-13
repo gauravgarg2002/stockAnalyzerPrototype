@@ -1,7 +1,7 @@
 import { copy } from '../../lib/copy';
 
 export function Skeleton({ className = '' }: { className?: string }) {
-  return <div aria-hidden="true" className={`animate-pulse rounded-md bg-slate-200 motion-reduce:animate-none ${className}`} />;
+  return <div aria-hidden="true" className={`skeleton-shimmer animate-shimmer rounded-lg motion-reduce:animate-none ${className}`} />;
 }
 
 export function SkeletonText({ lines = 3 }: { lines?: number }) {
@@ -16,7 +16,7 @@ export function SkeletonText({ lines = 3 }: { lines?: number }) {
 
 export function SkeletonCard({ lines = 3 }: { lines?: number }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6" aria-hidden="true">
+    <div className="rounded-sheet border border-slate-200 bg-white p-5 shadow-sheet sm:p-7" aria-hidden="true">
       <Skeleton className="mb-4 h-5 w-1/2" />
       <SkeletonText lines={lines} />
       <div className="mt-4 grid grid-cols-2 gap-3">
@@ -30,7 +30,7 @@ export function SkeletonCard({ lines = 3 }: { lines?: number }) {
 /** Page-level loading placeholder; announces itself once to screen readers. */
 export function PageSkeleton({ cards = 3, title = true }: { cards?: number; title?: boolean }) {
   return (
-    <div role="status" aria-live="polite" aria-busy="true">
+    <div role="status" aria-live="polite" aria-busy="true" className="pt-8">
       <span className="sr-only">{copy.common.loading}</span>
       {title ? (
         <div className="mb-6 space-y-3" aria-hidden="true">

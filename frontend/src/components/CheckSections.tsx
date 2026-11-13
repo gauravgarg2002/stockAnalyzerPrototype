@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import type { Answer, Drawdown, Fact, Kind, PriceHistory, UserBlock } from '../lib/api-types';
 import { copy, fill } from '../lib/copy';
 import { formatDate } from '../lib/dates';
@@ -12,21 +13,52 @@ import { Button } from './ui/Button';
 import { PriceChart } from './charts/PriceChart';
 import { SaveWithNote } from './SaveWithNote';
 
-/** "On this page" jump links, the same on every stock and fund check. */
+/** Which of the given section ids is currently being read (the last one whose top has passed the bar). */
+function useCurrentSection(ids: string[]): string | null {
+  const [current, setCurrent] = useState<string | null>(null);
+  const key = ids.join('|');
+  useEffect(() => {
+    function onScroll() {
+      let found: string | null = null;
+      for (const id of key.split('|')) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < 180) found = id;
+      }
+      setCurrent(found);
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [key]);
+  return current;
+}
+
+/** "On this page" jump links, the same on every stock and fund check. Sticks under the header and follows your place. */
 export function PageJump({ items }: { items: Array<{ id: string; label: string }> }) {
+  const current = useCurrentSection(items.map((i) => i.id));
   return (
-    <nav aria-label={copy.check.onThisPage} className="-mx-4 mb-8 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-      <ul className="flex min-w-max gap-2">
-        {items.map((i) => (
-          <li key={i.id}>
-            <a
-              href={`#${i.id}`}
-              className="inline-flex min-h-[40px] items-center rounded-full border border-slate-300 bg-white px-4 text-sm font-medium text-slate-800 hover:bg-slate-50"
-            >
-              {i.label}
-            </a>
-          </li>
-        ))}
+    <nav
+      aria-label={copy.check.onThisPage}
+      className="sticky top-[64px] z-20 -mx-4 mb-8 overflow-x-auto bg-paper/85 px-4 py-2.5 backdrop-blur-md sm:mx-0 sm:rounded-2xl sm:px-2 max-md:top-[118px]"
+    >
+      <ul className="flex min-w-max gap-1.5">
+        {items.map((i) => {
+          const on = current === i.id;
+          return (
+            <li key={i.id}>
+              <a
+                href={`#${i.id}`}
+                aria-current={on ? 'location' : undefined}
+                className={`inline-flex min-h-[38px] items-center rounded-full px-4 text-sm font-semibold transition-all duration-300 ${
+                  on ? 'bg-peacock-900 text-white shadow-sheet' : 'bg-white text-peacock-800 ring-1 ring-inset ring-slate-200 hover:ring-peacock-700'
+                }`}
+              >
+                {on ? <span aria-hidden="true" className="mr-2 h-1.5 w-1.5 rounded-full bg-marigold-400" /> : null}
+                {i.label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
@@ -88,7 +120,7 @@ export function PriceSection({ history, drawdown, name, label }: { history: Pric
         <PriceChart history={history} name={name} />
       </Card>
       <Card className="mt-4">
-        <h3 className="text-lg font-semibold text-slate-900">{copy.check.worstFallTitle}</h3>
+        <h3 className="font-display text-xl font-bold text-peacock-900">{copy.check.worstFallTitle}</h3>
         <SentenceList sentences={drawdown.sentences} className="mt-2" />
         <div className="mt-4 max-w-sm">
           <FigureChip figure={drawdown.worstFall} />
@@ -127,7 +159,8 @@ export function HoldingLine({ kind, user }: { kind: Kind; user: UserBlock }) {
   if (!user.holds || user.quantity === null || !user.holdingValue) return null;
   const template = kind === 'STOCK' ? copy.check.youHoldStock : copy.check.youHoldFund;
   return (
-    <p className="mb-6 rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-800">
+    <p className="mb-6 flex flex-wrap items-center gap-x-2 rounded-2xl bg-lagoon-100/80 px-4 py-3 text-slate-800 ring-1 ring-inset ring-lagoon-200">
+      <span aria-hidden="true" className="h-2 w-2 rounded-full bg-peacock-700" />
       {fill(template, { quantity: formatQuantity(user.quantity), value: user.holdingValue.display })}
       <span className="ml-2 text-xs text-slate-600">{user.holdingValue.source}</span>
     </p>

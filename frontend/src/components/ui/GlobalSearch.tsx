@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import type { KeyboardEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchInstruments } from '../../lib/api-client';
@@ -18,6 +19,23 @@ export interface SearchComboboxProps {
   clearOnSelect?: boolean;
   className?: string;
   autoFocus?: boolean;
+  /** 'dark' sits on the peacock-ink header or hero. */
+  tone?: 'light' | 'dark';
+  /** Pressing "/" anywhere focuses this box. Give it to one box per screen. */
+  shortcut?: boolean;
+  /** Cycle through example searches in the empty box. */
+  examples?: boolean;
+}
+
+/** Cycles the placeholder through example searches while the box is empty and not focused. */
+function useRotatingPlaceholder(enabled: boolean, paused: boolean): string | null {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    if (!enabled || paused) return undefined;
+    const t = window.setInterval(() => setI((n) => (n + 1) % copy.search.examples.length), 2600);
+    return () => window.clearInterval(t);
+  }, [enabled, paused]);
+  return enabled ? `${copy.search.tryPrefix}“${copy.search.examples[i]}”` : null;
 }
 
 /** Combobox: type to search, arrow keys to move, Enter to choose, Esc to close. */
@@ -31,6 +49,9 @@ export function SearchCombobox({
   clearOnSelect = true,
   className = '',
   autoFocus = false,
+  tone = 'light',
+  shortcut = false,
+  examples = false,
 }: SearchComboboxProps) {
   const uid = useId();
   const inputId = `${uid}-input`;
@@ -43,6 +64,22 @@ export function SearchCombobox({
   const [failed, setFailed] = useState(false);
   const debounced = useDebounce(text.trim(), 200);
   const wrapRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [focused, setFocused] = useState(false);
+  const rotating = useRotatingPlaceholder(examples, focused || text !== '');
+
+  useEffect(() => {
+    if (!shortcut) return undefined;
+    function onKey(e: globalThis.KeyboardEvent) {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      e.preventDefault();
+      inputRef.current?.focus();
+    }
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [shortcut]);
 
   useEffect(() => {
     if (debounced === '') {
@@ -121,6 +158,7 @@ export function SearchCombobox({
           : fill(copy.search.count, { n: String(results.length) });
 
   const big = size === 'lg';
+  const dark = tone === 'dark';
   return (
     <div ref={wrapRef} className={`relative ${className}`}>
       <label htmlFor={inputId} className={hideLabel ? 'sr-only' : 'mb-1 block text-sm font-medium text-slate-800'}>
@@ -128,7 +166,9 @@ export function SearchCombobox({
       </label>
       <div className="relative">
         <svg
-          className={`pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-600 ${big ? 'h-6 w-6' : 'h-5 w-5'}`}
+          className={`pointer-events-none absolute top-1/2 -translate-y-1/2 transition-colors ${big ? 'left-4 h-6 w-6' : 'left-3 h-5 w-5'} ${
+            dark && !focused ? 'text-lagoon-200' : 'text-peacock-700'
+          }`}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -140,6 +180,7 @@ export function SearchCombobox({
           <path d="M20 20l-3.5-3.5" />
         </svg>
         <input
+          ref={inputRef}
           id={inputId}
           type="text"
           role="combobox"
@@ -150,25 +191,46 @@ export function SearchCombobox({
           autoComplete="off"
           spellCheck={false}
           autoFocus={autoFocus}
-          placeholder={placeholder ?? copy.search.placeholder}
+          placeholder={rotating ?? placeholder ?? copy.search.placeholder}
           value={text}
           onChange={(e) => {
             setText(e.target.value);
             setOpen(true);
           }}
-          onFocus={() => setOpen(true)}
-          onBlur={() => setOpen(false)}
+          onFocus={() => {
+            setOpen(true);
+            setFocused(true);
+          }}
+          onBlur={() => {
+            setOpen(false);
+            setFocused(false);
+          }}
           onKeyDown={onKeyDown}
-          className={`block w-full rounded-xl border border-slate-400 bg-white pl-10 pr-3 text-slate-900 placeholder:text-slate-600 focus:border-indigo-700 ${
-            big ? 'min-h-[56px] text-lg shadow-sm sm:pl-12' : 'min-h-[44px] text-base'
+          className={`block w-full rounded-2xl border-2 pr-14 transition-[background-color,border-color,box-shadow] duration-200 focus:outline-none ${
+            big ? 'min-h-[64px] pl-14 text-xl font-medium shadow-lift' : 'min-h-[44px] pl-10 text-base'
+          } ${
+            dark
+              ? 'border-white/15 bg-white/10 text-white placeholder:text-lagoon-200/80 hover:bg-white/15 focus:border-marigold-400 focus:bg-white focus:text-peacock-950 focus:placeholder:text-slate-500'
+              : 'border-slate-300 bg-white text-peacock-950 placeholder:text-slate-500 hover:border-peacock-400 focus:border-marigold-400 focus:shadow-lens'
           }`}
         />
+        {shortcut && !focused && text === '' ? (
+          <kbd
+            aria-hidden="true"
+            title={copy.search.shortcutHint}
+            className={`pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border px-2 py-0.5 font-sans text-xs font-semibold sm:block ${
+              dark ? 'border-white/20 text-lagoon-200' : 'border-slate-300 text-slate-500'
+            }`}
+          >
+            /
+          </kbd>
+        ) : null}
       </div>
       <div role="status" aria-live="polite" className="sr-only">
         {statusText}
       </div>
       {showPopup ? (
-        <div className="absolute left-0 right-0 z-40 mt-2 max-h-80 overflow-auto rounded-xl border border-slate-200 bg-white shadow-lg">
+        <div className="absolute left-0 right-0 z-40 mt-2 max-h-96 animate-pop overflow-auto rounded-2xl border border-slate-200 bg-white p-1.5 text-left shadow-lift">
           {results.length > 0 ? (
             <ul id={listId} role="listbox" aria-label={label}>
               {results.map((r, i) => (
@@ -180,12 +242,21 @@ export function SearchCombobox({
                   onMouseDown={(e) => e.preventDefault()}
                   onMouseEnter={() => setActive(i)}
                   onClick={() => choose(r)}
-                  className={`flex cursor-pointer items-center justify-between gap-3 px-4 py-3 ${
-                    i === active ? 'bg-indigo-50' : ''
+                  style={{ animationDelay: `${i * 35}ms` } as CSSProperties}
+                  className={`flex animate-rise cursor-pointer items-center justify-between gap-3 rounded-xl px-3.5 py-3 transition-colors ${
+                    i === active ? 'bg-lagoon-100' : ''
                   }`}
                 >
-                  <span className="min-w-0">
-                    <span className="block truncate font-medium text-slate-900">{r.name}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl font-display text-sm font-extrabold ${
+                      r.kind === 'STOCK' ? 'bg-peacock-900 text-marigold-400' : 'bg-marigold-400 text-peacock-900'
+                    }`}
+                  >
+                    {r.name.replace(/^the\s+/i, '').slice(0, 1).toUpperCase()}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate font-semibold text-peacock-950">{r.name}</span>
                     <span className="block truncate text-sm text-slate-600">{r.subtitle}</span>
                   </span>
                   <Badge>{r.kind === 'STOCK' ? copy.search.stockTag : copy.search.fundTag}</Badge>
@@ -193,7 +264,7 @@ export function SearchCombobox({
               ))}
             </ul>
           ) : (
-            <p id={listId} className="px-4 py-3 text-sm text-slate-700">
+            <p id={listId} className="px-3.5 py-3 text-sm text-slate-700">
               {statusText}
             </p>
           )}
@@ -204,7 +275,21 @@ export function SearchCombobox({
 }
 
 /** Header / home search: choosing a result opens its check page. */
-export function GlobalSearch({ size = 'md', className = '', autoFocus = false }: { size?: 'md' | 'lg'; className?: string; autoFocus?: boolean }) {
+export function GlobalSearch({
+  size = 'md',
+  className = '',
+  autoFocus = false,
+  tone = 'light',
+  shortcut = false,
+  examples = false,
+}: {
+  size?: 'md' | 'lg';
+  className?: string;
+  autoFocus?: boolean;
+  tone?: 'light' | 'dark';
+  shortcut?: boolean;
+  examples?: boolean;
+}) {
   const navigate = useNavigate();
   return (
     <SearchCombobox
@@ -212,6 +297,9 @@ export function GlobalSearch({ size = 'md', className = '', autoFocus = false }:
       size={size}
       className={className}
       autoFocus={autoFocus}
+      tone={tone}
+      shortcut={shortcut}
+      examples={examples}
       hideLabel
       onSelect={(r) => navigate(r.checkPath)}
     />

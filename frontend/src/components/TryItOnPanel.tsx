@@ -194,11 +194,11 @@ export function TryItOnResult({ result }: { result: TryItOnResponse }) {
           <h3 className="text-sm font-semibold text-slate-800">{copy.tryIt.sizeMix}</h3>
           <div className="mt-3 grid gap-5 sm:grid-cols-2">
             <div>
-              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-600">{copy.tryIt.before}</p>
+              <p className="mb-2 text-sm font-semibold text-slate-600">{copy.tryIt.before}</p>
               <MixBar lines={m.sizeMix.before} label={`${copy.tryIt.sizeMix}, ${copy.tryIt.before}`} />
             </div>
             <div>
-              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-slate-600">{copy.tryIt.after}</p>
+              <p className="mb-2 text-sm font-semibold text-slate-600">{copy.tryIt.after}</p>
               <MixBar lines={m.sizeMix.after} label={`${copy.tryIt.sizeMix}, ${copy.tryIt.after}`} />
             </div>
           </div>

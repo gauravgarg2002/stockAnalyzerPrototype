@@ -14,6 +14,7 @@ import { Drawer } from '../components/ui/Drawer';
 import { FigureChip } from '../components/ui/FigureChip';
 import { Badge } from '../components/ui/Badge';
 import { TryItOnPanel } from '../components/TryItOnPanel';
+import { LiveQuote } from '../components/LiveQuote';
 import { AnswersSection, CheckActions, FactsSection, HoldingLine, PageJump, PriceSection } from '../components/CheckSections';
 
 export default function StockCheckPage() {
@@ -33,10 +34,12 @@ export default function StockCheckPage() {
       <PageHeader
         eyebrow={copy.check.stockEyebrow}
         title={ins.name}
-        subtitle={`${ins.sector} · ${ins.industry}`}
+        subtitle={`${ins.sector}, ${ins.industry}`}
         sampleData={data.sampleData}
         asOf={data.asOf}
-      />
+      >
+        <LiveQuote symbol={ins.symbol} />
+      </PageHeader>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:max-w-2xl">
         <FigureChip figure={ins.lastPrice} />

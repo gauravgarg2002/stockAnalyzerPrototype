@@ -42,15 +42,15 @@ export function ErrorState({ error, onRetry, title, compact = false }: ErrorStat
   return (
     <div
       role="alert"
-      className={`rounded-2xl border border-slate-300 bg-white text-center ${compact ? 'px-4 py-6' : 'px-6 py-10'}`}
+      className={`rounded-sheet border border-slate-200 bg-white text-center shadow-sheet ${compact ? 'px-4 py-6' : 'mt-8 px-6 py-12'}`}
     >
-      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700" aria-hidden="true">
+      <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-marigold-50 text-marigold-700 ring-1 ring-inset ring-marigold-200" aria-hidden="true">
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="9" />
           <path d="M12 7v6M12 16.5v.5" />
         </svg>
       </div>
-      <h2 className="text-lg font-semibold text-slate-900">{title ?? f.title}</h2>
+      <h2 className="font-display text-xl font-bold text-peacock-900">{title ?? f.title}</h2>
       <p className="mx-auto mt-1 max-w-md text-slate-600">{f.body}</p>
       {onRetry ? (
         <div className="mt-4">

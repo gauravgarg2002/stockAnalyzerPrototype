@@ -30,24 +30,24 @@ export function Drawer({ open, onClose, title, children }: DrawerProps) {
 
   return createPortal(
     <div className="fixed inset-0 z-50">
-      <div className="absolute inset-0 bg-slate-900/50" onClick={onClose} aria-hidden="true" />
+      <div className="absolute inset-0 animate-fade bg-peacock-950/55 backdrop-blur-[2px]" onClick={onClose} aria-hidden="true" />
       <div
         ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className="absolute inset-x-0 bottom-0 flex max-h-[92vh] flex-col rounded-t-2xl bg-white shadow-2xl sm:inset-y-0 sm:left-auto sm:right-0 sm:max-h-none sm:w-[34rem] sm:rounded-none sm:rounded-l-2xl"
+        className="absolute inset-x-0 bottom-0 flex max-h-[92vh] animate-slide-in-up flex-col rounded-t-3xl bg-paper shadow-lift sm:inset-y-0 sm:left-auto sm:right-0 sm:max-h-none sm:w-[36rem] sm:animate-slide-in-right sm:rounded-none sm:rounded-l-3xl"
       >
-        <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-4 py-3 sm:px-6">
-          <h2 id={titleId} className="text-lg font-semibold text-slate-900">
+        <div className="jali flex items-center justify-between gap-3 px-4 py-4 text-white sm:rounded-tl-3xl sm:px-6">
+          <h2 id={titleId} className="font-display text-xl font-bold">
             {title}
           </h2>
           <button
             type="button"
             onClick={onClose}
             aria-label={copy.common.close}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-700 hover:bg-slate-100"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-transform duration-200 hover:rotate-90 hover:bg-white/10"
           >
             <span aria-hidden="true">✕</span>
           </button>

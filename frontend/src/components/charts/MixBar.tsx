@@ -1,30 +1,39 @@
+import type { CSSProperties } from 'react';
 import type { MixLine } from '../../lib/api-types';
+import { useInView } from '../../hooks/useMotion';
 
-const SHADES = ['bg-slate-800', 'bg-slate-500', 'bg-slate-300', 'bg-slate-200', 'bg-stone-300', 'bg-stone-200'];
+// Categories only: peacock, lagoon, marigold, slate-blue, sand, mist. None of them reads as a verdict.
+const SHADES = ['#0B3B4F', '#6CB7BE', '#F4A92B', '#5B6C8F', '#C6B48A', '#CCE8EA'];
 
-/** One stacked bar for a mix. Every segment is also written out in the legend. */
+/** One stacked bar for a mix; segments grow in left to right. Every segment is also written out in the legend. */
 export function MixBar({ lines, label }: { lines: MixLine[]; label: string }) {
+  const [ref, shown] = useInView<HTMLDivElement>();
   return (
-    <div>
-      <div className="flex h-4 overflow-hidden rounded-full bg-slate-100" role="img" aria-label={`${label}: ${lines.map((l) => `${l.label} ${l.display}`).join(', ')}`}>
+    <div ref={ref}>
+      <div
+        className="flex h-5 gap-[3px] overflow-hidden rounded-full"
+        role="img"
+        aria-label={`${label}: ${lines.map((l) => `${l.label} ${l.display}`).join(', ')}`}
+      >
         {lines.map((l, i) =>
           l.pct > 0 ? (
             <div
               key={l.key}
-              className={`h-full border-r-2 border-white last:border-r-0 ${SHADES[i % SHADES.length]}`}
-              style={{ width: `${l.pct}%` }}
+              title={`${l.label}: ${l.display}`}
+              className="h-full origin-left rounded-sm transition-[transform,filter] duration-700 ease-out first:rounded-l-full last:rounded-r-full hover:brightness-110"
+              style={{ width: `${l.pct}%`, background: SHADES[i % SHADES.length], transform: shown ? 'scaleX(1)' : 'scaleX(0)', transitionDelay: `${i * 120}ms` } as CSSProperties}
             />
           ) : null,
         )}
       </div>
-      <ul className="mt-3 grid gap-x-6 gap-y-1.5 text-sm sm:grid-cols-2" aria-label={label}>
+      <ul className="mt-4 grid gap-x-8 gap-y-2 text-[0.95rem] sm:grid-cols-2" aria-label={label}>
         {lines.map((l, i) => (
-          <li key={l.key} className="flex items-center justify-between gap-3">
-            <span className="flex items-center gap-2 text-slate-700">
-              <span aria-hidden="true" className={`h-3 w-3 shrink-0 rounded-sm ring-1 ring-inset ring-slate-400 ${SHADES[i % SHADES.length]}`} />
+          <li key={l.key} className="flex items-center justify-between gap-3 border-b border-dashed border-slate-200 pb-1.5">
+            <span className="flex items-center gap-2.5 text-slate-700">
+              <span aria-hidden="true" className="h-3.5 w-3.5 shrink-0 rounded-[5px] ring-1 ring-inset ring-black/10" style={{ background: SHADES[i % SHADES.length] }} />
               {l.label}
             </span>
-            <span className="tabular-nums text-slate-900">{l.display}</span>
+            <span className="font-semibold tabular-nums text-peacock-900">{l.display}</span>
           </li>
         ))}
       </ul>

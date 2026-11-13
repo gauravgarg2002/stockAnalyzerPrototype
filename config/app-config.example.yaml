@@ -13,7 +13,7 @@ services:
 adapters:
   broker: mock            # mock | kite_mcp | kite_connect
   fundamentals: mock      # mock | screener
-  prices: mock            # mock | broker_then_nse_eod | nse_eod
+  prices: mock            # mock | broker_then_nse_eod | nse_eod. With a Kite broker, use broker_then_nse_eod: stock and Nifty 50 history then come from your Zerodha account
   surveillance: mock      # mock | nse
   fundNav: mock           # mock | mfapi
   fundMeta: mock          # mock | amfi

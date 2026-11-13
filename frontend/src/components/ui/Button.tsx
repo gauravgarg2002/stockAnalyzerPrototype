@@ -2,16 +2,17 @@ import { forwardRef } from 'react';
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'accent';
 export type ButtonSize = 'md' | 'sm';
 
 const BASE =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60';
+  'inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-[transform,box-shadow,background-color,color] duration-200 ease-out active:translate-y-px active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100';
 
 const VARIANTS: Record<ButtonVariant, string> = {
-  primary: 'bg-indigo-700 text-white hover:bg-indigo-800 active:bg-indigo-900',
-  secondary: 'border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 active:bg-slate-100',
-  ghost: 'text-indigo-700 hover:bg-indigo-50 active:bg-indigo-100',
+  primary: 'bg-peacock-900 text-white shadow-sheet hover:-translate-y-0.5 hover:bg-peacock-800 hover:shadow-lift',
+  accent: 'bg-marigold-400 text-peacock-950 shadow-sheet hover:-translate-y-0.5 hover:bg-marigold-300 hover:shadow-lens',
+  secondary: 'border border-slate-300 bg-white text-peacock-900 hover:-translate-y-0.5 hover:border-peacock-700 hover:shadow-sheet',
+  ghost: 'text-peacock-700 hover:bg-peacock-50 active:bg-peacock-100',
 };
 
 const SIZES: Record<ButtonSize, string> = {

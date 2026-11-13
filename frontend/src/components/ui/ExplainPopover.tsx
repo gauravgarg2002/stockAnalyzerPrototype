@@ -119,10 +119,10 @@ function ExplainPanel({
       aria-labelledby={titleId}
       tabIndex={-1}
       style={style}
-      className="fixed z-50 max-h-[70vh] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-xl sm:max-h-[60vh]"
+      className="fixed z-50 max-h-[70vh] animate-pop overflow-y-auto rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-lift sm:max-h-[60vh]"
     >
       <div className="flex items-start justify-between gap-3">
-        <h2 id={titleId} className="text-base font-semibold text-slate-900">
+        <h2 id={titleId} className="font-display text-lg font-bold text-peacock-900">
           {data ? data.term.term : copy.explain.title}
         </h2>
         <button
@@ -152,23 +152,23 @@ function ExplainPanel({
         {data ? (
           <div className="mt-2 space-y-3 text-sm text-slate-800">
             <section>
-              <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">{copy.explain.meaning}</h3>
+              <h3 className="text-sm font-semibold text-marigold-700">{copy.explain.meaning}</h3>
               <p className="mt-1 text-base">{data.term.meaning}</p>
             </section>
             {data.thisFigure ? (
               <section>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">
+                <h3 className="text-sm font-semibold text-marigold-700">
                   {data.instrument ? fill(copy.explain.forThis, { name: data.instrument.name }) : copy.explain.thisFigure}
                 </h3>
-                <p className="mt-1 text-lg font-semibold tabular-nums text-slate-900">{data.thisFigure.display}</p>
+                <p className="mt-1 font-display text-2xl font-bold tabular-nums text-peacock-900">{data.thisFigure.display}</p>
                 <p className="text-xs text-slate-600">
-                  {data.thisFigure.source} · {copy.common.asOf} {formatDate(data.thisFigure.asOf)}
+                  {data.thisFigure.source}, {copy.common.asOf} {formatDate(data.thisFigure.asOf)}
                 </p>
               </section>
             ) : null}
             {data.typical ? (
               <section>
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-600">{copy.explain.typical}</h3>
+                <h3 className="text-sm font-semibold text-marigold-700">{copy.explain.typical}</h3>
                 <p className="mt-1">
                   {data.typical.label}: <span className="font-semibold tabular-nums">{data.typical.display}</span>
                 </p>

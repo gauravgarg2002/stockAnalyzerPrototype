@@ -165,6 +165,15 @@ class BrokerAdapter(Protocol):
     def historical(self, symbol: str, start: date, end: date) -> list[PricePoint]:
         """Daily candles from the connected broker; [] when unavailable."""
 
+    def quote(self, symbol: str) -> dict:
+        """Live quote (broker_extras.map_quote shape); {available: false, reason} when it cannot be had. Never raises."""
+
+    def activity(self) -> dict:
+        """Today's positions, orders, trades and price triggers (broker_extras.build_activity shape). Never raises."""
+
+    def index_history(self, index_id: str, start: date, end: date) -> list[PricePoint]:
+        """Daily index candles (NIFTY50 only); [] when unavailable."""
+
 
 @runtime_checkable
 class FundamentalsAdapter(Protocol):

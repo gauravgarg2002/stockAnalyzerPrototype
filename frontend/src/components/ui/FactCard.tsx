@@ -11,11 +11,11 @@ import { DataTable } from './DataTable';
 /** One of the eight fixed facts. Same layout for every stock and every fund. */
 export function FactCard({ fact, headingId }: { fact: Fact; headingId: string }) {
   return (
-    <Card as="article" labelledBy={headingId} className="h-full">
+    <Card as="article" labelledBy={headingId} className="h-full" spotlight>
       <div className="flex items-start justify-between gap-2">
-        <h3 id={headingId} className="text-base font-semibold leading-snug text-slate-900">
-          <span className="mr-2 text-slate-600" aria-hidden="true">
-            {fact.order}.
+        <h3 id={headingId} className="flex items-baseline gap-2.5 font-display text-lg font-bold leading-snug text-peacock-900">
+          <span aria-hidden="true" className="font-display text-sm font-extrabold tabular-nums text-marigold-600">
+            {String(fact.order).padStart(2, '0')}
           </span>
           {fact.title}
         </h3>

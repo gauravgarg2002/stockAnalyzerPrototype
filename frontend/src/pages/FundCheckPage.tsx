@@ -60,7 +60,7 @@ export default function FundCheckPage() {
       <PageHeader
         eyebrow={copy.check.fundEyebrow}
         title={ins.name}
-        subtitle={`${ins.category} · ${ins.planType === 'DIRECT' ? copy.fund.directPlan : copy.fund.regularPlan} · ${ins.amc}`}
+        subtitle={`${ins.category}, ${ins.planType === 'DIRECT' ? copy.fund.directPlan : copy.fund.regularPlan}, ${ins.amc}`}
         sampleData={data.sampleData}
         asOf={data.asOf}
       />

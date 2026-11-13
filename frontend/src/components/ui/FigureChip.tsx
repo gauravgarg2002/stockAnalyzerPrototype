@@ -2,6 +2,7 @@ import type { Figure } from '../../lib/api-types';
 import { formatDate } from '../../lib/dates';
 import { copy } from '../../lib/copy';
 import { ExplainPopover } from './ExplainPopover';
+import { CountUp } from './Motion';
 
 export interface FigureChipProps {
   figure: Figure;
@@ -14,16 +15,16 @@ export interface FigureChipProps {
 export function FigureChip({ figure, bare = false, className = '' }: FigureChipProps) {
   const unavailable = figure.value === null;
   return (
-    <div className={`rounded-xl bg-slate-50 p-3 ring-1 ring-inset ring-slate-200 ${className}`}>
+    <div className={`group/fig rounded-2xl bg-paper p-4 ring-1 ring-inset ring-slate-200 transition-colors duration-200 hover:bg-lagoon-100/60 hover:ring-lagoon-300 ${className}`}>
       <div className="flex items-start justify-between gap-2">
-        <p className="text-sm text-slate-700">{figure.label}</p>
+        <p className="text-sm font-medium text-slate-700">{figure.label}</p>
         {figure.termId ? <ExplainPopover termId={figure.termId} label={figure.label} /> : null}
       </div>
-      <p className={`mt-1 break-words text-xl font-semibold tabular-nums ${unavailable ? 'text-slate-600' : 'text-slate-900'}`}>
-        {figure.display}
+      <p className={`mt-1 break-words font-display tabular-nums ${unavailable ? 'text-lg font-semibold text-slate-600' : 'text-2xl font-bold text-peacock-900'}`}>
+        {unavailable ? figure.display : <CountUp display={figure.display} />}
       </p>
       {!bare && figure.comparisons.length > 0 ? (
-        <ul className="mt-2 space-y-0.5 text-sm text-slate-700">
+        <ul className="mt-2 space-y-1 border-l-2 border-marigold-300 pl-3 text-sm text-slate-700">
           {figure.comparisons.map((c, i) => (
             <li key={`${c.kind}-${i}`}>
               <span className="text-slate-600">{c.label}: </span>
@@ -32,8 +33,8 @@ export function FigureChip({ figure, bare = false, className = '' }: FigureChipP
           ))}
         </ul>
       ) : null}
-      <p className="mt-2 text-xs text-slate-600">
-        {figure.source} · {copy.common.asOf} {formatDate(figure.asOf)}
+      <p className="mt-3 text-xs text-slate-600">
+        {figure.source}, {copy.common.asOf} {formatDate(figure.asOf)}
       </p>
     </div>
   );

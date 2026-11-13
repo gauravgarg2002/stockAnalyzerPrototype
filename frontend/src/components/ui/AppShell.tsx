@@ -1,10 +1,12 @@
-import { Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { copy } from '../../lib/copy';
 import { ROUTES } from '../../lib/routes';
 import { GlobalSearch } from './GlobalSearch';
 import { Footer } from './Footer';
 import { PageSkeleton } from './Skeleton';
+import { LogoMark } from './LogoMark';
 
 const NAV = [
   { to: ROUTES.home, label: copy.nav.home, end: true },
@@ -14,10 +16,55 @@ const NAV = [
   { to: ROUTES.connect, label: copy.nav.connect, end: false },
 ] as const;
 
-function navClass(isActive: boolean): string {
-  return `block rounded-lg px-3 py-2 text-base font-medium ${
-    isActive ? 'bg-indigo-50 text-indigo-800' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
-  }`;
+/** Desktop nav with a marigold marker that slides to the active page. */
+function DesktopNav() {
+  const location = useLocation();
+  const listRef = useRef<HTMLUListElement>(null);
+  const [marker, setMarker] = useState<{ left: number; width: number } | null>(null);
+
+  useLayoutEffect(() => {
+    function place() {
+      const active = listRef.current?.querySelector<HTMLAnchorElement>('a[aria-current="page"]');
+      if (!active || !listRef.current) {
+        setMarker(null);
+        return;
+      }
+      const base = listRef.current.getBoundingClientRect();
+      const r = active.getBoundingClientRect();
+      setMarker({ left: r.left - base.left + 12, width: r.width - 24 });
+    }
+    place();
+    window.addEventListener('resize', place);
+    document.fonts?.ready.then(place).catch(() => undefined);
+    return () => window.removeEventListener('resize', place);
+  }, [location.pathname]);
+
+  return (
+    <nav aria-label={copy.nav.label} className="ml-6 hidden lg:block">
+      <ul ref={listRef} className="relative flex items-center gap-1">
+        {NAV.map((n) => (
+          <li key={n.to}>
+            <NavLink
+              to={n.to}
+              end={n.end}
+              className={({ isActive }) =>
+                `block rounded-lg px-3 py-2 text-[0.95rem] font-semibold transition-colors ${
+                  isActive ? 'text-white' : 'text-lagoon-200/80 hover:text-white'
+                }`
+              }
+            >
+              {n.label}
+            </NavLink>
+          </li>
+        ))}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-1 h-[3px] rounded-full bg-marigold-400 transition-[left,width,opacity] duration-300 ease-out"
+          style={{ left: marker?.left ?? 0, width: marker?.width ?? 0, opacity: marker ? 1 : 0 }}
+        />
+      </ul>
+    </nav>
+  );
 }
 
 export function AppShell() {
@@ -47,48 +94,31 @@ export function AppShell() {
   }, [menuOpen]);
 
   return (
-    <div className="flex min-h-screen flex-col bg-stone-50 text-slate-800">
+    <div className="flex min-h-screen flex-col overflow-x-clip bg-paper text-slate-800">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-medium focus:text-indigo-800 focus:shadow-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-peacock-900 focus:shadow-lift"
       >
         {copy.app.skip}
       </a>
 
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-page items-center gap-3 px-4 py-2 sm:px-6">
-          <Link to={ROUTES.home} className="flex items-center gap-2 rounded-lg py-1 text-lg font-bold tracking-tight text-slate-900">
-            <span
-              aria-hidden="true"
-              className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-700 text-white"
-            >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 16l5-6 4 3 7-8" />
-              </svg>
-            </span>
-            {copy.app.name}
+      <header className={`jali sticky top-0 z-30 text-white ${isHome ? '' : 'border-b border-white/10'}`}>
+        <div className="mx-auto flex max-w-page items-center gap-3 px-4 py-3 sm:px-6">
+          <Link to={ROUTES.home} className="group flex items-center gap-2.5 rounded-lg py-0.5">
+            <LogoMark className="h-9 w-9 transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-105" />
+            <span className="font-display text-xl font-extrabold tracking-tight">{copy.app.name}</span>
           </Link>
 
-          <nav aria-label={copy.nav.label} className="ml-4 hidden lg:block">
-            <ul className="flex items-center gap-1">
-              {NAV.map((n) => (
-                <li key={n.to}>
-                  <NavLink to={n.to} end={n.end} className={({ isActive }) => navClass(isActive)}>
-                    {n.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <DesktopNav />
 
           <div className="ml-auto hidden w-full max-w-sm md:block">
-            {!isHome ? <GlobalSearch /> : null}
+            {!isHome ? <GlobalSearch tone="dark" shortcut /> : null}
           </div>
 
           <button
             ref={menuButton}
             type="button"
-            className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-800 hover:bg-slate-100 md:ml-2 lg:hidden"
+            className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-lg text-white hover:bg-white/10 md:ml-2 lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? copy.nav.closeMenu : copy.nav.openMenu}
@@ -102,17 +132,31 @@ export function AppShell() {
 
         {!isHome ? (
           <div className="mx-auto max-w-page px-4 pb-3 sm:px-6 md:hidden">
-            <GlobalSearch />
+            <GlobalSearch tone="dark" />
           </div>
         ) : null}
 
-        <div id="mobile-menu" hidden={!menuOpen} className="border-t border-slate-200 lg:hidden">
+        <div id="mobile-menu" hidden={!menuOpen} className="border-t border-white/10 lg:hidden">
           <nav aria-label={copy.nav.label} className="mx-auto max-w-page px-4 py-2 sm:px-6">
             <ul className="space-y-1">
-              {NAV.map((n) => (
-                <li key={n.to}>
-                  <NavLink to={n.to} end={n.end} className={({ isActive }) => navClass(isActive)} onClick={() => setMenuOpen(false)}>
-                    {n.label}
+              {NAV.map((n, i) => (
+                <li key={n.to} className="animate-rise" style={{ animationDelay: `${i * 40}ms` } as CSSProperties}>
+                  <NavLink
+                    to={n.to}
+                    end={n.end}
+                    onClick={() => setMenuOpen(false)}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 rounded-lg px-3 py-2.5 text-base font-semibold ${
+                        isActive ? 'bg-white/10 text-white' : 'text-lagoon-200 hover:bg-white/5 hover:text-white'
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span aria-hidden="true" className={`h-2 w-2 rounded-full ${isActive ? 'bg-marigold-400' : 'bg-white/20'}`} />
+                        {n.label}
+                      </>
+                    )}
                   </NavLink>
                 </li>
               ))}
@@ -125,10 +169,12 @@ export function AppShell() {
         id="main"
         ref={mainRef}
         tabIndex={-1}
-        className="mx-auto w-full max-w-page flex-1 px-4 py-6 outline-none sm:px-6 sm:py-8"
+        className={`mx-auto w-full flex-1 outline-none ${isHome ? '' : 'max-w-page px-4 pb-10 sm:px-6'}`}
       >
-        <Suspense fallback={<PageSkeleton cards={2} />}>
-          <Outlet />
+        <Suspense fallback={<div className={isHome ? 'mx-auto max-w-page px-4 py-8 sm:px-6' : 'py-8'}><PageSkeleton cards={2} /></div>}>
+          <div key={location.pathname} className="animate-fade">
+            <Outlet />
+          </div>
         </Suspense>
       </main>
 

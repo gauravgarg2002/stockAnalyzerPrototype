@@ -271,6 +271,17 @@ def broker_logout(ctx: AppContext, p: dict) -> dict:
     return ctx.broker.logout()
 
 
+def broker_quote(ctx: AppContext, p: dict) -> dict:
+    sym = str(p.get("symbol") or "").strip().upper()
+    if not sym:
+        raise errors.bad_request("symbol is required.")
+    return ctx.broker.quote(sym)
+
+
+def broker_activity(ctx: AppContext, p: dict) -> dict:
+    return ctx.broker.activity()
+
+
 def broker_portfolio(ctx: AppContext, p: dict) -> dict:
     bp = ctx.broker.portfolio()
     d = asdict(bp)

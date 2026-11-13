@@ -2,6 +2,7 @@
 // Dependency-free: only the platform `fetch` / `FormData` are used.
 
 import type {
+  ActivityResponse,
   ApiErrorBody,
   ApiErrorCode,
   ClientErrorCode,
@@ -21,6 +22,7 @@ import type {
   ManualHoldingRequest,
   MetaResponse,
   PortfolioResponse,
+  QuoteResponse,
   SearchResponse,
   StockCheckResponse,
   TryItOnRequest,
@@ -139,6 +141,11 @@ export const getPortfolio = (o?: RequestOptions) => get<PortfolioResponse>('/por
 
 export const searchInstruments = (q: string, o?: RequestOptions) =>
   get<SearchResponse>(`/search${query({ q: q.trim() })}`, o);
+
+export const getQuote = (symbol: string, o?: RequestOptions) =>
+  get<QuoteResponse>(`/stocks/${encodeURIComponent(symbol)}/quote`, o);
+
+export const getActivity = (o?: RequestOptions) => get<ActivityResponse>('/account/activity', o);
 
 export const getStockCheck = (symbol: string, o?: RequestOptions) =>
   get<StockCheckResponse>(`/stocks/${encodeURIComponent(symbol)}/check`, o);

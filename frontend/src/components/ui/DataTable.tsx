@@ -3,17 +3,17 @@ import type { DetailTable } from '../../lib/api-types';
 export function DataTable({ table }: { table: DetailTable }) {
   return (
     <div
-      className="overflow-x-auto rounded-xl border border-slate-200"
+      className="overflow-x-auto rounded-2xl border border-slate-200 bg-white"
       role="region"
       aria-label={table.title}
       tabIndex={0}
     >
       <table className="min-w-full border-collapse text-left text-sm">
-        <caption className="bg-slate-50 px-3 py-2 text-left text-sm font-semibold text-slate-800">{table.title}</caption>
+        <caption className="bg-peacock-900 px-4 py-2.5 text-left text-sm font-semibold text-white">{table.title}</caption>
         <thead>
-          <tr className="border-y border-slate-200 bg-slate-50 text-slate-700">
+          <tr className="border-b border-slate-200 bg-lagoon-100/70 text-peacock-900">
             {table.columns.map((c, i) => (
-              <th key={i} scope="col" className={`px-3 py-2 font-medium ${i > 0 ? 'text-right sm:text-left' : ''}`}>
+              <th key={i} scope="col" className={`px-4 py-2.5 font-semibold ${i > 0 ? 'text-right sm:text-left' : ''}`}>
                 {c}
               </th>
             ))}
@@ -21,14 +21,14 @@ export function DataTable({ table }: { table: DetailTable }) {
         </thead>
         <tbody>
           {table.rows.map((row, r) => (
-            <tr key={r} className="border-b border-slate-100 last:border-0">
+            <tr key={r} className="border-b border-slate-100 transition-colors last:border-0 hover:bg-marigold-50">
               {row.map((cell, c) =>
                 c === 0 ? (
-                  <th key={c} scope="row" className="px-3 py-2 font-medium text-slate-800">
+                  <th key={c} scope="row" className="px-4 py-2.5 font-medium text-slate-800">
                     {cell}
                   </th>
                 ) : (
-                  <td key={c} className="whitespace-nowrap px-3 py-2 text-right text-slate-700 sm:text-left">
+                  <td key={c} className="whitespace-nowrap px-4 py-2.5 text-right tabular-nums text-slate-700 sm:text-left">
                     {cell}
                   </td>
                 ),

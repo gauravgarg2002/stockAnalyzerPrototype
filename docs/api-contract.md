@@ -464,6 +464,20 @@ Java resolves `name`/`subtitle`/`latest` via B.8. Unknown instrument → 404.
 **DELETE /api/holdings/{id}** → 204.
 
 ---
+### A.14 Live quote and today's account activity (added 13 Nov 2026)
+
+Both are passed through from Python **uncached**, because they are only useful when fresh.
+
+`GET /api/stocks/{symbol}/quote` → `Quote`:
+`{sampleData, available, symbol, reason?, source, asOf (ISO datetime), lastPrice, lastPriceDisplay, open, openDisplay, high, highDisplay, low, lowDisplay, prevClose, prevCloseDisplay, changeDisplay, volume, volumeDisplay, rangePosition (0..1 within today's low–high, or null)}`.
+When no live price can be had (not connected, symbol unknown, broker error) the body is `{sampleData, available: false, symbol, reason}` with HTTP 200.
+
+`GET /api/account/activity` → `Activity`:
+`{sampleData, connected, source, asOf, sentences: Sentence[], positions: [{symbol, exchange, product, quantity, avgPrice, avgPriceDisplay, lastPrice, lastPriceDisplay, pnl, pnlDisplay}], orders: {total, complete, open, cancelled} | null, tradesToday: number | null, gtts: [{symbol, kind: SINGLE|TWO_LEG, triggerPrices, triggerDisplays, lastPriceAtSetup, quantity, status, createdAt}]}`.
+A part the broker could not return is `null` (orders, tradesToday) or empty. Direction of a price trigger (add or reduce) is deliberately not shown.
+
+Internal: `GET /internal/broker/quote?symbol=` and `GET /internal/broker/activity` (B.10), same bodies. Kite MCP tools used: `get_quotes`, `get_positions`, `get_orders`, `get_trades`, `get_gtts`; Kite Connect: `GET /quote`, `/portfolio/positions`, `/orders`, `/trades`, `/gtt/triggers`. With `prices: broker_then_nse_eod`, Nifty 50 history also comes from the broker (`get_historical_data`, NIFTY 50 index token).
+
 ## §B Internal REST API (Java → Python, base `/internal`)
 
 Python listens on `ports.python`. Bodies are JSON. Errors follow §0.2. Timeouts: Java uses 10 s, except `/internal/broker/*` and `/internal/statements/parse` which use 60 s.

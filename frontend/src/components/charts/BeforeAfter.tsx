@@ -11,17 +11,17 @@ export interface BeforeAfterSide {
 /** One metric, two columns: Before and After. Equal visual weight, no direction colouring. */
 export function BeforeAfterRow({ title, before, after, children }: { title: string; before: BeforeAfterSide; after: BeforeAfterSide; children?: ReactNode }) {
   return (
-    <div className="rounded-xl border border-slate-200 p-4">
-      <h3 className="text-sm font-semibold text-slate-800">{title}</h3>
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sheet">
+      <h3 className="font-semibold text-peacock-900">{title}</h3>
       <dl className="mt-2 grid grid-cols-2 gap-4">
         <div>
-          <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">{copy.tryIt.before}</dt>
-          <dd className="mt-1 text-lg font-semibold tabular-nums text-slate-900">{before.headline}</dd>
+          <dt className="text-sm font-medium text-slate-600">{copy.tryIt.before}</dt>
+          <dd className="mt-1 font-display text-xl font-bold tabular-nums text-slate-600">{before.headline}</dd>
           {before.caption ? <dd className="text-sm text-slate-600">{before.caption}</dd> : null}
         </div>
         <div>
-          <dt className="text-xs font-medium uppercase tracking-wide text-slate-600">{copy.tryIt.after}</dt>
-          <dd className="mt-1 text-lg font-semibold tabular-nums text-slate-900">{after.headline}</dd>
+          <dt className="text-sm font-medium text-slate-600">{copy.tryIt.after}</dt>
+          <dd className="mt-1 font-display text-xl font-bold tabular-nums text-peacock-900"><span key={after.headline} className="inline-block animate-pop">{after.headline}</span></dd>
           {after.caption ? <dd className="text-sm text-slate-600">{after.caption}</dd> : null}
         </div>
       </dl>
@@ -31,5 +31,5 @@ export function BeforeAfterRow({ title, before, after, children }: { title: stri
 }
 
 export function figureSource(f: Figure): string {
-  return `${f.source} · ${copy.common.asOf} ${formatDate(f.asOf)}`;
+  return `${f.source}, ${copy.common.asOf} ${formatDate(f.asOf)}`;
 }

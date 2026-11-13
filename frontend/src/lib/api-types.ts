@@ -698,3 +698,64 @@ export interface ManualHoldingRequest {
   avgPrice: number;
   firstBuyDate: string | null;
 }
+
+// ---------------------------------------------------------------- A.14 live quote and account activity
+
+export interface QuoteResponse {
+  sampleData: boolean;
+  available: boolean;
+  symbol: string;
+  reason?: string;
+  source?: string;
+  asOf?: string | null;
+  lastPrice?: number | null;
+  lastPriceDisplay?: string;
+  open?: number | null;
+  openDisplay?: string;
+  high?: number | null;
+  highDisplay?: string;
+  low?: number | null;
+  lowDisplay?: string;
+  prevClose?: number | null;
+  prevCloseDisplay?: string;
+  changeDisplay?: string;
+  volume?: number | null;
+  volumeDisplay?: string;
+  rangePosition?: number | null;
+}
+
+export interface ActivityPosition {
+  symbol: string;
+  exchange: string;
+  product: string;
+  quantity: number;
+  avgPrice: number | null;
+  avgPriceDisplay: string;
+  lastPrice: number | null;
+  lastPriceDisplay: string;
+  pnl: number | null;
+  pnlDisplay: string;
+}
+
+export interface ActivityTrigger {
+  symbol: string;
+  kind: 'SINGLE' | 'TWO_LEG';
+  triggerPrices: number[];
+  triggerDisplays: string[];
+  lastPriceAtSetup: number | null;
+  quantity: number | null;
+  status: string;
+  createdAt: string | null;
+}
+
+export interface ActivityResponse {
+  sampleData: boolean;
+  connected: boolean;
+  source: string;
+  asOf: string;
+  sentences: Sentence[];
+  positions: ActivityPosition[];
+  orders: { total: number; complete: number; open: number; cancelled: number } | null;
+  tradesToday: number | null;
+  gtts: ActivityTrigger[];
+}

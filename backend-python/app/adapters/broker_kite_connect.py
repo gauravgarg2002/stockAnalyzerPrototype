@@ -23,6 +23,8 @@ import requests
 from ..errors import ApiError
 from . import broker_guard
 from .base import BrokerPortfolio, PricePoint
+from .broker_extras import (NIFTY50_TOKEN, build_activity, clean_symbol, count_trades, map_gtts, map_positions,
+                            map_quote, pick_quote_row, summarize_orders, unavailable_quote, unwrap_rows)
 from .http_util import DEFAULT_TIMEOUT, make_session, today_ist, unavailable
 
 API_BASE = "https://api.kite.trade"
@@ -33,35 +35,11 @@ NOT_CONNECTED_MSG = "Not connected to Zerodha Kite yet."
 
 # ---------- pure mapping helpers (shared with broker_kite_mcp) ----------
 
-def unwrap_rows(obj: Any, *keys: str) -> list[dict]:
-    """Accept a list, or a dict wrapping the list under data/holdings/etc."""
-    if isinstance(obj, list):
-        return [r for r in obj if isinstance(r, dict)]
-    if isinstance(obj, dict):
-        for k in ("data", *keys):
-            v = obj.get(k)
-            if isinstance(v, list):
-                return [r for r in v if isinstance(r, dict)]
-            if isinstance(v, dict):
-                inner = unwrap_rows(v, *keys)
-                if inner:
-                    return inner
-    return []
-
-
 def _f(v: Any) -> float | None:
     try:
         return None if v is None or v == "" else float(v)
     except (TypeError, ValueError):
         return None
-
-
-def clean_symbol(ts: str) -> str:
-    s = (ts or "").strip().upper()
-    for suf in ("-BE", "-T0", "-BZ", "-SM", "-ST", "-X1"):
-        if s.endswith(suf):
-            s = s[: -len(suf)]
-    return s
 
 
 def map_stock_holdings(rows: list[dict]) -> list[dict]:
@@ -310,6 +288,45 @@ class KiteConnectBroker:
             if tok is None:
                 return []
             body = self._request("GET", f"/instruments/historical/{tok}/day",
+                                 params={"from": start.isoformat(), "to": end.isoformat()})
+            return parse_candles(body)
+        except ApiError:
+            return []
+
+
+    # -- extras (read-only): live quote, today's activity, index history
+    def quote(self, symbol: str) -> dict:
+        sym = symbol.strip().upper()
+        if not self._access_token:
+            return unavailable_quote(sym, "Connect your Zerodha account to see the live price.", False)
+        try:
+            row = pick_quote_row(self._request("GET", "/quote", params={"i": f"NSE:{sym}"}), sym)
+        except ApiError:
+            return unavailable_quote(sym, "Zerodha Kite did not return a price just now.", False)
+        if row is None:
+            return unavailable_quote(sym, "Zerodha Kite has no live price for this symbol.", False)
+        return map_quote(row, sym, "NSE, live via your Zerodha account", False)
+
+    def activity(self) -> dict:
+        if not self._access_token:
+            return build_activity(sample=False, connected=False, source=SOURCE, as_of=today_ist().isoformat(),
+                                  positions=None, orders=None, trades=None, gtts=None)
+
+        def part(path: str, mapper):
+            try:
+                return mapper(self._request("GET", path))
+            except ApiError:
+                return None
+
+        return build_activity(sample=False, connected=True, source=SOURCE, as_of=today_ist().isoformat(),
+                              positions=part("/portfolio/positions", map_positions), orders=part("/orders", summarize_orders),
+                              trades=part("/trades", count_trades), gtts=part("/gtt/triggers", map_gtts))
+
+    def index_history(self, index_id: str, start: date, end: date) -> list[PricePoint]:
+        if index_id != "NIFTY50" or not self._access_token:
+            return []
+        try:
+            body = self._request("GET", f"/instruments/historical/{NIFTY50_TOKEN}/day",
                                  params={"from": start.isoformat(), "to": end.isoformat()})
             return parse_candles(body)
         except ApiError:

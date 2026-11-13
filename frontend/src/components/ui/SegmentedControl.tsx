@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
 
 export interface SegmentOption<T extends string> {
@@ -17,6 +17,12 @@ export interface SegmentedControlProps<T extends string> {
 /** Radio-group style switch with arrow-key navigation. */
 export function SegmentedControl<T extends string>({ label, value, options, onChange, className = '' }: SegmentedControlProps<T>) {
   const refs = useRef<Array<HTMLButtonElement | null>>([]);
+  const [pill, setPill] = useState<{ left: number; top: number; width: number; height: number } | null>(null);
+  useLayoutEffect(() => {
+    const idx = options.findIndex((o) => o.value === value);
+    const el = refs.current[idx];
+    if (el) setPill({ left: el.offsetLeft, top: el.offsetTop, width: el.offsetWidth, height: el.offsetHeight });
+  }, [value, options]);
 
   function onKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     const idx = options.findIndex((o) => o.value === value);
@@ -37,8 +43,15 @@ export function SegmentedControl<T extends string>({ label, value, options, onCh
       role="radiogroup"
       aria-label={label}
       onKeyDown={onKeyDown}
-      className={`inline-flex max-w-full flex-wrap rounded-xl bg-slate-100 p-1 ${className}`}
+      className={`relative inline-flex max-w-full flex-wrap rounded-2xl bg-peacock-50 p-1 ring-1 ring-inset ring-lagoon-200 ${className}`}
     >
+      {pill ? (
+        <span
+          aria-hidden="true"
+          className="absolute rounded-xl bg-peacock-900 shadow-sheet transition-all duration-300 ease-out"
+          style={{ left: pill.left, top: pill.top, width: pill.width, height: pill.height }}
+        />
+      ) : null}
       {options.map((o, i) => {
         const selected = o.value === value;
         return (
@@ -52,8 +65,8 @@ export function SegmentedControl<T extends string>({ label, value, options, onCh
             aria-checked={selected}
             tabIndex={selected ? 0 : -1}
             onClick={() => onChange(o.value)}
-            className={`min-h-[40px] rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-              selected ? 'bg-white text-slate-900 shadow-sm ring-1 ring-slate-300' : 'text-slate-700 hover:text-slate-900'
+            className={`relative z-10 min-h-[40px] rounded-xl px-4 py-1.5 text-sm font-semibold transition-colors duration-300 ${
+              selected ? 'text-white' : 'text-peacock-800 hover:text-peacock-950'
             }`}
           >
             {o.label}

@@ -9,7 +9,7 @@ from app.routes import ROUTES
 CONTRACT_ROUTES = [
     ("GET", "/internal/health"), ("GET", "/internal/search"), ("GET", "/internal/stocks/{symbol}/check"), ("POST", "/internal/funds/{schemeCode}/check"),
     ("GET", "/internal/compare"), ("GET", "/internal/glossary"), ("GET", "/internal/explain"), ("POST", "/internal/instruments/bundle"),
-    ("POST", "/internal/prices/points"), ("POST", "/internal/broker/login/start"), ("GET", "/internal/broker/login/status"),
+    ("POST", "/internal/prices/points"), ("POST", "/internal/broker/login/start"), ("GET", "/internal/broker/login/status"), ("GET", "/internal/broker/quote"), ("GET", "/internal/broker/activity"),
     ("POST", "/internal/broker/login/complete"), ("POST", "/internal/broker/logout"), ("GET", "/internal/broker/portfolio"),
     ("POST", "/internal/statements/parse"), ("POST", "/internal/narrate")]
 

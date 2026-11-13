@@ -72,7 +72,7 @@ function WatchlistCard({ item, onChanged, onRemoved }: { item: WatchlistItem; on
               </p>
             ) : null}
             <p className="text-xs text-slate-600">
-              {item.latest.source} · {copy.common.asOf} {formatDate(item.latest.asOf)}
+              {item.latest.source}, {copy.common.asOf} {formatDate(item.latest.asOf)}
             </p>
           </div>
         ) : null}

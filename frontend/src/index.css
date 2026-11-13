@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neutral palette only: slate/stone greys plus one indigo accent. No red or green anywhere. */
+/*
+ * Plainfolio, "see-through" theme.
+ * Solid peacock-ink surfaces carry a jali (lattice screen) pattern: the product looks through funds to what you
+ * really own. One marigold accent marks focus, the active place and the lens. Lagoon tints "through funds".
+ * No red and no green anywhere, so colour never reads as a verdict.
+ */
 @layer base {
   html {
     color-scheme: light;
@@ -11,15 +16,27 @@
   }
 
   body {
-    @apply bg-stone-50 text-slate-800 antialiased;
-    font-feature-settings: 'tnum' 0;
+    @apply bg-paper text-slate-800 antialiased;
+    font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
   }
 
-  /* One visible focus style everywhere (indigo-700, 2px). */
+  h1,
+  h2,
+  .font-display {
+    font-family: 'Bricolage Grotesque', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+  }
+
+  .tabular-nums,
+  [class*='tabular-nums'] {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
   :focus-visible {
-    outline: 2px solid #4338ca;
+    outline: 3px solid #f4a92b;
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 
   input:focus-visible,
@@ -29,8 +46,8 @@
   }
 
   ::selection {
-    background: #c7d2fe;
-    color: #0f172a;
+    background: #fad58a;
+    color: #0b3b4f;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -41,7 +58,104 @@
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* The jali lattice: a quatrefoil screen, drawn in two light strokes over peacock ink. */
+  .jali {
+    background-color: #0b3b4f;
+    background-image:
+      radial-gradient(circle at 50% 50%, transparent 9px, rgba(159, 211, 214, 0.13) 9.5px, rgba(159, 211, 214, 0.13) 10.5px, transparent 11px),
+      radial-gradient(circle at 0 0, transparent 9px, rgba(159, 211, 214, 0.09) 9.5px, rgba(159, 211, 214, 0.09) 10.5px, transparent 11px);
+    background-size: 28px 28px;
+  }
+
+  /* The lens: a soft marigold light that follows the pointer over a .jali surface (set --lx / --ly). */
+  .jali-lens {
+    background: radial-gradient(
+      220px circle at var(--lx, 70%) var(--ly, 30%),
+      rgba(244, 169, 43, 0.22),
+      rgba(244, 169, 43, 0.06) 45%,
+      transparent 70%
+    );
+    transition: background-position 0.2s;
+  }
+
+  /* Pointer spotlight on cards (set --sx / --sy from the pointer position). */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(320px circle at var(--sx, -400px) var(--sy, -400px), rgba(28, 127, 140, 0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, #e7eeec 0%, #f4f7f6 45%, #e7eeec 90%);
+    background-size: 960px 100%;
+  }
+
+  /* Expand and collapse with a height animation (grid-rows technique). */
+  .collapsible {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .collapsible[data-open='true'] {
+    grid-template-rows: 1fr;
+  }
+  .collapsible > * {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  /* Text links: an underline that thickens into a marigold highlight on hover. */
+  .link-draw {
+    @apply font-semibold text-indigo-700;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size 220ms ease-out, color 150ms;
+  }
+  .link-draw:hover {
+    @apply text-indigo-900;
+    background-image: linear-gradient(#fad58a, #fad58a);
+    background-size: 100% 0.5em;
+  }
+
+  /* Scroll-in reveal used by <Reveal>. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
     }
   }
 }
