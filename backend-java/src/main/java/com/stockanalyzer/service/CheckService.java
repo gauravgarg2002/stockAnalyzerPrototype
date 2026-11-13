@@ -30,7 +30,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 
@@ -76,7 +75,7 @@ public class CheckService {
     public JsonNode search(String q) {
         String text = q == null ? "" : q.trim();
         if (text.isEmpty()) throw ApiException.badRequest("q must have at least 1 character.");
-        return cache.get("search:" + text.toLowerCase(Locale.ROOT), JsonNode.class, () -> python.search(text, 10));
+        return cache.get("search:" + text, JsonNode.class, () -> python.search(text, 10));
     }
 
     public JsonNode glossary() {
@@ -196,7 +195,7 @@ public class CheckService {
 
     private Figure holdingValue(double valueInr, Double valueOneYearAgo, String asOf) {
         List<Comparison> cmp = new ArrayList<>();
-        if (valueOneYearAgo != null) cmp.add(Figures.cmp("PREVIOUS_PERIOD", "1 year ago", valueOneYearAgo, Units.INR));
+        if (valueOneYearAgo != null) cmp.add(Figures.cmp("PREVIOUS_PERIOD", "1 year ago", Money.roundRupees(valueOneYearAgo), Units.INR));
         return Figures.calc("holding_value", "Value of your holding", Money.roundRupees(valueInr), Units.INR, asOf, cmp);
     }
 

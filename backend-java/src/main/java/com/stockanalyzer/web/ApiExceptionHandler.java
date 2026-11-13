@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
@@ -37,7 +39,8 @@ public class ApiExceptionHandler {
         return body(e.status(), e.code(), e.getMessage(), e.details());
     }
 
-    @ExceptionHandler({HttpMessageNotReadableException.class, MissingServletRequestParameterException.class,
+    @ExceptionHandler({HttpMessageNotReadableException.class, HttpMediaTypeNotSupportedException.class,
+            ServletRequestBindingException.class, MissingServletRequestParameterException.class,
             MissingServletRequestPartException.class, MethodArgumentTypeMismatchException.class})
     public ResponseEntity<Map<String, Object>> badRequest(Exception e) {
         String message = e instanceof MissingServletRequestParameterException m
