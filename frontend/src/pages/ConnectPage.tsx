@@ -80,7 +80,14 @@ function KiteCard({ conn, onChanged }: { conn: ConnectionResponse; onChanged: ()
     }
   }, []);
 
-  useEffect(() => stopPolling, [stopPolling]);
+  // On leaving the page, stop the timer and make any status call still in flight give up instead of re-arming it.
+  useEffect(
+    () => () => {
+      stopPolling();
+      startedAt.current = Number.NEGATIVE_INFINITY;
+    },
+    [stopPolling],
+  );
 
   const runImport = useCallback(async () => {
     setFlow('importing');

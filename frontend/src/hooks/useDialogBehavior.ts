@@ -57,7 +57,10 @@ export function useDialogBehavior(
     document.addEventListener('keydown', onKeyDown);
     return () => {
       document.removeEventListener('keydown', onKeyDown);
-      if (previous && document.contains(previous)) previous.focus();
+      // Give focus back unless the person has already moved it to something else (e.g. clicked another control).
+      const now = document.activeElement;
+      const focusLost = !now || now === document.body || (node?.contains(now) ?? false);
+      if (previous && focusLost && document.contains(previous)) previous.focus();
     };
   }, [active, containerRef]);
 }
