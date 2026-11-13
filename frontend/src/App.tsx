@@ -1,7 +1,6 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { AppShell } from './components/ui/AppShell';
-import { PageSkeleton } from './components/ui/Skeleton';
 import { MetaProvider } from './context/MetaContext';
 import { ROUTES } from './lib/routes';
 import HomePage from './pages/HomePage';
@@ -19,22 +18,20 @@ const TryItOnPage = lazy(() => import('./pages/TryItOnPage'));
 export default function App() {
   return (
     <MetaProvider>
-      <Suspense fallback={<PageSkeleton cards={2} />}>
-        <Routes>
-          <Route element={<AppShell />}>
-            <Route path={ROUTES.home} element={<HomePage />} />
-            <Route path={ROUTES.connect} element={<ConnectPage />} />
-            <Route path={ROUTES.portfolio} element={<PortfolioPage />} />
-            <Route path={ROUTES.stock} element={<StockCheckPage />} />
-            <Route path={ROUTES.fund} element={<FundCheckPage />} />
-            <Route path={ROUTES.compare} element={<ComparePage />} />
-            <Route path={ROUTES.watchlist} element={<WatchlistPage />} />
-            <Route path={ROUTES.tryIt} element={<TryItOnPage />} />
-            <Route path={ROUTES.tryItKind} element={<TryItOnPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route element={<AppShell />}>
+          <Route path={ROUTES.home} element={<HomePage />} />
+          <Route path={ROUTES.connect} element={<ConnectPage />} />
+          <Route path={ROUTES.portfolio} element={<PortfolioPage />} />
+          <Route path={ROUTES.stock} element={<StockCheckPage />} />
+          <Route path={ROUTES.fund} element={<FundCheckPage />} />
+          <Route path={ROUTES.compare} element={<ComparePage />} />
+          <Route path={ROUTES.watchlist} element={<WatchlistPage />} />
+          <Route path={ROUTES.tryIt} element={<TryItOnPage />} />
+          <Route path={ROUTES.tryItKind} element={<TryItOnPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </MetaProvider>
   );
 }

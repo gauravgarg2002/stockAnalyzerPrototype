@@ -93,7 +93,7 @@ export default function HomePage() {
                         {f.id === 'overlap' ? copy.home.factOverlap : f.id === 'cost' ? copy.home.factCost : copy.home.factCash}
                       </h3>
                       <p className="mt-2 text-slate-800">{f.sentence.text}</p>
-                      <FigureGrid figures={f.figures} bare className="sm:grid-cols-1" />
+                      <FigureGrid figures={f.figures} bare single />
                     </Card>
                   ))}
                 </div>

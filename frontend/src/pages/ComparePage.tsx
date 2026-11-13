@@ -77,7 +77,7 @@ function CompareTable({ data }: { data: CompareResponse }) {
                     {cell ? (
                       <>
                         <SentenceList sentences={cell.sentences} />
-                        <FigureGrid figures={cell.figures} className="sm:grid-cols-1" />
+                        <FigureGrid figures={cell.figures} single />
                       </>
                     ) : (
                       <p className="text-slate-600">{copy.common.notAvailable}</p>

@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { copy } from '../../lib/copy';
 import { ROUTES } from '../../lib/routes';
 import { GlobalSearch } from './GlobalSearch';
 import { Footer } from './Footer';
+import { PageSkeleton } from './Skeleton';
 
 const NAV = [
   { to: ROUTES.home, label: copy.nav.home, end: true },
@@ -126,7 +127,9 @@ export function AppShell() {
         tabIndex={-1}
         className="mx-auto w-full max-w-page flex-1 px-4 py-6 outline-none sm:px-6 sm:py-8"
       >
-        <Outlet />
+        <Suspense fallback={<PageSkeleton cards={2} />}>
+          <Outlet />
+        </Suspense>
       </main>
 
       <Footer />

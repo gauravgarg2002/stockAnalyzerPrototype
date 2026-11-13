@@ -103,7 +103,7 @@ export default function StockCheckPage() {
       </div>
 
       <Drawer open={tryOpen} onClose={() => setTryOpen(false)} title={copy.tryIt.drawerTitle}>
-        <TryItOnPanel kind="STOCK" id={ins.symbol} />
+        <TryItOnPanel kind="STOCK" id={ins.symbol} name={ins.name} />
       </Drawer>
     </ExplainScope>
   );

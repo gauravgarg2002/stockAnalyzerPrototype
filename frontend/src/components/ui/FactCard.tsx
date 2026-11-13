@@ -27,7 +27,7 @@ export function FactCard({ fact, headingId }: { fact: Fact; headingId: string })
         </div>
       ) : null}
       <SentenceList sentences={fact.sentences} className="mt-3" />
-      <FigureGrid figures={fact.figures} className="sm:grid-cols-1" />
+      <FigureGrid figures={fact.figures} single />
       {fact.details ? (
         <ShowDetails>
           <DataTable table={fact.details} />

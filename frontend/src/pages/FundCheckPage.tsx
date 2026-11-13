@@ -130,7 +130,7 @@ export default function FundCheckPage() {
       </div>
 
       <Drawer open={tryOpen} onClose={() => setTryOpen(false)} title={copy.tryIt.drawerTitle}>
-        <TryItOnPanel kind="FUND" id={ins.schemeCode} />
+        <TryItOnPanel kind="FUND" id={ins.schemeCode} name={ins.name} />
       </Drawer>
     </ExplainScope>
   );

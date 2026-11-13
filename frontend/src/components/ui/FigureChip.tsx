@@ -51,10 +51,10 @@ export function sortRupeesFirst(figures: Figure[]): Figure[] {
     .map((x) => x.f);
 }
 
-export function FigureGrid({ figures, bare = false, className = '' }: { figures: Figure[]; bare?: boolean; className?: string }) {
+export function FigureGrid({ figures, bare = false, single = false, className = '' }: { figures: Figure[]; bare?: boolean; single?: boolean; className?: string }) {
   if (figures.length === 0) return null;
   return (
-    <div className={`mt-4 grid gap-3 sm:grid-cols-2 ${className}`}>
+    <div className={`mt-4 grid gap-3 ${single ? '' : 'sm:grid-cols-2'} ${className}`}>
       {sortRupeesFirst(figures).map((f) => (
         <FigureChip key={f.id} figure={f} bare={bare} />
       ))}

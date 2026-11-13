@@ -20,12 +20,14 @@ const MAX_AMOUNT = 1_000_000_000;
 export interface TryItOnPanelProps {
   kind?: Kind | null;
   id?: string | null;
+  /** Display name of the instrument, when the caller knows it. */
+  name?: string;
   /** Called when the person picks a different instrument in the built-in search (page mode). */
   onPick?: (kind: Kind, id: string) => void;
 }
 
 /** Form + before/after result. Used on the Try it on page and inside the drawer on check pages. */
-export function TryItOnPanel({ kind, id, onPick }: TryItOnPanelProps) {
+export function TryItOnPanel({ kind, id, name, onPick }: TryItOnPanelProps) {
   const [mode, setMode] = useState<TryMode>('SIP');
   const [amount, setAmount] = useState('');
   const [months, setMonths] = useState('12');
@@ -92,7 +94,7 @@ export function TryItOnPanel({ kind, id, onPick }: TryItOnPanelProps) {
         </div>
       ) : (
         <p className="mb-4 text-sm text-slate-700">
-          {fill(copy.tryIt.intro, { name: picked && picked.id === targetId ? picked.name : targetId })}
+          {fill(copy.tryIt.intro, { name: name ?? (picked && picked.id === targetId ? picked.name : targetId) })}
         </p>
       )}
 
