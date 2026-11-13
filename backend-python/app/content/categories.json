@@ -1,0 +1,162 @@
+{
+ "Large Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 80% of the money in shares of the 100 largest listed companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 80
+ },
+ "Large & Mid Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 35% in large companies and at least 35% in mid-sized companies, with the rest anywhere.",
+  "minEquityPct": 70
+ },
+ "Mid Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares of mid-sized companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 65
+ },
+ "Small Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares of smaller companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 65
+ },
+ "Multi Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 25% each in large, mid-sized and smaller companies, and at least 75% in shares overall.",
+  "minEquityPct": 75
+ },
+ "Flexi Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "Shares of companies of any size, at least 65% of the money; the rest can be in debt and cash.",
+  "minEquityPct": 65
+ },
+ "Focused Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares, spread over no more than 30 companies.",
+  "minEquityPct": 65
+ },
+ "Value Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares picked using a value approach, which looks for shares priced low against the company's worth.",
+  "minEquityPct": 65
+ },
+ "Contra Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares, chosen to go against the current market trend.",
+  "minEquityPct": 65
+ },
+ "Dividend Yield Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares of companies that pay higher dividends.",
+  "minEquityPct": 65
+ },
+ "Sectoral/Thematic Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 80% of the money in shares of one sector or theme, such as banks or technology.",
+  "minEquityPct": 80
+ },
+ "ELSS": {
+  "group": "EQUITY",
+  "mayHold": "At least 80% of the money in shares of companies of any size; money is locked in for three years by law.",
+  "minEquityPct": 80
+ },
+ "Index Fund": {
+  "group": "EQUITY",
+  "mayHold": "Shares that make up a market index, in the same proportion as the index; the fund copies the index rather than choosing companies.",
+  "minEquityPct": 95
+ },
+ "Aggressive Hybrid Fund": {
+  "group": "HYBRID",
+  "mayHold": "Between 65% and 80% of the money in shares and the rest in debt; the mix can change within those limits.",
+  "minEquityPct": 65
+ },
+ "Conservative Hybrid Fund": {
+  "group": "HYBRID",
+  "mayHold": "Between 10% and 25% of the money in shares and the rest mostly in debt.",
+  "minEquityPct": 10
+ },
+ "Balanced Advantage Fund": {
+  "group": "HYBRID",
+  "mayHold": "A changing mix of shares and debt, where the share of each moves with market conditions.",
+  "minEquityPct": null
+ },
+ "Dynamic Asset Allocation Fund": {
+  "group": "HYBRID",
+  "mayHold": "A changing mix of shares and debt, where the share of each moves with market conditions.",
+  "minEquityPct": null
+ },
+ "Multi Asset Allocation Fund": {
+  "group": "HYBRID",
+  "mayHold": "At least 10% each in three asset types, usually shares, debt and gold.",
+  "minEquityPct": null
+ },
+ "Arbitrage Fund": {
+  "group": "HYBRID",
+  "mayHold": "At least 65% of the money in shares, offset by opposite trades in the futures market, with the rest in debt.",
+  "minEquityPct": 65
+ },
+ "Equity Savings Fund": {
+  "group": "HYBRID",
+  "mayHold": "A mix of shares, offsetting futures trades and debt, with at least 65% in shares counting the offsetting trades.",
+  "minEquityPct": 65
+ },
+ "Liquid Fund": {
+  "group": "DEBT",
+  "mayHold": "Debt papers that return the money within 91 days; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Overnight Fund": {
+  "group": "DEBT",
+  "mayHold": "Debt papers that return the money the next day; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Ultra Short Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in three to six months; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Low Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in six to twelve months; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Short Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in one to three years; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Medium Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in three to four years; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Long Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in more than seven years; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Corporate Bond Fund": {
+  "group": "DEBT",
+  "mayHold": "At least 80% of the money in highly rated company bonds; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Banking and PSU Fund": {
+  "group": "DEBT",
+  "mayHold": "At least 80% of the money in debt papers of banks, public sector companies and public financial institutions.",
+  "minEquityPct": null
+ },
+ "Gilt Fund": {
+  "group": "DEBT",
+  "mayHold": "At least 80% of the money in government bonds; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Money Market Fund": {
+  "group": "DEBT",
+  "mayHold": "Debt papers that return the money within one year; it holds no shares.",
+  "minEquityPct": null
+ },
+ "Credit Risk Fund": {
+  "group": "DEBT",
+  "mayHold": "At least 65% of the money in lower-rated company bonds; it holds no shares.",
+  "minEquityPct": null
+ }
+}

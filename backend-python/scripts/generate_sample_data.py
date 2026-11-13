@@ -122,7 +122,7 @@ def build_stock(s: dict, days: list[date], market: list[float], idx: int) -> tup
     sd = [d for d in days if d >= first]
     mk = market[len(days) - len(sd):]
     mean_m = sum(mk) / len(mk)
-    idio = max(0.10, math.sqrt(max(s["vol"] ** 2 - (s["beta"] * 0.13) ** 2, 0.0)))
+    idio = 0.6 * max(0.10, math.sqrt(max(s["vol"] ** 2 - (s["beta"] * 0.13) ** 2, 0.0)))
     rets = [s["beta"] * (m - mean_m) + idio / SQ252 * rng.gauss(0, 1) for m in mk]
     rets = fit_total(rets[1:], math.log(s["mult"]))
     rets = [0.0] + rets
@@ -329,6 +329,33 @@ def build_fund_holdings(f: dict, pools: dict, rng: random.Random) -> tuple[list[
     return holdings, prev
 
 
+CAT_BENCH = {"Flexi Cap Fund": ("NIFTY500_TRI", 0.8), "Index Fund": ("NIFTY50_TRI", -0.3), "Mid Cap Fund": ("NIFTY_MIDCAP150_TRI", 0.9),
+             "Small Cap Fund": ("NIFTY_SMALLCAP250_TRI", 1.2), "ELSS": ("NIFTY500_TRI", 0.5), "Aggressive Hybrid Fund": ("CRISIL_HYBRID_35_65", 0.4),
+             "Large Cap Fund": ("NIFTY100_TRI", 0.0), "Short Duration Fund": ("CRISIL_SHORT_DURATION_DEBT", -0.2)}
+
+
+def derive_category_returns(days: list[date], ivals: dict) -> dict:
+    """Category averages are tied to each category's benchmark path so the sample stays internally consistent."""
+    out = {}
+    for cat, spec in SP.CATEGORIES.items():
+        bid, delta = CAT_BENCH[cat]
+        vs = ivals[bid]
+        rec = json.loads(json.dumps(spec))
+        rets = {}
+        for n in (3, 5, 10):
+            target = date(ASOF.year - n, ASOF.month, ASOF.day)
+            i0 = next((i for i, d in enumerate(days) if d >= target), 0)
+            rets[f"{n}Y"] = round(((vs[-1] / vs[i0]) ** (1.0 / n) - 1) * 100 + delta, 1)
+        rec["averageReturns"] = rets
+        peak, worst = vs[0], 0.0
+        for v in vs:
+            peak = max(peak, v)
+            worst = min(worst, v / peak - 1)
+        rec["averageWorstFallPct"] = round(worst * 100 * (4.0 if spec["group"] == "DEBT" else 1.05), 1)
+        out[cat] = rec
+    return out
+
+
 def generate(out: Path) -> None:
     out = Path(out)
     days = bdays(SERIES_START, ASOF)
@@ -419,7 +446,8 @@ def generate(out: Path) -> None:
             "events": [{"date": d, "type": t, "text": x} for d, t, x in f["events"]],
         })
     write_text(out / "funds.json", dumps(funds))
-    write_text(out / "fund_categories.json", dumps(SP.CATEGORIES))
+    cats = derive_category_returns(days, ivals)
+    write_text(out / "fund_categories.json", dumps(cats))
     u = SP.SAMPLE_USER
     write_text(out / "sample_user.json", dumps({
         "accountLabel": u["accountLabel"], "idleCashInr": u["idleCashInr"],

@@ -194,7 +194,7 @@ INDICES = [
  ("NIFTY_MIDCAP150_TRI", "Nifty Midcap 150 TRI", "TRI", 3900.0, 21500.0, 1.12, 0.005),
  ("NIFTY_SMALLCAP250_TRI", "Nifty Smallcap 250 TRI", "TRI", 3500.0, 17800.0, 1.2, 0.006),
  ("CRISIL_HYBRID_35_65", "CRISIL Hybrid 35+65 Aggressive Index", "TRI", 6200.0, 17900.0, 0.66, 0.001),
- ("CRISIL_SHORT_DURATION_DEBT", "CRISIL Short Duration Debt Index", "TRI", 2500.0, 5400.0, 0.0, 0.0),
+ ("CRISIL_SHORT_DURATION_DEBT", "CRISIL Short Duration Debt Index", "TRI", 2500.0, 5250.0, 0.0, 0.0),
 ]
 
 FUNDS = [
@@ -227,7 +227,7 @@ FUNDS = [
       events=[("2026-07-01", "MANAGER_CHANGE", "Pooja Sharma joined as co-manager.")]),
  dict(code="900801", name="Ganga Short Duration Fund - Direct Plan - Growth", short="Ganga Short Duration", amc="Ganga Mutual Fund", cat="Short Duration Fund", group="DEBT",
       plan="DIRECT", twin=None, launch="2013-10-01", aum=47600000000, aum1y=51200000000, ter=0.38, exit=(0.0, 0), lock=0, bench="CRISIL_SHORT_DURATION_DEBT",
-      managers=[("Neha Kapoor", "2018-11-01")], mix=(0.0, 93.0, 7.0, 0.0), nav=31.7742, cagr=7.3, beta=0.0, vol=0.004, ntype=(0, 0, 0), events=[]),
+      managers=[("Neha Kapoor", "2018-11-01")], mix=(0.0, 93.0, 7.0, 0.0), nav=31.7742, cagr=7.9, beta=0.0, vol=0.004, ntype=(0, 0, 0), events=[]),
 ]
 
 CATEGORIES = {
