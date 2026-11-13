@@ -11,8 +11,7 @@ help:
 	@echo "make clean         remove build output and local data"
 
 setup:
-	cd backend-python && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-	-cd backend-python && .venv/bin/pip install -r requirements-optional.txt
+	bash scripts/python-env.sh
 	cd backend-java && mvn -q -DskipTests package
 	cd frontend && npm install
 

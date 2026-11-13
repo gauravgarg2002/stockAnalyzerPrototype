@@ -16,12 +16,8 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 echo "[1/3] Python service (logs: .run/python.log)"
+bash "$ROOT/scripts/python-env.sh"
 cd "$ROOT/backend-python"
-if [ ! -d .venv ]; then
-  python3 -m venv .venv
-  .venv/bin/pip install -q -r requirements.txt
-  .venv/bin/pip install -q -r requirements-optional.txt || echo "  optional packages not installed (statement parsing uses the built-in fallback)"
-fi
 .venv/bin/python -m app.serve >"$ROOT/.run/python.log" 2>&1 &
 pids+=($!)
 

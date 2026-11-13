@@ -17,6 +17,8 @@ Needs Python 3.11+, Java 21 + Maven, Node 20+.
 
 Or with Docker: `docker compose up --build`. Or `make setup && make dev`.
 
+The script picks the newest Python 3.11+ it finds (or the one in `$PYTHON`) and rebuilds `backend-python/.venv` if it was made with an older Python or is missing packages. On macOS the built-in `python3` is 3.9, so install a newer one first: `brew install python@3.12`. Java 21 is required; check `java -version` and `mvn -v` both report 21. Java takes about 15 seconds to start, so the first few `/api` proxy errors from Vite at launch are expected.
+
 ## Architecture
 
 ```mermaid
