@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neutral palette only: slate/stone greys plus one indigo accent. No red or green anywhere. */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-slate-800 antialiased;
+    font-feature-settings: 'tnum' 0;
+  }
+
+  /* One visible focus style everywhere (indigo-700, 2px). */
+  :focus-visible {
+    outline: 2px solid #4338ca;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-offset: 0;
+  }
+
+  ::selection {
+    background: #c7d2fe;
+    color: #0f172a;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
