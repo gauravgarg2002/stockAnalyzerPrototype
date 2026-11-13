@@ -9,6 +9,7 @@ import json
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from . import context
 from .errors import ApiError
@@ -20,6 +21,13 @@ app = FastAPI(title="Stock & fund checker - internal API", version="0.1.0", docs
 @app.exception_handler(ApiError)
 async def _api_error(request: Request, exc: ApiError):
     return JSONResponse(exc.body(), status_code=exc.status)
+
+
+@app.exception_handler(StarletteHTTPException)
+async def _http_exc(request: Request, exc: StarletteHTTPException):
+    if exc.status_code == 404:
+        return JSONResponse({"error": {"code": "NOT_FOUND", "message": f"No route for {request.url.path}.", "details": {"path": request.url.path}}}, status_code=404)
+    return JSONResponse({"error": {"code": "BAD_REQUEST", "message": "Method not allowed for this route.", "details": {"path": request.url.path}}}, status_code=400)
 
 
 @app.exception_handler(Exception)

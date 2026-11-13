@@ -1,0 +1,828 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "kind": "FUND",
+ "instruments": [
+  {
+   "kind": "FUND",
+   "id": "900101",
+   "name": "Kaveri Flexi Cap Fund - Regular Plan - Growth",
+   "subtitle": "Flexi Cap Fund · Regular plan",
+   "checkPath": "/fund/900101"
+  },
+  {
+   "kind": "FUND",
+   "id": "900301",
+   "name": "Godavari Midcap Fund - Direct Plan - Growth",
+   "subtitle": "Mid Cap Fund · Direct plan",
+   "checkPath": "/fund/900301"
+  }
+ ],
+ "rows": [
+  {
+   "id": "holdings",
+   "order": 1,
+   "question": "What does it invest in and who runs it?",
+   "cells": [
+    {
+     "instrumentId": "900101",
+     "sentences": [
+      {
+       "text": "Kaveri Flexi Cap Fund - Regular Plan - Growth is a Flexi Cap Fund from Kaveri Mutual Fund; its money is 96.5% in shares, 0.0% in debt and 3.5% in cash and similar assets.",
+       "templateId": "fnd.holdings.what",
+       "generator": "template"
+      },
+      {
+       "text": "It lists 44 companies in its portfolio, and the largest are Reliance Industries Ltd (7.0%), Mphasis Ltd (4.9%) and Radico Khaitan Ltd (4.3%).",
+       "templateId": "fnd.holdings.top",
+       "generator": "template"
+      },
+      {
+       "text": "It is run by Ananya Rao; the longest-serving manager has been in charge for 7.6 years.",
+       "templateId": "fnd.holdings.managers",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "equity_share",
+       "label": "Share of the fund held in shares",
+       "value": 96.5,
+       "unit": "PCT",
+       "display": "96.5%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "THRESHOLD",
+         "label": "Category minimum",
+         "value": 65.0,
+         "unit": "PCT",
+         "display": "65.0%"
+        }
+       ],
+       "termId": null
+      },
+      {
+       "id": "holdings_count",
+       "label": "Number of companies held",
+       "value": 44,
+       "unit": "COUNT",
+       "display": "44",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for Flexi Cap Fund funds",
+         "value": 58,
+         "unit": "COUNT",
+         "display": "58"
+        }
+       ],
+       "termId": null
+      },
+      {
+       "id": "manager_tenure",
+       "label": "Time the longest-serving manager has run it",
+       "value": 7.58,
+       "unit": "YEARS",
+       "display": "7.6 years",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for Flexi Cap Fund funds",
+         "value": 5.1,
+         "unit": "YEARS",
+         "display": "5.1 years"
+        }
+       ],
+       "termId": "fund_manager"
+      }
+     ]
+    },
+    {
+     "instrumentId": "900301",
+     "sentences": [
+      {
+       "text": "Godavari Midcap Fund - Direct Plan - Growth is a Mid Cap Fund from Godavari Mutual Fund; its money is 95.8% in shares, 0.0% in debt and 4.2% in cash and similar assets.",
+       "templateId": "fnd.holdings.what",
+       "generator": "template"
+      },
+      {
+       "text": "It lists 38 companies in its portfolio, and the largest are Persistent Systems Ltd (9.2%), Voltas Ltd (7.6%) and HDFC Bank Ltd (6.0%).",
+       "templateId": "fnd.holdings.top",
+       "generator": "template"
+      },
+      {
+       "text": "It is run by Vikram Iyer and Sneha Kulkarni; the longest-serving manager has been in charge for 9.7 years.",
+       "templateId": "fnd.holdings.managers",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "equity_share",
+       "label": "Share of the fund held in shares",
+       "value": 95.8,
+       "unit": "PCT",
+       "display": "95.8%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "THRESHOLD",
+         "label": "Category minimum",
+         "value": 65.0,
+         "unit": "PCT",
+         "display": "65.0%"
+        }
+       ],
+       "termId": null
+      },
+      {
+       "id": "holdings_count",
+       "label": "Number of companies held",
+       "value": 38,
+       "unit": "COUNT",
+       "display": "38",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for Mid Cap Fund funds",
+         "value": 65,
+         "unit": "COUNT",
+         "display": "65"
+        }
+       ],
+       "termId": null
+      },
+      {
+       "id": "manager_tenure",
+       "label": "Time the longest-serving manager has run it",
+       "value": 9.74,
+       "unit": "YEARS",
+       "display": "9.7 years",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for Mid Cap Fund funds",
+         "value": 4.8,
+         "unit": "YEARS",
+         "display": "4.8 years"
+        }
+       ],
+       "termId": "fund_manager"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "performance",
+   "order": 2,
+   "question": "How has it done against its benchmark and category over 3, 5 and 10 years?",
+   "cells": [
+    {
+     "instrumentId": "900101",
+     "sentences": [
+      {
+       "text": "Over the last 3 years the fund returned 9.0% a year, above its benchmark (Nifty 500 TRI) at 8.4% and below the Flexi Cap Fund average of 9.2%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 5 years the fund returned 8.3% a year, above its benchmark (Nifty 500 TRI) at 7.3% and above the Flexi Cap Fund average of 7.9%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 10 years the fund returned 12.9% a year, below its benchmark (Nifty 500 TRI) at 13.5% and below the Flexi Cap Fund average of 14.3%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "return_3y",
+       "label": "Return over 3 years, yearly average",
+       "value": 9.02,
+       "unit": "PCT",
+       "display": "9.0%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty 500 TRI, same period",
+         "value": 8.45,
+         "unit": "PCT",
+         "display": "8.5%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Flexi Cap Fund funds",
+         "value": 9.2,
+         "unit": "PCT",
+         "display": "9.2%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "return_5y",
+       "label": "Return over 5 years, yearly average",
+       "value": 8.34,
+       "unit": "PCT",
+       "display": "8.3%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty 500 TRI, same period",
+         "value": 7.33,
+         "unit": "PCT",
+         "display": "7.3%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Flexi Cap Fund funds",
+         "value": 7.9,
+         "unit": "PCT",
+         "display": "7.9%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "return_10y",
+       "label": "Return over 10 years, yearly average",
+       "value": 12.87,
+       "unit": "PCT",
+       "display": "12.9%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty 500 TRI, same period",
+         "value": 13.54,
+         "unit": "PCT",
+         "display": "13.5%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Flexi Cap Fund funds",
+         "value": 14.3,
+         "unit": "PCT",
+         "display": "14.3%"
+        }
+       ],
+       "termId": "cagr"
+      }
+     ]
+    },
+    {
+     "instrumentId": "900301",
+     "sentences": [
+      {
+       "text": "Over the last 3 years the fund returned 14.3% a year, above its benchmark (Nifty Midcap 150 TRI) at 12.5% and above the Mid Cap Fund average of 13.4%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 5 years the fund returned 12.4% a year, above its benchmark (Nifty Midcap 150 TRI) at 11.5% and above the Mid Cap Fund average of 12.1%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 10 years the fund returned 18.9% a year, above its benchmark (Nifty Midcap 150 TRI) at 18.6% and below the Mid Cap Fund average of 19.5%.",
+       "templateId": "fnd.perf.period",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "return_3y",
+       "label": "Return over 3 years, yearly average",
+       "value": 14.32,
+       "unit": "PCT",
+       "display": "14.3%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty Midcap 150 TRI, same period",
+         "value": 12.47,
+         "unit": "PCT",
+         "display": "12.5%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Mid Cap Fund funds",
+         "value": 13.4,
+         "unit": "PCT",
+         "display": "13.4%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "return_5y",
+       "label": "Return over 5 years, yearly average",
+       "value": 12.36,
+       "unit": "PCT",
+       "display": "12.4%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty Midcap 150 TRI, same period",
+         "value": 11.45,
+         "unit": "PCT",
+         "display": "11.5%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Mid Cap Fund funds",
+         "value": 12.1,
+         "unit": "PCT",
+         "display": "12.1%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "return_10y",
+       "label": "Return over 10 years, yearly average",
+       "value": 18.91,
+       "unit": "PCT",
+       "display": "18.9%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty Midcap 150 TRI, same period",
+         "value": 18.61,
+         "unit": "PCT",
+         "display": "18.6%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Mid Cap Fund funds",
+         "value": 19.5,
+         "unit": "PCT",
+         "display": "19.5%"
+        }
+       ],
+       "termId": "cagr"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bumpiness",
+   "order": 3,
+   "question": "How bumpy has the ride been?",
+   "cells": [
+    {
+     "instrumentId": "900101",
+     "sentences": [
+      {
+       "text": "On ₹1 lakh, the fund's worst fall of 13.3% would have been about ₹13,300 between its high and its low point.",
+       "templateId": "fnd.bump.rupees",
+       "generator": "template"
+      },
+      {
+       "text": "Over the same dates the worst fall in its benchmark was 14.9%, and the Flexi Cap Fund average worst fall is 15.7%.",
+       "templateId": "fnd.bump.compare",
+       "generator": "template"
+      },
+      {
+       "text": "It took 195 days from the lowest point to get back to the earlier high.",
+       "templateId": "fnd.bump.recovered",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "worst_fall",
+       "label": "Worst fall from a high to a later low",
+       "value": -13.3,
+       "unit": "PCT_CHANGE",
+       "display": "-13.3%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty 500 TRI, same period",
+         "value": -14.93,
+         "unit": "PCT_CHANGE",
+         "display": "-14.9%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Flexi Cap Fund funds",
+         "value": -15.7,
+         "unit": "PCT_CHANGE",
+         "display": "-15.7%"
+        }
+       ],
+       "termId": "worst_fall"
+      },
+      {
+       "id": "recovery_time",
+       "label": "Time to get back to the earlier high",
+       "value": 195,
+       "unit": "DAYS",
+       "display": "195 days",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty 500 TRI, same period",
+         "value": 65,
+         "unit": "DAYS",
+         "display": "65 days"
+        }
+       ],
+       "termId": "recovery_time"
+      }
+     ]
+    },
+    {
+     "instrumentId": "900301",
+     "sentences": [
+      {
+       "text": "On ₹1 lakh, the fund's worst fall of 14.2% would have been about ₹14,182 between its high and its low point.",
+       "templateId": "fnd.bump.rupees",
+       "generator": "template"
+      },
+      {
+       "text": "Over the same dates the worst fall in its benchmark was 15.5%, and the Mid Cap Fund average worst fall is 16.3%.",
+       "templateId": "fnd.bump.compare",
+       "generator": "template"
+      },
+      {
+       "text": "It took 200 days from the lowest point to get back to the earlier high.",
+       "templateId": "fnd.bump.recovered",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "worst_fall",
+       "label": "Worst fall from a high to a later low",
+       "value": -14.18,
+       "unit": "PCT_CHANGE",
+       "display": "-14.2%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty Midcap 150 TRI, same period",
+         "value": -15.48,
+         "unit": "PCT_CHANGE",
+         "display": "-15.5%"
+        },
+        {
+         "kind": "CATEGORY",
+         "label": "Average for Mid Cap Fund funds",
+         "value": -16.3,
+         "unit": "PCT_CHANGE",
+         "display": "-16.3%"
+        }
+       ],
+       "termId": "worst_fall"
+      },
+      {
+       "id": "recovery_time",
+       "label": "Time to get back to the earlier high",
+       "value": 200,
+       "unit": "DAYS",
+       "display": "200 days",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "BENCHMARK",
+         "label": "Nifty Midcap 150 TRI, same period",
+         "value": 59,
+         "unit": "DAYS",
+         "display": "59 days"
+        }
+       ],
+       "termId": "recovery_time"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "order": 4,
+   "question": "What does it cost per year on your amount?",
+   "cells": [
+    {
+     "instrumentId": "900101",
+     "sentences": [
+      {
+       "text": "On ₹1 lakh (the same amount used for every fund compared) the fund charges about ₹1,720 a year, an expense ratio of 1.7%; the Flexi Cap Fund median for regular plans is 1.6%.",
+       "templateId": "fnd.cost.yearly",
+       "generator": "template"
+      },
+      {
+       "text": "The direct plan of the same fund would charge ₹680 on the same amount, so the regular plan costs ₹1,040 more each year.",
+       "templateId": "fnd.cost.gap_regular",
+       "generator": "template"
+      },
+      {
+       "text": "The fee is taken out of the fund's value every day, so it is never billed to you separately.",
+       "templateId": "fnd.cost.how",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "expense_ratio",
+       "label": "Yearly fee (expense ratio)",
+       "value": 1.72,
+       "unit": "PCT",
+       "display": "1.7%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for regular plans in Flexi Cap Fund",
+         "value": 1.61,
+         "unit": "PCT",
+         "display": "1.6%"
+        }
+       ],
+       "termId": "expense_ratio"
+      },
+      {
+       "id": "yearly_cost",
+       "label": "Yearly fee in rupees on your amount",
+       "value": 1720,
+       "unit": "INR",
+       "display": "₹1,720",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PLAN_TWIN",
+         "label": "Direct plan of the same fund",
+         "value": 680,
+         "unit": "INR",
+         "display": "₹680"
+        }
+       ],
+       "termId": "expense_ratio"
+      },
+      {
+       "id": "twin_gap",
+       "label": "Yearly difference between regular and direct plan",
+       "value": 1040,
+       "unit": "INR",
+       "display": "₹1,040",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PLAN_TWIN",
+         "label": "Cost of the other plan",
+         "value": 680,
+         "unit": "INR",
+         "display": "₹680"
+        }
+       ],
+       "termId": "regular_plan"
+      }
+     ]
+    },
+    {
+     "instrumentId": "900301",
+     "sentences": [
+      {
+       "text": "On ₹1 lakh (the same amount used for every fund compared) the fund charges about ₹740 a year, an expense ratio of 0.7%; the Mid Cap Fund median for direct plans is 0.8%.",
+       "templateId": "fnd.cost.yearly",
+       "generator": "template"
+      },
+      {
+       "text": "No direct or regular twin of this fund is known, so no plan comparison is shown.",
+       "templateId": "fnd.cost.no_twin",
+       "generator": "template"
+      },
+      {
+       "text": "The fee is taken out of the fund's value every day, so it is never billed to you separately.",
+       "templateId": "fnd.cost.how",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "expense_ratio",
+       "label": "Yearly fee (expense ratio)",
+       "value": 0.74,
+       "unit": "PCT",
+       "display": "0.7%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "Median for direct plans in Mid Cap Fund",
+         "value": 0.78,
+         "unit": "PCT",
+         "display": "0.8%"
+        }
+       ],
+       "termId": "expense_ratio"
+      },
+      {
+       "id": "yearly_cost",
+       "label": "Yearly fee in rupees on your amount",
+       "value": 740,
+       "unit": "INR",
+       "display": "₹740",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "CATEGORY",
+         "label": "At the Mid Cap Fund median fee",
+         "value": 780,
+         "unit": "INR",
+         "display": "₹780"
+        }
+       ],
+       "termId": "expense_ratio"
+      },
+      {
+       "id": "twin_gap",
+       "label": "Yearly difference between regular and direct plan",
+       "value": null,
+       "unit": "INR",
+       "display": "Not available",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PLAN_TWIN",
+         "label": "No matching plan known",
+         "value": null,
+         "unit": "INR",
+         "display": "Not available"
+        }
+       ],
+       "termId": "direct_plan"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recent",
+   "order": 5,
+   "question": "What changed recently?",
+   "cells": [
+    {
+     "instrumentId": "900101",
+     "sentences": [
+      {
+       "text": "The fund's size is ₹18,240 crore, compared with ₹15,980 crore a year earlier, a change of +14.1%.",
+       "templateId": "fnd.recent.aum",
+       "generator": "template"
+      },
+      {
+       "text": "Compared with last month, Hindustan Unilever Ltd and Deccan Infra Projects Ltd entered the ten largest holdings and Voltas Ltd and Supreme Industries Ltd left them.",
+       "templateId": "fnd.recent.top10",
+       "generator": "template"
+      },
+      {
+       "text": "No manager, benchmark or fee changes are listed in the last six months.",
+       "templateId": "fnd.recent.event_none",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "aum",
+       "label": "Size of the fund (assets under management)",
+       "value": 182400000000,
+       "unit": "INR",
+       "display": "₹18,240 crore",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "1 year ago",
+         "value": 159800000000,
+         "unit": "INR",
+         "display": "₹15,980 crore"
+        }
+       ],
+       "termId": "aum"
+      },
+      {
+       "id": "aum_change_1y",
+       "label": "Change in fund size over 1 year",
+       "value": 14.14,
+       "unit": "PCT_CHANGE",
+       "display": "+14.1%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "Fund size a year ago",
+         "value": 159800000000,
+         "unit": "INR",
+         "display": "₹15,980 crore"
+        }
+       ],
+       "termId": "aum"
+      }
+     ]
+    },
+    {
+     "instrumentId": "900301",
+     "sentences": [
+      {
+       "text": "The fund's size is ₹24,100 crore, compared with ₹19,850 crore a year earlier, a change of +21.4%.",
+       "templateId": "fnd.recent.aum",
+       "generator": "template"
+      },
+      {
+       "text": "Compared with last month, Coforge Ltd and Grindwell Norton Ltd entered the ten largest holdings and The Federal Bank Ltd and ICICI Bank Ltd left them.",
+       "templateId": "fnd.recent.top10",
+       "generator": "template"
+      },
+      {
+       "text": "No manager, benchmark or fee changes are listed in the last six months.",
+       "templateId": "fnd.recent.event_none",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "aum",
+       "label": "Size of the fund (assets under management)",
+       "value": 241000000000,
+       "unit": "INR",
+       "display": "₹24,100 crore",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "1 year ago",
+         "value": 198500000000,
+         "unit": "INR",
+         "display": "₹19,850 crore"
+        }
+       ],
+       "termId": "aum"
+      },
+      {
+       "id": "aum_change_1y",
+       "label": "Change in fund size over 1 year",
+       "value": 21.41,
+       "unit": "PCT_CHANGE",
+       "display": "+21.4%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "Fund size a year ago",
+         "value": 198500000000,
+         "unit": "INR",
+         "display": "₹19,850 crore"
+        }
+       ],
+       "termId": "aum"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

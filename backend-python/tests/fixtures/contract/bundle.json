@@ -1,0 +1,1065 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "stocks": [
+  {
+   "symbol": "TCS",
+   "name": "Tata Consultancy Services Ltd",
+   "isin": "INESMP000002",
+   "sector": "Information Technology",
+   "industry": "IT Services",
+   "sizeBand": "LARGE",
+   "subtitle": "Information Technology · Large cap",
+   "lastPrice": 3925.4,
+   "lastPriceDate": "2026-10-30",
+   "priceOneYearAgo": 3007.22,
+   "source": "Sample data",
+   "checkAvailable": true
+  },
+  {
+   "symbol": "HDFCBANK",
+   "name": "HDFC Bank Ltd",
+   "isin": "INESMP000003",
+   "sector": "Financial Services",
+   "industry": "Private Sector Bank",
+   "sizeBand": "LARGE",
+   "subtitle": "Financial Services · Large cap",
+   "lastPrice": 1712.3,
+   "lastPriceDate": "2026-10-30",
+   "priceOneYearAgo": 1450.53,
+   "source": "Sample data",
+   "checkAvailable": true
+  }
+ ],
+ "funds": [
+  {
+   "schemeCode": "900101",
+   "isin": "INFSMP900101",
+   "name": "Kaveri Flexi Cap Fund - Regular Plan - Growth",
+   "subtitle": "Flexi Cap Fund · Regular plan",
+   "amc": "Kaveri Mutual Fund",
+   "category": "Flexi Cap Fund",
+   "categoryGroup": "EQUITY",
+   "planType": "REGULAR",
+   "terPct": 1.72,
+   "categoryMedianTerPct": 1.61,
+   "twinSchemeCode": "900102",
+   "twinName": "Kaveri Flexi Cap Fund - Direct Plan - Growth",
+   "twinTerPct": 0.68,
+   "nav": 62.4012,
+   "navDate": "2026-10-30",
+   "navOneYearAgo": 53.2096,
+   "assetMix": {
+    "equityPct": 96.5,
+    "debtPct": 0.0,
+    "cashPct": 3.5,
+    "otherPct": 0.0
+   },
+   "portfolioDate": "2026-09-30",
+   "holdings": [
+    {
+     "key": "RELIANCE",
+     "symbol": "RELIANCE",
+     "isin": null,
+     "name": "Reliance Industries Ltd",
+     "sector": "Oil Gas & Consumable Fuels",
+     "sizeBand": "LARGE",
+     "weightPct": 6.98,
+     "checkAvailable": true
+    },
+    {
+     "key": "MPHASIS",
+     "symbol": "MPHASIS",
+     "isin": null,
+     "name": "Mphasis Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "MID",
+     "weightPct": 4.89,
+     "checkAvailable": false
+    },
+    {
+     "key": "RADICO",
+     "symbol": "RADICO",
+     "isin": null,
+     "name": "Radico Khaitan Ltd",
+     "sector": "FMCG",
+     "sizeBand": "SMALL",
+     "weightPct": 4.25,
+     "checkAvailable": false
+    },
+    {
+     "key": "HDFCBANK",
+     "symbol": "HDFCBANK",
+     "isin": null,
+     "name": "HDFC Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 4.15,
+     "checkAvailable": true
+    },
+    {
+     "key": "ITC",
+     "symbol": "ITC",
+     "isin": null,
+     "name": "ITC Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 3.48,
+     "checkAvailable": true
+    },
+    {
+     "key": "MARUTI",
+     "symbol": "MARUTI",
+     "isin": null,
+     "name": "Maruti Suzuki India Ltd",
+     "sector": "Automobile & Auto Components",
+     "sizeBand": "LARGE",
+     "weightPct": 3.28,
+     "checkAvailable": true
+    },
+    {
+     "key": "SUNTECK",
+     "symbol": "SUNTECK",
+     "isin": null,
+     "name": "Sunteck Realty Ltd",
+     "sector": "Realty",
+     "sizeBand": "SMALL",
+     "weightPct": 3.23,
+     "checkAvailable": false
+    },
+    {
+     "key": "SUNPHARMA",
+     "symbol": "SUNPHARMA",
+     "isin": null,
+     "name": "Sun Pharmaceutical Industries Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 3.12,
+     "checkAvailable": true
+    },
+    {
+     "key": "HINDUNILVR",
+     "symbol": "HINDUNILVR",
+     "isin": null,
+     "name": "Hindustan Unilever Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 3.09,
+     "checkAvailable": false
+    },
+    {
+     "key": "DECCANINF",
+     "symbol": "DECCANINF",
+     "isin": null,
+     "name": "Deccan Infra Projects Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "SMALL",
+     "weightPct": 2.97,
+     "checkAvailable": true
+    },
+    {
+     "key": "SUPREMEIND",
+     "symbol": "SUPREMEIND",
+     "isin": null,
+     "name": "Supreme Industries Ltd",
+     "sector": "Chemicals",
+     "sizeBand": "MID",
+     "weightPct": 2.97,
+     "checkAvailable": false
+    },
+    {
+     "key": "VOLTAS",
+     "symbol": "VOLTAS",
+     "isin": null,
+     "name": "Voltas Ltd",
+     "sector": "Consumer Durables",
+     "sizeBand": "MID",
+     "weightPct": 2.85,
+     "checkAvailable": true
+    },
+    {
+     "key": "TCS",
+     "symbol": "TCS",
+     "isin": null,
+     "name": "Tata Consultancy Services Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 2.74,
+     "checkAvailable": true
+    },
+    {
+     "key": "ASIANPAINT",
+     "symbol": "ASIANPAINT",
+     "isin": null,
+     "name": "Asian Paints Ltd",
+     "sector": "Consumer Durables",
+     "sizeBand": "LARGE",
+     "weightPct": 2.69,
+     "checkAvailable": true
+    },
+    {
+     "key": "COFORGE",
+     "symbol": "COFORGE",
+     "isin": null,
+     "name": "Coforge Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "MID",
+     "weightPct": 2.66,
+     "checkAvailable": false
+    },
+    {
+     "key": "BAJFINANCE",
+     "symbol": "BAJFINANCE",
+     "isin": null,
+     "name": "Bajaj Finance Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.52,
+     "checkAvailable": false
+    },
+    {
+     "key": "ICICIBANK",
+     "symbol": "ICICIBANK",
+     "isin": null,
+     "name": "ICICI Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.52,
+     "checkAvailable": false
+    },
+    {
+     "key": "AXISBANK",
+     "symbol": "AXISBANK",
+     "isin": null,
+     "name": "Axis Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.3,
+     "checkAvailable": false
+    },
+    {
+     "key": "TECHM",
+     "symbol": "TECHM",
+     "isin": null,
+     "name": "Tech Mahindra Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 2.18,
+     "checkAvailable": false
+    },
+    {
+     "key": "PIIND",
+     "symbol": "PIIND",
+     "isin": null,
+     "name": "PI Industries Ltd",
+     "sector": "Chemicals",
+     "sizeBand": "MID",
+     "weightPct": 2.11,
+     "checkAvailable": false
+    },
+    {
+     "key": "ABCAPITAL",
+     "symbol": "ABCAPITAL",
+     "isin": null,
+     "name": "Aditya Birla Capital Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "MID",
+     "weightPct": 1.93,
+     "checkAvailable": false
+    },
+    {
+     "key": "KOTAKBANK",
+     "symbol": "KOTAKBANK",
+     "isin": null,
+     "name": "Kotak Mahindra Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 1.79,
+     "checkAvailable": false
+    },
+    {
+     "key": "SBIN",
+     "symbol": "SBIN",
+     "isin": null,
+     "name": "State Bank of India",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 1.74,
+     "checkAvailable": false
+    },
+    {
+     "key": "HINDALCO",
+     "symbol": "HINDALCO",
+     "isin": null,
+     "name": "Hindalco Industries Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 1.55,
+     "checkAvailable": false
+    },
+    {
+     "key": "BAJAJFINSV",
+     "symbol": "BAJAJFINSV",
+     "isin": null,
+     "name": "Bajaj Finserv Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 1.54,
+     "checkAvailable": false
+    },
+    {
+     "key": "GRINDWELL",
+     "symbol": "GRINDWELL",
+     "isin": null,
+     "name": "Grindwell Norton Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "SMALL",
+     "weightPct": 1.54,
+     "checkAvailable": false
+    },
+    {
+     "key": "IDFCFIRSTB",
+     "symbol": "IDFCFIRSTB",
+     "isin": null,
+     "name": "IDFC First Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "MID",
+     "weightPct": 1.49,
+     "checkAvailable": false
+    },
+    {
+     "key": "HCLTECH",
+     "symbol": "HCLTECH",
+     "isin": null,
+     "name": "HCL Technologies Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 1.46,
+     "checkAvailable": false
+    },
+    {
+     "key": "CUMMINSIND",
+     "symbol": "CUMMINSIND",
+     "isin": null,
+     "name": "Cummins India Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "MID",
+     "weightPct": 1.23,
+     "checkAvailable": false
+    },
+    {
+     "key": "NTPC",
+     "symbol": "NTPC",
+     "isin": null,
+     "name": "NTPC Ltd",
+     "sector": "Power",
+     "sizeBand": "LARGE",
+     "weightPct": 1.21,
+     "checkAvailable": false
+    },
+    {
+     "key": "LT",
+     "symbol": "LT",
+     "isin": null,
+     "name": "Larsen & Toubro Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "LARGE",
+     "weightPct": 1.19,
+     "checkAvailable": true
+    },
+    {
+     "key": "WIPRO",
+     "symbol": "WIPRO",
+     "isin": null,
+     "name": "Wipro Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 1.14,
+     "checkAvailable": false
+    },
+    {
+     "key": "TITAN",
+     "symbol": "TITAN",
+     "isin": null,
+     "name": "Titan Company Ltd",
+     "sector": "Consumer Durables",
+     "sizeBand": "LARGE",
+     "weightPct": 1.11,
+     "checkAvailable": false
+    },
+    {
+     "key": "MAXHEALTH",
+     "symbol": "MAXHEALTH",
+     "isin": null,
+     "name": "Max Healthcare Institute Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "MID",
+     "weightPct": 1.08,
+     "checkAvailable": false
+    },
+    {
+     "key": "GRASIM",
+     "symbol": "GRASIM",
+     "isin": null,
+     "name": "Grasim Industries Ltd",
+     "sector": "Construction Materials",
+     "sizeBand": "LARGE",
+     "weightPct": 1.06,
+     "checkAvailable": false
+    },
+    {
+     "key": "LUPIN",
+     "symbol": "LUPIN",
+     "isin": null,
+     "name": "Lupin Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "MID",
+     "weightPct": 1.03,
+     "checkAvailable": false
+    },
+    {
+     "key": "POWERGRID",
+     "symbol": "POWERGRID",
+     "isin": null,
+     "name": "Power Grid Corporation of India Ltd",
+     "sector": "Power",
+     "sizeBand": "LARGE",
+     "weightPct": 1.03,
+     "checkAvailable": false
+    },
+    {
+     "key": "AUROPHARMA",
+     "symbol": "AUROPHARMA",
+     "isin": null,
+     "name": "Aurobindo Pharma Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "MID",
+     "weightPct": 1.0,
+     "checkAvailable": false
+    },
+    {
+     "key": "POLYCAB",
+     "symbol": "POLYCAB",
+     "isin": null,
+     "name": "Polycab India Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "MID",
+     "weightPct": 0.98,
+     "checkAvailable": false
+    },
+    {
+     "key": "SRF",
+     "symbol": "SRF",
+     "isin": null,
+     "name": "SRF Ltd",
+     "sector": "Chemicals",
+     "sizeBand": "MID",
+     "weightPct": 0.9,
+     "checkAvailable": false
+    },
+    {
+     "key": "NESTLEIND",
+     "symbol": "NESTLEIND",
+     "isin": null,
+     "name": "Nestle India Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 0.89,
+     "checkAvailable": false
+    },
+    {
+     "key": "DRREDDY",
+     "symbol": "DRREDDY",
+     "isin": null,
+     "name": "Dr. Reddy's Laboratories Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 0.84,
+     "checkAvailable": false
+    },
+    {
+     "key": "PERSISTENT",
+     "symbol": "PERSISTENT",
+     "isin": null,
+     "name": "Persistent Systems Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "MID",
+     "weightPct": 0.76,
+     "checkAvailable": false
+    },
+    {
+     "key": "TATASTEEL",
+     "symbol": "TATASTEEL",
+     "isin": null,
+     "name": "Tata Steel Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 0.68,
+     "checkAvailable": true
+    }
+   ],
+   "source": "Sample data"
+  },
+  {
+   "schemeCode": "900201",
+   "isin": "INFSMP900201",
+   "name": "Narmada Nifty 50 Index Fund - Direct Plan - Growth",
+   "subtitle": "Index Fund · Direct plan",
+   "amc": "Narmada Mutual Fund",
+   "category": "Index Fund",
+   "categoryGroup": "EQUITY",
+   "planType": "DIRECT",
+   "terPct": 0.18,
+   "categoryMedianTerPct": 0.2,
+   "twinSchemeCode": null,
+   "twinName": null,
+   "twinTerPct": null,
+   "nav": 21.8543,
+   "navDate": "2026-10-30",
+   "navOneYearAgo": 19.0527,
+   "assetMix": {
+    "equityPct": 99.7,
+    "debtPct": 0.0,
+    "cashPct": 0.3,
+    "otherPct": 0.0
+   },
+   "portfolioDate": "2026-09-30",
+   "holdings": [
+    {
+     "key": "RELIANCE",
+     "symbol": "RELIANCE",
+     "isin": null,
+     "name": "Reliance Industries Ltd",
+     "sector": "Oil Gas & Consumable Fuels",
+     "sizeBand": "LARGE",
+     "weightPct": 9.48,
+     "checkAvailable": true
+    },
+    {
+     "key": "HDFCBANK",
+     "symbol": "HDFCBANK",
+     "isin": null,
+     "name": "HDFC Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 7.28,
+     "checkAvailable": true
+    },
+    {
+     "key": "TCS",
+     "symbol": "TCS",
+     "isin": null,
+     "name": "Tata Consultancy Services Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 5.96,
+     "checkAvailable": true
+    },
+    {
+     "key": "BHARTIARTL",
+     "symbol": "BHARTIARTL",
+     "isin": null,
+     "name": "Bharti Airtel Ltd",
+     "sector": "Telecommunication",
+     "sizeBand": "LARGE",
+     "weightPct": 5.06,
+     "checkAvailable": true
+    },
+    {
+     "key": "ICICIBANK",
+     "symbol": "ICICIBANK",
+     "isin": null,
+     "name": "ICICI Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 4.4,
+     "checkAvailable": false
+    },
+    {
+     "key": "INFY",
+     "symbol": "INFY",
+     "isin": null,
+     "name": "Infosys Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 3.9,
+     "checkAvailable": true
+    },
+    {
+     "key": "SBIN",
+     "symbol": "SBIN",
+     "isin": null,
+     "name": "State Bank of India",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 3.51,
+     "checkAvailable": false
+    },
+    {
+     "key": "ITC",
+     "symbol": "ITC",
+     "isin": null,
+     "name": "ITC Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 3.19,
+     "checkAvailable": true
+    },
+    {
+     "key": "HINDUNILVR",
+     "symbol": "HINDUNILVR",
+     "isin": null,
+     "name": "Hindustan Unilever Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 2.93,
+     "checkAvailable": false
+    },
+    {
+     "key": "LT",
+     "symbol": "LT",
+     "isin": null,
+     "name": "Larsen & Toubro Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "LARGE",
+     "weightPct": 2.71,
+     "checkAvailable": true
+    },
+    {
+     "key": "KOTAKBANK",
+     "symbol": "KOTAKBANK",
+     "isin": null,
+     "name": "Kotak Mahindra Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.52,
+     "checkAvailable": false
+    },
+    {
+     "key": "BAJFINANCE",
+     "symbol": "BAJFINANCE",
+     "isin": null,
+     "name": "Bajaj Finance Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.36,
+     "checkAvailable": false
+    },
+    {
+     "key": "AXISBANK",
+     "symbol": "AXISBANK",
+     "isin": null,
+     "name": "Axis Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 2.22,
+     "checkAvailable": false
+    },
+    {
+     "key": "HCLTECH",
+     "symbol": "HCLTECH",
+     "isin": null,
+     "name": "HCL Technologies Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 2.09,
+     "checkAvailable": false
+    },
+    {
+     "key": "MARUTI",
+     "symbol": "MARUTI",
+     "isin": null,
+     "name": "Maruti Suzuki India Ltd",
+     "sector": "Automobile & Auto Components",
+     "sizeBand": "LARGE",
+     "weightPct": 1.98,
+     "checkAvailable": true
+    },
+    {
+     "key": "SUNPHARMA",
+     "symbol": "SUNPHARMA",
+     "isin": null,
+     "name": "Sun Pharmaceutical Industries Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 1.88,
+     "checkAvailable": true
+    },
+    {
+     "key": "NTPC",
+     "symbol": "NTPC",
+     "isin": null,
+     "name": "NTPC Ltd",
+     "sector": "Power",
+     "sizeBand": "LARGE",
+     "weightPct": 1.79,
+     "checkAvailable": false
+    },
+    {
+     "key": "ULTRACEMCO",
+     "symbol": "ULTRACEMCO",
+     "isin": null,
+     "name": "UltraTech Cement Ltd",
+     "sector": "Construction Materials",
+     "sizeBand": "LARGE",
+     "weightPct": 1.71,
+     "checkAvailable": false
+    },
+    {
+     "key": "TITAN",
+     "symbol": "TITAN",
+     "isin": null,
+     "name": "Titan Company Ltd",
+     "sector": "Consumer Durables",
+     "sizeBand": "LARGE",
+     "weightPct": 1.64,
+     "checkAvailable": false
+    },
+    {
+     "key": "ONGC",
+     "symbol": "ONGC",
+     "isin": null,
+     "name": "Oil and Natural Gas Corporation Ltd",
+     "sector": "Oil Gas & Consumable Fuels",
+     "sizeBand": "LARGE",
+     "weightPct": 1.57,
+     "checkAvailable": false
+    },
+    {
+     "key": "POWERGRID",
+     "symbol": "POWERGRID",
+     "isin": null,
+     "name": "Power Grid Corporation of India Ltd",
+     "sector": "Power",
+     "sizeBand": "LARGE",
+     "weightPct": 1.51,
+     "checkAvailable": false
+    },
+    {
+     "key": "ADANIPORTS",
+     "symbol": "ADANIPORTS",
+     "isin": null,
+     "name": "Adani Ports and Special Economic Zone Ltd",
+     "sector": "Services",
+     "sizeBand": "LARGE",
+     "weightPct": 1.45,
+     "checkAvailable": false
+    },
+    {
+     "key": "ASIANPAINT",
+     "symbol": "ASIANPAINT",
+     "isin": null,
+     "name": "Asian Paints Ltd",
+     "sector": "Consumer Durables",
+     "sizeBand": "LARGE",
+     "weightPct": 1.4,
+     "checkAvailable": true
+    },
+    {
+     "key": "BAJAJFINSV",
+     "symbol": "BAJAJFINSV",
+     "isin": null,
+     "name": "Bajaj Finserv Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 1.35,
+     "checkAvailable": false
+    },
+    {
+     "key": "COALINDIA",
+     "symbol": "COALINDIA",
+     "isin": null,
+     "name": "Coal India Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 1.31,
+     "checkAvailable": false
+    },
+    {
+     "key": "WIPRO",
+     "symbol": "WIPRO",
+     "isin": null,
+     "name": "Wipro Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 1.26,
+     "checkAvailable": false
+    },
+    {
+     "key": "NESTLEIND",
+     "symbol": "NESTLEIND",
+     "isin": null,
+     "name": "Nestle India Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 1.22,
+     "checkAvailable": false
+    },
+    {
+     "key": "JSWSTEEL",
+     "symbol": "JSWSTEEL",
+     "isin": null,
+     "name": "JSW Steel Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 1.19,
+     "checkAvailable": false
+    },
+    {
+     "key": "TATASTEEL",
+     "symbol": "TATASTEEL",
+     "isin": null,
+     "name": "Tata Steel Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 1.15,
+     "checkAvailable": true
+    },
+    {
+     "key": "HINDALCO",
+     "symbol": "HINDALCO",
+     "isin": null,
+     "name": "Hindalco Industries Ltd",
+     "sector": "Metals & Mining",
+     "sizeBand": "LARGE",
+     "weightPct": 1.12,
+     "checkAvailable": false
+    },
+    {
+     "key": "GRASIM",
+     "symbol": "GRASIM",
+     "isin": null,
+     "name": "Grasim Industries Ltd",
+     "sector": "Construction Materials",
+     "sizeBand": "LARGE",
+     "weightPct": 1.09,
+     "checkAvailable": false
+    },
+    {
+     "key": "TECHM",
+     "symbol": "TECHM",
+     "isin": null,
+     "name": "Tech Mahindra Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 1.06,
+     "checkAvailable": false
+    },
+    {
+     "key": "DRREDDY",
+     "symbol": "DRREDDY",
+     "isin": null,
+     "name": "Dr. Reddy's Laboratories Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 1.03,
+     "checkAvailable": false
+    },
+    {
+     "key": "CIPLA",
+     "symbol": "CIPLA",
+     "isin": null,
+     "name": "Cipla Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 1.01,
+     "checkAvailable": false
+    },
+    {
+     "key": "APOLLOHOSP",
+     "symbol": "APOLLOHOSP",
+     "isin": null,
+     "name": "Apollo Hospitals Enterprise Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 0.98,
+     "checkAvailable": false
+    },
+    {
+     "key": "BRITANNIA",
+     "symbol": "BRITANNIA",
+     "isin": null,
+     "name": "Britannia Industries Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 0.96,
+     "checkAvailable": false
+    },
+    {
+     "key": "EICHERMOT",
+     "symbol": "EICHERMOT",
+     "isin": null,
+     "name": "Eicher Motors Ltd",
+     "sector": "Automobile & Auto Components",
+     "sizeBand": "LARGE",
+     "weightPct": 0.94,
+     "checkAvailable": false
+    },
+    {
+     "key": "HEROMOTOCO",
+     "symbol": "HEROMOTOCO",
+     "isin": null,
+     "name": "Hero MotoCorp Ltd",
+     "sector": "Automobile & Auto Components",
+     "sizeBand": "LARGE",
+     "weightPct": 0.92,
+     "checkAvailable": false
+    },
+    {
+     "key": "BAJAJAUTO",
+     "symbol": "BAJAJAUTO",
+     "isin": null,
+     "name": "Bajaj Auto Ltd",
+     "sector": "Automobile & Auto Components",
+     "sizeBand": "LARGE",
+     "weightPct": 0.9,
+     "checkAvailable": false
+    },
+    {
+     "key": "SBILIFE",
+     "symbol": "SBILIFE",
+     "isin": null,
+     "name": "SBI Life Insurance Company Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.88,
+     "checkAvailable": false
+    },
+    {
+     "key": "HDFCLIFE",
+     "symbol": "HDFCLIFE",
+     "isin": null,
+     "name": "HDFC Life Insurance Company Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.86,
+     "checkAvailable": false
+    },
+    {
+     "key": "INDUSINDBK",
+     "symbol": "INDUSINDBK",
+     "isin": null,
+     "name": "IndusInd Bank Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.84,
+     "checkAvailable": false
+    },
+    {
+     "key": "SHRIRAMFIN",
+     "symbol": "SHRIRAMFIN",
+     "isin": null,
+     "name": "Shriram Finance Ltd",
+     "sector": "Financial Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.82,
+     "checkAvailable": false
+    },
+    {
+     "key": "TATACONSUM",
+     "symbol": "TATACONSUM",
+     "isin": null,
+     "name": "Tata Consumer Products Ltd",
+     "sector": "FMCG",
+     "sizeBand": "LARGE",
+     "weightPct": 0.81,
+     "checkAvailable": false
+    },
+    {
+     "key": "DIVISLAB",
+     "symbol": "DIVISLAB",
+     "isin": null,
+     "name": "Divi's Laboratories Ltd",
+     "sector": "Healthcare",
+     "sizeBand": "LARGE",
+     "weightPct": 0.79,
+     "checkAvailable": false
+    },
+    {
+     "key": "LTIM",
+     "symbol": "LTIM",
+     "isin": null,
+     "name": "LTIMindtree Ltd",
+     "sector": "Information Technology",
+     "sizeBand": "LARGE",
+     "weightPct": 0.78,
+     "checkAvailable": false
+    },
+    {
+     "key": "BPCL",
+     "symbol": "BPCL",
+     "isin": null,
+     "name": "Bharat Petroleum Corporation Ltd",
+     "sector": "Oil Gas & Consumable Fuels",
+     "sizeBand": "LARGE",
+     "weightPct": 0.76,
+     "checkAvailable": false
+    },
+    {
+     "key": "TRENT",
+     "symbol": "TRENT",
+     "isin": null,
+     "name": "Trent Ltd",
+     "sector": "Consumer Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.75,
+     "checkAvailable": false
+    },
+    {
+     "key": "DMART",
+     "symbol": "DMART",
+     "isin": null,
+     "name": "Avenue Supermarts Ltd",
+     "sector": "Consumer Services",
+     "sizeBand": "LARGE",
+     "weightPct": 0.74,
+     "checkAvailable": false
+    },
+    {
+     "key": "HAL",
+     "symbol": "HAL",
+     "isin": null,
+     "name": "Hindustan Aeronautics Ltd",
+     "sector": "Construction & Engineering",
+     "sizeBand": "LARGE",
+     "weightPct": 0.72,
+     "checkAvailable": false
+    }
+   ],
+   "source": "Sample data"
+  },
+  {
+   "schemeCode": "900801",
+   "isin": "INFSMP900801",
+   "name": "Ganga Short Duration Fund - Direct Plan - Growth",
+   "subtitle": "Short Duration Fund · Direct plan",
+   "amc": "Ganga Mutual Fund",
+   "category": "Short Duration Fund",
+   "categoryGroup": "DEBT",
+   "planType": "DIRECT",
+   "terPct": 0.38,
+   "categoryMedianTerPct": 0.4,
+   "twinSchemeCode": null,
+   "twinName": null,
+   "twinTerPct": null,
+   "nav": 31.7742,
+   "navDate": "2026-10-30",
+   "navOneYearAgo": 29.2156,
+   "assetMix": {
+    "equityPct": 0.0,
+    "debtPct": 93.0,
+    "cashPct": 7.0,
+    "otherPct": 0.0
+   },
+   "portfolioDate": "2026-09-30",
+   "holdings": [],
+   "source": "Sample data"
+  }
+ ],
+ "notFound": [
+  {
+   "kind": "STOCK",
+   "id": "XYZ"
+  }
+ ]
+}

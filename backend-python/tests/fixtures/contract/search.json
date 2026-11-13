@@ -1,0 +1,20 @@
+{
+ "sampleData": true,
+ "query": "tata",
+ "results": [
+  {
+   "kind": "STOCK",
+   "id": "TCS",
+   "name": "Tata Consultancy Services Ltd",
+   "subtitle": "Information Technology · Large cap",
+   "checkPath": "/stock/TCS"
+  },
+  {
+   "kind": "STOCK",
+   "id": "TATASTEEL",
+   "name": "Tata Steel Ltd",
+   "subtitle": "Metals & Mining · Large cap",
+   "checkPath": "/stock/TATASTEEL"
+  }
+ ]
+}

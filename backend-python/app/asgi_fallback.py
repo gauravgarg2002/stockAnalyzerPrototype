@@ -23,8 +23,6 @@ def _make_endpoint(route):
         try:
             if route.kind == "query":
                 params.update(dict(request.query_params))
-                if route.method == "POST":
-                    pass
             else:
                 raw = await request.body()
                 try:
@@ -43,9 +41,16 @@ def _make_endpoint(route):
     return endpoint
 
 
+async def _http_exc(request: Request, exc):
+    status = getattr(exc, "status_code", 404)
+    if status == 404:
+        return _error(404, "NOT_FOUND", f"No route for {request.url.path}.", {"path": request.url.path})
+    return _error(400, "BAD_REQUEST", "Method not allowed for this route.", {"path": request.url.path})
+
+
 def create_app() -> Starlette:
     routes = [SRoute(r.path, _make_endpoint(r), methods=[r.method]) for r in ROUTES]
-    return Starlette(routes=routes)
+    return Starlette(routes=routes, exception_handlers={404: _http_exc, 405: _http_exc})
 
 
 app = create_app()

@@ -1,0 +1,7 @@
+{
+ "sampleData": true,
+ "brokerMode": "mock",
+ "status": "CONNECTED",
+ "loginUrl": null,
+ "message": "Sample account connected."
+}

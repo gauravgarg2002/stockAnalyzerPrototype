@@ -1,0 +1,21 @@
+{
+ "sampleData": false,
+ "items": [
+  {
+   "key": "summary.0",
+   "sentence": {
+    "text": "Your holdings are worth ₹12.8 lakh across 6 stocks and 4 mutual funds.",
+    "templateId": "pf.summary.value",
+    "generator": "template"
+   }
+  },
+  {
+   "key": "fact.overlap",
+   "sentence": {
+    "text": "Kaveri Flexi Cap Fund - Regular Plan - Growth and Narmada Nifty 50 Index Fund - Direct Plan - Growth hold 27 companies in common, adding up to an overlap of 41.4%.",
+    "templateId": "pf.fact.overlap",
+    "generator": "template"
+   }
+  }
+ ]
+}

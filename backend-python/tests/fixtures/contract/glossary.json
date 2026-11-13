@@ -1,0 +1,787 @@
+{
+ "sampleData": false,
+ "terms": [
+  {
+   "id": "market_cap",
+   "term": "Market value (market cap)",
+   "aliases": [
+    "market cap",
+    "market capitalisation"
+   ],
+   "meaning": "The price of one share times the number of shares: what the whole company is worth on the stock market today.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "market_cap"
+   ]
+  },
+  {
+   "id": "size_band",
+   "term": "Size band",
+   "aliases": [
+    "company size",
+    "cap size"
+   ],
+   "meaning": "Whether the company is counted as large, mid, small or micro cap, based on its market value.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "size_band"
+   ]
+  },
+  {
+   "id": "large_cap",
+   "term": "Large cap",
+   "aliases": [
+    "large-cap"
+   ],
+   "meaning": "One of the biggest listed companies, usually the top 100 by market value.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "mid_cap",
+   "term": "Mid cap",
+   "aliases": [
+    "mid-cap"
+   ],
+   "meaning": "A mid-sized listed company, usually ranked from about 101 to 250 by market value.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "small_cap",
+   "term": "Small cap",
+   "aliases": [
+    "small-cap"
+   ],
+   "meaning": "A smaller listed company, usually ranked below 250 by market value.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "micro_cap",
+   "term": "Micro cap",
+   "aliases": [
+    "micro-cap"
+   ],
+   "meaning": "A very small listed company that trades in low volumes, so its price can move sharply.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "revenue",
+   "term": "Revenue",
+   "aliases": [
+    "sales",
+    "turnover",
+    "total income"
+   ],
+   "meaning": "The total money a company earns from its business in a period, before any costs are taken out.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "revenue_fy",
+    "quarter_revenue_yoy"
+   ]
+  },
+  {
+   "id": "operating_margin",
+   "term": "Operating margin",
+   "aliases": [
+    "operating profit margin",
+    "OPM"
+   ],
+   "meaning": "The share of each rupee of revenue left after paying the costs of running the business, before interest and tax.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "operating_margin"
+   ]
+  },
+  {
+   "id": "net_profit",
+   "term": "Net profit",
+   "aliases": [
+    "profit after tax",
+    "PAT",
+    "earnings"
+   ],
+   "meaning": "What is left of the revenue after all costs, interest and tax are paid. A negative figure is a net loss.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "net_profit_y3",
+    "quarter_profit_yoy"
+   ]
+  },
+  {
+   "id": "eps",
+   "term": "Earnings per share (EPS)",
+   "aliases": [
+    "EPS"
+   ],
+   "meaning": "The company's yearly net profit divided by its number of shares: the profit that belongs to one share.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "pe_ratio",
+   "term": "P/E (price to earnings)",
+   "aliases": [
+    "PE",
+    "price to earnings",
+    "price to yearly profit"
+   ],
+   "meaning": "How many rupees investors pay today for each rupee of the company's yearly profit.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "pe"
+   ]
+  },
+  {
+   "id": "pb_ratio",
+   "term": "P/B (price to book)",
+   "aliases": [
+    "PB",
+    "price to book",
+    "price to shareholders' money"
+   ],
+   "meaning": "The share price divided by the shareholders' money per share, which compares the market price with the accounting value.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "pb"
+   ]
+  },
+  {
+   "id": "roe",
+   "term": "Return on equity (ROE)",
+   "aliases": [
+    "ROE",
+    "return on shareholders' money"
+   ],
+   "meaning": "Yearly net profit as a percentage of the money shareholders have put into the company.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "roe"
+   ]
+  },
+  {
+   "id": "debt",
+   "term": "Debt",
+   "aliases": [
+    "borrowings",
+    "total debt"
+   ],
+   "meaning": "Money the company has borrowed and must pay back, with interest.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "total_debt"
+   ]
+  },
+  {
+   "id": "debt_to_equity",
+   "term": "Debt to equity",
+   "aliases": [
+    "D/E",
+    "debt compared with shareholders' money"
+   ],
+   "meaning": "How many rupees the company has borrowed for each rupee that shareholders have put in.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "debt_to_equity"
+   ]
+  },
+  {
+   "id": "debt_to_profit",
+   "term": "Debt against yearly earnings",
+   "aliases": [
+    "debt to profit",
+    "debt to earnings"
+   ],
+   "meaning": "Total debt divided by the latest yearly net profit: roughly how many years of profit it would take to repay the debt.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "debt_to_profit"
+   ]
+  },
+  {
+   "id": "interest_coverage",
+   "term": "Interest coverage",
+   "aliases": [
+    "interest cover"
+   ],
+   "meaning": "How many times the company's yearly operating profit covers its yearly interest payments.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "interest_coverage"
+   ]
+  },
+  {
+   "id": "promoter_holding",
+   "term": "Promoter holding",
+   "aliases": [
+    "promoter shareholding",
+    "promoter stake"
+   ],
+   "meaning": "The share of the company owned by its founders or controlling group.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "promoter_holding"
+   ]
+  },
+  {
+   "id": "promoter_pledge",
+   "term": "Promoter pledge",
+   "aliases": [
+    "pledged shares",
+    "share pledge"
+   ],
+   "meaning": "The share of the promoters' own shares that they have put up as security for loans.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "promoter_pledge"
+   ]
+  },
+  {
+   "id": "fii_holding",
+   "term": "Foreign investor holding (FII)",
+   "aliases": [
+    "FII",
+    "FPI",
+    "foreign institutional investors"
+   ],
+   "meaning": "The share of the company owned by foreign funds and institutions.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "dividend_yield",
+   "term": "Dividend yield",
+   "aliases": [
+    "yield"
+   ],
+   "meaning": "The yearly dividend paid per share as a percentage of the share price.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "dividend_yield"
+   ]
+  },
+  {
+   "id": "avg_daily_traded_value",
+   "term": "Average daily trading value",
+   "aliases": [
+    "traded value",
+    "liquidity",
+    "turnover value"
+   ],
+   "meaning": "The rupee value of shares that change hands on an average day; a higher value means shares are easier to trade.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "avg_daily_traded_value"
+   ]
+  },
+  {
+   "id": "surveillance_asm",
+   "term": "ASM (Additional Surveillance Measure)",
+   "aliases": [
+    "ASM"
+   ],
+   "meaning": "An NSE list of stocks whose price moves are watched more closely, with extra margin and trading checks.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "surveillance_status"
+   ]
+  },
+  {
+   "id": "surveillance_gsm",
+   "term": "GSM (Graded Surveillance Measure)",
+   "aliases": [
+    "GSM"
+   ],
+   "meaning": "An NSE list of stocks with unusual price moves compared with their financial position, traded under staged restrictions.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "surveillance_status"
+   ]
+  },
+  {
+   "id": "surveillance_esm",
+   "term": "ESM (Enhanced Surveillance Measure)",
+   "aliases": [
+    "ESM"
+   ],
+   "meaning": "An NSE list of smaller-company stocks that have extra trading checks to limit sharp swings.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "surveillance_status"
+   ]
+  },
+  {
+   "id": "cagr",
+   "term": "CAGR (yearly average growth)",
+   "aliases": [
+    "compound annual growth rate",
+    "yearly average"
+   ],
+   "meaning": "The steady yearly rate at which something would have to grow to get from its starting value to its ending value.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": [
+    "revenue_cagr_3y",
+    "profit_cagr_3y",
+    "return_3y",
+    "return_5y",
+    "return_10y"
+   ]
+  },
+  {
+   "id": "worst_fall",
+   "term": "Worst fall",
+   "aliases": [
+    "maximum drawdown",
+    "drawdown"
+   ],
+   "meaning": "The biggest drop from a high point to the lowest point that came after it, within the period shown.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": [
+    "worst_fall"
+   ]
+  },
+  {
+   "id": "recovery_time",
+   "term": "Recovery time",
+   "aliases": [
+    "time to recover"
+   ],
+   "meaning": "The number of days from the lowest point until the price or value got back to its earlier high.",
+   "appliesTo": [
+    "STOCK",
+    "FUND"
+   ],
+   "figureIds": [
+    "recovery_time"
+   ]
+  },
+  {
+   "id": "nifty_50",
+   "term": "Nifty 50",
+   "aliases": [
+    "Nifty",
+    "NIFTY50"
+   ],
+   "meaning": "An index of 50 of the largest listed Indian companies, often used to show how the overall market has moved.",
+   "appliesTo": [
+    "STOCK",
+    "FUND",
+    "PORTFOLIO"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "peers",
+   "term": "Peers",
+   "aliases": [
+    "peer group",
+    "similar companies"
+   ],
+   "meaning": "Listed companies in the same line of business, used for comparison.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "nav",
+   "term": "NAV (net asset value)",
+   "aliases": [
+    "net asset value",
+    "unit price"
+   ],
+   "meaning": "The price of one unit of a mutual fund: the value of everything the fund holds divided by its number of units.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "nav"
+   ]
+  },
+  {
+   "id": "expense_ratio",
+   "term": "Expense ratio",
+   "aliases": [
+    "TER",
+    "total expense ratio",
+    "fund fee"
+   ],
+   "meaning": "The yearly fee a mutual fund charges, as a percentage of your money in it; it is taken out of the fund's value each day.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "expense_ratio",
+    "yearly_cost"
+   ]
+  },
+  {
+   "id": "direct_plan",
+   "term": "Direct plan",
+   "aliases": [
+    "direct"
+   ],
+   "meaning": "A version of a mutual fund bought straight from the fund company, with no distributor commission and so a lower fee.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "plan_type"
+   ]
+  },
+  {
+   "id": "regular_plan",
+   "term": "Regular plan",
+   "aliases": [
+    "regular"
+   ],
+   "meaning": "A version of a mutual fund bought through a distributor, whose commission is included in a higher yearly fee.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "plan_cost_gap",
+    "twin_gap"
+   ]
+  },
+  {
+   "id": "aum",
+   "term": "AUM (assets under management)",
+   "aliases": [
+    "fund size",
+    "assets under management"
+   ],
+   "meaning": "The total amount of money investors have put into the fund.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "aum"
+   ]
+  },
+  {
+   "id": "exit_load",
+   "term": "Exit load",
+   "aliases": [
+    "exit fee"
+   ],
+   "meaning": "A fee charged if you take your money out of a fund before a stated period is over.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "exit_load"
+   ]
+  },
+  {
+   "id": "lock_in",
+   "term": "Lock-in period",
+   "aliases": [
+    "lock-in",
+    "lockin"
+   ],
+   "meaning": "A period during which you cannot take your money out of the investment.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "lock_in"
+   ]
+  },
+  {
+   "id": "elss",
+   "term": "ELSS (tax-saving fund)",
+   "aliases": [
+    "ELSS",
+    "equity linked savings scheme",
+    "tax saver"
+   ],
+   "meaning": "A mutual fund that invests mostly in shares and has a three-year lock-in, which qualifies for a tax deduction under Indian rules.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "index_fund",
+   "term": "Index fund",
+   "aliases": [
+    "passive fund",
+    "index tracker"
+   ],
+   "meaning": "A mutual fund that copies a market index such as the Nifty 50 instead of choosing companies.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "benchmark",
+   "term": "Benchmark",
+   "aliases": [
+    "benchmark index"
+   ],
+   "meaning": "The market index a fund is measured against, to show how it did compared with the market it invests in.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "tri",
+   "term": "TRI (total return index)",
+   "aliases": [
+    "total return index"
+   ],
+   "meaning": "An index that counts dividends paid by its companies as well as price changes, so it is the fair yardstick for funds.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "category_average",
+   "term": "Category average",
+   "aliases": [
+    "category median",
+    "category"
+   ],
+   "meaning": "The typical figure for all funds in the same SEBI category, shown to compare a fund with similar funds.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "top10_share",
+   "term": "Top ten holdings share",
+   "aliases": [
+    "concentration",
+    "top 10 holdings"
+   ],
+   "meaning": "The share of a fund's money that sits in its ten largest holdings.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "top10_share"
+   ]
+  },
+  {
+   "id": "fund_overlap",
+   "term": "Fund overlap",
+   "aliases": [
+    "overlap",
+    "common holdings"
+   ],
+   "meaning": "How much two funds hold the same companies: for each shared company take the smaller of the two weights, then add them up.",
+   "appliesTo": [
+    "FUND",
+    "PORTFOLIO"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "fund_manager",
+   "term": "Fund manager",
+   "aliases": [
+    "manager",
+    "fund management"
+   ],
+   "meaning": "The person or team who chooses what a mutual fund invests in.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "manager_tenure"
+   ]
+  },
+  {
+   "id": "sip",
+   "term": "SIP (systematic investment plan)",
+   "aliases": [
+    "SIP",
+    "monthly investment"
+   ],
+   "meaning": "A way of investing a fixed amount in a fund on a set date every month.",
+   "appliesTo": [
+    "FUND",
+    "PORTFOLIO"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "look_through_exposure",
+   "term": "True exposure (look-through)",
+   "aliases": [
+    "look-through",
+    "true exposure"
+   ],
+   "meaning": "Your holdings in each company counted both directly and through the mutual funds you own.",
+   "appliesTo": [
+    "PORTFOLIO"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "idle_cash",
+   "term": "Idle cash",
+   "aliases": [
+    "cash balance",
+    "unused cash"
+   ],
+   "meaning": "Money lying unused in your trading account that is not invested in anything.",
+   "appliesTo": [
+    "PORTFOLIO"
+   ],
+   "figureIds": [
+    "idle_cash"
+   ]
+  },
+  {
+   "id": "net_worth",
+   "term": "Net worth (shareholders' money)",
+   "aliases": [
+    "book value",
+    "shareholders' funds",
+    "equity"
+   ],
+   "meaning": "What would be left for shareholders if the company paid off all its debts: its assets minus its liabilities.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": [
+    "net_worth"
+   ]
+  },
+  {
+   "id": "equity_share",
+   "term": "Share held in shares",
+   "aliases": [
+    "equity share",
+    "equity allocation"
+   ],
+   "meaning": "The part of a fund's money that is invested in company shares rather than in debt or cash.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "equity_share"
+   ]
+  },
+  {
+   "id": "holdings_count",
+   "term": "Number of holdings",
+   "aliases": [
+    "number of stocks"
+   ],
+   "meaning": "How many different companies a mutual fund holds.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "holdings_count"
+   ]
+  },
+  {
+   "id": "fund_age",
+   "term": "Fund age",
+   "aliases": [
+    "age of the fund"
+   ],
+   "meaning": "The number of years since the fund was launched.",
+   "appliesTo": [
+    "FUND"
+   ],
+   "figureIds": [
+    "fund_age"
+   ]
+  },
+  {
+   "id": "sector",
+   "term": "Sector",
+   "aliases": [
+    "industry group"
+   ],
+   "meaning": "A group of companies in a similar line of business, such as banks or software.",
+   "appliesTo": [
+    "STOCK",
+    "PORTFOLIO"
+   ],
+   "figureIds": []
+  },
+  {
+   "id": "dividend",
+   "term": "Dividend",
+   "aliases": [
+    "payout"
+   ],
+   "meaning": "A part of the company's profit paid out to its shareholders.",
+   "appliesTo": [
+    "STOCK"
+   ],
+   "figureIds": []
+  }
+ ]
+}

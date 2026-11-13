@@ -1,0 +1,7 @@
+{
+ "sampleData": true,
+ "brokerMode": "mock",
+ "status": "CONNECTED",
+ "accountLabel": "Your Zerodha account (sample)",
+ "message": "Connected."
+}

@@ -1,0 +1,43 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "items": [
+  {
+   "kind": "STOCK",
+   "id": "TCS",
+   "values": [
+    {
+     "requestedDate": "2025-10-30",
+     "date": "2025-10-30",
+     "value": 3007.22
+    },
+    {
+     "requestedDate": "2023-06-05",
+     "date": "2023-06-05",
+     "value": 3715.93
+    },
+    {
+     "requestedDate": "2026-10-30",
+     "date": "2026-10-30",
+     "value": 3925.4
+    }
+   ]
+  },
+  {
+   "kind": "INDEX",
+   "id": "NIFTY50",
+   "values": [
+    {
+     "requestedDate": "2025-10-30",
+     "date": "2025-10-30",
+     "value": 22969.24
+    },
+    {
+     "requestedDate": "2026-10-30",
+     "date": "2026-10-30",
+     "value": 26150.0
+    }
+   ]
+  }
+ ]
+}

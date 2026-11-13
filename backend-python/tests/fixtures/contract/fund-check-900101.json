@@ -1,0 +1,5368 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "instrument": {
+  "kind": "FUND",
+  "schemeCode": "900101",
+  "isin": "INFSMP900101",
+  "name": "Kaveri Flexi Cap Fund - Regular Plan - Growth",
+  "shortName": "Kaveri Flexi Cap (Regular)",
+  "amc": "Kaveri Mutual Fund",
+  "category": "Flexi Cap Fund",
+  "categoryGroup": "EQUITY",
+  "planType": "REGULAR",
+  "twin": {
+   "schemeCode": "900102",
+   "name": "Kaveri Flexi Cap Fund - Direct Plan - Growth",
+   "planType": "DIRECT"
+  },
+  "benchmark": {
+   "id": "NIFTY500_TRI",
+   "name": "Nifty 500 TRI"
+  },
+  "nav": {
+   "id": "nav",
+   "label": "NAV (price of one unit)",
+   "value": 62.4012,
+   "unit": "INR_PRICE",
+   "display": "₹62.40",
+   "source": "Sample data",
+   "asOf": "2026-10-30",
+   "comparisons": [
+    {
+     "kind": "PREVIOUS_PERIOD",
+     "label": "1 year ago",
+     "value": 53.2096,
+     "unit": "INR_PRICE",
+     "display": "₹53.21"
+    }
+   ],
+   "termId": "nav"
+  }
+ },
+ "amount": {
+  "amountInr": 115448.0,
+  "display": "₹1.2 lakh",
+  "basis": "HOLDING"
+ },
+ "answers": [
+  {
+   "id": "holdings",
+   "order": 1,
+   "question": "What does it invest in and who runs it?",
+   "sentences": [
+    {
+     "text": "Kaveri Flexi Cap Fund - Regular Plan - Growth is a Flexi Cap Fund from Kaveri Mutual Fund; its money is 96.5% in shares, 0.0% in debt and 3.5% in cash and similar assets.",
+     "templateId": "fnd.holdings.what",
+     "generator": "template"
+    },
+    {
+     "text": "It lists 44 companies in its portfolio, and the largest are Reliance Industries Ltd (7.0%), Mphasis Ltd (4.9%) and Radico Khaitan Ltd (4.3%).",
+     "templateId": "fnd.holdings.top",
+     "generator": "template"
+    },
+    {
+     "text": "It is run by Ananya Rao; the longest-serving manager has been in charge for 7.6 years.",
+     "templateId": "fnd.holdings.managers",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "equity_share",
+     "label": "Share of the fund held in shares",
+     "value": 96.5,
+     "unit": "PCT",
+     "display": "96.5%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "THRESHOLD",
+       "label": "Category minimum",
+       "value": 65.0,
+       "unit": "PCT",
+       "display": "65.0%"
+      }
+     ],
+     "termId": null
+    },
+    {
+     "id": "holdings_count",
+     "label": "Number of companies held",
+     "value": 44,
+     "unit": "COUNT",
+     "display": "44",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for Flexi Cap Fund funds",
+       "value": 58,
+       "unit": "COUNT",
+       "display": "58"
+      }
+     ],
+     "termId": null
+    },
+    {
+     "id": "manager_tenure",
+     "label": "Time the longest-serving manager has run it",
+     "value": 7.58,
+     "unit": "YEARS",
+     "display": "7.6 years",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for Flexi Cap Fund funds",
+       "value": 5.1,
+       "unit": "YEARS",
+       "display": "5.1 years"
+      }
+     ],
+     "termId": "fund_manager"
+    }
+   ],
+   "details": {
+    "title": "Top 10 holdings, asset mix and managers",
+    "columns": [
+     "Item",
+     "Sector or detail",
+     "Share or date"
+    ],
+    "rows": [
+     [
+      "Reliance Industries Ltd",
+      "Oil Gas & Consumable Fuels",
+      "7.0%"
+     ],
+     [
+      "Mphasis Ltd",
+      "Information Technology",
+      "4.9%"
+     ],
+     [
+      "Radico Khaitan Ltd",
+      "FMCG",
+      "4.3%"
+     ],
+     [
+      "HDFC Bank Ltd",
+      "Financial Services",
+      "4.2%"
+     ],
+     [
+      "ITC Ltd",
+      "FMCG",
+      "3.5%"
+     ],
+     [
+      "Maruti Suzuki India Ltd",
+      "Automobile & Auto Components",
+      "3.3%"
+     ],
+     [
+      "Sunteck Realty Ltd",
+      "Realty",
+      "3.2%"
+     ],
+     [
+      "Sun Pharmaceutical Industries Ltd",
+      "Healthcare",
+      "3.1%"
+     ],
+     [
+      "Hindustan Unilever Ltd",
+      "FMCG",
+      "3.1%"
+     ],
+     [
+      "Deccan Infra Projects Ltd",
+      "Construction & Engineering",
+      "3.0%"
+     ],
+     [
+      "Asset mix: Shares",
+      "",
+      "96.5%"
+     ],
+     [
+      "Asset mix: Debt",
+      "",
+      "0.0%"
+     ],
+     [
+      "Asset mix: Cash",
+      "",
+      "3.5%"
+     ],
+     [
+      "Asset mix: Other",
+      "",
+      "0.0%"
+     ],
+     [
+      "Manager: Ananya Rao",
+      "",
+      "Since 1 Apr 2019"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "performance",
+   "order": 2,
+   "question": "How has it done against its benchmark and category over 3, 5 and 10 years?",
+   "sentences": [
+    {
+     "text": "Over the last 3 years the fund returned 9.0% a year, above its benchmark (Nifty 500 TRI) at 8.4% and below the Flexi Cap Fund average of 9.2%.",
+     "templateId": "fnd.perf.period",
+     "generator": "template"
+    },
+    {
+     "text": "Over the last 5 years the fund returned 8.3% a year, above its benchmark (Nifty 500 TRI) at 7.3% and above the Flexi Cap Fund average of 7.9%.",
+     "templateId": "fnd.perf.period",
+     "generator": "template"
+    },
+    {
+     "text": "Over the last 10 years the fund returned 12.9% a year, below its benchmark (Nifty 500 TRI) at 13.5% and below the Flexi Cap Fund average of 14.3%.",
+     "templateId": "fnd.perf.period",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "return_3y",
+     "label": "Return over 3 years, yearly average",
+     "value": 9.02,
+     "unit": "PCT",
+     "display": "9.0%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "BENCHMARK",
+       "label": "Nifty 500 TRI, same period",
+       "value": 8.45,
+       "unit": "PCT",
+       "display": "8.5%"
+      },
+      {
+       "kind": "CATEGORY",
+       "label": "Average for Flexi Cap Fund funds",
+       "value": 9.2,
+       "unit": "PCT",
+       "display": "9.2%"
+      }
+     ],
+     "termId": "cagr"
+    },
+    {
+     "id": "return_5y",
+     "label": "Return over 5 years, yearly average",
+     "value": 8.34,
+     "unit": "PCT",
+     "display": "8.3%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "BENCHMARK",
+       "label": "Nifty 500 TRI, same period",
+       "value": 7.33,
+       "unit": "PCT",
+       "display": "7.3%"
+      },
+      {
+       "kind": "CATEGORY",
+       "label": "Average for Flexi Cap Fund funds",
+       "value": 7.9,
+       "unit": "PCT",
+       "display": "7.9%"
+      }
+     ],
+     "termId": "cagr"
+    },
+    {
+     "id": "return_10y",
+     "label": "Return over 10 years, yearly average",
+     "value": 12.87,
+     "unit": "PCT",
+     "display": "12.9%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "BENCHMARK",
+       "label": "Nifty 500 TRI, same period",
+       "value": 13.54,
+       "unit": "PCT",
+       "display": "13.5%"
+      },
+      {
+       "kind": "CATEGORY",
+       "label": "Average for Flexi Cap Fund funds",
+       "value": 14.3,
+       "unit": "PCT",
+       "display": "14.3%"
+      }
+     ],
+     "termId": "cagr"
+    }
+   ],
+   "details": {
+    "title": "Returns by period and calendar year",
+    "columns": [
+     "Period",
+     "Fund",
+     "Benchmark"
+    ],
+    "rows": [
+     [
+      "3 years (yearly average)",
+      "9.0%",
+      "8.4%"
+     ],
+     [
+      "5 years (yearly average)",
+      "8.3%",
+      "7.3%"
+     ],
+     [
+      "10 years (yearly average)",
+      "12.9%",
+      "13.5%"
+     ],
+     [
+      "Calendar year 2021",
+      "+12.0%",
+      "+10.0%"
+     ],
+     [
+      "Calendar year 2022",
+      "+9.8%",
+      "+9.4%"
+     ],
+     [
+      "Calendar year 2023",
+      "+16.8%",
+      "+14.5%"
+     ],
+     [
+      "Calendar year 2024",
+      "+4.7%",
+      "+4.1%"
+     ],
+     [
+      "Calendar year 2025",
+      "+1.2%",
+      "+1.4%"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "bumpiness",
+   "order": 3,
+   "question": "How bumpy has the ride been?",
+   "sentences": [
+    {
+     "text": "On ₹1.2 lakh, the fund's worst fall of 13.3% would have been about ₹15,355 between its high and its low point.",
+     "templateId": "fnd.bump.rupees",
+     "generator": "template"
+    },
+    {
+     "text": "Over the same dates the worst fall in its benchmark was 14.9%, and the Flexi Cap Fund average worst fall is 15.7%.",
+     "templateId": "fnd.bump.compare",
+     "generator": "template"
+    },
+    {
+     "text": "It took 195 days from the lowest point to get back to the earlier high.",
+     "templateId": "fnd.bump.recovered",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "worst_fall",
+     "label": "Worst fall from a high to a later low",
+     "value": -13.3,
+     "unit": "PCT_CHANGE",
+     "display": "-13.3%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "BENCHMARK",
+       "label": "Nifty 500 TRI, same period",
+       "value": -14.93,
+       "unit": "PCT_CHANGE",
+       "display": "-14.9%"
+      },
+      {
+       "kind": "CATEGORY",
+       "label": "Average for Flexi Cap Fund funds",
+       "value": -15.7,
+       "unit": "PCT_CHANGE",
+       "display": "-15.7%"
+      }
+     ],
+     "termId": "worst_fall"
+    },
+    {
+     "id": "recovery_time",
+     "label": "Time to get back to the earlier high",
+     "value": 195,
+     "unit": "DAYS",
+     "display": "195 days",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "BENCHMARK",
+       "label": "Nifty 500 TRI, same period",
+       "value": 65,
+       "unit": "DAYS",
+       "display": "65 days"
+      }
+     ],
+     "termId": "recovery_time"
+    }
+   ],
+   "details": {
+    "title": "Five largest falls",
+    "columns": [
+     "High point",
+     "Low point",
+     "Fall",
+     "Back to earlier high on"
+    ],
+    "rows": [
+     [
+      "1 Feb 2022",
+      "9 Jun 2022",
+      "-13.3%",
+      "21 Dec 2022"
+     ],
+     [
+      "12 Feb 2025",
+      "11 Nov 2025",
+      "-13.2%",
+      "8 Jan 2026"
+     ],
+     [
+      "4 Jun 2018",
+      "14 Jan 2019",
+      "-13.0%",
+      "18 Mar 2019"
+     ],
+     [
+      "16 May 2024",
+      "19 Sep 2024",
+      "-11.6%",
+      "12 Feb 2025"
+     ],
+     [
+      "26 Oct 2017",
+      "14 Feb 2018",
+      "-11.3%",
+      "17 May 2018"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cost",
+   "order": 4,
+   "question": "What does it cost per year on your amount?",
+   "sentences": [
+    {
+     "text": "On ₹1.2 lakh (your holding in this fund) the fund charges about ₹1,986 a year, an expense ratio of 1.7%; the Flexi Cap Fund median for regular plans is 1.6%.",
+     "templateId": "fnd.cost.yearly",
+     "generator": "template"
+    },
+    {
+     "text": "The direct plan of the same fund would charge ₹785 on the same amount, so the regular plan costs ₹1,201 more each year.",
+     "templateId": "fnd.cost.gap_regular",
+     "generator": "template"
+    },
+    {
+     "text": "The fee is taken out of the fund's value every day, so it is never billed to you separately.",
+     "templateId": "fnd.cost.how",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "expense_ratio",
+     "label": "Yearly fee (expense ratio)",
+     "value": 1.72,
+     "unit": "PCT",
+     "display": "1.7%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for regular plans in Flexi Cap Fund",
+       "value": 1.61,
+       "unit": "PCT",
+       "display": "1.6%"
+      }
+     ],
+     "termId": "expense_ratio"
+    },
+    {
+     "id": "yearly_cost",
+     "label": "Yearly fee in rupees on your amount",
+     "value": 1986,
+     "unit": "INR",
+     "display": "₹1,986",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "PLAN_TWIN",
+       "label": "Direct plan of the same fund",
+       "value": 785,
+       "unit": "INR",
+       "display": "₹785"
+      }
+     ],
+     "termId": "expense_ratio"
+    },
+    {
+     "id": "twin_gap",
+     "label": "Yearly difference between regular and direct plan",
+     "value": 1201,
+     "unit": "INR",
+     "display": "₹1,201",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "PLAN_TWIN",
+       "label": "Cost of the other plan",
+       "value": 785,
+       "unit": "INR",
+       "display": "₹785"
+      }
+     ],
+     "termId": "regular_plan"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "recent",
+   "order": 5,
+   "question": "What changed recently?",
+   "sentences": [
+    {
+     "text": "The fund's size is ₹18,240 crore, compared with ₹15,980 crore a year earlier, a change of +14.1%.",
+     "templateId": "fnd.recent.aum",
+     "generator": "template"
+    },
+    {
+     "text": "Compared with last month, Hindustan Unilever Ltd and Deccan Infra Projects Ltd entered the ten largest holdings and Voltas Ltd and Supreme Industries Ltd left them.",
+     "templateId": "fnd.recent.top10",
+     "generator": "template"
+    },
+    {
+     "text": "No manager, benchmark or fee changes are listed in the last six months.",
+     "templateId": "fnd.recent.event_none",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "aum",
+     "label": "Size of the fund (assets under management)",
+     "value": 182400000000,
+     "unit": "INR",
+     "display": "₹18,240 crore",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "1 year ago",
+       "value": 159800000000,
+       "unit": "INR",
+       "display": "₹15,980 crore"
+      }
+     ],
+     "termId": "aum"
+    },
+    {
+     "id": "aum_change_1y",
+     "label": "Change in fund size over 1 year",
+     "value": 14.14,
+     "unit": "PCT_CHANGE",
+     "display": "+14.1%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "Fund size a year ago",
+       "value": 159800000000,
+       "unit": "INR",
+       "display": "₹15,980 crore"
+      }
+     ],
+     "termId": "aum"
+    }
+   ],
+   "details": {
+    "title": "Changes in the top 10 since last month, and fund events",
+    "columns": [
+     "Date or item",
+     "What changed",
+     "Detail"
+    ],
+    "rows": [
+     [
+      "Top 10",
+      "Entered: Hindustan Unilever Ltd",
+      "3.1% now"
+     ],
+     [
+      "Top 10",
+      "Entered: Deccan Infra Projects Ltd",
+      "3.0% now"
+     ],
+     [
+      "Top 10",
+      "Left: Voltas Ltd",
+      "3.1% last month"
+     ],
+     [
+      "Top 10",
+      "Left: Supreme Industries Ltd",
+      "3.1% last month"
+     ],
+     [
+      "1 Apr 2025",
+      "The yearly expense ratio of the regular plan changed from 1.78% to 1.72%.",
+      "Ter change"
+     ]
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "plan_type",
+   "order": 1,
+   "title": "Direct or regular plan, and the yearly cost difference",
+   "termId": "regular_plan",
+   "available": true,
+   "sentences": [
+    {
+     "text": "This is the regular plan, which pays a distributor a commission; on ₹1.2 lakh the direct plan of the same fund would cost ₹1,201 less each year.",
+     "templateId": "fnd.fact.plan_regular",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "plan_type",
+     "label": "Plan type",
+     "value": "Regular plan",
+     "unit": "TEXT",
+     "display": "Regular plan",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [],
+     "termId": "regular_plan"
+    },
+    {
+     "id": "plan_cost_gap",
+     "label": "Yearly cost difference between the two plans on your amount",
+     "value": 1201,
+     "unit": "INR",
+     "display": "₹1,201",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "PLAN_TWIN",
+       "label": "Yearly cost of the direct plan",
+       "value": 785,
+       "unit": "INR",
+       "display": "₹785"
+      }
+     ],
+     "termId": "regular_plan"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "expense_vs_category",
+   "order": 2,
+   "title": "Expense ratio against the category",
+   "termId": "expense_ratio",
+   "available": true,
+   "sentences": [
+    {
+     "text": "The yearly fee is 1.7%, which is above the Flexi Cap Fund median of 1.6% for regular plans.",
+     "templateId": "fnd.fact.expense",
+     "generator": "template"
+    },
+    {
+     "text": "On ₹1.2 lakh that is ₹1,986 a year.",
+     "templateId": "fnd.fact.expense_rupees",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "expense_ratio",
+     "label": "Yearly fee (expense ratio)",
+     "value": 1.72,
+     "unit": "PCT",
+     "display": "1.7%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for regular plans in Flexi Cap Fund",
+       "value": 1.61,
+       "unit": "PCT",
+       "display": "1.6%"
+      }
+     ],
+     "termId": "expense_ratio"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "age_and_size",
+   "order": 3,
+   "title": "Fund age and size",
+   "termId": "aum",
+   "available": true,
+   "sentences": [
+    {
+     "text": "The fund was launched on 1 Jan 2013, 13.8 years ago; the Flexi Cap Fund median age is 11.5 years.",
+     "templateId": "fnd.fact.age",
+     "generator": "template"
+    },
+    {
+     "text": "It manages ₹18,240 crore of investors' money; the Flexi Cap Fund median is ₹9,500 crore.",
+     "templateId": "fnd.fact.size",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "fund_age",
+     "label": "Age of the fund",
+     "value": 13.83,
+     "unit": "YEARS",
+     "display": "13.8 years",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for Flexi Cap Fund funds",
+       "value": 11.5,
+       "unit": "YEARS",
+       "display": "11.5 years"
+      }
+     ],
+     "termId": null
+    },
+    {
+     "id": "aum",
+     "label": "Size of the fund (assets under management)",
+     "value": 182400000000,
+     "unit": "INR",
+     "display": "₹18,240 crore",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for Flexi Cap Fund funds",
+       "value": 95000000000,
+       "unit": "INR",
+       "display": "₹9,500 crore"
+      }
+     ],
+     "termId": "aum"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "years_trailed_benchmark",
+   "order": 4,
+   "title": "Years out of the last five it trailed its benchmark",
+   "termId": "benchmark",
+   "available": true,
+   "sentences": [
+    {
+     "text": "The fund returned less than its benchmark in 1 year out of the last 5 years (2021 to 2025).",
+     "templateId": "fnd.fact.trailed",
+     "generator": "template"
+    },
+    {
+     "text": "The Flexi Cap Fund average is 2.2 years out of five.",
+     "templateId": "fnd.fact.trailed_cmp",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "years_trailed",
+     "label": "Calendar years the fund returned less than its benchmark",
+     "value": 1,
+     "unit": "COUNT",
+     "display": "1",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Average for Flexi Cap Fund funds (out of five)",
+       "value": 2.2,
+       "unit": "YEARS",
+       "display": "2.2 years"
+      }
+     ],
+     "termId": "benchmark"
+    }
+   ],
+   "details": {
+    "title": "Calendar-year returns: fund and Nifty 500 TRI",
+    "columns": [
+     "Year",
+     "Fund",
+     "Benchmark",
+     "Result"
+    ],
+    "rows": [
+     [
+      "2021",
+      "+12.0%",
+      "+10.0%",
+      "Matched or ahead"
+     ],
+     [
+      "2022",
+      "+9.8%",
+      "+9.4%",
+      "Matched or ahead"
+     ],
+     [
+      "2023",
+      "+16.8%",
+      "+14.5%",
+      "Matched or ahead"
+     ],
+     [
+      "2024",
+      "+4.7%",
+      "+4.1%",
+      "Matched or ahead"
+     ],
+     [
+      "2025",
+      "+1.2%",
+      "+1.4%",
+      "Trailed"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "category_mandate",
+   "order": 5,
+   "title": "Category and what it may hold",
+   "termId": null,
+   "available": true,
+   "sentences": [
+    {
+     "text": "Flexi Cap Fund: Shares of companies of any size, at least 65% of the money; the rest can be in debt and cash.",
+     "templateId": "fnd.fact.mandate",
+     "generator": "template"
+    },
+    {
+     "text": "This fund holds 96.5% in shares; the minimum for the category is 65.0%.",
+     "templateId": "fnd.fact.mandate_equity",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "category",
+     "label": "Category",
+     "value": "Flexi Cap Fund",
+     "unit": "TEXT",
+     "display": "Flexi Cap Fund",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": null
+    },
+    {
+     "id": "equity_share",
+     "label": "Share of the fund held in shares",
+     "value": 96.5,
+     "unit": "PCT",
+     "display": "96.5%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "THRESHOLD",
+       "label": "Category minimum",
+       "value": 65.0,
+       "unit": "PCT",
+       "display": "65.0%"
+      }
+     ],
+     "termId": null
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "top10_share",
+   "order": 6,
+   "title": "Share of the fund in its top ten holdings",
+   "termId": "top10_share",
+   "available": true,
+   "sentences": [
+    {
+     "text": "The ten largest holdings make up 39.4% of the fund; the Flexi Cap Fund median is 46.2%.",
+     "templateId": "fnd.fact.top10",
+     "generator": "template"
+    },
+    {
+     "text": "The single largest holding is Reliance Industries Ltd at 7.0%.",
+     "templateId": "fnd.fact.top10_largest",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "top10_share",
+     "label": "Share of the fund in its ten largest holdings",
+     "value": 39.44,
+     "unit": "PCT",
+     "display": "39.4%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Median for Flexi Cap Fund funds",
+       "value": 46.2,
+       "unit": "PCT",
+       "display": "46.2%"
+      }
+     ],
+     "termId": "top10_share"
+    }
+   ],
+   "details": {
+    "title": "Ten largest holdings",
+    "columns": [
+     "Company",
+     "Sector",
+     "Share of fund"
+    ],
+    "rows": [
+     [
+      "Reliance Industries Ltd",
+      "Oil Gas & Consumable Fuels",
+      "7.0%"
+     ],
+     [
+      "Mphasis Ltd",
+      "Information Technology",
+      "4.9%"
+     ],
+     [
+      "Radico Khaitan Ltd",
+      "FMCG",
+      "4.3%"
+     ],
+     [
+      "HDFC Bank Ltd",
+      "Financial Services",
+      "4.2%"
+     ],
+     [
+      "ITC Ltd",
+      "FMCG",
+      "3.5%"
+     ],
+     [
+      "Maruti Suzuki India Ltd",
+      "Automobile & Auto Components",
+      "3.3%"
+     ],
+     [
+      "Sunteck Realty Ltd",
+      "Realty",
+      "3.2%"
+     ],
+     [
+      "Sun Pharmaceutical Industries Ltd",
+      "Healthcare",
+      "3.1%"
+     ],
+     [
+      "Hindustan Unilever Ltd",
+      "FMCG",
+      "3.1%"
+     ],
+     [
+      "Deccan Infra Projects Ltd",
+      "Construction & Engineering",
+      "3.0%"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "exit_load_lockin",
+   "order": 7,
+   "title": "Exit load and lock-in",
+   "termId": "exit_load",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Exit load is a fee charged if you take money out early: 1% if you take money out within 365 days.",
+     "templateId": "fnd.fact.exit_load",
+     "generator": "template"
+    },
+    {
+     "text": "There is no lock-in period.",
+     "templateId": "fnd.fact.lockin_none",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "exit_load",
+     "label": "Exit load",
+     "value": "1% if you take money out within 365 days",
+     "unit": "TEXT",
+     "display": "1% if you take money out within 365 days",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": "exit_load"
+    },
+    {
+     "id": "lock_in",
+     "label": "Lock-in period",
+     "value": 0.0,
+     "unit": "YEARS",
+     "display": "0 years",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "CATEGORY",
+       "label": "Typical for Flexi Cap Fund funds",
+       "value": 0.0,
+       "unit": "YEARS",
+       "display": "0 years"
+      }
+     ],
+     "termId": "lock_in"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "overlap_with_holdings",
+   "order": 8,
+   "title": "Overlap with funds you already hold",
+   "termId": "fund_overlap",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Narmada Nifty 50 Index Fund - Direct Plan - Growth is the fund you hold that this one overlaps with most, at 41.4% with 27 companies in common.",
+     "templateId": "fnd.fact.overlap_top",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "overlap_900201",
+     "label": "Narmada Nifty 50 Index Fund - Direct Plan - Growth",
+     "value": 41.37,
+     "unit": "PCT",
+     "display": "41.4%",
+     "source": "Calculated from your holdings",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": "fund_overlap"
+    }
+   ],
+   "details": {
+    "title": "Overlap with each fund you hold",
+    "columns": [
+     "Fund",
+     "Overlap",
+     "Companies in common"
+    ],
+    "rows": [
+     [
+      "Narmada Nifty 50 Index Fund - Direct Plan - Growth",
+      "41.4%",
+      "27"
+     ]
+    ]
+   }
+  }
+ ],
+ "priceHistory": {
+  "frequency": "WEEKLY",
+  "from": "2016-11-04",
+  "to": "2026-10-30",
+  "points": [
+   {
+    "date": "2016-11-04",
+    "value": 18.6297
+   },
+   {
+    "date": "2016-11-11",
+    "value": 18.5494
+   },
+   {
+    "date": "2016-11-18",
+    "value": 18.6894
+   },
+   {
+    "date": "2016-11-25",
+    "value": 18.4317
+   },
+   {
+    "date": "2016-12-02",
+    "value": 18.0956
+   },
+   {
+    "date": "2016-12-09",
+    "value": 17.639
+   },
+   {
+    "date": "2016-12-16",
+    "value": 17.6697
+   },
+   {
+    "date": "2016-12-23",
+    "value": 17.9731
+   },
+   {
+    "date": "2016-12-30",
+    "value": 17.7609
+   },
+   {
+    "date": "2017-01-06",
+    "value": 17.4337
+   },
+   {
+    "date": "2017-01-13",
+    "value": 18.2942
+   },
+   {
+    "date": "2017-01-20",
+    "value": 18.4014
+   },
+   {
+    "date": "2017-01-27",
+    "value": 18.5778
+   },
+   {
+    "date": "2017-02-03",
+    "value": 19.4172
+   },
+   {
+    "date": "2017-02-10",
+    "value": 19.0102
+   },
+   {
+    "date": "2017-02-17",
+    "value": 18.9741
+   },
+   {
+    "date": "2017-02-24",
+    "value": 19.2348
+   },
+   {
+    "date": "2017-03-03",
+    "value": 19.602
+   },
+   {
+    "date": "2017-03-10",
+    "value": 19.5328
+   },
+   {
+    "date": "2017-03-17",
+    "value": 19.8222
+   },
+   {
+    "date": "2017-03-24",
+    "value": 19.8177
+   },
+   {
+    "date": "2017-03-31",
+    "value": 20.8577
+   },
+   {
+    "date": "2017-04-07",
+    "value": 20.9506
+   },
+   {
+    "date": "2017-04-14",
+    "value": 21.3912
+   },
+   {
+    "date": "2017-04-21",
+    "value": 21.4088
+   },
+   {
+    "date": "2017-04-28",
+    "value": 21.524
+   },
+   {
+    "date": "2017-05-05",
+    "value": 22.0666
+   },
+   {
+    "date": "2017-05-12",
+    "value": 21.6682
+   },
+   {
+    "date": "2017-05-19",
+    "value": 21.7
+   },
+   {
+    "date": "2017-05-26",
+    "value": 21.9762
+   },
+   {
+    "date": "2017-06-02",
+    "value": 21.6339
+   },
+   {
+    "date": "2017-06-09",
+    "value": 21.7137
+   },
+   {
+    "date": "2017-06-16",
+    "value": 21.6851
+   },
+   {
+    "date": "2017-06-23",
+    "value": 22.2739
+   },
+   {
+    "date": "2017-06-30",
+    "value": 22.3658
+   },
+   {
+    "date": "2017-07-07",
+    "value": 22.1213
+   },
+   {
+    "date": "2017-07-14",
+    "value": 21.9618
+   },
+   {
+    "date": "2017-07-21",
+    "value": 22.7668
+   },
+   {
+    "date": "2017-07-28",
+    "value": 22.452
+   },
+   {
+    "date": "2017-08-04",
+    "value": 22.051
+   },
+   {
+    "date": "2017-08-11",
+    "value": 21.8287
+   },
+   {
+    "date": "2017-08-18",
+    "value": 21.7412
+   },
+   {
+    "date": "2017-08-25",
+    "value": 21.9281
+   },
+   {
+    "date": "2017-09-01",
+    "value": 22.0075
+   },
+   {
+    "date": "2017-09-08",
+    "value": 22.1435
+   },
+   {
+    "date": "2017-09-15",
+    "value": 22.3233
+   },
+   {
+    "date": "2017-09-22",
+    "value": 22.368
+   },
+   {
+    "date": "2017-09-29",
+    "value": 22.2347
+   },
+   {
+    "date": "2017-10-06",
+    "value": 22.2866
+   },
+   {
+    "date": "2017-10-13",
+    "value": 22.7204
+   },
+   {
+    "date": "2017-10-20",
+    "value": 23.4761
+   },
+   {
+    "date": "2017-10-27",
+    "value": 23.9696
+   },
+   {
+    "date": "2017-11-03",
+    "value": 23.7931
+   },
+   {
+    "date": "2017-11-10",
+    "value": 22.9622
+   },
+   {
+    "date": "2017-11-17",
+    "value": 23.0212
+   },
+   {
+    "date": "2017-11-24",
+    "value": 22.8351
+   },
+   {
+    "date": "2017-12-01",
+    "value": 22.4341
+   },
+   {
+    "date": "2017-12-08",
+    "value": 22.0543
+   },
+   {
+    "date": "2017-12-15",
+    "value": 22.3369
+   },
+   {
+    "date": "2017-12-22",
+    "value": 22.2926
+   },
+   {
+    "date": "2017-12-29",
+    "value": 22.638
+   },
+   {
+    "date": "2018-01-05",
+    "value": 22.1004
+   },
+   {
+    "date": "2018-01-12",
+    "value": 22.3467
+   },
+   {
+    "date": "2018-01-19",
+    "value": 22.0568
+   },
+   {
+    "date": "2018-01-26",
+    "value": 21.9901
+   },
+   {
+    "date": "2018-02-02",
+    "value": 22.0143
+   },
+   {
+    "date": "2018-02-09",
+    "value": 21.7124
+   },
+   {
+    "date": "2018-02-16",
+    "value": 21.6311
+   },
+   {
+    "date": "2018-02-23",
+    "value": 21.8062
+   },
+   {
+    "date": "2018-03-02",
+    "value": 22.6319
+   },
+   {
+    "date": "2018-03-09",
+    "value": 22.303
+   },
+   {
+    "date": "2018-03-16",
+    "value": 22.7628
+   },
+   {
+    "date": "2018-03-23",
+    "value": 22.8419
+   },
+   {
+    "date": "2018-03-30",
+    "value": 23.1317
+   },
+   {
+    "date": "2018-04-06",
+    "value": 23.2695
+   },
+   {
+    "date": "2018-04-13",
+    "value": 22.9955
+   },
+   {
+    "date": "2018-04-20",
+    "value": 22.4996
+   },
+   {
+    "date": "2018-04-27",
+    "value": 22.8104
+   },
+   {
+    "date": "2018-05-04",
+    "value": 23.482
+   },
+   {
+    "date": "2018-05-11",
+    "value": 23.6671
+   },
+   {
+    "date": "2018-05-18",
+    "value": 24.4057
+   },
+   {
+    "date": "2018-05-25",
+    "value": 24.3609
+   },
+   {
+    "date": "2018-06-01",
+    "value": 25.3117
+   },
+   {
+    "date": "2018-06-08",
+    "value": 24.6534
+   },
+   {
+    "date": "2018-06-15",
+    "value": 25.0421
+   },
+   {
+    "date": "2018-06-22",
+    "value": 24.8392
+   },
+   {
+    "date": "2018-06-29",
+    "value": 24.681
+   },
+   {
+    "date": "2018-07-06",
+    "value": 25.399
+   },
+   {
+    "date": "2018-07-13",
+    "value": 24.6208
+   },
+   {
+    "date": "2018-07-20",
+    "value": 24.6568
+   },
+   {
+    "date": "2018-07-27",
+    "value": 24.4757
+   },
+   {
+    "date": "2018-08-03",
+    "value": 24.0893
+   },
+   {
+    "date": "2018-08-10",
+    "value": 23.7734
+   },
+   {
+    "date": "2018-08-17",
+    "value": 24.3781
+   },
+   {
+    "date": "2018-08-24",
+    "value": 24.6683
+   },
+   {
+    "date": "2018-08-31",
+    "value": 24.8134
+   },
+   {
+    "date": "2018-09-07",
+    "value": 24.5446
+   },
+   {
+    "date": "2018-09-14",
+    "value": 24.5473
+   },
+   {
+    "date": "2018-09-21",
+    "value": 24.6948
+   },
+   {
+    "date": "2018-09-28",
+    "value": 24.2615
+   },
+   {
+    "date": "2018-10-05",
+    "value": 23.6913
+   },
+   {
+    "date": "2018-10-12",
+    "value": 23.4316
+   },
+   {
+    "date": "2018-10-19",
+    "value": 24.1519
+   },
+   {
+    "date": "2018-10-26",
+    "value": 24.1668
+   },
+   {
+    "date": "2018-11-02",
+    "value": 23.3905
+   },
+   {
+    "date": "2018-11-09",
+    "value": 23.5178
+   },
+   {
+    "date": "2018-11-16",
+    "value": 22.6091
+   },
+   {
+    "date": "2018-11-23",
+    "value": 22.7999
+   },
+   {
+    "date": "2018-11-30",
+    "value": 23.0299
+   },
+   {
+    "date": "2018-12-07",
+    "value": 23.0426
+   },
+   {
+    "date": "2018-12-14",
+    "value": 22.959
+   },
+   {
+    "date": "2018-12-21",
+    "value": 22.8436
+   },
+   {
+    "date": "2018-12-28",
+    "value": 22.8666
+   },
+   {
+    "date": "2019-01-04",
+    "value": 22.4539
+   },
+   {
+    "date": "2019-01-11",
+    "value": 22.3015
+   },
+   {
+    "date": "2019-01-18",
+    "value": 22.855
+   },
+   {
+    "date": "2019-01-25",
+    "value": 23.8672
+   },
+   {
+    "date": "2019-02-01",
+    "value": 23.3833
+   },
+   {
+    "date": "2019-02-08",
+    "value": 23.8067
+   },
+   {
+    "date": "2019-02-15",
+    "value": 24.7618
+   },
+   {
+    "date": "2019-02-22",
+    "value": 24.2171
+   },
+   {
+    "date": "2019-03-01",
+    "value": 24.8861
+   },
+   {
+    "date": "2019-03-08",
+    "value": 24.561
+   },
+   {
+    "date": "2019-03-15",
+    "value": 25.359
+   },
+   {
+    "date": "2019-03-22",
+    "value": 25.6145
+   },
+   {
+    "date": "2019-03-29",
+    "value": 25.6437
+   },
+   {
+    "date": "2019-04-05",
+    "value": 25.2186
+   },
+   {
+    "date": "2019-04-12",
+    "value": 25.6433
+   },
+   {
+    "date": "2019-04-19",
+    "value": 25.6837
+   },
+   {
+    "date": "2019-04-26",
+    "value": 25.6169
+   },
+   {
+    "date": "2019-05-03",
+    "value": 26.346
+   },
+   {
+    "date": "2019-05-10",
+    "value": 25.8189
+   },
+   {
+    "date": "2019-05-17",
+    "value": 25.7978
+   },
+   {
+    "date": "2019-05-24",
+    "value": 25.7219
+   },
+   {
+    "date": "2019-05-31",
+    "value": 26.1732
+   },
+   {
+    "date": "2019-06-07",
+    "value": 26.6715
+   },
+   {
+    "date": "2019-06-14",
+    "value": 26.0085
+   },
+   {
+    "date": "2019-06-21",
+    "value": 26.4597
+   },
+   {
+    "date": "2019-06-28",
+    "value": 26.7722
+   },
+   {
+    "date": "2019-07-05",
+    "value": 26.6531
+   },
+   {
+    "date": "2019-07-12",
+    "value": 26.6079
+   },
+   {
+    "date": "2019-07-19",
+    "value": 27.5226
+   },
+   {
+    "date": "2019-07-26",
+    "value": 27.9792
+   },
+   {
+    "date": "2019-08-02",
+    "value": 28.6106
+   },
+   {
+    "date": "2019-08-09",
+    "value": 28.7112
+   },
+   {
+    "date": "2019-08-16",
+    "value": 28.9791
+   },
+   {
+    "date": "2019-08-23",
+    "value": 29.3282
+   },
+   {
+    "date": "2019-08-30",
+    "value": 29.9384
+   },
+   {
+    "date": "2019-09-06",
+    "value": 30.3187
+   },
+   {
+    "date": "2019-09-13",
+    "value": 29.1053
+   },
+   {
+    "date": "2019-09-20",
+    "value": 28.8871
+   },
+   {
+    "date": "2019-09-27",
+    "value": 28.2539
+   },
+   {
+    "date": "2019-10-04",
+    "value": 29.688
+   },
+   {
+    "date": "2019-10-11",
+    "value": 29.3405
+   },
+   {
+    "date": "2019-10-18",
+    "value": 29.4478
+   },
+   {
+    "date": "2019-10-25",
+    "value": 30.0817
+   },
+   {
+    "date": "2019-11-01",
+    "value": 30.6683
+   },
+   {
+    "date": "2019-11-08",
+    "value": 30.6812
+   },
+   {
+    "date": "2019-11-15",
+    "value": 30.3322
+   },
+   {
+    "date": "2019-11-22",
+    "value": 30.271
+   },
+   {
+    "date": "2019-11-29",
+    "value": 31.4152
+   },
+   {
+    "date": "2019-12-06",
+    "value": 31.2792
+   },
+   {
+    "date": "2019-12-13",
+    "value": 31.5042
+   },
+   {
+    "date": "2019-12-20",
+    "value": 31.7355
+   },
+   {
+    "date": "2019-12-27",
+    "value": 31.7491
+   },
+   {
+    "date": "2020-01-03",
+    "value": 32.5649
+   },
+   {
+    "date": "2020-01-10",
+    "value": 32.5149
+   },
+   {
+    "date": "2020-01-17",
+    "value": 31.3845
+   },
+   {
+    "date": "2020-01-24",
+    "value": 31.6318
+   },
+   {
+    "date": "2020-01-31",
+    "value": 31.4852
+   },
+   {
+    "date": "2020-02-07",
+    "value": 30.8561
+   },
+   {
+    "date": "2020-02-14",
+    "value": 31.0875
+   },
+   {
+    "date": "2020-02-21",
+    "value": 30.9125
+   },
+   {
+    "date": "2020-02-28",
+    "value": 31.8449
+   },
+   {
+    "date": "2020-03-06",
+    "value": 31.5493
+   },
+   {
+    "date": "2020-03-13",
+    "value": 32.0943
+   },
+   {
+    "date": "2020-03-20",
+    "value": 32.9224
+   },
+   {
+    "date": "2020-03-27",
+    "value": 33.0049
+   },
+   {
+    "date": "2020-04-03",
+    "value": 32.1978
+   },
+   {
+    "date": "2020-04-10",
+    "value": 32.064
+   },
+   {
+    "date": "2020-04-17",
+    "value": 32.148
+   },
+   {
+    "date": "2020-04-24",
+    "value": 32.2469
+   },
+   {
+    "date": "2020-05-01",
+    "value": 33.0799
+   },
+   {
+    "date": "2020-05-08",
+    "value": 33.0979
+   },
+   {
+    "date": "2020-05-15",
+    "value": 32.6654
+   },
+   {
+    "date": "2020-05-22",
+    "value": 32.648
+   },
+   {
+    "date": "2020-05-29",
+    "value": 32.4024
+   },
+   {
+    "date": "2020-06-05",
+    "value": 31.6476
+   },
+   {
+    "date": "2020-06-12",
+    "value": 31.6525
+   },
+   {
+    "date": "2020-06-19",
+    "value": 32.313
+   },
+   {
+    "date": "2020-06-26",
+    "value": 32.0864
+   },
+   {
+    "date": "2020-07-03",
+    "value": 32.3869
+   },
+   {
+    "date": "2020-07-10",
+    "value": 32.48
+   },
+   {
+    "date": "2020-07-17",
+    "value": 31.7417
+   },
+   {
+    "date": "2020-07-24",
+    "value": 31.7936
+   },
+   {
+    "date": "2020-07-31",
+    "value": 32.3213
+   },
+   {
+    "date": "2020-08-07",
+    "value": 32.4281
+   },
+   {
+    "date": "2020-08-14",
+    "value": 33.1724
+   },
+   {
+    "date": "2020-08-21",
+    "value": 33.5552
+   },
+   {
+    "date": "2020-08-28",
+    "value": 34.2578
+   },
+   {
+    "date": "2020-09-04",
+    "value": 34.1229
+   },
+   {
+    "date": "2020-09-11",
+    "value": 34.0549
+   },
+   {
+    "date": "2020-09-18",
+    "value": 34.8658
+   },
+   {
+    "date": "2020-09-25",
+    "value": 35.4152
+   },
+   {
+    "date": "2020-10-02",
+    "value": 35.6917
+   },
+   {
+    "date": "2020-10-09",
+    "value": 35.0562
+   },
+   {
+    "date": "2020-10-16",
+    "value": 35.5469
+   },
+   {
+    "date": "2020-10-23",
+    "value": 35.7563
+   },
+   {
+    "date": "2020-10-30",
+    "value": 37.3653
+   },
+   {
+    "date": "2020-11-06",
+    "value": 36.5978
+   },
+   {
+    "date": "2020-11-13",
+    "value": 37.0262
+   },
+   {
+    "date": "2020-11-20",
+    "value": 37.8841
+   },
+   {
+    "date": "2020-11-27",
+    "value": 37.7461
+   },
+   {
+    "date": "2020-12-04",
+    "value": 37.4698
+   },
+   {
+    "date": "2020-12-11",
+    "value": 38.2035
+   },
+   {
+    "date": "2020-12-18",
+    "value": 38.9353
+   },
+   {
+    "date": "2020-12-25",
+    "value": 37.9384
+   },
+   {
+    "date": "2021-01-01",
+    "value": 38.224
+   },
+   {
+    "date": "2021-01-08",
+    "value": 38.0599
+   },
+   {
+    "date": "2021-01-15",
+    "value": 38.5328
+   },
+   {
+    "date": "2021-01-22",
+    "value": 38.1902
+   },
+   {
+    "date": "2021-01-29",
+    "value": 38.0742
+   },
+   {
+    "date": "2021-02-05",
+    "value": 38.2336
+   },
+   {
+    "date": "2021-02-12",
+    "value": 38.3979
+   },
+   {
+    "date": "2021-02-19",
+    "value": 38.8672
+   },
+   {
+    "date": "2021-02-26",
+    "value": 38.2262
+   },
+   {
+    "date": "2021-03-05",
+    "value": 37.0461
+   },
+   {
+    "date": "2021-03-12",
+    "value": 36.3008
+   },
+   {
+    "date": "2021-03-19",
+    "value": 36.0736
+   },
+   {
+    "date": "2021-03-26",
+    "value": 36.6018
+   },
+   {
+    "date": "2021-04-02",
+    "value": 36.7107
+   },
+   {
+    "date": "2021-04-09",
+    "value": 35.5221
+   },
+   {
+    "date": "2021-04-16",
+    "value": 36.3274
+   },
+   {
+    "date": "2021-04-23",
+    "value": 36.2514
+   },
+   {
+    "date": "2021-04-30",
+    "value": 36.4662
+   },
+   {
+    "date": "2021-05-07",
+    "value": 36.5527
+   },
+   {
+    "date": "2021-05-14",
+    "value": 35.8357
+   },
+   {
+    "date": "2021-05-21",
+    "value": 36.1121
+   },
+   {
+    "date": "2021-05-28",
+    "value": 35.6572
+   },
+   {
+    "date": "2021-06-04",
+    "value": 36.3058
+   },
+   {
+    "date": "2021-06-11",
+    "value": 36.7566
+   },
+   {
+    "date": "2021-06-18",
+    "value": 36.9988
+   },
+   {
+    "date": "2021-06-25",
+    "value": 37.8585
+   },
+   {
+    "date": "2021-07-02",
+    "value": 38.3626
+   },
+   {
+    "date": "2021-07-09",
+    "value": 37.8819
+   },
+   {
+    "date": "2021-07-16",
+    "value": 38.2582
+   },
+   {
+    "date": "2021-07-23",
+    "value": 39.1565
+   },
+   {
+    "date": "2021-07-30",
+    "value": 38.936
+   },
+   {
+    "date": "2021-08-06",
+    "value": 38.9384
+   },
+   {
+    "date": "2021-08-13",
+    "value": 39.9878
+   },
+   {
+    "date": "2021-08-20",
+    "value": 41.2534
+   },
+   {
+    "date": "2021-08-27",
+    "value": 40.6559
+   },
+   {
+    "date": "2021-09-03",
+    "value": 40.6905
+   },
+   {
+    "date": "2021-09-10",
+    "value": 40.7513
+   },
+   {
+    "date": "2021-09-17",
+    "value": 39.9279
+   },
+   {
+    "date": "2021-09-24",
+    "value": 39.8944
+   },
+   {
+    "date": "2021-10-01",
+    "value": 40.3182
+   },
+   {
+    "date": "2021-10-08",
+    "value": 41.0507
+   },
+   {
+    "date": "2021-10-15",
+    "value": 41.4541
+   },
+   {
+    "date": "2021-10-22",
+    "value": 42.2257
+   },
+   {
+    "date": "2021-10-29",
+    "value": 41.8116
+   },
+   {
+    "date": "2021-11-05",
+    "value": 42.2755
+   },
+   {
+    "date": "2021-11-12",
+    "value": 41.8173
+   },
+   {
+    "date": "2021-11-19",
+    "value": 41.9757
+   },
+   {
+    "date": "2021-11-26",
+    "value": 42.4944
+   },
+   {
+    "date": "2021-12-03",
+    "value": 41.4546
+   },
+   {
+    "date": "2021-12-10",
+    "value": 41.4149
+   },
+   {
+    "date": "2021-12-17",
+    "value": 41.3818
+   },
+   {
+    "date": "2021-12-24",
+    "value": 41.9225
+   },
+   {
+    "date": "2021-12-31",
+    "value": 42.4288
+   },
+   {
+    "date": "2022-01-07",
+    "value": 42.1845
+   },
+   {
+    "date": "2022-01-14",
+    "value": 43.6868
+   },
+   {
+    "date": "2022-01-21",
+    "value": 43.0607
+   },
+   {
+    "date": "2022-01-28",
+    "value": 43.844
+   },
+   {
+    "date": "2022-02-04",
+    "value": 43.896
+   },
+   {
+    "date": "2022-02-11",
+    "value": 43.3987
+   },
+   {
+    "date": "2022-02-18",
+    "value": 42.6677
+   },
+   {
+    "date": "2022-02-25",
+    "value": 41.665
+   },
+   {
+    "date": "2022-03-04",
+    "value": 40.7075
+   },
+   {
+    "date": "2022-03-11",
+    "value": 41.0701
+   },
+   {
+    "date": "2022-03-18",
+    "value": 40.7923
+   },
+   {
+    "date": "2022-03-25",
+    "value": 40.9873
+   },
+   {
+    "date": "2022-04-01",
+    "value": 41.3166
+   },
+   {
+    "date": "2022-04-08",
+    "value": 41.2195
+   },
+   {
+    "date": "2022-04-15",
+    "value": 40.6095
+   },
+   {
+    "date": "2022-04-22",
+    "value": 41.3836
+   },
+   {
+    "date": "2022-04-29",
+    "value": 41.1726
+   },
+   {
+    "date": "2022-05-06",
+    "value": 41.0619
+   },
+   {
+    "date": "2022-05-13",
+    "value": 40.8966
+   },
+   {
+    "date": "2022-05-20",
+    "value": 41.0663
+   },
+   {
+    "date": "2022-05-27",
+    "value": 39.6918
+   },
+   {
+    "date": "2022-06-03",
+    "value": 39.7695
+   },
+   {
+    "date": "2022-06-10",
+    "value": 38.9338
+   },
+   {
+    "date": "2022-06-17",
+    "value": 38.9282
+   },
+   {
+    "date": "2022-06-24",
+    "value": 40.9332
+   },
+   {
+    "date": "2022-07-01",
+    "value": 40.3405
+   },
+   {
+    "date": "2022-07-08",
+    "value": 40.6867
+   },
+   {
+    "date": "2022-07-15",
+    "value": 40.7252
+   },
+   {
+    "date": "2022-07-22",
+    "value": 40.865
+   },
+   {
+    "date": "2022-07-29",
+    "value": 41.2132
+   },
+   {
+    "date": "2022-08-05",
+    "value": 41.9434
+   },
+   {
+    "date": "2022-08-12",
+    "value": 42.4381
+   },
+   {
+    "date": "2022-08-19",
+    "value": 42.603
+   },
+   {
+    "date": "2022-08-26",
+    "value": 42.2476
+   },
+   {
+    "date": "2022-09-02",
+    "value": 42.5772
+   },
+   {
+    "date": "2022-09-09",
+    "value": 42.2227
+   },
+   {
+    "date": "2022-09-16",
+    "value": 43.2044
+   },
+   {
+    "date": "2022-09-23",
+    "value": 43.2819
+   },
+   {
+    "date": "2022-09-30",
+    "value": 43.9355
+   },
+   {
+    "date": "2022-10-07",
+    "value": 43.0373
+   },
+   {
+    "date": "2022-10-14",
+    "value": 42.7155
+   },
+   {
+    "date": "2022-10-21",
+    "value": 42.7232
+   },
+   {
+    "date": "2022-10-28",
+    "value": 41.6275
+   },
+   {
+    "date": "2022-11-04",
+    "value": 41.6151
+   },
+   {
+    "date": "2022-11-11",
+    "value": 40.8546
+   },
+   {
+    "date": "2022-11-18",
+    "value": 42.1578
+   },
+   {
+    "date": "2022-11-25",
+    "value": 41.6883
+   },
+   {
+    "date": "2022-12-02",
+    "value": 42.3254
+   },
+   {
+    "date": "2022-12-09",
+    "value": 42.4964
+   },
+   {
+    "date": "2022-12-16",
+    "value": 42.6783
+   },
+   {
+    "date": "2022-12-23",
+    "value": 45.4267
+   },
+   {
+    "date": "2022-12-30",
+    "value": 46.5881
+   },
+   {
+    "date": "2023-01-06",
+    "value": 45.7869
+   },
+   {
+    "date": "2023-01-13",
+    "value": 46.8146
+   },
+   {
+    "date": "2023-01-20",
+    "value": 46.6754
+   },
+   {
+    "date": "2023-01-27",
+    "value": 47.1515
+   },
+   {
+    "date": "2023-02-03",
+    "value": 47.4175
+   },
+   {
+    "date": "2023-02-10",
+    "value": 46.9003
+   },
+   {
+    "date": "2023-02-17",
+    "value": 46.88
+   },
+   {
+    "date": "2023-02-24",
+    "value": 45.5783
+   },
+   {
+    "date": "2023-03-03",
+    "value": 45.0023
+   },
+   {
+    "date": "2023-03-10",
+    "value": 46.6432
+   },
+   {
+    "date": "2023-03-17",
+    "value": 46.6522
+   },
+   {
+    "date": "2023-03-24",
+    "value": 46.4507
+   },
+   {
+    "date": "2023-03-31",
+    "value": 46.4502
+   },
+   {
+    "date": "2023-04-07",
+    "value": 47.9751
+   },
+   {
+    "date": "2023-04-14",
+    "value": 48.6066
+   },
+   {
+    "date": "2023-04-21",
+    "value": 48.6856
+   },
+   {
+    "date": "2023-04-28",
+    "value": 47.6951
+   },
+   {
+    "date": "2023-05-05",
+    "value": 47.4323
+   },
+   {
+    "date": "2023-05-12",
+    "value": 47.5615
+   },
+   {
+    "date": "2023-05-19",
+    "value": 47.9205
+   },
+   {
+    "date": "2023-05-26",
+    "value": 47.4154
+   },
+   {
+    "date": "2023-06-02",
+    "value": 47.6613
+   },
+   {
+    "date": "2023-06-09",
+    "value": 47.5254
+   },
+   {
+    "date": "2023-06-16",
+    "value": 47.6639
+   },
+   {
+    "date": "2023-06-23",
+    "value": 46.5204
+   },
+   {
+    "date": "2023-06-30",
+    "value": 47.011
+   },
+   {
+    "date": "2023-07-07",
+    "value": 47.0066
+   },
+   {
+    "date": "2023-07-14",
+    "value": 47.4378
+   },
+   {
+    "date": "2023-07-21",
+    "value": 47.7293
+   },
+   {
+    "date": "2023-07-28",
+    "value": 48.0074
+   },
+   {
+    "date": "2023-08-04",
+    "value": 48.0155
+   },
+   {
+    "date": "2023-08-11",
+    "value": 48.4068
+   },
+   {
+    "date": "2023-08-18",
+    "value": 47.6271
+   },
+   {
+    "date": "2023-08-25",
+    "value": 48.3178
+   },
+   {
+    "date": "2023-09-01",
+    "value": 48.1988
+   },
+   {
+    "date": "2023-09-08",
+    "value": 47.8087
+   },
+   {
+    "date": "2023-09-15",
+    "value": 48.1235
+   },
+   {
+    "date": "2023-09-22",
+    "value": 49.7614
+   },
+   {
+    "date": "2023-09-29",
+    "value": 49.473
+   },
+   {
+    "date": "2023-10-06",
+    "value": 48.6839
+   },
+   {
+    "date": "2023-10-13",
+    "value": 47.1979
+   },
+   {
+    "date": "2023-10-20",
+    "value": 47.0887
+   },
+   {
+    "date": "2023-10-27",
+    "value": 48.3709
+   },
+   {
+    "date": "2023-11-03",
+    "value": 49.2262
+   },
+   {
+    "date": "2023-11-10",
+    "value": 51.0098
+   },
+   {
+    "date": "2023-11-17",
+    "value": 50.2543
+   },
+   {
+    "date": "2023-11-24",
+    "value": 51.5771
+   },
+   {
+    "date": "2023-12-01",
+    "value": 51.8544
+   },
+   {
+    "date": "2023-12-08",
+    "value": 50.9099
+   },
+   {
+    "date": "2023-12-15",
+    "value": 52.2928
+   },
+   {
+    "date": "2023-12-22",
+    "value": 52.6302
+   },
+   {
+    "date": "2023-12-29",
+    "value": 54.4196
+   },
+   {
+    "date": "2024-01-05",
+    "value": 52.9891
+   },
+   {
+    "date": "2024-01-12",
+    "value": 51.6482
+   },
+   {
+    "date": "2024-01-19",
+    "value": 51.4596
+   },
+   {
+    "date": "2024-01-26",
+    "value": 52.9501
+   },
+   {
+    "date": "2024-02-02",
+    "value": 54.057
+   },
+   {
+    "date": "2024-02-09",
+    "value": 53.9023
+   },
+   {
+    "date": "2024-02-16",
+    "value": 56.8735
+   },
+   {
+    "date": "2024-02-23",
+    "value": 56.4002
+   },
+   {
+    "date": "2024-03-01",
+    "value": 57.1541
+   },
+   {
+    "date": "2024-03-08",
+    "value": 56.9712
+   },
+   {
+    "date": "2024-03-15",
+    "value": 57.2278
+   },
+   {
+    "date": "2024-03-22",
+    "value": 57.2193
+   },
+   {
+    "date": "2024-03-29",
+    "value": 55.3202
+   },
+   {
+    "date": "2024-04-05",
+    "value": 55.512
+   },
+   {
+    "date": "2024-04-12",
+    "value": 55.2082
+   },
+   {
+    "date": "2024-04-19",
+    "value": 55.0107
+   },
+   {
+    "date": "2024-04-26",
+    "value": 55.9872
+   },
+   {
+    "date": "2024-05-03",
+    "value": 56.6437
+   },
+   {
+    "date": "2024-05-10",
+    "value": 59.2842
+   },
+   {
+    "date": "2024-05-17",
+    "value": 59.2059
+   },
+   {
+    "date": "2024-05-24",
+    "value": 58.6724
+   },
+   {
+    "date": "2024-05-31",
+    "value": 57.9985
+   },
+   {
+    "date": "2024-06-07",
+    "value": 59.0165
+   },
+   {
+    "date": "2024-06-14",
+    "value": 57.6896
+   },
+   {
+    "date": "2024-06-21",
+    "value": 56.6896
+   },
+   {
+    "date": "2024-06-28",
+    "value": 58.5651
+   },
+   {
+    "date": "2024-07-05",
+    "value": 59.1931
+   },
+   {
+    "date": "2024-07-12",
+    "value": 57.5302
+   },
+   {
+    "date": "2024-07-19",
+    "value": 57.5086
+   },
+   {
+    "date": "2024-07-26",
+    "value": 57.7848
+   },
+   {
+    "date": "2024-08-02",
+    "value": 56.0396
+   },
+   {
+    "date": "2024-08-09",
+    "value": 55.2934
+   },
+   {
+    "date": "2024-08-16",
+    "value": 55.5816
+   },
+   {
+    "date": "2024-08-23",
+    "value": 55.9637
+   },
+   {
+    "date": "2024-08-30",
+    "value": 56.4548
+   },
+   {
+    "date": "2024-09-06",
+    "value": 54.0294
+   },
+   {
+    "date": "2024-09-13",
+    "value": 54.3507
+   },
+   {
+    "date": "2024-09-20",
+    "value": 53.5865
+   },
+   {
+    "date": "2024-09-27",
+    "value": 53.2083
+   },
+   {
+    "date": "2024-10-04",
+    "value": 53.8514
+   },
+   {
+    "date": "2024-10-11",
+    "value": 54.0616
+   },
+   {
+    "date": "2024-10-18",
+    "value": 54.2854
+   },
+   {
+    "date": "2024-10-25",
+    "value": 54.308
+   },
+   {
+    "date": "2024-11-01",
+    "value": 56.4155
+   },
+   {
+    "date": "2024-11-08",
+    "value": 56.3146
+   },
+   {
+    "date": "2024-11-15",
+    "value": 56.8701
+   },
+   {
+    "date": "2024-11-22",
+    "value": 57.8204
+   },
+   {
+    "date": "2024-11-29",
+    "value": 57.1085
+   },
+   {
+    "date": "2024-12-06",
+    "value": 55.7248
+   },
+   {
+    "date": "2024-12-13",
+    "value": 55.9594
+   },
+   {
+    "date": "2024-12-20",
+    "value": 56.31
+   },
+   {
+    "date": "2024-12-27",
+    "value": 56.3961
+   },
+   {
+    "date": "2025-01-03",
+    "value": 55.9969
+   },
+   {
+    "date": "2025-01-10",
+    "value": 58.4869
+   },
+   {
+    "date": "2025-01-17",
+    "value": 57.6107
+   },
+   {
+    "date": "2025-01-24",
+    "value": 58.0929
+   },
+   {
+    "date": "2025-01-31",
+    "value": 57.4893
+   },
+   {
+    "date": "2025-02-07",
+    "value": 58.7301
+   },
+   {
+    "date": "2025-02-14",
+    "value": 59.0035
+   },
+   {
+    "date": "2025-02-21",
+    "value": 58.1534
+   },
+   {
+    "date": "2025-02-28",
+    "value": 57.9734
+   },
+   {
+    "date": "2025-03-07",
+    "value": 58.0313
+   },
+   {
+    "date": "2025-03-14",
+    "value": 58.4326
+   },
+   {
+    "date": "2025-03-21",
+    "value": 58.3468
+   },
+   {
+    "date": "2025-03-28",
+    "value": 57.6983
+   },
+   {
+    "date": "2025-04-04",
+    "value": 55.8792
+   },
+   {
+    "date": "2025-04-11",
+    "value": 55.2634
+   },
+   {
+    "date": "2025-04-18",
+    "value": 54.0959
+   },
+   {
+    "date": "2025-04-25",
+    "value": 54.4276
+   },
+   {
+    "date": "2025-05-02",
+    "value": 54.0482
+   },
+   {
+    "date": "2025-05-09",
+    "value": 54.7618
+   },
+   {
+    "date": "2025-05-16",
+    "value": 54.187
+   },
+   {
+    "date": "2025-05-23",
+    "value": 53.5577
+   },
+   {
+    "date": "2025-05-30",
+    "value": 54.1602
+   },
+   {
+    "date": "2025-06-06",
+    "value": 54.4402
+   },
+   {
+    "date": "2025-06-13",
+    "value": 54.2915
+   },
+   {
+    "date": "2025-06-20",
+    "value": 54.625
+   },
+   {
+    "date": "2025-06-27",
+    "value": 53.6968
+   },
+   {
+    "date": "2025-07-04",
+    "value": 53.7583
+   },
+   {
+    "date": "2025-07-11",
+    "value": 54.4184
+   },
+   {
+    "date": "2025-07-18",
+    "value": 54.2456
+   },
+   {
+    "date": "2025-07-25",
+    "value": 54.7082
+   },
+   {
+    "date": "2025-08-01",
+    "value": 54.8244
+   },
+   {
+    "date": "2025-08-08",
+    "value": 54.9714
+   },
+   {
+    "date": "2025-08-15",
+    "value": 55.321
+   },
+   {
+    "date": "2025-08-22",
+    "value": 56.3582
+   },
+   {
+    "date": "2025-08-29",
+    "value": 56.2713
+   },
+   {
+    "date": "2025-09-05",
+    "value": 57.0779
+   },
+   {
+    "date": "2025-09-12",
+    "value": 56.3378
+   },
+   {
+    "date": "2025-09-19",
+    "value": 56.1076
+   },
+   {
+    "date": "2025-09-26",
+    "value": 56.2548
+   },
+   {
+    "date": "2025-10-03",
+    "value": 55.8867
+   },
+   {
+    "date": "2025-10-10",
+    "value": 55.3989
+   },
+   {
+    "date": "2025-10-17",
+    "value": 53.6722
+   },
+   {
+    "date": "2025-10-24",
+    "value": 54.0916
+   },
+   {
+    "date": "2025-10-31",
+    "value": 53.3642
+   },
+   {
+    "date": "2025-11-07",
+    "value": 52.1231
+   },
+   {
+    "date": "2025-11-14",
+    "value": 53.5836
+   },
+   {
+    "date": "2025-11-21",
+    "value": 54.8157
+   },
+   {
+    "date": "2025-11-28",
+    "value": 54.9859
+   },
+   {
+    "date": "2025-12-05",
+    "value": 55.9848
+   },
+   {
+    "date": "2025-12-12",
+    "value": 55.7092
+   },
+   {
+    "date": "2025-12-19",
+    "value": 55.3236
+   },
+   {
+    "date": "2025-12-26",
+    "value": 56.3971
+   },
+   {
+    "date": "2026-01-02",
+    "value": 58.5471
+   },
+   {
+    "date": "2026-01-09",
+    "value": 60.693
+   },
+   {
+    "date": "2026-01-16",
+    "value": 61.6285
+   },
+   {
+    "date": "2026-01-23",
+    "value": 61.4325
+   },
+   {
+    "date": "2026-01-30",
+    "value": 59.7248
+   },
+   {
+    "date": "2026-02-06",
+    "value": 60.5665
+   },
+   {
+    "date": "2026-02-13",
+    "value": 60.7382
+   },
+   {
+    "date": "2026-02-20",
+    "value": 61.4392
+   },
+   {
+    "date": "2026-02-27",
+    "value": 60.7666
+   },
+   {
+    "date": "2026-03-06",
+    "value": 59.9515
+   },
+   {
+    "date": "2026-03-13",
+    "value": 60.2262
+   },
+   {
+    "date": "2026-03-20",
+    "value": 59.9187
+   },
+   {
+    "date": "2026-03-27",
+    "value": 58.2948
+   },
+   {
+    "date": "2026-04-03",
+    "value": 58.3992
+   },
+   {
+    "date": "2026-04-10",
+    "value": 57.365
+   },
+   {
+    "date": "2026-04-17",
+    "value": 58.973
+   },
+   {
+    "date": "2026-04-24",
+    "value": 58.5108
+   },
+   {
+    "date": "2026-05-01",
+    "value": 58.9116
+   },
+   {
+    "date": "2026-05-08",
+    "value": 58.9935
+   },
+   {
+    "date": "2026-05-15",
+    "value": 61.2407
+   },
+   {
+    "date": "2026-05-22",
+    "value": 60.6893
+   },
+   {
+    "date": "2026-05-29",
+    "value": 60.2345
+   },
+   {
+    "date": "2026-06-05",
+    "value": 60.433
+   },
+   {
+    "date": "2026-06-12",
+    "value": 60.3127
+   },
+   {
+    "date": "2026-06-19",
+    "value": 59.7047
+   },
+   {
+    "date": "2026-06-26",
+    "value": 60.2309
+   },
+   {
+    "date": "2026-07-03",
+    "value": 60.6415
+   },
+   {
+    "date": "2026-07-10",
+    "value": 59.2328
+   },
+   {
+    "date": "2026-07-17",
+    "value": 58.9192
+   },
+   {
+    "date": "2026-07-24",
+    "value": 59.1142
+   },
+   {
+    "date": "2026-07-31",
+    "value": 59.868
+   },
+   {
+    "date": "2026-08-07",
+    "value": 58.8709
+   },
+   {
+    "date": "2026-08-14",
+    "value": 58.0735
+   },
+   {
+    "date": "2026-08-21",
+    "value": 58.0469
+   },
+   {
+    "date": "2026-08-28",
+    "value": 58.7836
+   },
+   {
+    "date": "2026-09-04",
+    "value": 58.8365
+   },
+   {
+    "date": "2026-09-11",
+    "value": 58.1922
+   },
+   {
+    "date": "2026-09-18",
+    "value": 58.072
+   },
+   {
+    "date": "2026-09-25",
+    "value": 57.7256
+   },
+   {
+    "date": "2026-10-02",
+    "value": 58.4683
+   },
+   {
+    "date": "2026-10-09",
+    "value": 59.2253
+   },
+   {
+    "date": "2026-10-16",
+    "value": 58.3297
+   },
+   {
+    "date": "2026-10-23",
+    "value": 60.4944
+   },
+   {
+    "date": "2026-10-30",
+    "value": 62.4012
+   }
+  ],
+  "benchmark": {
+   "id": "NIFTY500_TRI",
+   "name": "Nifty 500 TRI",
+   "points": [
+    {
+     "date": "2016-11-04",
+     "value": 18.6297
+    },
+    {
+     "date": "2016-11-11",
+     "value": 18.6665
+    },
+    {
+     "date": "2016-11-18",
+     "value": 18.7559
+    },
+    {
+     "date": "2016-11-25",
+     "value": 18.591
+    },
+    {
+     "date": "2016-12-02",
+     "value": 18.2786
+    },
+    {
+     "date": "2016-12-09",
+     "value": 17.8294
+    },
+    {
+     "date": "2016-12-16",
+     "value": 17.8288
+    },
+    {
+     "date": "2016-12-23",
+     "value": 18.0833
+    },
+    {
+     "date": "2016-12-30",
+     "value": 17.8274
+    },
+    {
+     "date": "2017-01-06",
+     "value": 17.389
+    },
+    {
+     "date": "2017-01-13",
+     "value": 18.3323
+    },
+    {
+     "date": "2017-01-20",
+     "value": 18.426
+    },
+    {
+     "date": "2017-01-27",
+     "value": 18.6072
+    },
+    {
+     "date": "2017-02-03",
+     "value": 19.5007
+    },
+    {
+     "date": "2017-02-10",
+     "value": 19.1093
+    },
+    {
+     "date": "2017-02-17",
+     "value": 19.0423
+    },
+    {
+     "date": "2017-02-24",
+     "value": 19.3308
+    },
+    {
+     "date": "2017-03-03",
+     "value": 19.6869
+    },
+    {
+     "date": "2017-03-10",
+     "value": 19.6921
+    },
+    {
+     "date": "2017-03-17",
+     "value": 19.9443
+    },
+    {
+     "date": "2017-03-24",
+     "value": 19.8748
+    },
+    {
+     "date": "2017-03-31",
+     "value": 20.865
+    },
+    {
+     "date": "2017-04-07",
+     "value": 21.0026
+    },
+    {
+     "date": "2017-04-14",
+     "value": 21.4875
+    },
+    {
+     "date": "2017-04-21",
+     "value": 21.5288
+    },
+    {
+     "date": "2017-04-28",
+     "value": 21.5843
+    },
+    {
+     "date": "2017-05-05",
+     "value": 22.1289
+    },
+    {
+     "date": "2017-05-12",
+     "value": 21.7106
+    },
+    {
+     "date": "2017-05-19",
+     "value": 21.6956
+    },
+    {
+     "date": "2017-05-26",
+     "value": 21.8138
+    },
+    {
+     "date": "2017-06-02",
+     "value": 21.5991
+    },
+    {
+     "date": "2017-06-09",
+     "value": 21.6951
+    },
+    {
+     "date": "2017-06-16",
+     "value": 21.6254
+    },
+    {
+     "date": "2017-06-23",
+     "value": 22.2437
+    },
+    {
+     "date": "2017-06-30",
+     "value": 22.3309
+    },
+    {
+     "date": "2017-07-07",
+     "value": 22.0244
+    },
+    {
+     "date": "2017-07-14",
+     "value": 21.8613
+    },
+    {
+     "date": "2017-07-21",
+     "value": 22.7787
+    },
+    {
+     "date": "2017-07-28",
+     "value": 22.5049
+    },
+    {
+     "date": "2017-08-04",
+     "value": 22.2153
+    },
+    {
+     "date": "2017-08-11",
+     "value": 22.0039
+    },
+    {
+     "date": "2017-08-18",
+     "value": 21.859
+    },
+    {
+     "date": "2017-08-25",
+     "value": 21.9496
+    },
+    {
+     "date": "2017-09-01",
+     "value": 21.8457
+    },
+    {
+     "date": "2017-09-08",
+     "value": 21.9269
+    },
+    {
+     "date": "2017-09-15",
+     "value": 22.105
+    },
+    {
+     "date": "2017-09-22",
+     "value": 22.1796
+    },
+    {
+     "date": "2017-09-29",
+     "value": 22.0504
+    },
+    {
+     "date": "2017-10-06",
+     "value": 22.104
+    },
+    {
+     "date": "2017-10-13",
+     "value": 22.4443
+    },
+    {
+     "date": "2017-10-20",
+     "value": 23.0936
+    },
+    {
+     "date": "2017-10-27",
+     "value": 23.5426
+    },
+    {
+     "date": "2017-11-03",
+     "value": 23.3854
+    },
+    {
+     "date": "2017-11-10",
+     "value": 22.5292
+    },
+    {
+     "date": "2017-11-17",
+     "value": 22.6452
+    },
+    {
+     "date": "2017-11-24",
+     "value": 22.3421
+    },
+    {
+     "date": "2017-12-01",
+     "value": 21.9609
+    },
+    {
+     "date": "2017-12-08",
+     "value": 21.5434
+    },
+    {
+     "date": "2017-12-15",
+     "value": 21.8526
+    },
+    {
+     "date": "2017-12-22",
+     "value": 21.7733
+    },
+    {
+     "date": "2017-12-29",
+     "value": 22.1215
+    },
+    {
+     "date": "2018-01-05",
+     "value": 21.563
+    },
+    {
+     "date": "2018-01-12",
+     "value": 21.9795
+    },
+    {
+     "date": "2018-01-19",
+     "value": 21.7805
+    },
+    {
+     "date": "2018-01-26",
+     "value": 21.6014
+    },
+    {
+     "date": "2018-02-02",
+     "value": 21.6285
+    },
+    {
+     "date": "2018-02-09",
+     "value": 21.357
+    },
+    {
+     "date": "2018-02-16",
+     "value": 21.3348
+    },
+    {
+     "date": "2018-02-23",
+     "value": 21.7007
+    },
+    {
+     "date": "2018-03-02",
+     "value": 22.6028
+    },
+    {
+     "date": "2018-03-09",
+     "value": 22.2357
+    },
+    {
+     "date": "2018-03-16",
+     "value": 22.7458
+    },
+    {
+     "date": "2018-03-23",
+     "value": 22.8079
+    },
+    {
+     "date": "2018-03-30",
+     "value": 23.1387
+    },
+    {
+     "date": "2018-04-06",
+     "value": 23.2028
+    },
+    {
+     "date": "2018-04-13",
+     "value": 22.9326
+    },
+    {
+     "date": "2018-04-20",
+     "value": 22.5315
+    },
+    {
+     "date": "2018-04-27",
+     "value": 22.8488
+    },
+    {
+     "date": "2018-05-04",
+     "value": 23.5149
+    },
+    {
+     "date": "2018-05-11",
+     "value": 23.9666
+    },
+    {
+     "date": "2018-05-18",
+     "value": 24.7147
+    },
+    {
+     "date": "2018-05-25",
+     "value": 24.7974
+    },
+    {
+     "date": "2018-06-01",
+     "value": 25.811
+    },
+    {
+     "date": "2018-06-08",
+     "value": 25.0317
+    },
+    {
+     "date": "2018-06-15",
+     "value": 25.5362
+    },
+    {
+     "date": "2018-06-22",
+     "value": 25.2401
+    },
+    {
+     "date": "2018-06-29",
+     "value": 24.9988
+    },
+    {
+     "date": "2018-07-06",
+     "value": 25.5881
+    },
+    {
+     "date": "2018-07-13",
+     "value": 24.6973
+    },
+    {
+     "date": "2018-07-20",
+     "value": 24.6497
+    },
+    {
+     "date": "2018-07-27",
+     "value": 24.435
+    },
+    {
+     "date": "2018-08-03",
+     "value": 23.9587
+    },
+    {
+     "date": "2018-08-10",
+     "value": 23.7002
+    },
+    {
+     "date": "2018-08-17",
+     "value": 24.3381
+    },
+    {
+     "date": "2018-08-24",
+     "value": 24.8053
+    },
+    {
+     "date": "2018-08-31",
+     "value": 25.1396
+    },
+    {
+     "date": "2018-09-07",
+     "value": 24.8883
+    },
+    {
+     "date": "2018-09-14",
+     "value": 25.1031
+    },
+    {
+     "date": "2018-09-21",
+     "value": 25.3088
+    },
+    {
+     "date": "2018-09-28",
+     "value": 24.8234
+    },
+    {
+     "date": "2018-10-05",
+     "value": 24.2411
+    },
+    {
+     "date": "2018-10-12",
+     "value": 23.9662
+    },
+    {
+     "date": "2018-10-19",
+     "value": 24.7406
+    },
+    {
+     "date": "2018-10-26",
+     "value": 24.8122
+    },
+    {
+     "date": "2018-11-02",
+     "value": 24.0302
+    },
+    {
+     "date": "2018-11-09",
+     "value": 24.1193
+    },
+    {
+     "date": "2018-11-16",
+     "value": 23.1592
+    },
+    {
+     "date": "2018-11-23",
+     "value": 23.2347
+    },
+    {
+     "date": "2018-11-30",
+     "value": 23.5343
+    },
+    {
+     "date": "2018-12-07",
+     "value": 23.5889
+    },
+    {
+     "date": "2018-12-14",
+     "value": 23.448
+    },
+    {
+     "date": "2018-12-21",
+     "value": 23.3636
+    },
+    {
+     "date": "2018-12-28",
+     "value": 23.4378
+    },
+    {
+     "date": "2019-01-04",
+     "value": 23.0766
+    },
+    {
+     "date": "2019-01-11",
+     "value": 22.9591
+    },
+    {
+     "date": "2019-01-18",
+     "value": 23.4759
+    },
+    {
+     "date": "2019-01-25",
+     "value": 24.4915
+    },
+    {
+     "date": "2019-02-01",
+     "value": 23.9491
+    },
+    {
+     "date": "2019-02-08",
+     "value": 24.4197
+    },
+    {
+     "date": "2019-02-15",
+     "value": 25.5753
+    },
+    {
+     "date": "2019-02-22",
+     "value": 25.0421
+    },
+    {
+     "date": "2019-03-01",
+     "value": 25.8637
+    },
+    {
+     "date": "2019-03-08",
+     "value": 25.5883
+    },
+    {
+     "date": "2019-03-15",
+     "value": 26.4553
+    },
+    {
+     "date": "2019-03-22",
+     "value": 26.828
+    },
+    {
+     "date": "2019-03-29",
+     "value": 26.8819
+    },
+    {
+     "date": "2019-04-05",
+     "value": 26.5401
+    },
+    {
+     "date": "2019-04-12",
+     "value": 27.0121
+    },
+    {
+     "date": "2019-04-19",
+     "value": 27.16
+    },
+    {
+     "date": "2019-04-26",
+     "value": 27.2312
+    },
+    {
+     "date": "2019-05-03",
+     "value": 27.9971
+    },
+    {
+     "date": "2019-05-10",
+     "value": 27.2263
+    },
+    {
+     "date": "2019-05-17",
+     "value": 27.3745
+    },
+    {
+     "date": "2019-05-24",
+     "value": 27.2572
+    },
+    {
+     "date": "2019-05-31",
+     "value": 27.7146
+    },
+    {
+     "date": "2019-06-07",
+     "value": 28.3927
+    },
+    {
+     "date": "2019-06-14",
+     "value": 27.7077
+    },
+    {
+     "date": "2019-06-21",
+     "value": 28.3034
+    },
+    {
+     "date": "2019-06-28",
+     "value": 28.7268
+    },
+    {
+     "date": "2019-07-05",
+     "value": 28.6948
+    },
+    {
+     "date": "2019-07-12",
+     "value": 28.7666
+    },
+    {
+     "date": "2019-07-19",
+     "value": 29.7526
+    },
+    {
+     "date": "2019-07-26",
+     "value": 30.3063
+    },
+    {
+     "date": "2019-08-02",
+     "value": 31.0632
+    },
+    {
+     "date": "2019-08-09",
+     "value": 31.2512
+    },
+    {
+     "date": "2019-08-16",
+     "value": 31.5268
+    },
+    {
+     "date": "2019-08-23",
+     "value": 32.0785
+    },
+    {
+     "date": "2019-08-30",
+     "value": 32.7144
+    },
+    {
+     "date": "2019-09-06",
+     "value": 33.0735
+    },
+    {
+     "date": "2019-09-13",
+     "value": 31.7645
+    },
+    {
+     "date": "2019-09-20",
+     "value": 31.6078
+    },
+    {
+     "date": "2019-09-27",
+     "value": 30.8325
+    },
+    {
+     "date": "2019-10-04",
+     "value": 32.5766
+    },
+    {
+     "date": "2019-10-11",
+     "value": 32.0651
+    },
+    {
+     "date": "2019-10-18",
+     "value": 32.0015
+    },
+    {
+     "date": "2019-10-25",
+     "value": 32.6412
+    },
+    {
+     "date": "2019-11-01",
+     "value": 33.2786
+    },
+    {
+     "date": "2019-11-08",
+     "value": 33.2351
+    },
+    {
+     "date": "2019-11-15",
+     "value": 32.9085
+    },
+    {
+     "date": "2019-11-22",
+     "value": 32.9139
+    },
+    {
+     "date": "2019-11-29",
+     "value": 34.4355
+    },
+    {
+     "date": "2019-12-06",
+     "value": 34.3513
+    },
+    {
+     "date": "2019-12-13",
+     "value": 34.6055
+    },
+    {
+     "date": "2019-12-20",
+     "value": 34.7856
+    },
+    {
+     "date": "2019-12-27",
+     "value": 34.8108
+    },
+    {
+     "date": "2020-01-03",
+     "value": 35.6383
+    },
+    {
+     "date": "2020-01-10",
+     "value": 35.5855
+    },
+    {
+     "date": "2020-01-17",
+     "value": 34.4206
+    },
+    {
+     "date": "2020-01-24",
+     "value": 34.7414
+    },
+    {
+     "date": "2020-01-31",
+     "value": 34.6292
+    },
+    {
+     "date": "2020-02-07",
+     "value": 33.8894
+    },
+    {
+     "date": "2020-02-14",
+     "value": 34.155
+    },
+    {
+     "date": "2020-02-21",
+     "value": 33.9026
+    },
+    {
+     "date": "2020-02-28",
+     "value": 35.0379
+    },
+    {
+     "date": "2020-03-06",
+     "value": 34.721
+    },
+    {
+     "date": "2020-03-13",
+     "value": 35.5288
+    },
+    {
+     "date": "2020-03-20",
+     "value": 36.5278
+    },
+    {
+     "date": "2020-03-27",
+     "value": 36.7623
+    },
+    {
+     "date": "2020-04-03",
+     "value": 35.8822
+    },
+    {
+     "date": "2020-04-10",
+     "value": 35.5338
+    },
+    {
+     "date": "2020-04-17",
+     "value": 35.5845
+    },
+    {
+     "date": "2020-04-24",
+     "value": 35.5696
+    },
+    {
+     "date": "2020-05-01",
+     "value": 36.3798
+    },
+    {
+     "date": "2020-05-08",
+     "value": 36.268
+    },
+    {
+     "date": "2020-05-15",
+     "value": 35.8432
+    },
+    {
+     "date": "2020-05-22",
+     "value": 35.9638
+    },
+    {
+     "date": "2020-05-29",
+     "value": 35.6221
+    },
+    {
+     "date": "2020-06-05",
+     "value": 34.6089
+    },
+    {
+     "date": "2020-06-12",
+     "value": 34.4212
+    },
+    {
+     "date": "2020-06-19",
+     "value": 35.1504
+    },
+    {
+     "date": "2020-06-26",
+     "value": 34.873
+    },
+    {
+     "date": "2020-07-03",
+     "value": 35.3021
+    },
+    {
+     "date": "2020-07-10",
+     "value": 35.4852
+    },
+    {
+     "date": "2020-07-17",
+     "value": 34.586
+    },
+    {
+     "date": "2020-07-24",
+     "value": 34.796
+    },
+    {
+     "date": "2020-07-31",
+     "value": 35.4852
+    },
+    {
+     "date": "2020-08-07",
+     "value": 35.7173
+    },
+    {
+     "date": "2020-08-14",
+     "value": 36.6705
+    },
+    {
+     "date": "2020-08-21",
+     "value": 37.1844
+    },
+    {
+     "date": "2020-08-28",
+     "value": 38.0108
+    },
+    {
+     "date": "2020-09-04",
+     "value": 37.8543
+    },
+    {
+     "date": "2020-09-11",
+     "value": 37.6834
+    },
+    {
+     "date": "2020-09-18",
+     "value": 38.625
+    },
+    {
+     "date": "2020-09-25",
+     "value": 39.278
+    },
+    {
+     "date": "2020-10-02",
+     "value": 39.6813
+    },
+    {
+     "date": "2020-10-09",
+     "value": 38.6682
+    },
+    {
+     "date": "2020-10-16",
+     "value": 39.3738
+    },
+    {
+     "date": "2020-10-23",
+     "value": 39.5148
+    },
+    {
+     "date": "2020-10-30",
+     "value": 41.4267
+    },
+    {
+     "date": "2020-11-06",
+     "value": 40.6257
+    },
+    {
+     "date": "2020-11-13",
+     "value": 41.121
+    },
+    {
+     "date": "2020-11-20",
+     "value": 42.1642
+    },
+    {
+     "date": "2020-11-27",
+     "value": 42.0361
+    },
+    {
+     "date": "2020-12-04",
+     "value": 41.8647
+    },
+    {
+     "date": "2020-12-11",
+     "value": 42.7834
+    },
+    {
+     "date": "2020-12-18",
+     "value": 43.5613
+    },
+    {
+     "date": "2020-12-25",
+     "value": 42.3353
+    },
+    {
+     "date": "2021-01-01",
+     "value": 42.7933
+    },
+    {
+     "date": "2021-01-08",
+     "value": 42.3463
+    },
+    {
+     "date": "2021-01-15",
+     "value": 43.0038
+    },
+    {
+     "date": "2021-01-22",
+     "value": 42.5386
+    },
+    {
+     "date": "2021-01-29",
+     "value": 42.3936
+    },
+    {
+     "date": "2021-02-05",
+     "value": 42.4109
+    },
+    {
+     "date": "2021-02-12",
+     "value": 42.3928
+    },
+    {
+     "date": "2021-02-19",
+     "value": 42.8996
+    },
+    {
+     "date": "2021-02-26",
+     "value": 42.2768
+    },
+    {
+     "date": "2021-03-05",
+     "value": 40.906
+    },
+    {
+     "date": "2021-03-12",
+     "value": 40.2664
+    },
+    {
+     "date": "2021-03-19",
+     "value": 39.7711
+    },
+    {
+     "date": "2021-03-26",
+     "value": 40.1179
+    },
+    {
+     "date": "2021-04-02",
+     "value": 40.2142
+    },
+    {
+     "date": "2021-04-09",
+     "value": 39.0039
+    },
+    {
+     "date": "2021-04-16",
+     "value": 40.1111
+    },
+    {
+     "date": "2021-04-23",
+     "value": 40.0178
+    },
+    {
+     "date": "2021-04-30",
+     "value": 40.4196
+    },
+    {
+     "date": "2021-05-07",
+     "value": 40.5316
+    },
+    {
+     "date": "2021-05-14",
+     "value": 39.83
+    },
+    {
+     "date": "2021-05-21",
+     "value": 40.1454
+    },
+    {
+     "date": "2021-05-28",
+     "value": 39.7264
+    },
+    {
+     "date": "2021-06-04",
+     "value": 40.0471
+    },
+    {
+     "date": "2021-06-11",
+     "value": 40.5446
+    },
+    {
+     "date": "2021-06-18",
+     "value": 40.7987
+    },
+    {
+     "date": "2021-06-25",
+     "value": 41.9158
+    },
+    {
+     "date": "2021-07-02",
+     "value": 42.4425
+    },
+    {
+     "date": "2021-07-09",
+     "value": 41.941
+    },
+    {
+     "date": "2021-07-16",
+     "value": 42.4805
+    },
+    {
+     "date": "2021-07-23",
+     "value": 43.7934
+    },
+    {
+     "date": "2021-07-30",
+     "value": 43.5633
+    },
+    {
+     "date": "2021-08-06",
+     "value": 43.3717
+    },
+    {
+     "date": "2021-08-13",
+     "value": 44.542
+    },
+    {
+     "date": "2021-08-20",
+     "value": 45.8253
+    },
+    {
+     "date": "2021-08-27",
+     "value": 45.3868
+    },
+    {
+     "date": "2021-09-03",
+     "value": 45.2473
+    },
+    {
+     "date": "2021-09-10",
+     "value": 45.3495
+    },
+    {
+     "date": "2021-09-17",
+     "value": 44.5822
+    },
+    {
+     "date": "2021-09-24",
+     "value": 44.5828
+    },
+    {
+     "date": "2021-10-01",
+     "value": 44.9711
+    },
+    {
+     "date": "2021-10-08",
+     "value": 45.882
+    },
+    {
+     "date": "2021-10-15",
+     "value": 46.2997
+    },
+    {
+     "date": "2021-10-22",
+     "value": 47.1219
+    },
+    {
+     "date": "2021-10-29",
+     "value": 46.5239
+    },
+    {
+     "date": "2021-11-05",
+     "value": 47.2874
+    },
+    {
+     "date": "2021-11-12",
+     "value": 46.5113
+    },
+    {
+     "date": "2021-11-19",
+     "value": 46.6258
+    },
+    {
+     "date": "2021-11-26",
+     "value": 47.2229
+    },
+    {
+     "date": "2021-12-03",
+     "value": 45.8961
+    },
+    {
+     "date": "2021-12-10",
+     "value": 45.6818
+    },
+    {
+     "date": "2021-12-17",
+     "value": 45.4203
+    },
+    {
+     "date": "2021-12-24",
+     "value": 45.9777
+    },
+    {
+     "date": "2021-12-31",
+     "value": 46.6326
+    },
+    {
+     "date": "2022-01-07",
+     "value": 46.3278
+    },
+    {
+     "date": "2022-01-14",
+     "value": 48.2355
+    },
+    {
+     "date": "2022-01-21",
+     "value": 47.608
+    },
+    {
+     "date": "2022-01-28",
+     "value": 48.5139
+    },
+    {
+     "date": "2022-02-04",
+     "value": 48.7657
+    },
+    {
+     "date": "2022-02-11",
+     "value": 48.3613
+    },
+    {
+     "date": "2022-02-18",
+     "value": 47.6097
+    },
+    {
+     "date": "2022-02-25",
+     "value": 46.6788
+    },
+    {
+     "date": "2022-03-04",
+     "value": 45.4529
+    },
+    {
+     "date": "2022-03-11",
+     "value": 45.6918
+    },
+    {
+     "date": "2022-03-18",
+     "value": 45.2433
+    },
+    {
+     "date": "2022-03-25",
+     "value": 45.6038
+    },
+    {
+     "date": "2022-04-01",
+     "value": 45.9031
+    },
+    {
+     "date": "2022-04-08",
+     "value": 45.6943
+    },
+    {
+     "date": "2022-04-15",
+     "value": 45.1275
+    },
+    {
+     "date": "2022-04-22",
+     "value": 46.0605
+    },
+    {
+     "date": "2022-04-29",
+     "value": 45.6443
+    },
+    {
+     "date": "2022-05-06",
+     "value": 45.4161
+    },
+    {
+     "date": "2022-05-13",
+     "value": 44.9191
+    },
+    {
+     "date": "2022-05-20",
+     "value": 45.073
+    },
+    {
+     "date": "2022-05-27",
+     "value": 43.4948
+    },
+    {
+     "date": "2022-06-03",
+     "value": 43.6923
+    },
+    {
+     "date": "2022-06-10",
+     "value": 42.5319
+    },
+    {
+     "date": "2022-06-17",
+     "value": 42.4454
+    },
+    {
+     "date": "2022-06-24",
+     "value": 44.6557
+    },
+    {
+     "date": "2022-07-01",
+     "value": 44.0469
+    },
+    {
+     "date": "2022-07-08",
+     "value": 44.3701
+    },
+    {
+     "date": "2022-07-15",
+     "value": 44.4724
+    },
+    {
+     "date": "2022-07-22",
+     "value": 44.5299
+    },
+    {
+     "date": "2022-07-29",
+     "value": 44.9884
+    },
+    {
+     "date": "2022-08-05",
+     "value": 45.9126
+    },
+    {
+     "date": "2022-08-12",
+     "value": 46.64
+    },
+    {
+     "date": "2022-08-19",
+     "value": 46.7231
+    },
+    {
+     "date": "2022-08-26",
+     "value": 46.3452
+    },
+    {
+     "date": "2022-09-02",
+     "value": 46.7522
+    },
+    {
+     "date": "2022-09-09",
+     "value": 46.2595
+    },
+    {
+     "date": "2022-09-16",
+     "value": 47.5775
+    },
+    {
+     "date": "2022-09-23",
+     "value": 47.6912
+    },
+    {
+     "date": "2022-09-30",
+     "value": 48.2685
+    },
+    {
+     "date": "2022-10-07",
+     "value": 47.1188
+    },
+    {
+     "date": "2022-10-14",
+     "value": 46.862
+    },
+    {
+     "date": "2022-10-21",
+     "value": 46.8902
+    },
+    {
+     "date": "2022-10-28",
+     "value": 45.6053
+    },
+    {
+     "date": "2022-11-04",
+     "value": 45.4566
+    },
+    {
+     "date": "2022-11-11",
+     "value": 44.7066
+    },
+    {
+     "date": "2022-11-18",
+     "value": 46.1239
+    },
+    {
+     "date": "2022-11-25",
+     "value": 45.6066
+    },
+    {
+     "date": "2022-12-02",
+     "value": 46.2034
+    },
+    {
+     "date": "2022-12-09",
+     "value": 46.503
+    },
+    {
+     "date": "2022-12-16",
+     "value": 46.4241
+    },
+    {
+     "date": "2022-12-23",
+     "value": 49.4678
+    },
+    {
+     "date": "2022-12-30",
+     "value": 51.0012
+    },
+    {
+     "date": "2023-01-06",
+     "value": 50.2523
+    },
+    {
+     "date": "2023-01-13",
+     "value": 51.4569
+    },
+    {
+     "date": "2023-01-20",
+     "value": 51.1344
+    },
+    {
+     "date": "2023-01-27",
+     "value": 52.0385
+    },
+    {
+     "date": "2023-02-03",
+     "value": 52.3823
+    },
+    {
+     "date": "2023-02-10",
+     "value": 51.8481
+    },
+    {
+     "date": "2023-02-17",
+     "value": 51.7482
+    },
+    {
+     "date": "2023-02-24",
+     "value": 50.2296
+    },
+    {
+     "date": "2023-03-03",
+     "value": 49.6744
+    },
+    {
+     "date": "2023-03-10",
+     "value": 51.6744
+    },
+    {
+     "date": "2023-03-17",
+     "value": 51.6073
+    },
+    {
+     "date": "2023-03-24",
+     "value": 51.5473
+    },
+    {
+     "date": "2023-03-31",
+     "value": 51.3268
+    },
+    {
+     "date": "2023-04-07",
+     "value": 52.9881
+    },
+    {
+     "date": "2023-04-14",
+     "value": 53.8056
+    },
+    {
+     "date": "2023-04-21",
+     "value": 53.827
+    },
+    {
+     "date": "2023-04-28",
+     "value": 52.7688
+    },
+    {
+     "date": "2023-05-05",
+     "value": 52.1076
+    },
+    {
+     "date": "2023-05-12",
+     "value": 52.3121
+    },
+    {
+     "date": "2023-05-19",
+     "value": 52.6098
+    },
+    {
+     "date": "2023-05-26",
+     "value": 51.9732
+    },
+    {
+     "date": "2023-06-02",
+     "value": 52.1359
+    },
+    {
+     "date": "2023-06-09",
+     "value": 51.9513
+    },
+    {
+     "date": "2023-06-16",
+     "value": 52.1963
+    },
+    {
+     "date": "2023-06-23",
+     "value": 50.8635
+    },
+    {
+     "date": "2023-06-30",
+     "value": 51.2959
+    },
+    {
+     "date": "2023-07-07",
+     "value": 51.0785
+    },
+    {
+     "date": "2023-07-14",
+     "value": 51.4794
+    },
+    {
+     "date": "2023-07-21",
+     "value": 51.9552
+    },
+    {
+     "date": "2023-07-28",
+     "value": 52.1549
+    },
+    {
+     "date": "2023-08-04",
+     "value": 52.114
+    },
+    {
+     "date": "2023-08-11",
+     "value": 52.6831
+    },
+    {
+     "date": "2023-08-18",
+     "value": 51.9599
+    },
+    {
+     "date": "2023-08-25",
+     "value": 52.5801
+    },
+    {
+     "date": "2023-09-01",
+     "value": 52.5136
+    },
+    {
+     "date": "2023-09-08",
+     "value": 52.0543
+    },
+    {
+     "date": "2023-09-15",
+     "value": 52.4086
+    },
+    {
+     "date": "2023-09-22",
+     "value": 54.2615
+    },
+    {
+     "date": "2023-09-29",
+     "value": 54.1362
+    },
+    {
+     "date": "2023-10-06",
+     "value": 53.0113
+    },
+    {
+     "date": "2023-10-13",
+     "value": 51.1925
+    },
+    {
+     "date": "2023-10-20",
+     "value": 50.9403
+    },
+    {
+     "date": "2023-10-27",
+     "value": 52.1427
+    },
+    {
+     "date": "2023-11-03",
+     "value": 53.0324
+    },
+    {
+     "date": "2023-11-10",
+     "value": 55.234
+    },
+    {
+     "date": "2023-11-17",
+     "value": 54.1841
+    },
+    {
+     "date": "2023-11-24",
+     "value": 55.3805
+    },
+    {
+     "date": "2023-12-01",
+     "value": 55.6324
+    },
+    {
+     "date": "2023-12-08",
+     "value": 54.5135
+    },
+    {
+     "date": "2023-12-15",
+     "value": 56.0984
+    },
+    {
+     "date": "2023-12-22",
+     "value": 56.4496
+    },
+    {
+     "date": "2023-12-29",
+     "value": 58.4037
+    },
+    {
+     "date": "2024-01-05",
+     "value": 56.7716
+    },
+    {
+     "date": "2024-01-12",
+     "value": 55.2719
+    },
+    {
+     "date": "2024-01-19",
+     "value": 55.0383
+    },
+    {
+     "date": "2024-01-26",
+     "value": 56.7952
+    },
+    {
+     "date": "2024-02-02",
+     "value": 58.1441
+    },
+    {
+     "date": "2024-02-09",
+     "value": 57.8653
+    },
+    {
+     "date": "2024-02-16",
+     "value": 61.2185
+    },
+    {
+     "date": "2024-02-23",
+     "value": 60.7465
+    },
+    {
+     "date": "2024-03-01",
+     "value": 61.4949
+    },
+    {
+     "date": "2024-03-08",
+     "value": 61.2462
+    },
+    {
+     "date": "2024-03-15",
+     "value": 61.6648
+    },
+    {
+     "date": "2024-03-22",
+     "value": 61.9217
+    },
+    {
+     "date": "2024-03-29",
+     "value": 59.5488
+    },
+    {
+     "date": "2024-04-05",
+     "value": 59.7036
+    },
+    {
+     "date": "2024-04-12",
+     "value": 59.017
+    },
+    {
+     "date": "2024-04-19",
+     "value": 58.5539
+    },
+    {
+     "date": "2024-04-26",
+     "value": 59.4098
+    },
+    {
+     "date": "2024-05-03",
+     "value": 60.1296
+    },
+    {
+     "date": "2024-05-10",
+     "value": 62.8944
+    },
+    {
+     "date": "2024-05-17",
+     "value": 62.8518
+    },
+    {
+     "date": "2024-05-24",
+     "value": 62.1059
+    },
+    {
+     "date": "2024-05-31",
+     "value": 61.5096
+    },
+    {
+     "date": "2024-06-07",
+     "value": 62.4024
+    },
+    {
+     "date": "2024-06-14",
+     "value": 61.2509
+    },
+    {
+     "date": "2024-06-21",
+     "value": 60.193
+    },
+    {
+     "date": "2024-06-28",
+     "value": 62.3862
+    },
+    {
+     "date": "2024-07-05",
+     "value": 63.2764
+    },
+    {
+     "date": "2024-07-12",
+     "value": 61.4544
+    },
+    {
+     "date": "2024-07-19",
+     "value": 61.1714
+    },
+    {
+     "date": "2024-07-26",
+     "value": 61.155
+    },
+    {
+     "date": "2024-08-02",
+     "value": 59.4699
+    },
+    {
+     "date": "2024-08-09",
+     "value": 58.8104
+    },
+    {
+     "date": "2024-08-16",
+     "value": 59.2131
+    },
+    {
+     "date": "2024-08-23",
+     "value": 59.6705
+    },
+    {
+     "date": "2024-08-30",
+     "value": 60.2497
+    },
+    {
+     "date": "2024-09-06",
+     "value": 57.5549
+    },
+    {
+     "date": "2024-09-13",
+     "value": 57.8488
+    },
+    {
+     "date": "2024-09-20",
+     "value": 56.7055
+    },
+    {
+     "date": "2024-09-27",
+     "value": 56.6451
+    },
+    {
+     "date": "2024-10-04",
+     "value": 57.5017
+    },
+    {
+     "date": "2024-10-11",
+     "value": 57.6478
+    },
+    {
+     "date": "2024-10-18",
+     "value": 57.8764
+    },
+    {
+     "date": "2024-10-25",
+     "value": 58.0543
+    },
+    {
+     "date": "2024-11-01",
+     "value": 60.1846
+    },
+    {
+     "date": "2024-11-08",
+     "value": 59.971
+    },
+    {
+     "date": "2024-11-15",
+     "value": 60.4524
+    },
+    {
+     "date": "2024-11-22",
+     "value": 61.5525
+    },
+    {
+     "date": "2024-11-29",
+     "value": 60.8778
+    },
+    {
+     "date": "2024-12-06",
+     "value": 59.161
+    },
+    {
+     "date": "2024-12-13",
+     "value": 59.4399
+    },
+    {
+     "date": "2024-12-20",
+     "value": 60.1333
+    },
+    {
+     "date": "2024-12-27",
+     "value": 60.0758
+    },
+    {
+     "date": "2025-01-03",
+     "value": 59.7612
+    },
+    {
+     "date": "2025-01-10",
+     "value": 62.6759
+    },
+    {
+     "date": "2025-01-17",
+     "value": 61.7774
+    },
+    {
+     "date": "2025-01-24",
+     "value": 62.4085
+    },
+    {
+     "date": "2025-01-31",
+     "value": 61.7025
+    },
+    {
+     "date": "2025-02-07",
+     "value": 63.2268
+    },
+    {
+     "date": "2025-02-14",
+     "value": 63.69
+    },
+    {
+     "date": "2025-02-21",
+     "value": 62.8834
+    },
+    {
+     "date": "2025-02-28",
+     "value": 62.527
+    },
+    {
+     "date": "2025-03-07",
+     "value": 62.5691
+    },
+    {
+     "date": "2025-03-14",
+     "value": 63.3694
+    },
+    {
+     "date": "2025-03-21",
+     "value": 63.3744
+    },
+    {
+     "date": "2025-03-28",
+     "value": 62.2658
+    },
+    {
+     "date": "2025-04-04",
+     "value": 60.4184
+    },
+    {
+     "date": "2025-04-11",
+     "value": 59.2432
+    },
+    {
+     "date": "2025-04-18",
+     "value": 57.9188
+    },
+    {
+     "date": "2025-04-25",
+     "value": 58.1942
+    },
+    {
+     "date": "2025-05-02",
+     "value": 57.7588
+    },
+    {
+     "date": "2025-05-09",
+     "value": 58.5625
+    },
+    {
+     "date": "2025-05-16",
+     "value": 57.9884
+    },
+    {
+     "date": "2025-05-23",
+     "value": 57.41
+    },
+    {
+     "date": "2025-05-30",
+     "value": 58.1746
+    },
+    {
+     "date": "2025-06-06",
+     "value": 58.7189
+    },
+    {
+     "date": "2025-06-13",
+     "value": 58.3101
+    },
+    {
+     "date": "2025-06-20",
+     "value": 58.6787
+    },
+    {
+     "date": "2025-06-27",
+     "value": 57.8724
+    },
+    {
+     "date": "2025-07-04",
+     "value": 57.8006
+    },
+    {
+     "date": "2025-07-11",
+     "value": 58.5022
+    },
+    {
+     "date": "2025-07-18",
+     "value": 58.266
+    },
+    {
+     "date": "2025-07-25",
+     "value": 58.6038
+    },
+    {
+     "date": "2025-08-01",
+     "value": 58.4401
+    },
+    {
+     "date": "2025-08-08",
+     "value": 58.265
+    },
+    {
+     "date": "2025-08-15",
+     "value": 58.8551
+    },
+    {
+     "date": "2025-08-22",
+     "value": 60.0015
+    },
+    {
+     "date": "2025-08-29",
+     "value": 60.2628
+    },
+    {
+     "date": "2025-09-05",
+     "value": 61.0494
+    },
+    {
+     "date": "2025-09-12",
+     "value": 60.0958
+    },
+    {
+     "date": "2025-09-19",
+     "value": 60.012
+    },
+    {
+     "date": "2025-09-26",
+     "value": 60.0156
+    },
+    {
+     "date": "2025-10-03",
+     "value": 59.8529
+    },
+    {
+     "date": "2025-10-10",
+     "value": 59.4633
+    },
+    {
+     "date": "2025-10-17",
+     "value": 57.5304
+    },
+    {
+     "date": "2025-10-24",
+     "value": 57.7606
+    },
+    {
+     "date": "2025-10-31",
+     "value": 57.0499
+    },
+    {
+     "date": "2025-11-07",
+     "value": 55.4482
+    },
+    {
+     "date": "2025-11-14",
+     "value": 57.0807
+    },
+    {
+     "date": "2025-11-21",
+     "value": 58.5506
+    },
+    {
+     "date": "2025-11-28",
+     "value": 58.6129
+    },
+    {
+     "date": "2025-12-05",
+     "value": 59.7909
+    },
+    {
+     "date": "2025-12-12",
+     "value": 59.5737
+    },
+    {
+     "date": "2025-12-19",
+     "value": 59.1036
+    },
+    {
+     "date": "2025-12-26",
+     "value": 60.4748
+    },
+    {
+     "date": "2026-01-02",
+     "value": 62.5813
+    },
+    {
+     "date": "2026-01-09",
+     "value": 64.7479
+    },
+    {
+     "date": "2026-01-16",
+     "value": 65.9866
+    },
+    {
+     "date": "2026-01-23",
+     "value": 65.9641
+    },
+    {
+     "date": "2026-01-30",
+     "value": 64.1525
+    },
+    {
+     "date": "2026-02-06",
+     "value": 64.8796
+    },
+    {
+     "date": "2026-02-13",
+     "value": 65.205
+    },
+    {
+     "date": "2026-02-20",
+     "value": 65.1797
+    },
+    {
+     "date": "2026-02-27",
+     "value": 64.4667
+    },
+    {
+     "date": "2026-03-06",
+     "value": 63.7599
+    },
+    {
+     "date": "2026-03-13",
+     "value": 64.3022
+    },
+    {
+     "date": "2026-03-20",
+     "value": 63.9218
+    },
+    {
+     "date": "2026-03-27",
+     "value": 62.0285
+    },
+    {
+     "date": "2026-04-03",
+     "value": 62.1727
+    },
+    {
+     "date": "2026-04-10",
+     "value": 61.1839
+    },
+    {
+     "date": "2026-04-17",
+     "value": 62.9861
+    },
+    {
+     "date": "2026-04-24",
+     "value": 62.3856
+    },
+    {
+     "date": "2026-05-01",
+     "value": 62.7628
+    },
+    {
+     "date": "2026-05-08",
+     "value": 62.8586
+    },
+    {
+     "date": "2026-05-15",
+     "value": 64.9772
+    },
+    {
+     "date": "2026-05-22",
+     "value": 64.2252
+    },
+    {
+     "date": "2026-05-29",
+     "value": 63.5619
+    },
+    {
+     "date": "2026-06-05",
+     "value": 64.012
+    },
+    {
+     "date": "2026-06-12",
+     "value": 63.8999
+    },
+    {
+     "date": "2026-06-19",
+     "value": 63.1316
+    },
+    {
+     "date": "2026-06-26",
+     "value": 63.307
+    },
+    {
+     "date": "2026-07-03",
+     "value": 63.6066
+    },
+    {
+     "date": "2026-07-10",
+     "value": 61.8388
+    },
+    {
+     "date": "2026-07-17",
+     "value": 61.5198
+    },
+    {
+     "date": "2026-07-24",
+     "value": 61.5082
+    },
+    {
+     "date": "2026-07-31",
+     "value": 62.6519
+    },
+    {
+     "date": "2026-08-07",
+     "value": 61.5563
+    },
+    {
+     "date": "2026-08-14",
+     "value": 60.7733
+    },
+    {
+     "date": "2026-08-21",
+     "value": 60.7533
+    },
+    {
+     "date": "2026-08-28",
+     "value": 61.2871
+    },
+    {
+     "date": "2026-09-04",
+     "value": 61.4244
+    },
+    {
+     "date": "2026-09-11",
+     "value": 60.6432
+    },
+    {
+     "date": "2026-09-18",
+     "value": 60.6147
+    },
+    {
+     "date": "2026-09-25",
+     "value": 60.3079
+    },
+    {
+     "date": "2026-10-02",
+     "value": 61.4539
+    },
+    {
+     "date": "2026-10-09",
+     "value": 62.3369
+    },
+    {
+     "date": "2026-10-16",
+     "value": 61.5701
+    },
+    {
+     "date": "2026-10-23",
+     "value": 63.8308
+    },
+    {
+     "date": "2026-10-30",
+     "value": 66.2532
+    }
+   ]
+  },
+  "source": "Sample data",
+  "asOf": "2026-10-30"
+ },
+ "drawdown": {
+  "window": "10Y",
+  "worstFall": {
+   "id": "worst_fall",
+   "label": "Worst fall from a high to a later low",
+   "value": -13.3,
+   "unit": "PCT_CHANGE",
+   "display": "-13.3%",
+   "source": "Sample data",
+   "asOf": "2026-10-30",
+   "comparisons": [
+    {
+     "kind": "BENCHMARK",
+     "label": "Nifty 500 TRI, same period",
+     "value": -14.93,
+     "unit": "PCT_CHANGE",
+     "display": "-14.9%"
+    }
+   ],
+   "termId": "worst_fall"
+  },
+  "peakDate": "2022-02-01",
+  "troughDate": "2022-06-09",
+  "recoveryDate": "2022-12-21",
+  "recoveryDays": 195,
+  "sentences": [
+   {
+    "text": "Over the last ten years, the worst fall in the fund's value was 13.3%, from 1 Feb 2022 to 9 Jun 2022.",
+    "templateId": "fnd.drawdown.fall",
+    "generator": "template"
+   },
+   {
+    "text": "It took 195 days from the lowest point to get back to the earlier high.",
+    "templateId": "fnd.drawdown.recovered",
+    "generator": "template"
+   },
+   {
+    "text": "Over the same period the worst fall in its benchmark, Nifty 500 TRI, was 14.9%.",
+    "templateId": "fnd.drawdown.benchmark",
+    "generator": "template"
+   }
+  ]
+ }
+}

@@ -53,11 +53,9 @@ class AppContext:
         mods = MODULES[kind]
         if mode not in mods:
             raise ApiError("INTERNAL", f"Unknown {kind} adapter mode '{mode}'.")
-        for k in BUILD_ORDER:
-            if k == kind:
-                break
-            if k not in self._adapters and k in ("broker",):
-                self.adapter(k)  # live price adapters may use the broker
+        needs = {"broker": ["fund_meta"], "prices": ["fund_meta", "broker"], "fund_nav": ["fund_meta"]}.get(kind, [])
+        for dep in needs:
+            self.adapter(dep)
         mod = importlib.import_module(f"app.adapters.{mods[mode]}")
         adapter = mod.build(self.config, dict(self._adapters))
         self._adapters[kind] = adapter

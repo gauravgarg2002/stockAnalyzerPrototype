@@ -1,0 +1,980 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "kind": "STOCK",
+ "instruments": [
+  {
+   "kind": "STOCK",
+   "id": "TCS",
+   "name": "Tata Consultancy Services Ltd",
+   "subtitle": "Information Technology · Large cap",
+   "checkPath": "/stock/TCS"
+  },
+  {
+   "kind": "STOCK",
+   "id": "INFY",
+   "name": "Infosys Ltd",
+   "subtitle": "Information Technology · Large cap",
+   "checkPath": "/stock/INFY"
+  }
+ ],
+ "rows": [
+  {
+   "id": "business",
+   "order": 1,
+   "question": "What does the company do and how does it earn money?",
+   "cells": [
+    {
+     "instrumentId": "TCS",
+     "sentences": [
+      {
+       "text": "Tata Consultancy Services Ltd builds and runs software and technology systems for large companies around the world.",
+       "templateId": "stk.business.about",
+       "generator": "template"
+      },
+      {
+       "text": "It earned ₹2,55,300 crore in revenue in FY2026, up from ₹2,09,969 crore in FY2023.",
+       "templateId": "stk.business.revenue",
+       "generator": "template"
+      },
+      {
+       "text": "Banking and financial services accounts for 31.5% of revenue, the largest single business.",
+       "templateId": "stk.business.segment",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "revenue_fy",
+       "label": "Revenue, FY2026 (Apr 2025–Mar 2026)",
+       "value": 2553000000000,
+       "unit": "INR",
+       "display": "₹2,55,300 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 2099685052177,
+         "unit": "INR",
+         "display": "₹2,09,969 crore"
+        }
+       ],
+       "termId": "revenue"
+      },
+      {
+       "id": "top_segment_share",
+       "label": "Largest business, share of revenue",
+       "value": 31.5,
+       "unit": "PCT",
+       "display": "31.5%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "A year earlier",
+         "value": 32.1,
+         "unit": "PCT",
+         "display": "32.1%"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    },
+    {
+     "instrumentId": "INFY",
+     "sentences": [
+      {
+       "text": "Infosys Ltd builds, runs and updates software systems for banks, retailers and other large companies.",
+       "templateId": "stk.business.about",
+       "generator": "template"
+      },
+      {
+       "text": "It earned ₹1,67,000 crore in revenue in FY2026, up from ₹1,49,668 crore in FY2023.",
+       "templateId": "stk.business.revenue",
+       "generator": "template"
+      },
+      {
+       "text": "Financial services accounts for 27.5% of revenue, the largest single business.",
+       "templateId": "stk.business.segment",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "revenue_fy",
+       "label": "Revenue, FY2026 (Apr 2025–Mar 2026)",
+       "value": 1670000000000,
+       "unit": "INR",
+       "display": "₹1,67,000 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 1496680562369,
+         "unit": "INR",
+         "display": "₹1,49,668 crore"
+        }
+       ],
+       "termId": "revenue"
+      },
+      {
+       "id": "top_segment_share",
+       "label": "Largest business, share of revenue",
+       "value": 27.5,
+       "unit": "PCT",
+       "display": "27.5%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "A year earlier",
+         "value": 28.2,
+         "unit": "PCT",
+         "display": "28.2%"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "growth",
+   "order": 2,
+   "question": "Is it growing and profitable?",
+   "cells": [
+    {
+     "instrumentId": "TCS",
+     "sentences": [
+      {
+       "text": "Over the last three years, revenue grew by 6.7% a year on average; the median for its IT services peers is 8.6%.",
+       "templateId": "stk.growth.revenue",
+       "generator": "template"
+      },
+      {
+       "text": "Net profit grew by 5.9% a year on average over the same period (peer median 7.9%) and was ₹48,762 crore in FY2026.",
+       "templateId": "stk.growth.profit",
+       "generator": "template"
+      },
+      {
+       "text": "In FY2026 the company kept 25.9% of its revenue as operating profit (five-year median 26.3%, peer median 22.4%) and earned 51.6% on shareholders' money (peer median 27.9%).",
+       "templateId": "stk.growth.margin_roe",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "revenue_cagr_3y",
+       "label": "Revenue growth, yearly average over 3 years",
+       "value": 6.73,
+       "unit": "PCT",
+       "display": "6.7%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 8.6,
+         "unit": "PCT",
+         "display": "8.6%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "profit_cagr_3y",
+       "label": "Net profit growth, yearly average over 3 years",
+       "value": 5.94,
+       "unit": "PCT",
+       "display": "5.9%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 7.9,
+         "unit": "PCT",
+         "display": "7.9%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "operating_margin",
+       "label": "Operating profit as a share of revenue",
+       "value": 25.9,
+       "unit": "PCT",
+       "display": "25.9%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 26.25,
+         "unit": "PCT",
+         "display": "26.3%"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 22.4,
+         "unit": "PCT",
+         "display": "22.4%"
+        }
+       ],
+       "termId": "operating_margin"
+      },
+      {
+       "id": "roe",
+       "label": "Return on shareholders' money (ROE)",
+       "value": 51.6,
+       "unit": "PCT",
+       "display": "51.6%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 27.9,
+         "unit": "PCT",
+         "display": "27.9%"
+        }
+       ],
+       "termId": "roe"
+      }
+     ]
+    },
+    {
+     "instrumentId": "INFY",
+     "sentences": [
+      {
+       "text": "Over the last three years, revenue grew by 3.7% a year on average; the median for its IT services peers is 8.6%.",
+       "templateId": "stk.growth.revenue",
+       "generator": "template"
+      },
+      {
+       "text": "Net profit grew by 1.3% a year on average over the same period (peer median 7.9%) and was ₹26,720 crore in FY2026.",
+       "templateId": "stk.growth.profit",
+       "generator": "template"
+      },
+      {
+       "text": "In FY2026 the company kept 21.3% of its revenue as operating profit (five-year median 22.5%, peer median 22.4%) and earned 27.0% on shareholders' money (peer median 27.9%).",
+       "templateId": "stk.growth.margin_roe",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "revenue_cagr_3y",
+       "label": "Revenue growth, yearly average over 3 years",
+       "value": 3.72,
+       "unit": "PCT",
+       "display": "3.7%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 8.6,
+         "unit": "PCT",
+         "display": "8.6%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "profit_cagr_3y",
+       "label": "Net profit growth, yearly average over 3 years",
+       "value": 1.26,
+       "unit": "PCT",
+       "display": "1.3%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 7.9,
+         "unit": "PCT",
+         "display": "7.9%"
+        }
+       ],
+       "termId": "cagr"
+      },
+      {
+       "id": "operating_margin",
+       "label": "Operating profit as a share of revenue",
+       "value": 21.3,
+       "unit": "PCT",
+       "display": "21.3%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 22.46,
+         "unit": "PCT",
+         "display": "22.5%"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 22.4,
+         "unit": "PCT",
+         "display": "22.4%"
+        }
+       ],
+       "termId": "operating_margin"
+      },
+      {
+       "id": "roe",
+       "label": "Return on shareholders' money (ROE)",
+       "value": 26.99,
+       "unit": "PCT",
+       "display": "27.0%",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 27.9,
+         "unit": "PCT",
+         "display": "27.9%"
+        }
+       ],
+       "termId": "roe"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safety",
+   "order": 3,
+   "question": "Is it financially safe?",
+   "cells": [
+    {
+     "instrumentId": "TCS",
+     "sentences": [
+      {
+       "text": "The company owed ₹8,100 crore in FY2026, up from ₹7,605 crore in FY2023, and held ₹42,000 crore in cash.",
+       "templateId": "stk.safety.debt",
+       "generator": "template"
+      },
+      {
+       "text": "Its debt is 0.1x the money shareholders have put in; the five-year median is 0.1x and the peer median is 0.1x.",
+       "templateId": "stk.safety.ratio",
+       "generator": "template"
+      },
+      {
+       "text": "Yearly operating profit was 81.6x the yearly interest bill; the peer median is 38.5x.",
+       "templateId": "stk.safety.coverage",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "total_debt",
+       "label": "Total debt",
+       "value": 81000000000,
+       "unit": "INR",
+       "display": "₹8,100 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 76045900873,
+         "unit": "INR",
+         "display": "₹7,605 crore"
+        }
+       ],
+       "termId": "debt"
+      },
+      {
+       "id": "debt_to_equity",
+       "label": "Debt compared with shareholders' money",
+       "value": 0.09,
+       "unit": "TIMES",
+       "display": "0.1x",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 0.09,
+         "unit": "TIMES",
+         "display": "0.1x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 0.08,
+         "unit": "TIMES",
+         "display": "0.1x"
+        }
+       ],
+       "termId": "debt_to_equity"
+      },
+      {
+       "id": "interest_coverage",
+       "label": "Operating profit compared with yearly interest",
+       "value": 81.63,
+       "unit": "TIMES",
+       "display": "81.6x",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 38.5,
+         "unit": "TIMES",
+         "display": "38.5x"
+        }
+       ],
+       "termId": "interest_coverage"
+      },
+      {
+       "id": "cash",
+       "label": "Cash",
+       "value": 420000000000,
+       "unit": "INR",
+       "display": "₹42,000 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 424268791444,
+         "unit": "INR",
+         "display": "₹42,427 crore"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    },
+    {
+     "instrumentId": "INFY",
+     "sentences": [
+      {
+       "text": "The company owed ₹9,100 crore in FY2026, up from ₹7,667 crore in FY2023, and held ₹36,000 crore in cash.",
+       "templateId": "stk.safety.debt",
+       "generator": "template"
+      },
+      {
+       "text": "Its debt is 0.1x the money shareholders have put in; the five-year median is 0.1x and the peer median is 0.1x.",
+       "templateId": "stk.safety.ratio",
+       "generator": "template"
+      },
+      {
+       "text": "Yearly operating profit was 63.5x the yearly interest bill; the peer median is 38.5x.",
+       "templateId": "stk.safety.coverage",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "total_debt",
+       "label": "Total debt",
+       "value": 91000000000,
+       "unit": "INR",
+       "display": "₹9,100 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 76668971727,
+         "unit": "INR",
+         "display": "₹7,667 crore"
+        }
+       ],
+       "termId": "debt"
+      },
+      {
+       "id": "debt_to_equity",
+       "label": "Debt compared with shareholders' money",
+       "value": 0.09,
+       "unit": "TIMES",
+       "display": "0.1x",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 0.09,
+         "unit": "TIMES",
+         "display": "0.1x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 0.08,
+         "unit": "TIMES",
+         "display": "0.1x"
+        }
+       ],
+       "termId": "debt_to_equity"
+      },
+      {
+       "id": "interest_coverage",
+       "label": "Operating profit compared with yearly interest",
+       "value": 63.52,
+       "unit": "TIMES",
+       "display": "63.5x",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 38.5,
+         "unit": "TIMES",
+         "display": "38.5x"
+        }
+       ],
+       "termId": "interest_coverage"
+      },
+      {
+       "id": "cash",
+       "label": "Cash",
+       "value": 360000000000,
+       "unit": "INR",
+       "display": "₹36,000 crore",
+       "source": "Sample data",
+       "asOf": "2026-03-31",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "FY2023",
+         "value": 320544313538,
+         "unit": "INR",
+         "display": "₹32,054 crore"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "price",
+   "order": 4,
+   "question": "How is it priced against its own history and its peers?",
+   "cells": [
+    {
+     "instrumentId": "TCS",
+     "sentences": [
+      {
+       "text": "The share price is 28.3x the yearly profit per share. That is below the company's own five-year median of 30.8x and above the peer median of 25.1x.",
+       "templateId": "stk.price.pe",
+       "generator": "template"
+      },
+      {
+       "text": "The share price is 15.0x the shareholders' money per share (book value), above its own five-year median of 14.0x and above the peer median of 7.2x.",
+       "templateId": "stk.price.pb",
+       "generator": "template"
+      },
+      {
+       "text": "The whole company is valued at ₹14,20,200 crore on the market, against ₹10,88,005 crore a year ago, and its dividend yield is 1.9% (peer median 2.1%).",
+       "templateId": "stk.price.cap",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "pe",
+       "label": "Price to yearly profit (P/E)",
+       "value": 28.34,
+       "unit": "TIMES",
+       "display": "28.3x",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 30.75,
+         "unit": "TIMES",
+         "display": "30.8x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 25.1,
+         "unit": "TIMES",
+         "display": "25.1x"
+        }
+       ],
+       "termId": "pe_ratio"
+      },
+      {
+       "id": "pb",
+       "label": "Price to shareholders' money (P/B)",
+       "value": 15.03,
+       "unit": "TIMES",
+       "display": "15.0x",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 13.95,
+         "unit": "TIMES",
+         "display": "14.0x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 7.2,
+         "unit": "TIMES",
+         "display": "7.2x"
+        }
+       ],
+       "termId": "pb_ratio"
+      },
+      {
+       "id": "market_cap",
+       "label": "Market value of the company",
+       "value": 14201999999245,
+       "unit": "INR",
+       "display": "₹14,20,200 crore",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "1 year ago",
+         "value": 10880047495218,
+         "unit": "INR",
+         "display": "₹10,88,005 crore"
+        }
+       ],
+       "termId": "market_cap"
+      },
+      {
+       "id": "dividend_yield",
+       "label": "Dividend yield",
+       "value": 1.9,
+       "unit": "PCT",
+       "display": "1.9%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 2.1,
+         "unit": "PCT",
+         "display": "2.1%"
+        }
+       ],
+       "termId": "dividend_yield"
+      }
+     ]
+    },
+    {
+     "instrumentId": "INFY",
+     "sentences": [
+      {
+       "text": "The share price is 25.4x the yearly profit per share. That is below the company's own five-year median of 29.3x and about the same as the peer median of 25.1x.",
+       "templateId": "stk.price.pe",
+       "generator": "template"
+      },
+      {
+       "text": "The share price is 6.9x the shareholders' money per share (book value), below its own five-year median of 8.6x and below the peer median of 7.2x.",
+       "templateId": "stk.price.pb",
+       "generator": "template"
+      },
+      {
+       "text": "The whole company is valued at ₹6,83,000 crore on the market, against ₹6,99,988 crore a year ago, and its dividend yield is 2.6% (peer median 2.1%).",
+       "templateId": "stk.price.cap",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "pe",
+       "label": "Price to yearly profit (P/E)",
+       "value": 25.37,
+       "unit": "TIMES",
+       "display": "25.4x",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 29.25,
+         "unit": "TIMES",
+         "display": "29.3x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 25.1,
+         "unit": "TIMES",
+         "display": "25.1x"
+        }
+       ],
+       "termId": "pe_ratio"
+      },
+      {
+       "id": "pb",
+       "label": "Price to shareholders' money (P/B)",
+       "value": 6.9,
+       "unit": "TIMES",
+       "display": "6.9x",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "OWN_HISTORY",
+         "label": "5-year median",
+         "value": 8.65,
+         "unit": "TIMES",
+         "display": "8.7x"
+        },
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 7.2,
+         "unit": "TIMES",
+         "display": "7.2x"
+        }
+       ],
+       "termId": "pb_ratio"
+      },
+      {
+       "id": "market_cap",
+       "label": "Market value of the company",
+       "value": 6830000000416,
+       "unit": "INR",
+       "display": "₹6,83,000 crore",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "1 year ago",
+         "value": 6999877979512,
+         "unit": "INR",
+         "display": "₹6,99,988 crore"
+        }
+       ],
+       "termId": "market_cap"
+      },
+      {
+       "id": "dividend_yield",
+       "label": "Dividend yield",
+       "value": 2.6,
+       "unit": "PCT",
+       "display": "2.6%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "PEERS",
+         "label": "Median of IT services peers",
+         "value": 2.1,
+         "unit": "PCT",
+         "display": "2.1%"
+        }
+       ],
+       "termId": "dividend_yield"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recent",
+   "order": 5,
+   "question": "What changed recently?",
+   "cells": [
+    {
+     "instrumentId": "TCS",
+     "sentences": [
+      {
+       "text": "In July–September 2026, revenue changed by +7.1% and net profit by +5.8% compared with the same quarter a year earlier (results announced 9 Oct 2026).",
+       "templateId": "stk.recent.results",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 90 days the share price changed by +9.3%, while the Nifty 50 changed by +4.7%.",
+       "templateId": "stk.recent.price",
+       "generator": "template"
+      },
+      {
+       "text": "Latest company update, on 12 Oct 2026: An interim dividend of ₹11 per share was proposed.",
+       "templateId": "stk.recent.event",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "quarter_revenue_yoy",
+       "label": "Revenue, July–September 2026, against the same quarter a year earlier",
+       "value": 7.06,
+       "unit": "PCT_CHANGE",
+       "display": "+7.1%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "April–June 2026, same measure",
+         "value": 7.06,
+         "unit": "PCT_CHANGE",
+         "display": "+7.1%"
+        }
+       ],
+       "termId": "revenue"
+      },
+      {
+       "id": "quarter_profit_yoy",
+       "label": "Net profit, July–September 2026, against the same quarter a year earlier",
+       "value": 5.81,
+       "unit": "PCT_CHANGE",
+       "display": "+5.8%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "April–June 2026, same measure",
+         "value": 5.81,
+         "unit": "PCT_CHANGE",
+         "display": "+5.8%"
+        }
+       ],
+       "termId": "net_profit"
+      },
+      {
+       "id": "price_change_90d",
+       "label": "Share price change in the last 90 days",
+       "value": 9.3,
+       "unit": "PCT_CHANGE",
+       "display": "+9.3%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "INDEX",
+         "label": "Nifty 50, same dates",
+         "value": 4.67,
+         "unit": "PCT_CHANGE",
+         "display": "+4.7%"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    },
+    {
+     "instrumentId": "INFY",
+     "sentences": [
+      {
+       "text": "In July–September 2026, revenue changed by +5.5% and net profit by +1.6% compared with the same quarter a year earlier (results announced 16 Oct 2026).",
+       "templateId": "stk.recent.results",
+       "generator": "template"
+      },
+      {
+       "text": "Over the last 90 days the share price changed by -0.2%, while the Nifty 50 changed by +4.7%.",
+       "templateId": "stk.recent.price",
+       "generator": "template"
+      },
+      {
+       "text": "Latest company update, on 30 Oct 2026: A share repurchase programme was announced.",
+       "templateId": "stk.recent.event",
+       "generator": "template"
+      }
+     ],
+     "figures": [
+      {
+       "id": "quarter_revenue_yoy",
+       "label": "Revenue, July–September 2026, against the same quarter a year earlier",
+       "value": 5.49,
+       "unit": "PCT_CHANGE",
+       "display": "+5.5%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "April–June 2026, same measure",
+         "value": 5.49,
+         "unit": "PCT_CHANGE",
+         "display": "+5.5%"
+        }
+       ],
+       "termId": "revenue"
+      },
+      {
+       "id": "quarter_profit_yoy",
+       "label": "Net profit, July–September 2026, against the same quarter a year earlier",
+       "value": 1.56,
+       "unit": "PCT_CHANGE",
+       "display": "+1.6%",
+       "source": "Sample data",
+       "asOf": "2026-09-30",
+       "comparisons": [
+        {
+         "kind": "PREVIOUS_PERIOD",
+         "label": "April–June 2026, same measure",
+         "value": 1.56,
+         "unit": "PCT_CHANGE",
+         "display": "+1.6%"
+        }
+       ],
+       "termId": "net_profit"
+      },
+      {
+       "id": "price_change_90d",
+       "label": "Share price change in the last 90 days",
+       "value": -0.21,
+       "unit": "PCT_CHANGE",
+       "display": "-0.2%",
+       "source": "Sample data",
+       "asOf": "2026-10-30",
+       "comparisons": [
+        {
+         "kind": "INDEX",
+         "label": "Nifty 50, same dates",
+         "value": 4.67,
+         "unit": "PCT_CHANGE",
+         "display": "+4.7%"
+        }
+       ],
+       "termId": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

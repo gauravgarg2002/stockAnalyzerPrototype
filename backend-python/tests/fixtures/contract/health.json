@@ -1,0 +1,18 @@
+{
+ "status": "ok",
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "version": "0.1.0",
+ "adapters": {
+  "broker": "mock",
+  "fundamentals": "mock",
+  "prices": "mock",
+  "surveillance": "mock",
+  "fundNav": "mock",
+  "fundMeta": "mock",
+  "fundHoldings": "mock",
+  "statement": "auto"
+ },
+ "statementParser": "fallback",
+ "llmEnabled": false
+}

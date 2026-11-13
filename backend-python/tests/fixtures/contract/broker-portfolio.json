@@ -1,0 +1,96 @@
+{
+ "sampleData": true,
+ "source": "Your Zerodha account",
+ "asOf": "2026-10-30",
+ "accountLabel": "Your Zerodha account (sample)",
+ "stocks": [
+  {
+   "symbol": "RELIANCE",
+   "isin": "INESMP000001",
+   "quantity": 40,
+   "avgPrice": 2380.0,
+   "lastPrice": 1435.6,
+   "firstBuyDate": "2022-03-14"
+  },
+  {
+   "symbol": "HDFCBANK",
+   "isin": "INESMP000003",
+   "quantity": 60,
+   "avgPrice": 1520.0,
+   "lastPrice": 1712.3,
+   "firstBuyDate": "2021-12-20"
+  },
+  {
+   "symbol": "TCS",
+   "isin": "INESMP000002",
+   "quantity": 15,
+   "avgPrice": 3410.0,
+   "lastPrice": 3925.4,
+   "firstBuyDate": "2023-06-05"
+  },
+  {
+   "symbol": "ITC",
+   "isin": "INESMP000005",
+   "quantity": 300,
+   "avgPrice": 395.0,
+   "lastPrice": 412.7,
+   "firstBuyDate": "2024-02-12"
+  },
+  {
+   "symbol": "TATASTEEL",
+   "isin": "INESMP000010",
+   "quantity": 500,
+   "avgPrice": 118.0,
+   "lastPrice": 164.8,
+   "firstBuyDate": "2023-01-09"
+  },
+  {
+   "symbol": "DECCANINF",
+   "isin": "INESMP000014",
+   "quantity": 400,
+   "avgPrice": 212.0,
+   "lastPrice": 318.5,
+   "firstBuyDate": "2024-08-26"
+  }
+ ],
+ "funds": [
+  {
+   "schemeCode": "900101",
+   "isin": "INFSMP900101",
+   "name": "Kaveri Flexi Cap Fund - Regular Plan - Growth",
+   "units": 1850.234,
+   "avgNav": 62.4,
+   "lastNav": 62.4012,
+   "firstBuyDate": "2021-12-01"
+  },
+  {
+   "schemeCode": "900201",
+   "isin": "INFSMP900201",
+   "name": "Narmada Nifty 50 Index Fund - Direct Plan - Growth",
+   "units": 3120.5,
+   "avgNav": 21.85,
+   "lastNav": 21.8543,
+   "firstBuyDate": "2023-03-06"
+  },
+  {
+   "schemeCode": "900301",
+   "isin": "INFSMP900301",
+   "name": "Godavari Midcap Fund - Direct Plan - Growth",
+   "units": 410.112,
+   "avgNav": 98.3,
+   "lastNav": 102.6718,
+   "firstBuyDate": "2024-05-20"
+  },
+  {
+   "schemeCode": "900501",
+   "isin": "INFSMP900501",
+   "name": "Krishna ELSS Tax Saver Fund - Direct Plan - Growth",
+   "units": 980.0,
+   "avgNav": 41.2,
+   "lastNav": 44.1127,
+   "firstBuyDate": "2025-01-15"
+  }
+ ],
+ "idleCashInr": 42350.75,
+ "unmatched": []
+}

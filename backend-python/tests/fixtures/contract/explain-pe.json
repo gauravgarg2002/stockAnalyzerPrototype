@@ -1,0 +1,63 @@
+{
+ "sampleData": true,
+ "term": {
+  "id": "pe_ratio",
+  "term": "P/E (price to earnings)",
+  "aliases": [
+   "PE",
+   "price to earnings",
+   "price to yearly profit"
+  ],
+  "meaning": "How many rupees investors pay today for each rupee of the company's yearly profit.",
+  "appliesTo": [
+   "STOCK"
+  ],
+  "figureIds": [
+   "pe"
+  ]
+ },
+ "instrument": {
+  "kind": "STOCK",
+  "id": "TCS",
+  "name": "Tata Consultancy Services Ltd",
+  "subtitle": "Information Technology · Large cap"
+ },
+ "thisFigure": {
+  "id": "pe",
+  "label": "Price to yearly profit (P/E)",
+  "value": 28.34,
+  "unit": "TIMES",
+  "display": "28.3x",
+  "source": "Sample data",
+  "asOf": "2026-10-30",
+  "comparisons": [
+   {
+    "kind": "OWN_HISTORY",
+    "label": "5-year median",
+    "value": 30.75,
+    "unit": "TIMES",
+    "display": "30.8x"
+   },
+   {
+    "kind": "PEERS",
+    "label": "Median of IT services peers",
+    "value": 25.1,
+    "unit": "TIMES",
+    "display": "25.1x"
+   }
+  ],
+  "termId": "pe_ratio"
+ },
+ "typical": {
+  "kind": "PEERS",
+  "label": "Median of IT services peers",
+  "value": 25.1,
+  "unit": "TIMES",
+  "display": "25.1x"
+ },
+ "sentence": {
+  "text": "For Tata Consultancy Services Ltd this is 28.3x; the median of IT services peers is 25.1x.",
+  "templateId": "glossary.explain.with_typical",
+  "generator": "template"
+ }
+}

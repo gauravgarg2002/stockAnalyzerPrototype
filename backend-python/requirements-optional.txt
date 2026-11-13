@@ -1,0 +1,2 @@
+# Optional: better statement parsing. The app falls back to the built-in parser when this is not installed.
+casparser>=0.7

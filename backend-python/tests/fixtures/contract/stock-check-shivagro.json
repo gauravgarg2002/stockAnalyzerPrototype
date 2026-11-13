@@ -1,0 +1,3291 @@
+{
+ "sampleData": true,
+ "asOf": "2026-10-30",
+ "instrument": {
+  "kind": "STOCK",
+  "symbol": "SHIVAGRO",
+  "name": "Shivalik Agro Polymers Ltd",
+  "exchange": "NSE",
+  "isin": "INESMP000015",
+  "sector": "Chemicals",
+  "industry": "Agricultural Polymers",
+  "sizeBand": "MICRO",
+  "fictional": true,
+  "lastPrice": {
+   "id": "last_price",
+   "label": "Last price",
+   "value": 46.7,
+   "unit": "INR_PRICE",
+   "display": "₹46.70",
+   "source": "Sample data",
+   "asOf": "2026-10-30",
+   "comparisons": [
+    {
+     "kind": "PREVIOUS_PERIOD",
+     "label": "1 year ago",
+     "value": 44.39,
+     "unit": "INR_PRICE",
+     "display": "₹44.39"
+    }
+   ],
+   "termId": null
+  },
+  "marketCap": {
+   "id": "market_cap",
+   "label": "Market value of the company",
+   "value": 11500000016,
+   "unit": "INR",
+   "display": "₹1,150 crore",
+   "source": "Sample data",
+   "asOf": "2026-10-30",
+   "comparisons": [
+    {
+     "kind": "PREVIOUS_PERIOD",
+     "label": "1 year ago",
+     "value": 10931156332,
+     "unit": "INR",
+     "display": "₹1,093 crore"
+    }
+   ],
+   "termId": "market_cap"
+  }
+ },
+ "answers": [
+  {
+   "id": "business",
+   "order": 1,
+   "question": "What does the company do and how does it earn money?",
+   "sentences": [
+    {
+     "text": "Shivalik Agro Polymers Ltd makes plastic films and pipes used in farming and irrigation.",
+     "templateId": "stk.business.about",
+     "generator": "template"
+    },
+    {
+     "text": "It earned ₹640 crore in revenue in FY2026, up from ₹562.7 crore in FY2023.",
+     "templateId": "stk.business.revenue",
+     "generator": "template"
+    },
+    {
+     "text": "Irrigation pipes accounts for 48.0% of revenue, the largest single business.",
+     "templateId": "stk.business.segment",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "revenue_fy",
+     "label": "Revenue, FY2026 (Apr 2025–Mar 2026)",
+     "value": 6400000000,
+     "unit": "INR",
+     "display": "₹640 crore",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2023",
+       "value": 5627333365,
+       "unit": "INR",
+       "display": "₹562.7 crore"
+      }
+     ],
+     "termId": "revenue"
+    },
+    {
+     "id": "top_segment_share",
+     "label": "Largest business, share of revenue",
+     "value": 48.0,
+     "unit": "PCT",
+     "display": "48.0%",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "A year earlier",
+       "value": 52.0,
+       "unit": "PCT",
+       "display": "52.0%"
+      }
+     ],
+     "termId": null
+    }
+   ],
+   "details": {
+    "title": "Revenue by business",
+    "columns": [
+     "Business",
+     "Share of revenue",
+     "A year earlier"
+    ],
+    "rows": [
+     [
+      "Irrigation pipes",
+      "48.0%",
+      "52.0%"
+     ],
+     [
+      "Farm films",
+      "37.0%",
+      "33.0%"
+     ],
+     [
+      "Other polymer products",
+      "15.0%",
+      "15.0%"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "growth",
+   "order": 2,
+   "question": "Is it growing and profitable?",
+   "sentences": [
+    {
+     "text": "Over the last three years, revenue grew by 4.4% a year on average; the median for its Agricultural polymers peers is 9.0%.",
+     "templateId": "stk.growth.revenue",
+     "generator": "template"
+    },
+    {
+     "text": "Net profit shrank by 26.6% a year on average over the same period (peer median 6.0%) and was ₹7.7 crore in FY2026.",
+     "templateId": "stk.growth.profit",
+     "generator": "template"
+    },
+    {
+     "text": "In FY2026 the company kept 7.0% of its revenue as operating profit (five-year median 8.2%, peer median 11.0%) and earned 2.2% on shareholders' money (peer median 10.5%).",
+     "templateId": "stk.growth.margin_roe",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "revenue_cagr_3y",
+     "label": "Revenue growth, yearly average over 3 years",
+     "value": 4.38,
+     "unit": "PCT",
+     "display": "4.4%",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 9.0,
+       "unit": "PCT",
+       "display": "9.0%"
+      }
+     ],
+     "termId": "cagr"
+    },
+    {
+     "id": "profit_cagr_3y",
+     "label": "Net profit growth, yearly average over 3 years",
+     "value": -26.65,
+     "unit": "PCT",
+     "display": "-26.7%",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 6.0,
+       "unit": "PCT",
+       "display": "6.0%"
+      }
+     ],
+     "termId": "cagr"
+    },
+    {
+     "id": "operating_margin",
+     "label": "Operating profit as a share of revenue",
+     "value": 7.0,
+     "unit": "PCT",
+     "display": "7.0%",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "5-year median",
+       "value": 8.21,
+       "unit": "PCT",
+       "display": "8.2%"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 11.0,
+       "unit": "PCT",
+       "display": "11.0%"
+      }
+     ],
+     "termId": "operating_margin"
+    },
+    {
+     "id": "roe",
+     "label": "Return on shareholders' money (ROE)",
+     "value": 2.16,
+     "unit": "PCT",
+     "display": "2.2%",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 10.5,
+       "unit": "PCT",
+       "display": "10.5%"
+      }
+     ],
+     "termId": "roe"
+    }
+   ],
+   "details": {
+    "title": "Five years: revenue, operating profit, net profit and margin",
+    "columns": [
+     "Year",
+     "Revenue",
+     "Operating profit",
+     "Net profit",
+     "Operating margin"
+    ],
+    "rows": [
+     [
+      "FY2026",
+      "₹640 crore",
+      "₹44.8 crore",
+      "₹7.7 crore",
+      "7.0%"
+     ],
+     [
+      "FY2025",
+      "₹587.2 crore",
+      "₹44.6 crore",
+      "-₹20.6 crore",
+      "7.6%"
+     ],
+     [
+      "FY2024",
+      "₹624.6 crore",
+      "₹51.3 crore",
+      "₹17.6 crore",
+      "8.2%"
+     ],
+     [
+      "FY2023",
+      "₹562.7 crore",
+      "₹51 crore",
+      "₹19.5 crore",
+      "9.1%"
+     ],
+     [
+      "FY2022",
+      "₹493.6 crore",
+      "₹49.9 crore",
+      "₹18.7 crore",
+      "10.1%"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "safety",
+   "order": 3,
+   "question": "Is it financially safe?",
+   "sentences": [
+    {
+     "text": "The company owed ₹330 crore in FY2026, up from ₹240.5 crore in FY2023, and held ₹9 crore in cash.",
+     "templateId": "stk.safety.debt",
+     "generator": "template"
+    },
+    {
+     "text": "Its debt is 0.9x the money shareholders have put in; the five-year median is 0.8x and the peer median is 0.5x.",
+     "templateId": "stk.safety.ratio",
+     "generator": "template"
+    },
+    {
+     "text": "Yearly operating profit was 1.1x the yearly interest bill; the peer median is 3.8x.",
+     "templateId": "stk.safety.coverage",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "total_debt",
+     "label": "Total debt",
+     "value": 3300000000,
+     "unit": "INR",
+     "display": "₹330 crore",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2023",
+       "value": 2404994526,
+       "unit": "INR",
+       "display": "₹240.5 crore"
+      }
+     ],
+     "termId": "debt"
+    },
+    {
+     "id": "debt_to_equity",
+     "label": "Debt compared with shareholders' money",
+     "value": 0.93,
+     "unit": "TIMES",
+     "display": "0.9x",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "5-year median",
+       "value": 0.81,
+       "unit": "TIMES",
+       "display": "0.8x"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 0.5,
+       "unit": "TIMES",
+       "display": "0.5x"
+      }
+     ],
+     "termId": "debt_to_equity"
+    },
+    {
+     "id": "interest_coverage",
+     "label": "Operating profit compared with yearly interest",
+     "value": 1.09,
+     "unit": "TIMES",
+     "display": "1.1x",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 3.8,
+       "unit": "TIMES",
+       "display": "3.8x"
+      }
+     ],
+     "termId": "interest_coverage"
+    },
+    {
+     "id": "cash",
+     "label": "Cash",
+     "value": 90000000,
+     "unit": "INR",
+     "display": "₹9 crore",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2023",
+       "value": 125629043,
+       "unit": "INR",
+       "display": "₹12.6 crore"
+      }
+     ],
+     "termId": null
+    }
+   ],
+   "details": {
+    "title": "Five years: debt, cash, net worth and interest",
+    "columns": [
+     "Year",
+     "Total debt",
+     "Cash",
+     "Net worth",
+     "Interest paid"
+    ],
+    "rows": [
+     [
+      "FY2026",
+      "₹330 crore",
+      "₹9 crore",
+      "₹355 crore",
+      "₹41 crore"
+     ],
+     [
+      "FY2025",
+      "₹294.9 crore",
+      "₹10.6 crore",
+      "₹346.3 crore",
+      "₹38.2 crore"
+     ],
+     [
+      "FY2024",
+      "₹267.5 crore",
+      "₹11.2 crore",
+      "₹332 crore",
+      "₹31.3 crore"
+     ],
+     [
+      "FY2023",
+      "₹240.5 crore",
+      "₹12.6 crore",
+      "₹333.5 crore",
+      "₹28 crore"
+     ],
+     [
+      "FY2022",
+      "₹210 crore",
+      "₹14 crore",
+      "₹320 crore",
+      "₹24 crore"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "price",
+   "order": 4,
+   "question": "How is it priced against its own history and its peers?",
+   "sentences": [
+    {
+     "text": "The share price is 146.5x the yearly profit per share. That is above the company's own five-year median of 92.3x and above the peer median of 22.0x.",
+     "templateId": "stk.price.pe",
+     "generator": "template"
+    },
+    {
+     "text": "The share price is 3.2x the shareholders' money per share (book value), below its own five-year median of 4.1x and above the peer median of 2.4x.",
+     "templateId": "stk.price.pb",
+     "generator": "template"
+    },
+    {
+     "text": "The whole company is valued at ₹1,150 crore on the market, against ₹1,093 crore a year ago, and its dividend yield is 0.0% (peer median 0.5%).",
+     "templateId": "stk.price.cap",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "pe",
+     "label": "Price to yearly profit (P/E)",
+     "value": 146.5,
+     "unit": "TIMES",
+     "display": "146.5x",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "5-year median",
+       "value": 92.3,
+       "unit": "TIMES",
+       "display": "92.3x"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 22.0,
+       "unit": "TIMES",
+       "display": "22.0x"
+      }
+     ],
+     "termId": "pe_ratio"
+    },
+    {
+     "id": "pb",
+     "label": "Price to shareholders' money (P/B)",
+     "value": 3.24,
+     "unit": "TIMES",
+     "display": "3.2x",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "5-year median",
+       "value": 4.1,
+       "unit": "TIMES",
+       "display": "4.1x"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 2.4,
+       "unit": "TIMES",
+       "display": "2.4x"
+      }
+     ],
+     "termId": "pb_ratio"
+    },
+    {
+     "id": "market_cap",
+     "label": "Market value of the company",
+     "value": 11500000016,
+     "unit": "INR",
+     "display": "₹1,150 crore",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "1 year ago",
+       "value": 10931156332,
+       "unit": "INR",
+       "display": "₹1,093 crore"
+      }
+     ],
+     "termId": "market_cap"
+    },
+    {
+     "id": "dividend_yield",
+     "label": "Dividend yield",
+     "value": 0.0,
+     "unit": "PCT",
+     "display": "0.0%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 0.5,
+       "unit": "PCT",
+       "display": "0.5%"
+      }
+     ],
+     "termId": "dividend_yield"
+    }
+   ],
+   "details": {
+    "title": "Price to profit and to shareholders' money, September of each year",
+    "columns": [
+     "Month end",
+     "P/E",
+     "P/B"
+    ],
+    "rows": [
+     [
+      "30 Sep 2026",
+      "137.4x",
+      "3.0x"
+     ],
+     [
+      "30 Sep 2025",
+      "Not available",
+      "3.3x"
+     ],
+     [
+      "30 Sep 2024",
+      "Not available",
+      "3.7x"
+     ],
+     [
+      "30 Sep 2023",
+      "76.8x",
+      "4.3x"
+     ],
+     [
+      "30 Sep 2022",
+      "71.9x",
+      "4.2x"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "recent",
+   "order": 5,
+   "question": "What changed recently?",
+   "sentences": [
+    {
+     "text": "In April–June 2026, revenue changed by +8.8% and net profit by +9.4% compared with the same quarter a year earlier (results announced 9 Aug 2026).",
+     "templateId": "stk.recent.results",
+     "generator": "template"
+    },
+    {
+     "text": "Over the last 90 days the share price changed by -15.5%, while the Nifty 50 changed by +4.7%.",
+     "templateId": "stk.recent.price",
+     "generator": "template"
+    },
+    {
+     "text": "Latest company update, on 14 Aug 2026: The stock was placed in the long-term additional surveillance measure (ASM) framework, stage II.",
+     "templateId": "stk.recent.event",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "quarter_revenue_yoy",
+     "label": "Revenue, April–June 2026, against the same quarter a year earlier",
+     "value": 8.76,
+     "unit": "PCT_CHANGE",
+     "display": "+8.8%",
+     "source": "Sample data",
+     "asOf": "2026-06-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "January–March 2026, same measure",
+       "value": 8.56,
+       "unit": "PCT_CHANGE",
+       "display": "+8.6%"
+      }
+     ],
+     "termId": "revenue"
+    },
+    {
+     "id": "quarter_profit_yoy",
+     "label": "Net profit, April–June 2026, against the same quarter a year earlier",
+     "value": 9.44,
+     "unit": "PCT_CHANGE",
+     "display": "+9.4%",
+     "source": "Sample data",
+     "asOf": "2026-06-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "January–March 2026, same measure",
+       "value": null,
+       "unit": "PCT_CHANGE",
+       "display": "Not available"
+      }
+     ],
+     "termId": "net_profit"
+    },
+    {
+     "id": "price_change_90d",
+     "label": "Share price change in the last 90 days",
+     "value": -15.52,
+     "unit": "PCT_CHANGE",
+     "display": "-15.5%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "INDEX",
+       "label": "Nifty 50, same dates",
+       "value": 4.67,
+       "unit": "PCT_CHANGE",
+       "display": "+4.7%"
+      }
+     ],
+     "termId": null
+    }
+   ],
+   "details": {
+    "title": "Recent company events",
+    "columns": [
+     "Date",
+     "Event"
+    ],
+    "rows": [
+     [
+      "14 Aug 2026",
+      "The stock was placed in the long-term additional surveillance measure (ASM) framework, stage II."
+     ],
+     [
+      "9 Aug 2026",
+      "Results for April–June 2026 announced."
+     ],
+     [
+      "19 Apr 2026",
+      "Results for January–March 2026 announced."
+     ],
+     [
+      "24 Jan 2026",
+      "Results for October–December 2025 announced."
+     ]
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "promoter_holding",
+   "order": 1,
+   "title": "Promoter holding",
+   "termId": "promoter_holding",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Promoters own 41.0% of the company, down from 41.5% four quarters ago.",
+     "templateId": "stk.fact.promoter_holding",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "promoter_holding",
+     "label": "Promoter holding",
+     "value": 41.0,
+     "unit": "PCT",
+     "display": "41.0%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "Four quarters ago",
+       "value": 41.5,
+       "unit": "PCT",
+       "display": "41.5%"
+      }
+     ],
+     "termId": "promoter_holding"
+    }
+   ],
+   "details": {
+    "title": "Promoter holding by quarter",
+    "columns": [
+     "Quarter end",
+     "Promoter holding",
+     "Pledged (of promoter shares)"
+    ],
+    "rows": [
+     [
+      "30 Sep 2026",
+      "41.0%",
+      "4.2%"
+     ],
+     [
+      "30 Jun 2026",
+      "41.0%",
+      "4.2%"
+     ],
+     [
+      "31 Mar 2026",
+      "41.2%",
+      "3.8%"
+     ],
+     [
+      "31 Dec 2025",
+      "41.5%",
+      "3.8%"
+     ],
+     [
+      "30 Sep 2025",
+      "41.5%",
+      "3.5%"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "promoter_pledge",
+   "order": 2,
+   "title": "Promoter pledge",
+   "termId": "promoter_pledge",
+   "available": true,
+   "sentences": [
+    {
+     "text": "4.2% of the promoters' shares are pledged as security for loans, against 3.5% four quarters ago.",
+     "templateId": "stk.fact.promoter_pledge",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "promoter_pledge",
+     "label": "Promoter shares pledged (share of promoter shares)",
+     "value": 4.2,
+     "unit": "PCT",
+     "display": "4.2%",
+     "source": "Sample data",
+     "asOf": "2026-09-30",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "Four quarters ago",
+       "value": 3.5,
+       "unit": "PCT",
+       "display": "3.5%"
+      }
+     ],
+     "termId": "promoter_pledge"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "profit_last_3y",
+   "order": 3,
+   "title": "Profit or loss in each of the last three years",
+   "termId": "net_profit",
+   "available": true,
+   "sentences": [
+    {
+     "text": "The company reported a profit of ₹17.6 crore in FY2024, a loss of ₹20.6 crore in FY2025 and a profit of ₹7.7 crore in FY2026.",
+     "templateId": "stk.fact.profit",
+     "generator": "template"
+    },
+    {
+     "text": "1 year in this period ended with a net loss.",
+     "templateId": "stk.fact.profit_loss",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "net_profit_y1",
+     "label": "FY2024 (Apr 2023–Mar 2024)",
+     "value": 175905948,
+     "unit": "INR",
+     "display": "₹17.6 crore",
+     "source": "Sample data",
+     "asOf": "2024-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2023",
+       "value": 194572205,
+       "unit": "INR",
+       "display": "₹19.5 crore"
+      }
+     ],
+     "termId": "net_profit"
+    },
+    {
+     "id": "net_profit_y2",
+     "label": "FY2025 (Apr 2024–Mar 2025)",
+     "value": -205504587,
+     "unit": "INR",
+     "display": "-₹20.6 crore",
+     "source": "Sample data",
+     "asOf": "2025-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2024",
+       "value": 175905948,
+       "unit": "INR",
+       "display": "₹17.6 crore"
+      }
+     ],
+     "termId": "net_profit"
+    },
+    {
+     "id": "net_profit_y3",
+     "label": "FY2026 (Apr 2025–Mar 2026)",
+     "value": 76800000,
+     "unit": "INR",
+     "display": "₹7.7 crore",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "PREVIOUS_PERIOD",
+       "label": "FY2025",
+       "value": -205504587,
+       "unit": "INR",
+       "display": "-₹20.6 crore"
+      }
+     ],
+     "termId": "net_profit"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "debt_to_earnings",
+   "order": 4,
+   "title": "Debt against yearly earnings",
+   "termId": "debt_to_profit",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Total debt of ₹330 crore is 43.0x the latest yearly net profit of ₹7.7 crore.",
+     "templateId": "stk.fact.debt_to_profit",
+     "generator": "template"
+    },
+    {
+     "text": "Three years earlier this figure was 12.4x; the peer median is 2.8x.",
+     "templateId": "stk.fact.debt_to_profit_cmp",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "debt_to_profit",
+     "label": "Total debt compared with yearly net profit",
+     "value": 42.97,
+     "unit": "TIMES",
+     "display": "43.0x",
+     "source": "Sample data",
+     "asOf": "2026-03-31",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "3 years earlier (FY2023)",
+       "value": 12.36,
+       "unit": "TIMES",
+       "display": "12.4x"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 2.8,
+       "unit": "TIMES",
+       "display": "2.8x"
+      }
+     ],
+     "termId": "debt_to_profit"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "price_move_30d",
+   "order": 5,
+   "title": "Price move in the last 30 days",
+   "termId": null,
+   "available": true,
+   "sentences": [
+    {
+     "text": "The share price changed by +3.8% in the last 30 days, while the Nifty 50 changed by +6.0%.",
+     "templateId": "stk.fact.price_move",
+     "generator": "template"
+    },
+    {
+     "text": "No quarterly results were announced in this period.",
+     "templateId": "stk.fact.results_no",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "price_change_30d",
+     "label": "Share price change in the last 30 days",
+     "value": 3.78,
+     "unit": "PCT_CHANGE",
+     "display": "+3.8%",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "INDEX",
+       "label": "Nifty 50, same dates",
+       "value": 6.03,
+       "unit": "PCT_CHANGE",
+       "display": "+6.0%"
+      }
+     ],
+     "termId": null
+    },
+    {
+     "id": "results_in_window",
+     "label": "Results announced in this period",
+     "value": "No",
+     "unit": "TEXT",
+     "display": "No",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": null
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "avg_traded_value",
+   "order": 6,
+   "title": "Average daily trading value",
+   "termId": "avg_daily_traded_value",
+   "available": true,
+   "sentences": [
+    {
+     "text": "On an average day over the last 20 trading sessions, shares worth ₹33.5 lakh changed hands.",
+     "templateId": "stk.fact.avg_traded",
+     "generator": "template"
+    },
+    {
+     "text": "A year earlier the same figure was ₹36.3 lakh; the peer median is ₹1.5 crore.",
+     "templateId": "stk.fact.avg_traded_cmp",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "avg_daily_traded_value",
+     "label": "Average daily trading value (last 20 sessions)",
+     "value": 3350254,
+     "unit": "INR",
+     "display": "₹33.5 lakh",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "OWN_HISTORY",
+       "label": "Same 20 sessions a year earlier",
+       "value": 3633578,
+       "unit": "INR",
+       "display": "₹36.3 lakh"
+      },
+      {
+       "kind": "PEERS",
+       "label": "Median of Agricultural polymers peers",
+       "value": 15000000,
+       "unit": "INR",
+       "display": "₹1.5 crore"
+      }
+     ],
+     "termId": "avg_daily_traded_value"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "size_band",
+   "order": 7,
+   "title": "Size band",
+   "termId": "size_band",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Shivalik Agro Polymers Ltd is a micro cap company, valued at ₹1,150 crore on the market.",
+     "templateId": "stk.fact.size_band",
+     "generator": "template"
+    },
+    {
+     "text": "It ranks 1,850 by market value; there is no lower limit for micro cap companies.",
+     "templateId": "stk.fact.size_rank_nolimit",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "market_cap",
+     "label": "Market value of the company",
+     "value": 11500000016,
+     "unit": "INR",
+     "display": "₹1,150 crore",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [
+      {
+       "kind": "THRESHOLD",
+       "label": "Lowest market value counted as micro cap",
+       "value": 0,
+       "unit": "INR",
+       "display": "₹0"
+      }
+     ],
+     "termId": "market_cap"
+    },
+    {
+     "id": "size_band",
+     "label": "Size band",
+     "value": "Micro cap, rank 1850 by market value",
+     "unit": "TEXT",
+     "display": "Micro cap, rank 1850 by market value",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": "size_band"
+    }
+   ],
+   "details": null
+  },
+  {
+   "id": "surveillance",
+   "order": 8,
+   "title": "NSE surveillance lists (ASM, GSM, ESM)",
+   "termId": "surveillance_asm",
+   "available": true,
+   "sentences": [
+    {
+     "text": "Shivalik Agro Polymers Ltd is on the NSE surveillance lists: ASM long-term stage II since 14 Aug 2026.",
+     "templateId": "stk.fact.surv_on",
+     "generator": "template"
+    },
+    {
+     "text": "These lists mark stocks that the exchange watches more closely and applies extra trading checks to.",
+     "templateId": "stk.fact.surv_note",
+     "generator": "template"
+    }
+   ],
+   "figures": [
+    {
+     "id": "surveillance_status",
+     "label": "Surveillance list status",
+     "value": "ASM long-term stage II since 14 Aug 2026",
+     "unit": "TEXT",
+     "display": "ASM long-term stage II since 14 Aug 2026",
+     "source": "Sample data",
+     "asOf": "2026-10-30",
+     "comparisons": [],
+     "termId": "surveillance_asm"
+    }
+   ],
+   "details": null
+  }
+ ],
+ "priceHistory": {
+  "frequency": "WEEKLY",
+  "from": "2021-11-05",
+  "to": "2026-10-30",
+  "points": [
+   {
+    "date": "2021-11-05",
+    "value": 68.06
+   },
+   {
+    "date": "2021-11-12",
+    "value": 62.38
+   },
+   {
+    "date": "2021-11-19",
+    "value": 63.22
+   },
+   {
+    "date": "2021-11-26",
+    "value": 68.81
+   },
+   {
+    "date": "2021-12-03",
+    "value": 67.31
+   },
+   {
+    "date": "2021-12-10",
+    "value": 67.35
+   },
+   {
+    "date": "2021-12-17",
+    "value": 70.77
+   },
+   {
+    "date": "2021-12-24",
+    "value": 73.62
+   },
+   {
+    "date": "2021-12-31",
+    "value": 69.24
+   },
+   {
+    "date": "2022-01-07",
+    "value": 71.21
+   },
+   {
+    "date": "2022-01-14",
+    "value": 77.61
+   },
+   {
+    "date": "2022-01-21",
+    "value": 75.81
+   },
+   {
+    "date": "2022-01-28",
+    "value": 79.81
+   },
+   {
+    "date": "2022-02-04",
+    "value": 86.17
+   },
+   {
+    "date": "2022-02-11",
+    "value": 81.01
+   },
+   {
+    "date": "2022-02-18",
+    "value": 72.0
+   },
+   {
+    "date": "2022-02-25",
+    "value": 72.63
+   },
+   {
+    "date": "2022-03-04",
+    "value": 75.63
+   },
+   {
+    "date": "2022-03-11",
+    "value": 72.1
+   },
+   {
+    "date": "2022-03-18",
+    "value": 69.85
+   },
+   {
+    "date": "2022-03-25",
+    "value": 70.51
+   },
+   {
+    "date": "2022-04-01",
+    "value": 74.24
+   },
+   {
+    "date": "2022-04-08",
+    "value": 74.62
+   },
+   {
+    "date": "2022-04-15",
+    "value": 74.93
+   },
+   {
+    "date": "2022-04-22",
+    "value": 73.73
+   },
+   {
+    "date": "2022-04-29",
+    "value": 72.26
+   },
+   {
+    "date": "2022-05-06",
+    "value": 72.09
+   },
+   {
+    "date": "2022-05-13",
+    "value": 70.33
+   },
+   {
+    "date": "2022-05-20",
+    "value": 65.6
+   },
+   {
+    "date": "2022-05-27",
+    "value": 62.02
+   },
+   {
+    "date": "2022-06-03",
+    "value": 60.66
+   },
+   {
+    "date": "2022-06-10",
+    "value": 56.74
+   },
+   {
+    "date": "2022-06-17",
+    "value": 58.63
+   },
+   {
+    "date": "2022-06-24",
+    "value": 61.07
+   },
+   {
+    "date": "2022-07-01",
+    "value": 58.9
+   },
+   {
+    "date": "2022-07-08",
+    "value": 59.32
+   },
+   {
+    "date": "2022-07-15",
+    "value": 61.68
+   },
+   {
+    "date": "2022-07-22",
+    "value": 60.53
+   },
+   {
+    "date": "2022-07-29",
+    "value": 57.28
+   },
+   {
+    "date": "2022-08-05",
+    "value": 60.79
+   },
+   {
+    "date": "2022-08-12",
+    "value": 64.27
+   },
+   {
+    "date": "2022-08-19",
+    "value": 63.06
+   },
+   {
+    "date": "2022-08-26",
+    "value": 63.51
+   },
+   {
+    "date": "2022-09-02",
+    "value": 59.42
+   },
+   {
+    "date": "2022-09-09",
+    "value": 56.11
+   },
+   {
+    "date": "2022-09-16",
+    "value": 57.94
+   },
+   {
+    "date": "2022-09-23",
+    "value": 57.53
+   },
+   {
+    "date": "2022-09-30",
+    "value": 55.78
+   },
+   {
+    "date": "2022-10-07",
+    "value": 51.66
+   },
+   {
+    "date": "2022-10-14",
+    "value": 49.02
+   },
+   {
+    "date": "2022-10-21",
+    "value": 51.9
+   },
+   {
+    "date": "2022-10-28",
+    "value": 51.24
+   },
+   {
+    "date": "2022-11-04",
+    "value": 49.77
+   },
+   {
+    "date": "2022-11-11",
+    "value": 48.04
+   },
+   {
+    "date": "2022-11-18",
+    "value": 50.08
+   },
+   {
+    "date": "2022-11-25",
+    "value": 48.0
+   },
+   {
+    "date": "2022-12-02",
+    "value": 49.15
+   },
+   {
+    "date": "2022-12-09",
+    "value": 49.92
+   },
+   {
+    "date": "2022-12-16",
+    "value": 49.32
+   },
+   {
+    "date": "2022-12-23",
+    "value": 54.69
+   },
+   {
+    "date": "2022-12-30",
+    "value": 58.29
+   },
+   {
+    "date": "2023-01-06",
+    "value": 57.63
+   },
+   {
+    "date": "2023-01-13",
+    "value": 57.13
+   },
+   {
+    "date": "2023-01-20",
+    "value": 57.53
+   },
+   {
+    "date": "2023-01-27",
+    "value": 57.85
+   },
+   {
+    "date": "2023-02-03",
+    "value": 59.75
+   },
+   {
+    "date": "2023-02-10",
+    "value": 61.58
+   },
+   {
+    "date": "2023-02-17",
+    "value": 62.47
+   },
+   {
+    "date": "2023-02-24",
+    "value": 58.28
+   },
+   {
+    "date": "2023-03-03",
+    "value": 58.27
+   },
+   {
+    "date": "2023-03-10",
+    "value": 61.25
+   },
+   {
+    "date": "2023-03-17",
+    "value": 57.66
+   },
+   {
+    "date": "2023-03-24",
+    "value": 56.98
+   },
+   {
+    "date": "2023-03-31",
+    "value": 54.89
+   },
+   {
+    "date": "2023-04-07",
+    "value": 64.38
+   },
+   {
+    "date": "2023-04-14",
+    "value": 62.43
+   },
+   {
+    "date": "2023-04-21",
+    "value": 61.34
+   },
+   {
+    "date": "2023-04-28",
+    "value": 59.52
+   },
+   {
+    "date": "2023-05-05",
+    "value": 60.72
+   },
+   {
+    "date": "2023-05-12",
+    "value": 57.71
+   },
+   {
+    "date": "2023-05-19",
+    "value": 60.73
+   },
+   {
+    "date": "2023-05-26",
+    "value": 59.83
+   },
+   {
+    "date": "2023-06-02",
+    "value": 59.61
+   },
+   {
+    "date": "2023-06-09",
+    "value": 55.95
+   },
+   {
+    "date": "2023-06-16",
+    "value": 58.17
+   },
+   {
+    "date": "2023-06-23",
+    "value": 54.08
+   },
+   {
+    "date": "2023-06-30",
+    "value": 49.19
+   },
+   {
+    "date": "2023-07-07",
+    "value": 50.02
+   },
+   {
+    "date": "2023-07-14",
+    "value": 49.16
+   },
+   {
+    "date": "2023-07-21",
+    "value": 52.13
+   },
+   {
+    "date": "2023-07-28",
+    "value": 55.16
+   },
+   {
+    "date": "2023-08-04",
+    "value": 53.84
+   },
+   {
+    "date": "2023-08-11",
+    "value": 57.66
+   },
+   {
+    "date": "2023-08-18",
+    "value": 58.77
+   },
+   {
+    "date": "2023-08-25",
+    "value": 54.89
+   },
+   {
+    "date": "2023-09-01",
+    "value": 53.63
+   },
+   {
+    "date": "2023-09-08",
+    "value": 49.86
+   },
+   {
+    "date": "2023-09-15",
+    "value": 51.44
+   },
+   {
+    "date": "2023-09-22",
+    "value": 58.86
+   },
+   {
+    "date": "2023-09-29",
+    "value": 57.76
+   },
+   {
+    "date": "2023-10-06",
+    "value": 58.79
+   },
+   {
+    "date": "2023-10-13",
+    "value": 57.61
+   },
+   {
+    "date": "2023-10-20",
+    "value": 57.61
+   },
+   {
+    "date": "2023-10-27",
+    "value": 58.0
+   },
+   {
+    "date": "2023-11-03",
+    "value": 55.47
+   },
+   {
+    "date": "2023-11-10",
+    "value": 62.93
+   },
+   {
+    "date": "2023-11-17",
+    "value": 55.1
+   },
+   {
+    "date": "2023-11-24",
+    "value": 60.7
+   },
+   {
+    "date": "2023-12-01",
+    "value": 62.44
+   },
+   {
+    "date": "2023-12-08",
+    "value": 57.93
+   },
+   {
+    "date": "2023-12-15",
+    "value": 63.68
+   },
+   {
+    "date": "2023-12-22",
+    "value": 59.02
+   },
+   {
+    "date": "2023-12-29",
+    "value": 65.1
+   },
+   {
+    "date": "2024-01-05",
+    "value": 60.83
+   },
+   {
+    "date": "2024-01-12",
+    "value": 61.79
+   },
+   {
+    "date": "2024-01-19",
+    "value": 60.01
+   },
+   {
+    "date": "2024-01-26",
+    "value": 67.77
+   },
+   {
+    "date": "2024-02-02",
+    "value": 74.61
+   },
+   {
+    "date": "2024-02-09",
+    "value": 71.52
+   },
+   {
+    "date": "2024-02-16",
+    "value": 82.03
+   },
+   {
+    "date": "2024-02-23",
+    "value": 78.13
+   },
+   {
+    "date": "2024-03-01",
+    "value": 82.52
+   },
+   {
+    "date": "2024-03-08",
+    "value": 76.03
+   },
+   {
+    "date": "2024-03-15",
+    "value": 77.56
+   },
+   {
+    "date": "2024-03-22",
+    "value": 73.32
+   },
+   {
+    "date": "2024-03-29",
+    "value": 64.09
+   },
+   {
+    "date": "2024-04-05",
+    "value": 65.48
+   },
+   {
+    "date": "2024-04-12",
+    "value": 62.08
+   },
+   {
+    "date": "2024-04-19",
+    "value": 61.72
+   },
+   {
+    "date": "2024-04-26",
+    "value": 64.38
+   },
+   {
+    "date": "2024-05-03",
+    "value": 65.63
+   },
+   {
+    "date": "2024-05-10",
+    "value": 71.78
+   },
+   {
+    "date": "2024-05-17",
+    "value": 64.84
+   },
+   {
+    "date": "2024-05-24",
+    "value": 68.89
+   },
+   {
+    "date": "2024-05-31",
+    "value": 66.78
+   },
+   {
+    "date": "2024-06-07",
+    "value": 68.09
+   },
+   {
+    "date": "2024-06-14",
+    "value": 66.36
+   },
+   {
+    "date": "2024-06-21",
+    "value": 62.01
+   },
+   {
+    "date": "2024-06-28",
+    "value": 62.83
+   },
+   {
+    "date": "2024-07-05",
+    "value": 65.26
+   },
+   {
+    "date": "2024-07-12",
+    "value": 61.8
+   },
+   {
+    "date": "2024-07-19",
+    "value": 63.12
+   },
+   {
+    "date": "2024-07-26",
+    "value": 62.27
+   },
+   {
+    "date": "2024-08-02",
+    "value": 58.76
+   },
+   {
+    "date": "2024-08-09",
+    "value": 55.14
+   },
+   {
+    "date": "2024-08-16",
+    "value": 56.95
+   },
+   {
+    "date": "2024-08-23",
+    "value": 56.83
+   },
+   {
+    "date": "2024-08-30",
+    "value": 61.13
+   },
+   {
+    "date": "2024-09-06",
+    "value": 55.13
+   },
+   {
+    "date": "2024-09-13",
+    "value": 56.57
+   },
+   {
+    "date": "2024-09-20",
+    "value": 53.89
+   },
+   {
+    "date": "2024-09-27",
+    "value": 49.92
+   },
+   {
+    "date": "2024-10-04",
+    "value": 52.37
+   },
+   {
+    "date": "2024-10-11",
+    "value": 52.85
+   },
+   {
+    "date": "2024-10-18",
+    "value": 54.67
+   },
+   {
+    "date": "2024-10-25",
+    "value": 53.83
+   },
+   {
+    "date": "2024-11-01",
+    "value": 53.89
+   },
+   {
+    "date": "2024-11-08",
+    "value": 51.03
+   },
+   {
+    "date": "2024-11-15",
+    "value": 46.55
+   },
+   {
+    "date": "2024-11-22",
+    "value": 48.81
+   },
+   {
+    "date": "2024-11-29",
+    "value": 49.13
+   },
+   {
+    "date": "2024-12-06",
+    "value": 45.62
+   },
+   {
+    "date": "2024-12-13",
+    "value": 43.31
+   },
+   {
+    "date": "2024-12-20",
+    "value": 42.16
+   },
+   {
+    "date": "2024-12-27",
+    "value": 41.92
+   },
+   {
+    "date": "2025-01-03",
+    "value": 40.84
+   },
+   {
+    "date": "2025-01-10",
+    "value": 44.35
+   },
+   {
+    "date": "2025-01-17",
+    "value": 46.03
+   },
+   {
+    "date": "2025-01-24",
+    "value": 45.05
+   },
+   {
+    "date": "2025-01-31",
+    "value": 43.21
+   },
+   {
+    "date": "2025-02-07",
+    "value": 45.94
+   },
+   {
+    "date": "2025-02-14",
+    "value": 46.38
+   },
+   {
+    "date": "2025-02-21",
+    "value": 45.63
+   },
+   {
+    "date": "2025-02-28",
+    "value": 45.19
+   },
+   {
+    "date": "2025-03-07",
+    "value": 43.18
+   },
+   {
+    "date": "2025-03-14",
+    "value": 44.03
+   },
+   {
+    "date": "2025-03-21",
+    "value": 44.5
+   },
+   {
+    "date": "2025-03-28",
+    "value": 42.82
+   },
+   {
+    "date": "2025-04-04",
+    "value": 40.55
+   },
+   {
+    "date": "2025-04-11",
+    "value": 37.6
+   },
+   {
+    "date": "2025-04-18",
+    "value": 37.74
+   },
+   {
+    "date": "2025-04-25",
+    "value": 37.46
+   },
+   {
+    "date": "2025-05-02",
+    "value": 36.77
+   },
+   {
+    "date": "2025-05-09",
+    "value": 38.32
+   },
+   {
+    "date": "2025-05-16",
+    "value": 39.69
+   },
+   {
+    "date": "2025-05-23",
+    "value": 36.99
+   },
+   {
+    "date": "2025-05-30",
+    "value": 35.73
+   },
+   {
+    "date": "2025-06-06",
+    "value": 38.39
+   },
+   {
+    "date": "2025-06-13",
+    "value": 34.5
+   },
+   {
+    "date": "2025-06-20",
+    "value": 34.5
+   },
+   {
+    "date": "2025-06-27",
+    "value": 35.45
+   },
+   {
+    "date": "2025-07-04",
+    "value": 36.69
+   },
+   {
+    "date": "2025-07-11",
+    "value": 34.91
+   },
+   {
+    "date": "2025-07-18",
+    "value": 34.1
+   },
+   {
+    "date": "2025-07-25",
+    "value": 34.04
+   },
+   {
+    "date": "2025-08-01",
+    "value": 38.44
+   },
+   {
+    "date": "2025-08-08",
+    "value": 40.22
+   },
+   {
+    "date": "2025-08-15",
+    "value": 41.5
+   },
+   {
+    "date": "2025-08-22",
+    "value": 43.23
+   },
+   {
+    "date": "2025-08-29",
+    "value": 44.77
+   },
+   {
+    "date": "2025-09-05",
+    "value": 47.94
+   },
+   {
+    "date": "2025-09-12",
+    "value": 46.65
+   },
+   {
+    "date": "2025-09-19",
+    "value": 47.81
+   },
+   {
+    "date": "2025-09-26",
+    "value": 45.88
+   },
+   {
+    "date": "2025-10-03",
+    "value": 46.43
+   },
+   {
+    "date": "2025-10-10",
+    "value": 45.66
+   },
+   {
+    "date": "2025-10-17",
+    "value": 43.09
+   },
+   {
+    "date": "2025-10-24",
+    "value": 46.68
+   },
+   {
+    "date": "2025-10-31",
+    "value": 45.25
+   },
+   {
+    "date": "2025-11-07",
+    "value": 44.72
+   },
+   {
+    "date": "2025-11-14",
+    "value": 42.88
+   },
+   {
+    "date": "2025-11-21",
+    "value": 45.1
+   },
+   {
+    "date": "2025-11-28",
+    "value": 45.82
+   },
+   {
+    "date": "2025-12-05",
+    "value": 46.8
+   },
+   {
+    "date": "2025-12-12",
+    "value": 46.67
+   },
+   {
+    "date": "2025-12-19",
+    "value": 49.03
+   },
+   {
+    "date": "2025-12-26",
+    "value": 49.23
+   },
+   {
+    "date": "2026-01-02",
+    "value": 53.17
+   },
+   {
+    "date": "2026-01-09",
+    "value": 59.6
+   },
+   {
+    "date": "2026-01-16",
+    "value": 59.07
+   },
+   {
+    "date": "2026-01-23",
+    "value": 57.73
+   },
+   {
+    "date": "2026-01-30",
+    "value": 55.32
+   },
+   {
+    "date": "2026-02-06",
+    "value": 55.78
+   },
+   {
+    "date": "2026-02-13",
+    "value": 55.2
+   },
+   {
+    "date": "2026-02-20",
+    "value": 52.3
+   },
+   {
+    "date": "2026-02-27",
+    "value": 49.55
+   },
+   {
+    "date": "2026-03-06",
+    "value": 50.72
+   },
+   {
+    "date": "2026-03-13",
+    "value": 47.1
+   },
+   {
+    "date": "2026-03-20",
+    "value": 48.62
+   },
+   {
+    "date": "2026-03-27",
+    "value": 44.87
+   },
+   {
+    "date": "2026-04-03",
+    "value": 44.13
+   },
+   {
+    "date": "2026-04-10",
+    "value": 41.32
+   },
+   {
+    "date": "2026-04-17",
+    "value": 43.35
+   },
+   {
+    "date": "2026-04-24",
+    "value": 41.92
+   },
+   {
+    "date": "2026-05-01",
+    "value": 42.45
+   },
+   {
+    "date": "2026-05-08",
+    "value": 42.16
+   },
+   {
+    "date": "2026-05-15",
+    "value": 44.04
+   },
+   {
+    "date": "2026-05-22",
+    "value": 44.49
+   },
+   {
+    "date": "2026-05-29",
+    "value": 44.68
+   },
+   {
+    "date": "2026-06-05",
+    "value": 48.48
+   },
+   {
+    "date": "2026-06-12",
+    "value": 50.85
+   },
+   {
+    "date": "2026-06-19",
+    "value": 48.71
+   },
+   {
+    "date": "2026-06-26",
+    "value": 52.53
+   },
+   {
+    "date": "2026-07-03",
+    "value": 50.65
+   },
+   {
+    "date": "2026-07-10",
+    "value": 50.48
+   },
+   {
+    "date": "2026-07-17",
+    "value": 52.4
+   },
+   {
+    "date": "2026-07-24",
+    "value": 53.34
+   },
+   {
+    "date": "2026-07-31",
+    "value": 55.28
+   },
+   {
+    "date": "2026-08-07",
+    "value": 56.49
+   },
+   {
+    "date": "2026-08-14",
+    "value": 54.73
+   },
+   {
+    "date": "2026-08-21",
+    "value": 55.37
+   },
+   {
+    "date": "2026-08-28",
+    "value": 53.24
+   },
+   {
+    "date": "2026-09-04",
+    "value": 50.3
+   },
+   {
+    "date": "2026-09-11",
+    "value": 46.04
+   },
+   {
+    "date": "2026-09-18",
+    "value": 45.95
+   },
+   {
+    "date": "2026-09-25",
+    "value": 43.51
+   },
+   {
+    "date": "2026-10-02",
+    "value": 44.22
+   },
+   {
+    "date": "2026-10-09",
+    "value": 44.77
+   },
+   {
+    "date": "2026-10-16",
+    "value": 41.85
+   },
+   {
+    "date": "2026-10-23",
+    "value": 45.91
+   },
+   {
+    "date": "2026-10-30",
+    "value": 46.7
+   }
+  ],
+  "benchmark": {
+   "id": "NIFTY50",
+   "name": "Nifty 50",
+   "points": [
+    {
+     "date": "2021-11-05",
+     "value": 68.06
+    },
+    {
+     "date": "2021-11-12",
+     "value": 67.0762
+    },
+    {
+     "date": "2021-11-19",
+     "value": 67.2219
+    },
+    {
+     "date": "2021-11-26",
+     "value": 68.0697
+    },
+    {
+     "date": "2021-12-03",
+     "value": 66.2044
+    },
+    {
+     "date": "2021-12-10",
+     "value": 65.9523
+    },
+    {
+     "date": "2021-12-17",
+     "value": 65.4955
+    },
+    {
+     "date": "2021-12-24",
+     "value": 66.2577
+    },
+    {
+     "date": "2021-12-31",
+     "value": 67.181
+    },
+    {
+     "date": "2022-01-07",
+     "value": 66.9386
+    },
+    {
+     "date": "2022-01-14",
+     "value": 69.5893
+    },
+    {
+     "date": "2022-01-21",
+     "value": 68.7307
+    },
+    {
+     "date": "2022-01-28",
+     "value": 69.9577
+    },
+    {
+     "date": "2022-02-04",
+     "value": 70.2642
+    },
+    {
+     "date": "2022-02-11",
+     "value": 69.7097
+    },
+    {
+     "date": "2022-02-18",
+     "value": 68.6452
+    },
+    {
+     "date": "2022-02-25",
+     "value": 67.4298
+    },
+    {
+     "date": "2022-03-04",
+     "value": 65.7467
+    },
+    {
+     "date": "2022-03-11",
+     "value": 66.0694
+    },
+    {
+     "date": "2022-03-18",
+     "value": 65.4231
+    },
+    {
+     "date": "2022-03-25",
+     "value": 65.896
+    },
+    {
+     "date": "2022-04-01",
+     "value": 66.2842
+    },
+    {
+     "date": "2022-04-08",
+     "value": 66.0472
+    },
+    {
+     "date": "2022-04-15",
+     "value": 65.2711
+    },
+    {
+     "date": "2022-04-22",
+     "value": 66.3357
+    },
+    {
+     "date": "2022-04-29",
+     "value": 65.7192
+    },
+    {
+     "date": "2022-05-06",
+     "value": 65.4495
+    },
+    {
+     "date": "2022-05-13",
+     "value": 64.8162
+    },
+    {
+     "date": "2022-05-20",
+     "value": 64.8882
+    },
+    {
+     "date": "2022-05-27",
+     "value": 62.5459
+    },
+    {
+     "date": "2022-06-03",
+     "value": 62.754
+    },
+    {
+     "date": "2022-06-10",
+     "value": 61.1113
+    },
+    {
+     "date": "2022-06-17",
+     "value": 61.0552
+    },
+    {
+     "date": "2022-06-24",
+     "value": 64.2047
+    },
+    {
+     "date": "2022-07-01",
+     "value": 63.2493
+    },
+    {
+     "date": "2022-07-08",
+     "value": 63.7203
+    },
+    {
+     "date": "2022-07-15",
+     "value": 63.935
+    },
+    {
+     "date": "2022-07-22",
+     "value": 64.137
+    },
+    {
+     "date": "2022-07-29",
+     "value": 64.8388
+    },
+    {
+     "date": "2022-08-05",
+     "value": 66.0365
+    },
+    {
+     "date": "2022-08-12",
+     "value": 66.8346
+    },
+    {
+     "date": "2022-08-19",
+     "value": 66.9454
+    },
+    {
+     "date": "2022-08-26",
+     "value": 66.4637
+    },
+    {
+     "date": "2022-09-02",
+     "value": 67.0757
+    },
+    {
+     "date": "2022-09-09",
+     "value": 66.5716
+    },
+    {
+     "date": "2022-09-16",
+     "value": 68.251
+    },
+    {
+     "date": "2022-09-23",
+     "value": 68.388
+    },
+    {
+     "date": "2022-09-30",
+     "value": 69.1244
+    },
+    {
+     "date": "2022-10-07",
+     "value": 67.6172
+    },
+    {
+     "date": "2022-10-14",
+     "value": 67.3172
+    },
+    {
+     "date": "2022-10-21",
+     "value": 67.3752
+    },
+    {
+     "date": "2022-10-28",
+     "value": 65.5014
+    },
+    {
+     "date": "2022-11-04",
+     "value": 65.443
+    },
+    {
+     "date": "2022-11-11",
+     "value": 64.3775
+    },
+    {
+     "date": "2022-11-18",
+     "value": 66.2828
+    },
+    {
+     "date": "2022-11-25",
+     "value": 65.602
+    },
+    {
+     "date": "2022-12-02",
+     "value": 66.3461
+    },
+    {
+     "date": "2022-12-09",
+     "value": 66.7463
+    },
+    {
+     "date": "2022-12-16",
+     "value": 66.607
+    },
+    {
+     "date": "2022-12-23",
+     "value": 70.7518
+    },
+    {
+     "date": "2022-12-30",
+     "value": 72.8354
+    },
+    {
+     "date": "2023-01-06",
+     "value": 71.7122
+    },
+    {
+     "date": "2023-01-13",
+     "value": 73.4518
+    },
+    {
+     "date": "2023-01-20",
+     "value": 72.978
+    },
+    {
+     "date": "2023-01-27",
+     "value": 74.1075
+    },
+    {
+     "date": "2023-02-03",
+     "value": 74.551
+    },
+    {
+     "date": "2023-02-10",
+     "value": 73.7384
+    },
+    {
+     "date": "2023-02-17",
+     "value": 73.5726
+    },
+    {
+     "date": "2023-02-24",
+     "value": 71.4338
+    },
+    {
+     "date": "2023-03-03",
+     "value": 70.6283
+    },
+    {
+     "date": "2023-03-10",
+     "value": 73.3429
+    },
+    {
+     "date": "2023-03-17",
+     "value": 73.103
+    },
+    {
+     "date": "2023-03-24",
+     "value": 72.9761
+    },
+    {
+     "date": "2023-03-31",
+     "value": 72.6649
+    },
+    {
+     "date": "2023-04-07",
+     "value": 74.8316
+    },
+    {
+     "date": "2023-04-14",
+     "value": 75.8658
+    },
+    {
+     "date": "2023-04-21",
+     "value": 75.9772
+    },
+    {
+     "date": "2023-04-28",
+     "value": 74.491
+    },
+    {
+     "date": "2023-05-05",
+     "value": 73.7923
+    },
+    {
+     "date": "2023-05-12",
+     "value": 73.998
+    },
+    {
+     "date": "2023-05-19",
+     "value": 74.4891
+    },
+    {
+     "date": "2023-05-26",
+     "value": 73.6949
+    },
+    {
+     "date": "2023-06-02",
+     "value": 73.7834
+    },
+    {
+     "date": "2023-06-09",
+     "value": 73.4594
+    },
+    {
+     "date": "2023-06-16",
+     "value": 73.684
+    },
+    {
+     "date": "2023-06-23",
+     "value": 71.7873
+    },
+    {
+     "date": "2023-06-30",
+     "value": 72.4107
+    },
+    {
+     "date": "2023-07-07",
+     "value": 72.0928
+    },
+    {
+     "date": "2023-07-14",
+     "value": 72.6846
+    },
+    {
+     "date": "2023-07-21",
+     "value": 73.3345
+    },
+    {
+     "date": "2023-07-28",
+     "value": 73.6043
+    },
+    {
+     "date": "2023-08-04",
+     "value": 73.5808
+    },
+    {
+     "date": "2023-08-11",
+     "value": 74.3943
+    },
+    {
+     "date": "2023-08-18",
+     "value": 73.2007
+    },
+    {
+     "date": "2023-08-25",
+     "value": 74.1229
+    },
+    {
+     "date": "2023-09-01",
+     "value": 73.9259
+    },
+    {
+     "date": "2023-09-08",
+     "value": 73.2256
+    },
+    {
+     "date": "2023-09-15",
+     "value": 73.7567
+    },
+    {
+     "date": "2023-09-22",
+     "value": 76.2528
+    },
+    {
+     "date": "2023-09-29",
+     "value": 76.0384
+    },
+    {
+     "date": "2023-10-06",
+     "value": 74.6063
+    },
+    {
+     "date": "2023-10-13",
+     "value": 72.1844
+    },
+    {
+     "date": "2023-10-20",
+     "value": 71.8022
+    },
+    {
+     "date": "2023-10-27",
+     "value": 73.4644
+    },
+    {
+     "date": "2023-11-03",
+     "value": 74.6658
+    },
+    {
+     "date": "2023-11-10",
+     "value": 77.7154
+    },
+    {
+     "date": "2023-11-17",
+     "value": 76.2189
+    },
+    {
+     "date": "2023-11-24",
+     "value": 77.9495
+    },
+    {
+     "date": "2023-12-01",
+     "value": 78.225
+    },
+    {
+     "date": "2023-12-08",
+     "value": 76.7713
+    },
+    {
+     "date": "2023-12-15",
+     "value": 79.1275
+    },
+    {
+     "date": "2023-12-22",
+     "value": 79.5048
+    },
+    {
+     "date": "2023-12-29",
+     "value": 82.1067
+    },
+    {
+     "date": "2024-01-05",
+     "value": 79.7746
+    },
+    {
+     "date": "2024-01-12",
+     "value": 77.8905
+    },
+    {
+     "date": "2024-01-19",
+     "value": 77.5459
+    },
+    {
+     "date": "2024-01-26",
+     "value": 79.9424
+    },
+    {
+     "date": "2024-02-02",
+     "value": 81.5876
+    },
+    {
+     "date": "2024-02-09",
+     "value": 81.1813
+    },
+    {
+     "date": "2024-02-16",
+     "value": 85.7037
+    },
+    {
+     "date": "2024-02-23",
+     "value": 85.0939
+    },
+    {
+     "date": "2024-03-01",
+     "value": 86.1661
+    },
+    {
+     "date": "2024-03-08",
+     "value": 85.8548
+    },
+    {
+     "date": "2024-03-15",
+     "value": 86.3473
+    },
+    {
+     "date": "2024-03-22",
+     "value": 86.7111
+    },
+    {
+     "date": "2024-03-29",
+     "value": 83.7066
+    },
+    {
+     "date": "2024-04-05",
+     "value": 83.9471
+    },
+    {
+     "date": "2024-04-12",
+     "value": 82.8939
+    },
+    {
+     "date": "2024-04-19",
+     "value": 82.3052
+    },
+    {
+     "date": "2024-04-26",
+     "value": 83.4727
+    },
+    {
+     "date": "2024-05-03",
+     "value": 84.4535
+    },
+    {
+     "date": "2024-05-10",
+     "value": 88.0425
+    },
+    {
+     "date": "2024-05-17",
+     "value": 88.0859
+    },
+    {
+     "date": "2024-05-24",
+     "value": 87.0809
+    },
+    {
+     "date": "2024-05-31",
+     "value": 86.1696
+    },
+    {
+     "date": "2024-06-07",
+     "value": 87.363
+    },
+    {
+     "date": "2024-06-14",
+     "value": 85.608
+    },
+    {
+     "date": "2024-06-21",
+     "value": 84.0039
+    },
+    {
+     "date": "2024-06-28",
+     "value": 86.9199
+    },
+    {
+     "date": "2024-07-05",
+     "value": 88.1997
+    },
+    {
+     "date": "2024-07-12",
+     "value": 85.746
+    },
+    {
+     "date": "2024-07-19",
+     "value": 85.4468
+    },
+    {
+     "date": "2024-07-26",
+     "value": 85.3535
+    },
+    {
+     "date": "2024-08-02",
+     "value": 82.977
+    },
+    {
+     "date": "2024-08-09",
+     "value": 81.9165
+    },
+    {
+     "date": "2024-08-16",
+     "value": 82.3589
+    },
+    {
+     "date": "2024-08-23",
+     "value": 82.8673
+    },
+    {
+     "date": "2024-08-30",
+     "value": 83.6458
+    },
+    {
+     "date": "2024-09-06",
+     "value": 80.0463
+    },
+    {
+     "date": "2024-09-13",
+     "value": 80.4288
+    },
+    {
+     "date": "2024-09-20",
+     "value": 79.013
+    },
+    {
+     "date": "2024-09-27",
+     "value": 78.7208
+    },
+    {
+     "date": "2024-10-04",
+     "value": 79.9024
+    },
+    {
+     "date": "2024-10-11",
+     "value": 80.2846
+    },
+    {
+     "date": "2024-10-18",
+     "value": 80.6127
+    },
+    {
+     "date": "2024-10-25",
+     "value": 80.7955
+    },
+    {
+     "date": "2024-11-01",
+     "value": 83.7304
+    },
+    {
+     "date": "2024-11-08",
+     "value": 83.5734
+    },
+    {
+     "date": "2024-11-15",
+     "value": 84.2299
+    },
+    {
+     "date": "2024-11-22",
+     "value": 85.6795
+    },
+    {
+     "date": "2024-11-29",
+     "value": 84.7892
+    },
+    {
+     "date": "2024-12-06",
+     "value": 82.424
+    },
+    {
+     "date": "2024-12-13",
+     "value": 82.7704
+    },
+    {
+     "date": "2024-12-20",
+     "value": 83.6543
+    },
+    {
+     "date": "2024-12-27",
+     "value": 83.4095
+    },
+    {
+     "date": "2025-01-03",
+     "value": 83.0145
+    },
+    {
+     "date": "2025-01-10",
+     "value": 86.7311
+    },
+    {
+     "date": "2025-01-17",
+     "value": 85.4412
+    },
+    {
+     "date": "2025-01-24",
+     "value": 86.2228
+    },
+    {
+     "date": "2025-01-31",
+     "value": 85.4921
+    },
+    {
+     "date": "2025-02-07",
+     "value": 87.6315
+    },
+    {
+     "date": "2025-02-14",
+     "value": 88.2025
+    },
+    {
+     "date": "2025-02-21",
+     "value": 87.1043
+    },
+    {
+     "date": "2025-02-28",
+     "value": 86.5872
+    },
+    {
+     "date": "2025-03-07",
+     "value": 86.5423
+    },
+    {
+     "date": "2025-03-14",
+     "value": 87.3757
+    },
+    {
+     "date": "2025-03-21",
+     "value": 87.1007
+    },
+    {
+     "date": "2025-03-28",
+     "value": 85.7326
+    },
+    {
+     "date": "2025-04-04",
+     "value": 83.1238
+    },
+    {
+     "date": "2025-04-11",
+     "value": 81.5239
+    },
+    {
+     "date": "2025-04-18",
+     "value": 79.798
+    },
+    {
+     "date": "2025-04-25",
+     "value": 80.1819
+    },
+    {
+     "date": "2025-05-02",
+     "value": 79.5698
+    },
+    {
+     "date": "2025-05-09",
+     "value": 80.5594
+    },
+    {
+     "date": "2025-05-16",
+     "value": 79.732
+    },
+    {
+     "date": "2025-05-23",
+     "value": 78.8891
+    },
+    {
+     "date": "2025-05-30",
+     "value": 79.9685
+    },
+    {
+     "date": "2025-06-06",
+     "value": 80.5653
+    },
+    {
+     "date": "2025-06-13",
+     "value": 80.0198
+    },
+    {
+     "date": "2025-06-20",
+     "value": 80.518
+    },
+    {
+     "date": "2025-06-27",
+     "value": 79.411
+    },
+    {
+     "date": "2025-07-04",
+     "value": 79.3289
+    },
+    {
+     "date": "2025-07-11",
+     "value": 80.0632
+    },
+    {
+     "date": "2025-07-18",
+     "value": 79.865
+    },
+    {
+     "date": "2025-07-25",
+     "value": 80.413
+    },
+    {
+     "date": "2025-08-01",
+     "value": 80.3484
+    },
+    {
+     "date": "2025-08-08",
+     "value": 80.1035
+    },
+    {
+     "date": "2025-08-15",
+     "value": 80.8624
+    },
+    {
+     "date": "2025-08-22",
+     "value": 82.067
+    },
+    {
+     "date": "2025-08-29",
+     "value": 82.2999
+    },
+    {
+     "date": "2025-09-05",
+     "value": 83.2995
+    },
+    {
+     "date": "2025-09-12",
+     "value": 81.9536
+    },
+    {
+     "date": "2025-09-19",
+     "value": 81.6697
+    },
+    {
+     "date": "2025-09-26",
+     "value": 81.6518
+    },
+    {
+     "date": "2025-10-03",
+     "value": 81.3015
+    },
+    {
+     "date": "2025-10-10",
+     "value": 80.893
+    },
+    {
+     "date": "2025-10-17",
+     "value": 78.3281
+    },
+    {
+     "date": "2025-10-24",
+     "value": 78.419
+    },
+    {
+     "date": "2025-10-31",
+     "value": 77.4458
+    },
+    {
+     "date": "2025-11-07",
+     "value": 75.4713
+    },
+    {
+     "date": "2025-11-14",
+     "value": 77.6064
+    },
+    {
+     "date": "2025-11-21",
+     "value": 79.4464
+    },
+    {
+     "date": "2025-11-28",
+     "value": 79.6087
+    },
+    {
+     "date": "2025-12-05",
+     "value": 81.1929
+    },
+    {
+     "date": "2025-12-12",
+     "value": 80.79
+    },
+    {
+     "date": "2025-12-19",
+     "value": 80.2049
+    },
+    {
+     "date": "2025-12-26",
+     "value": 81.9325
+    },
+    {
+     "date": "2026-01-02",
+     "value": 84.6566
+    },
+    {
+     "date": "2026-01-09",
+     "value": 87.5539
+    },
+    {
+     "date": "2026-01-16",
+     "value": 89.1792
+    },
+    {
+     "date": "2026-01-23",
+     "value": 89.0283
+    },
+    {
+     "date": "2026-01-30",
+     "value": 86.6811
+    },
+    {
+     "date": "2026-02-06",
+     "value": 87.6906
+    },
+    {
+     "date": "2026-02-13",
+     "value": 87.9779
+    },
+    {
+     "date": "2026-02-20",
+     "value": 87.9735
+    },
+    {
+     "date": "2026-02-27",
+     "value": 86.7471
+    },
+    {
+     "date": "2026-03-06",
+     "value": 85.6729
+    },
+    {
+     "date": "2026-03-13",
+     "value": 86.2505
+    },
+    {
+     "date": "2026-03-20",
+     "value": 85.6985
+    },
+    {
+     "date": "2026-03-27",
+     "value": 83.2262
+    },
+    {
+     "date": "2026-04-03",
+     "value": 83.454
+    },
+    {
+     "date": "2026-04-10",
+     "value": 82.2716
+    },
+    {
+     "date": "2026-04-17",
+     "value": 84.6538
+    },
+    {
+     "date": "2026-04-24",
+     "value": 83.6726
+    },
+    {
+     "date": "2026-05-01",
+     "value": 84.1133
+    },
+    {
+     "date": "2026-05-08",
+     "value": 84.3289
+    },
+    {
+     "date": "2026-05-15",
+     "value": 87.1299
+    },
+    {
+     "date": "2026-05-22",
+     "value": 86.0237
+    },
+    {
+     "date": "2026-05-29",
+     "value": 85.2199
+    },
+    {
+     "date": "2026-06-05",
+     "value": 85.6613
+    },
+    {
+     "date": "2026-06-12",
+     "value": 85.5617
+    },
+    {
+     "date": "2026-06-19",
+     "value": 84.7105
+    },
+    {
+     "date": "2026-06-26",
+     "value": 85.198
+    },
+    {
+     "date": "2026-07-03",
+     "value": 85.5697
+    },
+    {
+     "date": "2026-07-10",
+     "value": 83.1673
+    },
+    {
+     "date": "2026-07-17",
+     "value": 82.6796
+    },
+    {
+     "date": "2026-07-24",
+     "value": 82.7061
+    },
+    {
+     "date": "2026-07-31",
+     "value": 84.0294
+    },
+    {
+     "date": "2026-08-07",
+     "value": 82.671
+    },
+    {
+     "date": "2026-08-14",
+     "value": 81.7138
+    },
+    {
+     "date": "2026-08-21",
+     "value": 81.7387
+    },
+    {
+     "date": "2026-08-28",
+     "value": 82.3842
+    },
+    {
+     "date": "2026-09-04",
+     "value": 82.4643
+    },
+    {
+     "date": "2026-09-11",
+     "value": 81.5364
+    },
+    {
+     "date": "2026-09-18",
+     "value": 81.5154
+    },
+    {
+     "date": "2026-09-25",
+     "value": 81.0757
+    },
+    {
+     "date": "2026-10-02",
+     "value": 82.4541
+    },
+    {
+     "date": "2026-10-09",
+     "value": 83.5433
+    },
+    {
+     "date": "2026-10-16",
+     "value": 82.2926
+    },
+    {
+     "date": "2026-10-23",
+     "value": 85.1344
+    },
+    {
+     "date": "2026-10-30",
+     "value": 87.9532
+    }
+   ]
+  },
+  "source": "Sample data",
+  "asOf": "2026-10-30"
+ },
+ "drawdown": {
+  "window": "5Y",
+  "worstFall": {
+   "id": "worst_fall",
+   "label": "Worst fall from a high to a later low",
+   "value": -62.39,
+   "unit": "PCT_CHANGE",
+   "display": "-62.4%",
+   "source": "Sample data",
+   "asOf": "2026-10-30",
+   "comparisons": [
+    {
+     "kind": "BENCHMARK",
+     "label": "Nifty 50, same period",
+     "value": -16.15,
+     "unit": "PCT_CHANGE",
+     "display": "-16.2%"
+    }
+   ],
+   "termId": "worst_fall"
+  },
+  "peakDate": "2022-02-02",
+  "troughDate": "2025-07-14",
+  "recoveryDate": null,
+  "recoveryDays": null,
+  "sentences": [
+   {
+    "text": "Over the last five years, the worst fall in the share price was 62.4%, from 2 Feb 2022 to 14 Jul 2025.",
+    "templateId": "stk.drawdown.fall",
+    "generator": "template"
+   },
+   {
+    "text": "It had not got back to the earlier high by 30 Oct 2026.",
+    "templateId": "stk.drawdown.not_recovered",
+    "generator": "template"
+   },
+   {
+    "text": "Over the same period the worst fall in the Nifty 50 was 16.2%.",
+    "templateId": "stk.drawdown.benchmark",
+    "generator": "template"
+   }
+  ]
+ },
+ "peers": {
+  "groupName": "Agricultural polymers",
+  "members": [
+   {
+    "name": "Jain Irrigation Systems Ltd",
+    "symbol": "JISLJALEQS",
+    "checkAvailable": false
+   },
+   {
+    "name": "Finolex Industries Ltd",
+    "symbol": "FINPIPE",
+    "checkAvailable": false
+   },
+   {
+    "name": "Supreme Industries Ltd",
+    "symbol": "SUPREMEIND",
+    "checkAvailable": false
+   }
+  ]
+ }
+}
