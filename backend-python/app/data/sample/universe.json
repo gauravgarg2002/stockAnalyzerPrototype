@@ -1,0 +1,482 @@
+[
+ {
+  "symbol": "ICICIBANK",
+  "name": "ICICI Bank Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "SBIN",
+  "name": "State Bank of India",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HINDUNILVR",
+  "name": "Hindustan Unilever Ltd",
+  "sector": "FMCG",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "KOTAKBANK",
+  "name": "Kotak Mahindra Bank Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BAJFINANCE",
+  "name": "Bajaj Finance Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "AXISBANK",
+  "name": "Axis Bank Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HCLTECH",
+  "name": "HCL Technologies Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "NTPC",
+  "name": "NTPC Ltd",
+  "sector": "Power",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "ULTRACEMCO",
+  "name": "UltraTech Cement Ltd",
+  "sector": "Construction Materials",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "TITAN",
+  "name": "Titan Company Ltd",
+  "sector": "Consumer Durables",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "ONGC",
+  "name": "Oil and Natural Gas Corporation Ltd",
+  "sector": "Oil Gas & Consumable Fuels",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "POWERGRID",
+  "name": "Power Grid Corporation of India Ltd",
+  "sector": "Power",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "ADANIPORTS",
+  "name": "Adani Ports and Special Economic Zone Ltd",
+  "sector": "Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BAJAJFINSV",
+  "name": "Bajaj Finserv Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "COALINDIA",
+  "name": "Coal India Ltd",
+  "sector": "Metals & Mining",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "WIPRO",
+  "name": "Wipro Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "NESTLEIND",
+  "name": "Nestle India Ltd",
+  "sector": "FMCG",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "JSWSTEEL",
+  "name": "JSW Steel Ltd",
+  "sector": "Metals & Mining",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HINDALCO",
+  "name": "Hindalco Industries Ltd",
+  "sector": "Metals & Mining",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "GRASIM",
+  "name": "Grasim Industries Ltd",
+  "sector": "Construction Materials",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "TECHM",
+  "name": "Tech Mahindra Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "DRREDDY",
+  "name": "Dr. Reddy's Laboratories Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "CIPLA",
+  "name": "Cipla Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "APOLLOHOSP",
+  "name": "Apollo Hospitals Enterprise Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BRITANNIA",
+  "name": "Britannia Industries Ltd",
+  "sector": "FMCG",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "EICHERMOT",
+  "name": "Eicher Motors Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HEROMOTOCO",
+  "name": "Hero MotoCorp Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BAJAJAUTO",
+  "name": "Bajaj Auto Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "SBILIFE",
+  "name": "SBI Life Insurance Company Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HDFCLIFE",
+  "name": "HDFC Life Insurance Company Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "INDUSINDBK",
+  "name": "IndusInd Bank Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "SHRIRAMFIN",
+  "name": "Shriram Finance Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "TATACONSUM",
+  "name": "Tata Consumer Products Ltd",
+  "sector": "FMCG",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "DIVISLAB",
+  "name": "Divi's Laboratories Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "LTIM",
+  "name": "LTIMindtree Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BPCL",
+  "name": "Bharat Petroleum Corporation Ltd",
+  "sector": "Oil Gas & Consumable Fuels",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "TRENT",
+  "name": "Trent Ltd",
+  "sector": "Consumer Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "DMART",
+  "name": "Avenue Supermarts Ltd",
+  "sector": "Consumer Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "HAL",
+  "name": "Hindustan Aeronautics Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "BEL",
+  "name": "Bharat Electronics Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "INDIGO",
+  "name": "InterGlobe Aviation Ltd",
+  "sector": "Services",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "IOC",
+  "name": "Indian Oil Corporation Ltd",
+  "sector": "Oil Gas & Consumable Fuels",
+  "sizeBand": "LARGE"
+ },
+ {
+  "symbol": "PERSISTENT",
+  "name": "Persistent Systems Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "COFORGE",
+  "name": "Coforge Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "MPHASIS",
+  "name": "Mphasis Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "MUTHOOTFIN",
+  "name": "Muthoot Finance Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "CHOLAFIN",
+  "name": "Cholamandalam Investment and Finance Company Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "ABCAPITAL",
+  "name": "Aditya Birla Capital Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "IDFCFIRSTB",
+  "name": "IDFC First Bank Ltd",
+  "sector": "Financial Services",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "LUPIN",
+  "name": "Lupin Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "AUROPHARMA",
+  "name": "Aurobindo Pharma Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "MAXHEALTH",
+  "name": "Max Healthcare Institute Ltd",
+  "sector": "Healthcare",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "POLYCAB",
+  "name": "Polycab India Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "CUMMINSIND",
+  "name": "Cummins India Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "PIIND",
+  "name": "PI Industries Ltd",
+  "sector": "Chemicals",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "SRF",
+  "name": "SRF Ltd",
+  "sector": "Chemicals",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "SUPREMEIND",
+  "name": "Supreme Industries Ltd",
+  "sector": "Chemicals",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "TATAELXSI",
+  "name": "Tata Elxsi Ltd",
+  "sector": "Information Technology",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "JUBLFOOD",
+  "name": "Jubilant FoodWorks Ltd",
+  "sector": "Consumer Services",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "PAGEIND",
+  "name": "Page Industries Ltd",
+  "sector": "Textiles",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "BALKRISIND",
+  "name": "Balkrishna Industries Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "ASHOKLEY",
+  "name": "Ashok Leyland Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "GODREJPROP",
+  "name": "Godrej Properties Ltd",
+  "sector": "Realty",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "OBEROIRLTY",
+  "name": "Oberoi Realty Ltd",
+  "sector": "Realty",
+  "sizeBand": "MID"
+ },
+ {
+  "symbol": "RADICO",
+  "name": "Radico Khaitan Ltd",
+  "sector": "FMCG",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "KIRLOSENG",
+  "name": "Kirloskar Oil Engines Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "GRINDWELL",
+  "name": "Grindwell Norton Ltd",
+  "sector": "Construction & Engineering",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "SUNTECK",
+  "name": "Sunteck Realty Ltd",
+  "sector": "Realty",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "JKPAPER",
+  "name": "JK Paper Ltd",
+  "sector": "Forest Materials",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "WELSPUNLIV",
+  "name": "Welspun Living Ltd",
+  "sector": "Textiles",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "GREENPLY",
+  "name": "Greenply Industries Ltd",
+  "sector": "Forest Materials",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "CERA",
+  "name": "Cera Sanitaryware Ltd",
+  "sector": "Consumer Durables",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "ANANTRAJ",
+  "name": "Anant Raj Ltd",
+  "sector": "Realty",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "JBMA",
+  "name": "JBM Auto Ltd",
+  "sector": "Automobile & Auto Components",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "JYOTHYLAB",
+  "name": "Jyothy Labs Ltd",
+  "sector": "FMCG",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "NAVINFLUOR",
+  "name": "Navin Fluorine International Ltd",
+  "sector": "Chemicals",
+  "sizeBand": "SMALL"
+ },
+ {
+  "symbol": "ORCHVAL",
+  "name": "Orchid Valley Fabrics Ltd",
+  "sector": "Textiles",
+  "sizeBand": "MICRO"
+ },
+ {
+  "symbol": "MEGHCAST",
+  "name": "Meghna Castings Ltd",
+  "sector": "Metals & Mining",
+  "sizeBand": "MICRO"
+ },
+ {
+  "symbol": "KESARPLAS",
+  "name": "Kesar Plastics Ltd",
+  "sector": "Chemicals",
+  "sizeBand": "MICRO"
+ },
+ {
+  "symbol": "TARAPACK",
+  "name": "Tara Packaging Ltd",
+  "sector": "Forest Materials",
+  "sizeBand": "MICRO"
+ }
+]

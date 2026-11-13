@@ -1,0 +1,42 @@
+[
+ {
+  "id": "NIFTY50",
+  "name": "Nifty 50",
+  "kind": "PRICE"
+ },
+ {
+  "id": "NIFTY50_TRI",
+  "name": "Nifty 50 TRI",
+  "kind": "TRI"
+ },
+ {
+  "id": "NIFTY100_TRI",
+  "name": "Nifty 100 TRI",
+  "kind": "TRI"
+ },
+ {
+  "id": "NIFTY500_TRI",
+  "name": "Nifty 500 TRI",
+  "kind": "TRI"
+ },
+ {
+  "id": "NIFTY_MIDCAP150_TRI",
+  "name": "Nifty Midcap 150 TRI",
+  "kind": "TRI"
+ },
+ {
+  "id": "NIFTY_SMALLCAP250_TRI",
+  "name": "Nifty Smallcap 250 TRI",
+  "kind": "TRI"
+ },
+ {
+  "id": "CRISIL_HYBRID_35_65",
+  "name": "CRISIL Hybrid 35+65 Aggressive Index",
+  "kind": "TRI"
+ },
+ {
+  "id": "CRISIL_SHORT_DURATION_DEBT",
+  "name": "CRISIL Short Duration Debt Index",
+  "kind": "TRI"
+ }
+]

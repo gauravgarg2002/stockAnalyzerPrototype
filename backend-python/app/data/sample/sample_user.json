@@ -1,0 +1,68 @@
+{
+ "accountLabel": "Your Zerodha account (sample)",
+ "idleCashInr": 42350.75,
+ "stocks": [
+  {
+   "symbol": "RELIANCE",
+   "quantity": 40,
+   "avgPrice": 2380.0,
+   "firstBuyDate": "2022-03-14"
+  },
+  {
+   "symbol": "HDFCBANK",
+   "quantity": 60,
+   "avgPrice": 1520.0,
+   "firstBuyDate": "2021-12-20"
+  },
+  {
+   "symbol": "TCS",
+   "quantity": 15,
+   "avgPrice": 3410.0,
+   "firstBuyDate": "2023-06-05"
+  },
+  {
+   "symbol": "ITC",
+   "quantity": 300,
+   "avgPrice": 395.0,
+   "firstBuyDate": "2024-02-12"
+  },
+  {
+   "symbol": "TATASTEEL",
+   "quantity": 500,
+   "avgPrice": 118.0,
+   "firstBuyDate": "2023-01-09"
+  },
+  {
+   "symbol": "DECCANINF",
+   "quantity": 400,
+   "avgPrice": 212.0,
+   "firstBuyDate": "2024-08-26"
+  }
+ ],
+ "funds": [
+  {
+   "schemeCode": "900101",
+   "units": 1850.234,
+   "avgNav": 62.4,
+   "firstBuyDate": "2021-12-01"
+  },
+  {
+   "schemeCode": "900201",
+   "units": 3120.5,
+   "avgNav": 21.85,
+   "firstBuyDate": "2023-03-06"
+  },
+  {
+   "schemeCode": "900301",
+   "units": 410.112,
+   "avgNav": 98.3,
+   "firstBuyDate": "2024-05-20"
+  },
+  {
+   "schemeCode": "900501",
+   "units": 980.0,
+   "avgNav": 41.2,
+   "firstBuyDate": "2025-01-15"
+  }
+ ]
+}

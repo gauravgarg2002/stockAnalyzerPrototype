@@ -1,0 +1,170 @@
+{
+ "Flexi Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "Shares of companies of any size, at least 65% of the money; the rest can be in debt and cash.",
+  "minEquityPct": 65,
+  "medians": {
+   "terPctDirect": 0.72,
+   "terPctRegular": 1.61,
+   "ageYears": 11.5,
+   "aumInr": 95000000000,
+   "top10SharePct": 46.2,
+   "holdingsCount": 58,
+   "managerTenureYears": 5.1
+  },
+  "averageReturns": {
+   "3Y": 15.8,
+   "5Y": 17.2,
+   "10Y": 13.9
+  },
+  "averageWorstFallPct": -32.5,
+  "averageYearsTrailed": 2.2
+ },
+ "Index Fund": {
+  "group": "EQUITY",
+  "mayHold": "Shares that make up a market index, in the same proportion as the index; the fund copies the index rather than choosing companies.",
+  "minEquityPct": 95,
+  "medians": {
+   "terPctDirect": 0.2,
+   "terPctRegular": 0.6,
+   "ageYears": 8.0,
+   "aumInr": 40000000000,
+   "top10SharePct": 58.5,
+   "holdingsCount": 50,
+   "managerTenureYears": 4.0
+  },
+  "averageReturns": {
+   "3Y": 14.2,
+   "5Y": 16.0,
+   "10Y": 12.1
+  },
+  "averageWorstFallPct": -33.0,
+  "averageYearsTrailed": 2.6
+ },
+ "Mid Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares of mid-sized companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 65,
+  "medians": {
+   "terPctDirect": 0.78,
+   "terPctRegular": 1.7,
+   "ageYears": 11.0,
+   "aumInr": 110000000000,
+   "top10SharePct": 38.5,
+   "holdingsCount": 65,
+   "managerTenureYears": 4.8
+  },
+  "averageReturns": {
+   "3Y": 20.5,
+   "5Y": 24.0,
+   "10Y": 17.6
+  },
+  "averageWorstFallPct": -38.5,
+  "averageYearsTrailed": 2.0
+ },
+ "Small Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 65% of the money in shares of smaller companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 65,
+  "medians": {
+   "terPctDirect": 0.7,
+   "terPctRegular": 1.75,
+   "ageYears": 9.5,
+   "aumInr": 85000000000,
+   "top10SharePct": 30.5,
+   "holdingsCount": 85,
+   "managerTenureYears": 4.5
+  },
+  "averageReturns": {
+   "3Y": 22.0,
+   "5Y": 27.5,
+   "10Y": 19.0
+  },
+  "averageWorstFallPct": -42.0,
+  "averageYearsTrailed": 2.1
+ },
+ "ELSS": {
+  "group": "EQUITY",
+  "mayHold": "At least 80% of the money in shares of companies of any size; money is locked in for three years by law.",
+  "minEquityPct": 80,
+  "medians": {
+   "terPctDirect": 0.85,
+   "terPctRegular": 1.8,
+   "ageYears": 12.0,
+   "aumInr": 52000000000,
+   "top10SharePct": 44.0,
+   "holdingsCount": 60,
+   "managerTenureYears": 5.0
+  },
+  "averageReturns": {
+   "3Y": 16.5,
+   "5Y": 19.0,
+   "10Y": 14.2
+  },
+  "averageWorstFallPct": -34.0,
+  "averageYearsTrailed": 2.3
+ },
+ "Aggressive Hybrid Fund": {
+  "group": "HYBRID",
+  "mayHold": "Between 65% and 80% of the money in shares and the rest in debt; the mix can change within those limits.",
+  "minEquityPct": 65,
+  "medians": {
+   "terPctDirect": 0.92,
+   "terPctRegular": 1.75,
+   "ageYears": 11.0,
+   "aumInr": 65000000000,
+   "top10SharePct": 40.0,
+   "holdingsCount": 55,
+   "managerTenureYears": 4.6
+  },
+  "averageReturns": {
+   "3Y": 14.0,
+   "5Y": 16.5,
+   "10Y": 12.0
+  },
+  "averageWorstFallPct": -26.5,
+  "averageYearsTrailed": 2.4
+ },
+ "Large Cap Fund": {
+  "group": "EQUITY",
+  "mayHold": "At least 80% of the money in shares of the 100 largest listed companies; the rest can be in other shares, debt and cash.",
+  "minEquityPct": 80,
+  "medians": {
+   "terPctDirect": 0.85,
+   "terPctRegular": 1.65,
+   "ageYears": 12.5,
+   "aumInr": 120000000000,
+   "top10SharePct": 55.0,
+   "holdingsCount": 45,
+   "managerTenureYears": 5.2
+  },
+  "averageReturns": {
+   "3Y": 13.5,
+   "5Y": 15.8,
+   "10Y": 12.3
+  },
+  "averageWorstFallPct": -31.0,
+  "averageYearsTrailed": 2.5
+ },
+ "Short Duration Fund": {
+  "group": "DEBT",
+  "mayHold": "Bonds and other debt papers that return the money in one to three years; it holds no shares.",
+  "minEquityPct": null,
+  "medians": {
+   "terPctDirect": 0.4,
+   "terPctRegular": 1.0,
+   "ageYears": 11.0,
+   "aumInr": 45000000000,
+   "top10SharePct": 48.0,
+   "holdingsCount": 42,
+   "managerTenureYears": 4.4
+  },
+  "averageReturns": {
+   "3Y": 7.1,
+   "5Y": 6.8,
+   "10Y": 7.4
+  },
+  "averageWorstFallPct": -3.2,
+  "averageYearsTrailed": 2.0
+ }
+}

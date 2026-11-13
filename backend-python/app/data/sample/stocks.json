@@ -1,0 +1,8426 @@
+[
+ {
+  "symbol": "RELIANCE",
+  "name": "Reliance Industries Ltd",
+  "isin": "INESMP000001",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Oil Gas & Consumable Fuels",
+  "industry": "Oil, Gas and Retail Conglomerate",
+  "sizeBand": "LARGE",
+  "marketCapRank": 1,
+  "isFinancial": false,
+  "sharesOutstanding": 13527444971,
+  "lastPrice": 1435.6,
+  "about": "refines oil, runs a large retail chain and a mobile and digital services business, and also makes chemicals.",
+  "revenueSegments": [
+   {
+    "name": "Oil refining and chemicals",
+    "sharePct": 52.0,
+    "prevSharePct": 55.0
+   },
+   {
+    "name": "Retail",
+    "sharePct": 25.0,
+    "prevSharePct": 23.5
+   },
+   {
+    "name": "Digital services",
+    "sharePct": 14.0,
+    "prevSharePct": 13.0
+   },
+   {
+    "name": "Other businesses",
+    "sharePct": 9.0,
+    "prevSharePct": 8.5
+   }
+  ],
+  "peerGroup": {
+   "name": "Oil refining and marketing",
+   "members": [
+    {
+     "name": "Indian Oil Corporation Ltd",
+     "symbol": "IOC"
+    },
+    {
+     "name": "Bharat Petroleum Corporation Ltd",
+     "symbol": "BPCL"
+    },
+    {
+     "name": "Hindustan Petroleum Corporation Ltd",
+     "symbol": "HINDPETRO"
+    }
+   ],
+   "medians": {
+    "pe": 11.2,
+    "pb": 1.6,
+    "roePct": 14.1,
+    "operatingMarginPct": 8.9,
+    "revenueCagr3yPct": 6.2,
+    "profitCagr3yPct": 5.1,
+    "debtToEquity": 0.9,
+    "interestCoverage": 5.6,
+    "debtToProfit": 3.1,
+    "dividendYieldPct": 3.4,
+    "avgDailyTradedValueInr": 1200000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 10000000000000,
+    "operatingProfitInr": 1780000000000,
+    "netProfitInr": 810000000000,
+    "totalDebtInr": 3300000000000,
+    "cashInr": 1900000000000,
+    "netWorthInr": 9600000000000,
+    "interestInr": 230000000000,
+    "eps": 59.88
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 9132420091324,
+    "operatingProfitInr": 1588668756649,
+    "netProfitInr": 740507251130,
+    "totalDebtInr": 3121625935430,
+    "cashInr": 1821206611185,
+    "netWorthInr": 8804785445233,
+    "interestInr": 201602807614,
+    "eps": 54.74
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 8455944529004,
+    "operatingProfitInr": 1438467505722,
+    "netProfitInr": 636075148511,
+    "totalDebtInr": 2973271310272,
+    "cashInr": 1758955993835,
+    "netWorthInr": 8422732030192,
+    "interestInr": 191641319643,
+    "eps": 47.02
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 8249701979516,
+    "operatingProfitInr": 1317185021857,
+    "netProfitInr": 627181375489,
+    "totalDebtInr": 2724115936306,
+    "cashInr": 1757769751211,
+    "netWorthInr": 7718177401990,
+    "interestInr": 170284146528,
+    "eps": 46.36
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 6599761583613,
+    "operatingProfitInr": 1021528715604,
+    "netProfitInr": 476583024787,
+    "totalDebtInr": 2600000000000,
+    "cashInr": 1650000000000,
+    "netWorthInr": 7000000000000,
+    "interestInr": 145000000000,
+    "eps": 35.23
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-17",
+    "revenueInr": 2706271503135,
+    "netProfitInr": 214071385113
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-25",
+    "revenueInr": 2552603771713,
+    "netProfitInr": 212750712110
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-29",
+    "revenueInr": 2720081765883,
+    "netProfitInr": 220049649098
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-25",
+    "revenueInr": 2471501998808,
+    "netProfitInr": 205013476022
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-15",
+    "revenueInr": 2474460631357,
+    "netProfitInr": 193063973310
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-17",
+    "revenueInr": 2333955603952,
+    "netProfitInr": 191872901569
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-27",
+    "revenueInr": 2427390121330,
+    "netProfitInr": 193503395380
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-21",
+    "revenueInr": 2320745138273,
+    "netProfitInr": 188273328655
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 19.2,
+    "diiPct": 17.1,
+    "publicPct": 13.4
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 19.4,
+    "diiPct": 17.0,
+    "publicPct": 13.3
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 19.5,
+    "diiPct": 16.8,
+    "publicPct": 13.4
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 19.8,
+    "diiPct": 16.6,
+    "publicPct": 13.3
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 50.4,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.0,
+    "diiPct": 16.4,
+    "publicPct": 13.2
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 29.3,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 29.3,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 29.6,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 30.8,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 30.0,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 29.9,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 31.0,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 25.8,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 26.4,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 26.1,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 25.5,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 27.6,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 25.7,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 26.0,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 30.1,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 32.4,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 28.5,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 26.2,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 24.9,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 25.1,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 25.3,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 25.3,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 23.8,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 24.3,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 24.2,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 26.0,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 28.2,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 29.2,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 29.9,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 27.6,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 26.5,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 26.7,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 26.1,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 25.8,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 25.4,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 24.8,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 28.4,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 24.7,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 23.9,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 25.1,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 23.1,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 22.6,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 23.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 25.0,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 24.5,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 23.9,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 24.5,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 22.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 21.2,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 23.1,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 25.0,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 28.0,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 24.8,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 26.4,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 24.9,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 24.9,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 22.8,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 22.2,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 22.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 21.2,
+    "pb": 1.8
+   }
+  ],
+  "dividendYieldPct": 0.4,
+  "events": [
+   {
+    "date": "2026-10-17",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-08-29",
+    "type": "DIVIDEND",
+    "text": "A dividend of ₹10 per share was paid to shareholders."
+   },
+   {
+    "date": "2026-07-25",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-29",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-25",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "TCS",
+  "name": "Tata Consultancy Services Ltd",
+  "isin": "INESMP000002",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Information Technology",
+  "industry": "IT Services",
+  "sizeBand": "LARGE",
+  "marketCapRank": 2,
+  "isFinancial": false,
+  "sharesOutstanding": 3617975238,
+  "lastPrice": 3925.4,
+  "about": "builds and runs software and technology systems for large companies around the world.",
+  "revenueSegments": [
+   {
+    "name": "Banking and financial services",
+    "sharePct": 31.5,
+    "prevSharePct": 32.1
+   },
+   {
+    "name": "Retail and consumer",
+    "sharePct": 15.2,
+    "prevSharePct": 14.8
+   },
+   {
+    "name": "Technology and services",
+    "sharePct": 12.0,
+    "prevSharePct": 12.2
+   },
+   {
+    "name": "Manufacturing",
+    "sharePct": 9.8,
+    "prevSharePct": 9.9
+   },
+   {
+    "name": "Communication and media",
+    "sharePct": 7.0,
+    "prevSharePct": 7.4
+   },
+   {
+    "name": "Other industries",
+    "sharePct": 24.5,
+    "prevSharePct": 23.6
+   }
+  ],
+  "peerGroup": {
+   "name": "IT services",
+   "members": [
+    {
+     "name": "Infosys Ltd",
+     "symbol": "INFY"
+    },
+    {
+     "name": "HCL Technologies Ltd",
+     "symbol": "HCLTECH"
+    },
+    {
+     "name": "Wipro Ltd",
+     "symbol": "WIPRO"
+    },
+    {
+     "name": "Tech Mahindra Ltd",
+     "symbol": "TECHM"
+    }
+   ],
+   "medians": {
+    "pe": 25.1,
+    "pb": 7.2,
+    "roePct": 27.9,
+    "operatingMarginPct": 22.4,
+    "revenueCagr3yPct": 8.6,
+    "profitCagr3yPct": 7.9,
+    "debtToEquity": 0.08,
+    "interestCoverage": 38.5,
+    "debtToProfit": 0.4,
+    "dividendYieldPct": 2.1,
+    "avgDailyTradedValueInr": 6200000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 2553000000000,
+    "operatingProfitInr": 661227000000,
+    "netProfitInr": 487623000000,
+    "totalDebtInr": 81000000000,
+    "cashInr": 420000000000,
+    "netWorthInr": 945000000000,
+    "interestInr": 8100000000,
+    "eps": 134.78
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 2399436090226,
+    "operatingProfitInr": 631729157560,
+    "netProfitInr": 461338770597,
+    "totalDebtInr": 80618949334,
+    "cashInr": 421646712663,
+    "netWorthInr": 937719488180,
+    "interestInr": 7549955482,
+    "eps": 127.51
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 2242463635725,
+    "operatingProfitInr": 588720757326,
+    "netProfitInr": 435290085762,
+    "totalDebtInr": 76484816948,
+    "cashInr": 408731060901,
+    "netWorthInr": 907245950533,
+    "interestInr": 7156241740,
+    "eps": 120.31
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 2099685052177,
+    "operatingProfitInr": 549757289229,
+    "netProfitInr": 410125618902,
+    "totalDebtInr": 76045900873,
+    "cashInr": 424268791444,
+    "netWorthInr": 906098498419,
+    "interestInr": 6752098526,
+    "eps": 113.36
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 1785446472939,
+    "operatingProfitInr": 479240798204,
+    "netProfitInr": 345811736700,
+    "totalDebtInr": 76000000000,
+    "cashInr": 420000000000,
+    "netWorthInr": 880000000000,
+    "interestInr": 6200000000,
+    "eps": 95.58
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-09",
+    "revenueInr": 654684933605,
+    "netProfitInr": 120525454852
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-08-04",
+    "revenueInr": 649798250330,
+    "netProfitInr": 126181671449
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-27",
+    "revenueInr": 686020867198,
+    "netProfitInr": 134131636306
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-20",
+    "revenueInr": 648542398218,
+    "netProfitInr": 120337812390
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-14",
+    "revenueInr": 611500540985,
+    "netProfitInr": 113904037725
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-20",
+    "revenueInr": 606936193598,
+    "netProfitInr": 119249513578
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-21",
+    "revenueInr": 635278804290,
+    "netProfitInr": 127311078074
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-28",
+    "revenueInr": 608179823677,
+    "netProfitInr": 114444837757
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 71.77,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 11.9,
+    "diiPct": 11.2,
+    "publicPct": 5.13
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 71.77,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 12.1,
+    "diiPct": 11.0,
+    "publicPct": 5.13
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 71.77,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 12.3,
+    "diiPct": 10.8,
+    "publicPct": 5.13
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 71.77,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 12.6,
+    "diiPct": 10.5,
+    "publicPct": 5.13
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 71.77,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 12.8,
+    "diiPct": 10.3,
+    "publicPct": 5.13
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 37.3,
+    "pb": 14.6
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 34.6,
+    "pb": 13.6
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 33.9,
+    "pb": 13.3
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 38.2,
+    "pb": 15.0
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 33.9,
+    "pb": 13.3
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 31.1,
+    "pb": 12.2
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 28.9,
+    "pb": 11.5
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 29.4,
+    "pb": 11.9
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 28.3,
+    "pb": 11.6
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 29.7,
+    "pb": 12.3
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 32.3,
+    "pb": 13.5
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 32.6,
+    "pb": 13.8
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 30.2,
+    "pb": 12.9
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 28.6,
+    "pb": 12.4
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 31.1,
+    "pb": 13.6
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 31.4,
+    "pb": 13.9
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 30.4,
+    "pb": 13.6
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 31.8,
+    "pb": 14.4
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 31.9,
+    "pb": 14.5
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 32.3,
+    "pb": 14.8
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 32.5,
+    "pb": 14.9
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 33.2,
+    "pb": 15.3
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 35.4,
+    "pb": 16.4
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 36.1,
+    "pb": 16.8
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 37.0,
+    "pb": 17.3
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 35.7,
+    "pb": 16.8
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 35.8,
+    "pb": 16.9
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 33.3,
+    "pb": 15.9
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 33.5,
+    "pb": 16.0
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 31.4,
+    "pb": 15.0
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 27.7,
+    "pb": 13.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 29.4,
+    "pb": 14.2
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 29.8,
+    "pb": 14.4
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 27.9,
+    "pb": 13.5
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 28.5,
+    "pb": 13.8
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 28.7,
+    "pb": 13.9
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 29.6,
+    "pb": 14.4
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 29.8,
+    "pb": 14.5
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 29.9,
+    "pb": 14.6
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 34.0,
+    "pb": 16.7
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 31.2,
+    "pb": 15.3
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 30.3,
+    "pb": 14.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 30.4,
+    "pb": 15.0
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 25.3,
+    "pb": 12.5
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 24.3,
+    "pb": 12.1
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 24.4,
+    "pb": 12.2
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 25.6,
+    "pb": 12.9
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 22.6,
+    "pb": 11.4
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 20.1,
+    "pb": 10.2
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 18.5,
+    "pb": 9.4
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 19.4,
+    "pb": 9.9
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 18.6,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 20.4,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 20.3,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 20.4,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 22.3,
+    "pb": 11.4
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 23.6,
+    "pb": 12.1
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 25.1,
+    "pb": 12.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 26.6,
+    "pb": 13.5
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 26.1,
+    "pb": 13.2
+   }
+  ],
+  "dividendYieldPct": 1.9,
+  "events": [
+   {
+    "date": "2026-10-12",
+    "type": "DIVIDEND",
+    "text": "An interim dividend of ₹11 per share was proposed."
+   },
+   {
+    "date": "2026-10-09",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-08-04",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-27",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-20",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "HDFCBANK",
+  "name": "HDFC Bank Ltd",
+  "isin": "INESMP000003",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Financial Services",
+  "industry": "Private Sector Bank",
+  "sizeBand": "LARGE",
+  "marketCapRank": 3,
+  "isFinancial": true,
+  "sharesOutstanding": 7679729019,
+  "lastPrice": 1712.3,
+  "about": "takes deposits, lends to people and businesses, and offers cards, insurance and investment products.",
+  "revenueSegments": [
+   {
+    "name": "Retail banking",
+    "sharePct": 46.0,
+    "prevSharePct": 45.5
+   },
+   {
+    "name": "Wholesale banking",
+    "sharePct": 34.0,
+    "prevSharePct": 34.5
+   },
+   {
+    "name": "Treasury",
+    "sharePct": 12.0,
+    "prevSharePct": 12.2
+   },
+   {
+    "name": "Other banking",
+    "sharePct": 8.0,
+    "prevSharePct": 7.8
+   }
+  ],
+  "peerGroup": {
+   "name": "Private sector banks",
+   "members": [
+    {
+     "name": "ICICI Bank Ltd",
+     "symbol": "ICICIBANK"
+    },
+    {
+     "name": "Axis Bank Ltd",
+     "symbol": "AXISBANK"
+    },
+    {
+     "name": "Kotak Mahindra Bank Ltd",
+     "symbol": "KOTAKBANK"
+    }
+   ],
+   "medians": {
+    "pe": 17.8,
+    "pb": 2.6,
+    "roePct": 15.2,
+    "operatingMarginPct": 31.0,
+    "revenueCagr3yPct": 19.0,
+    "profitCagr3yPct": 17.5,
+    "debtToEquity": 7.4,
+    "interestCoverage": 1.5,
+    "debtToProfit": 11.0,
+    "dividendYieldPct": 0.9,
+    "avgDailyTradedValueInr": 9800000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 3000000000000,
+    "operatingProfitInr": 960000000000,
+    "netProfitInr": 630000000000,
+    "totalDebtInr": 21000000000000,
+    "cashInr": 1900000000000,
+    "netWorthInr": 4600000000000,
+    "interestInr": 1500000000000,
+    "eps": 82.03
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 2764976958525,
+    "operatingProfitInr": 904671440023,
+    "netProfitInr": 589739589594,
+    "totalDebtInr": 18940210162849,
+    "cashInr": 1850209740940,
+    "netWorthInr": 3971881979160,
+    "interestInr": 1309176582370,
+    "eps": 76.79
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 2229820127843,
+    "operatingProfitInr": 742349073662,
+    "netProfitInr": 474196061996,
+    "totalDebtInr": 17178426275024,
+    "cashInr": 1659971001042,
+    "netWorthInr": 3439540768255,
+    "interestInr": 1155923822395,
+    "eps": 61.75
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 1592728662745,
+    "operatingProfitInr": 531885727305,
+    "netProfitInr": 343152947924,
+    "totalDebtInr": 15516082347286,
+    "cashInr": 1634886176947,
+    "netWorthInr": 2901184049219,
+    "interestInr": 957498607261,
+    "eps": 44.68
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 1349770053174,
+    "operatingProfitInr": 461562064961,
+    "netProfitInr": 293973086014,
+    "totalDebtInr": 13500000000000,
+    "cashInr": 1500000000000,
+    "netWorthInr": 2360000000000,
+    "interestInr": 800000000000,
+    "eps": 38.28
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-18",
+    "revenueInr": 781311197422,
+    "netProfitInr": 158481542140
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-22",
+    "revenueInr": 765096619391,
+    "netProfitInr": 159753912681
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-27",
+    "revenueInr": 811463197303,
+    "netProfitInr": 166452089998
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-15",
+    "revenueInr": 766460439027,
+    "netProfitInr": 162600181555
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-19",
+    "revenueInr": 718493643426,
+    "netProfitInr": 149872238889
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-28",
+    "revenueInr": 703582720244,
+    "netProfitInr": 151075489558
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-24",
+    "revenueInr": 740307023077,
+    "netProfitInr": 157812408287
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-30",
+    "revenueInr": 691312267057,
+    "netProfitInr": 146274669820
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 47.5,
+    "diiPct": 32.0,
+    "publicPct": 20.5
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 47.8,
+    "diiPct": 31.8,
+    "publicPct": 20.4
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 48.0,
+    "diiPct": 31.5,
+    "publicPct": 20.5
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 48.2,
+    "diiPct": 31.3,
+    "publicPct": 20.5
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 48.5,
+    "diiPct": 31.0,
+    "publicPct": 20.5
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 36.5,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 36.0,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 35.9,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 36.5,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 36.2,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 37.2,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 35.4,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 33.5,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 33.4,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 32.7,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 32.5,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 33.1,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 31.3,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 33.1,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 35.4,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 32.9,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 31.5,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 33.3,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 33.3,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 32.3,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 31.9,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 32.4,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 31.4,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 31.8,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 30.2,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 31.8,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 32.0,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 29.4,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 29.9,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 30.9,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 29.2,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 24.7,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 26.0,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 25.3,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 24.0,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 20.8,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 21.5,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 20.1,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 19.6,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 19.4,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 19.7,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 19.6,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 19.0,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 19.2,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 20.2,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 20.0,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 20.4,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 19.3,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 17.8,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 19.4,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 20.5,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 21.4,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 22.0,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 19.2,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 19.5,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 19.7,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 19.3,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 19.2,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 18.8,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 20.0,
+    "pb": 2.7
+   }
+  ],
+  "dividendYieldPct": 1.2,
+  "events": [
+   {
+    "date": "2026-10-18",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-09-12",
+    "type": "DIVIDEND",
+    "text": "A dividend of ₹19.5 per share was paid to shareholders."
+   },
+   {
+    "date": "2026-07-22",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-27",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-15",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "INFY",
+  "name": "Infosys Ltd",
+  "isin": "INESMP000004",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Information Technology",
+  "industry": "IT Services",
+  "sizeBand": "LARGE",
+  "marketCapRank": 6,
+  "isFinancial": false,
+  "sharesOutstanding": 4152480545,
+  "lastPrice": 1644.8,
+  "about": "builds, runs and updates software systems for banks, retailers and other large companies.",
+  "revenueSegments": [
+   {
+    "name": "Financial services",
+    "sharePct": 27.5,
+    "prevSharePct": 28.2
+   },
+   {
+    "name": "Retail",
+    "sharePct": 14.0,
+    "prevSharePct": 13.4
+   },
+   {
+    "name": "Communication",
+    "sharePct": 11.0,
+    "prevSharePct": 11.8
+   },
+   {
+    "name": "Energy and utilities",
+    "sharePct": 12.5,
+    "prevSharePct": 12.0
+   },
+   {
+    "name": "Manufacturing",
+    "sharePct": 15.0,
+    "prevSharePct": 14.5
+   },
+   {
+    "name": "Other industries",
+    "sharePct": 20.0,
+    "prevSharePct": 20.1
+   }
+  ],
+  "peerGroup": {
+   "name": "IT services",
+   "members": [
+    {
+     "name": "Tata Consultancy Services Ltd",
+     "symbol": "TCS"
+    },
+    {
+     "name": "HCL Technologies Ltd",
+     "symbol": "HCLTECH"
+    },
+    {
+     "name": "Wipro Ltd",
+     "symbol": "WIPRO"
+    }
+   ],
+   "medians": {
+    "pe": 25.1,
+    "pb": 7.2,
+    "roePct": 27.9,
+    "operatingMarginPct": 22.4,
+    "revenueCagr3yPct": 8.6,
+    "profitCagr3yPct": 7.9,
+    "debtToEquity": 0.08,
+    "interestCoverage": 38.5,
+    "debtToProfit": 0.4,
+    "dividendYieldPct": 2.1,
+    "avgDailyTradedValueInr": 6200000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 1670000000000,
+    "operatingProfitInr": 355710000000,
+    "netProfitInr": 267200000000,
+    "totalDebtInr": 91000000000,
+    "cashInr": 360000000000,
+    "netWorthInr": 990000000000,
+    "interestInr": 5600000000,
+    "eps": 64.35
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 1588962892483,
+    "operatingProfitInr": 354582946451,
+    "netProfitInr": 261400393792,
+    "totalDebtInr": 84863699883,
+    "cashInr": 351009316176,
+    "netWorthInr": 913972200472,
+    "interestInr": 4911542518,
+    "eps": 62.95
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 1517634090242,
+    "operatingProfitInr": 340862068084,
+    "netProfitInr": 254953380268,
+    "totalDebtInr": 82692394964,
+    "cashInr": 344322676003,
+    "netWorthInr": 859195388359,
+    "interestInr": 4215668529,
+    "eps": 61.4
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 1496680562369,
+    "operatingProfitInr": 347300286015,
+    "netProfitInr": 257363501611,
+    "totalDebtInr": 76668971727,
+    "cashInr": 320544313538,
+    "netWorthInr": 824042731032,
+    "interestInr": 3841747687,
+    "eps": 61.98
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 1247233801974,
+    "operatingProfitInr": 295442359793,
+    "netProfitInr": 222831638444,
+    "totalDebtInr": 72000000000,
+    "cashInr": 310000000000,
+    "netWorthInr": 760000000000,
+    "interestInr": 3100000000,
+    "eps": 53.66
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-16",
+    "revenueInr": 432456874672,
+    "netProfitInr": 64261778425
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-08-04",
+    "revenueInr": 421230393457,
+    "netProfitInr": 66223739396
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-29",
+    "revenueInr": 437267309439,
+    "netProfitInr": 69475652022
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-28",
+    "revenueInr": 423436687251,
+    "netProfitInr": 69248933080
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-29",
+    "revenueInr": 409969356862,
+    "netProfitInr": 63271838769
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-22",
+    "revenueInr": 399326646449,
+    "netProfitInr": 65203576129
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-24",
+    "revenueInr": 422413165538,
+    "netProfitInr": 69778495227
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-25",
+    "revenueInr": 402761404285,
+    "netProfitInr": 64815271766
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 14.6,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 33.1,
+    "diiPct": 26.8,
+    "publicPct": 25.5
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 14.6,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 33.4,
+    "diiPct": 26.5,
+    "publicPct": 25.5
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 14.7,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 33.6,
+    "diiPct": 26.3,
+    "publicPct": 25.4
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 14.7,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 33.9,
+    "diiPct": 26.0,
+    "publicPct": 25.4
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 14.8,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 34.2,
+    "diiPct": 25.7,
+    "publicPct": 25.3
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 30.5,
+    "pb": 8.9
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 28.7,
+    "pb": 8.4
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 30.3,
+    "pb": 8.9
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 31.1,
+    "pb": 9.1
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 31.4,
+    "pb": 9.2
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 30.7,
+    "pb": 9.0
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 28.4,
+    "pb": 8.4
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 30.3,
+    "pb": 9.0
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 29.7,
+    "pb": 8.8
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 29.0,
+    "pb": 8.7
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 28.0,
+    "pb": 8.4
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 29.1,
+    "pb": 8.8
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 25.4,
+    "pb": 7.8
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 24.5,
+    "pb": 7.5
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 27.5,
+    "pb": 8.5
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 28.1,
+    "pb": 8.7
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 27.7,
+    "pb": 8.6
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 31.1,
+    "pb": 9.7
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 32.6,
+    "pb": 10.1
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 30.7,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 30.2,
+    "pb": 9.3
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 31.6,
+    "pb": 9.7
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 30.1,
+    "pb": 9.2
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 32.5,
+    "pb": 9.9
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 31.1,
+    "pb": 9.4
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 32.6,
+    "pb": 9.9
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 32.6,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 32.1,
+    "pb": 9.6
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 36.9,
+    "pb": 11.0
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 37.9,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 40.1,
+    "pb": 11.9
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 38.9,
+    "pb": 11.5
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 38.4,
+    "pb": 11.3
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 37.1,
+    "pb": 10.9
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 38.4,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 33.8,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 35.4,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 34.6,
+    "pb": 10.0
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 33.3,
+    "pb": 9.6
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 34.6,
+    "pb": 10.0
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 36.0,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 36.0,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 33.7,
+    "pb": 9.6
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 35.6,
+    "pb": 10.1
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 33.1,
+    "pb": 9.3
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 32.0,
+    "pb": 9.0
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 32.0,
+    "pb": 8.9
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 29.1,
+    "pb": 8.1
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 28.7,
+    "pb": 7.9
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 31.0,
+    "pb": 8.5
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 33.9,
+    "pb": 9.3
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 32.3,
+    "pb": 8.8
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 31.3,
+    "pb": 8.5
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 30.0,
+    "pb": 8.1
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 27.5,
+    "pb": 7.4
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 26.6,
+    "pb": 7.1
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 24.2,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 25.8,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 24.8,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 26.1,
+    "pb": 6.8
+   }
+  ],
+  "dividendYieldPct": 2.6,
+  "events": [
+   {
+    "date": "2026-10-30",
+    "type": "BUYBACK_ANNOUNCED",
+    "text": "A share repurchase programme was announced."
+   },
+   {
+    "date": "2026-10-16",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-08-04",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-29",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-28",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "ITC",
+  "name": "ITC Ltd",
+  "isin": "INESMP000005",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "FMCG",
+  "industry": "Diversified FMCG",
+  "sizeBand": "LARGE",
+  "marketCapRank": 7,
+  "isFinancial": false,
+  "sharesOutstanding": 12503028835,
+  "lastPrice": 412.7,
+  "about": "makes cigarettes, packaged foods and personal care items, and also has hotels and paper businesses.",
+  "revenueSegments": [
+   {
+    "name": "Cigarettes",
+    "sharePct": 44.0,
+    "prevSharePct": 45.5
+   },
+   {
+    "name": "Other consumer products",
+    "sharePct": 24.0,
+    "prevSharePct": 22.5
+   },
+   {
+    "name": "Agri business",
+    "sharePct": 18.0,
+    "prevSharePct": 18.5
+   },
+   {
+    "name": "Paper and packaging",
+    "sharePct": 8.0,
+    "prevSharePct": 8.0
+   },
+   {
+    "name": "Hotels",
+    "sharePct": 6.0,
+    "prevSharePct": 5.5
+   }
+  ],
+  "peerGroup": {
+   "name": "Diversified consumer products",
+   "members": [
+    {
+     "name": "Hindustan Unilever Ltd",
+     "symbol": "HINDUNILVR"
+    },
+    {
+     "name": "Nestle India Ltd",
+     "symbol": "NESTLEIND"
+    },
+    {
+     "name": "Britannia Industries Ltd",
+     "symbol": "BRITANNIA"
+    }
+   ],
+   "medians": {
+    "pe": 44.0,
+    "pb": 10.5,
+    "roePct": 24.0,
+    "operatingMarginPct": 21.5,
+    "revenueCagr3yPct": 9.0,
+    "profitCagr3yPct": 10.2,
+    "debtToEquity": 0.1,
+    "interestCoverage": 40.0,
+    "debtToProfit": 0.4,
+    "dividendYieldPct": 1.6,
+    "avgDailyTradedValueInr": 2100000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 840000000000,
+    "operatingProfitInr": 306600000000,
+    "netProfitInr": 226800000000,
+    "totalDebtInr": 15000000000,
+    "cashInr": 260000000000,
+    "netWorthInr": 830000000000,
+    "interestInr": 900000000,
+    "eps": 18.14
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 785046728972,
+    "operatingProfitInr": 280122646995,
+    "netProfitInr": 208476019548,
+    "totalDebtInr": 13775915710,
+    "cashInr": 247602370033,
+    "netWorthInr": 781872504989,
+    "interestInr": 824108286,
+    "eps": 16.67
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 720226356855,
+    "operatingProfitInr": 254623826323,
+    "netProfitInr": 186496778409,
+    "totalDebtInr": 12904914655,
+    "cashInr": 230751592757,
+    "netWorthInr": 717127503340,
+    "interestInr": 743819696,
+    "eps": 14.92
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 663803093876,
+    "operatingProfitInr": 227387741008,
+    "netProfitInr": 168794494042,
+    "totalDebtInr": 11982618990,
+    "cashInr": 227212329217,
+    "netWorthInr": 682306924302,
+    "interestInr": 681587946,
+    "eps": 13.5
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 544100896619,
+    "operatingProfitInr": 186690443771,
+    "netProfitInr": 135359673738,
+    "totalDebtInr": 11000000000,
+    "cashInr": 210000000000,
+    "netWorthInr": 620000000000,
+    "interestInr": 600000000,
+    "eps": 10.83
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-24",
+    "revenueInr": 215683714070,
+    "netProfitInr": 58201358049
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-26",
+    "revenueInr": 212158757616,
+    "netProfitInr": 57104217663
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-29",
+    "revenueInr": 223516441216,
+    "netProfitInr": 62477181850
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-24",
+    "revenueInr": 213203035349,
+    "netProfitInr": 57000084519
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-14",
+    "revenueInr": 203301558080,
+    "netProfitInr": 54171958366
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-19",
+    "revenueInr": 199978965355,
+    "netProfitInr": 53150775265
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-17",
+    "revenueInr": 208578619678,
+    "netProfitInr": 55601310180
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-19",
+    "revenueInr": 198246277351,
+    "netProfitInr": 51991911274
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.6,
+    "diiPct": 42.3,
+    "publicPct": 42.1
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.4,
+    "diiPct": 42.4,
+    "publicPct": 42.2
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.2,
+    "diiPct": 42.5,
+    "publicPct": 42.3
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.1,
+    "diiPct": 42.7,
+    "publicPct": 42.2
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.0,
+    "diiPct": 42.8,
+    "publicPct": 42.2
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 23.4,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 24.2,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 22.9,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 25.7,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 24.0,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 24.2,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 23.3,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 22.3,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 21.1,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 21.0,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 20.8,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 20.3,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 20.0,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 19.4,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 19.8,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 20.6,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 20.2,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 21.1,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 20.8,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 20.3,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 20.2,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 22.6,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 22.4,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 21.7,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 21.7,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 24.1,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 22.9,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 22.2,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 22.7,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 23.0,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 20.5,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 21.6,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 22.7,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 23.5,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 24.2,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 22.9,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 24.3,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 24.4,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 23.6,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 22.7,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 23.4,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 22.3,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 22.1,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 20.8,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 20.2,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 21.3,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 22.2,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 19.2,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 18.2,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 18.1,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 18.8,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 18.3,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 18.7,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 18.1,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 17.7,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 18.4,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 20.5,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 21.2,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 21.2,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 20.2,
+    "pb": 5.5
+   }
+  ],
+  "dividendYieldPct": 3.1,
+  "events": [
+   {
+    "date": "2026-10-24",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-08-02",
+    "type": "DIVIDEND",
+    "text": "A final dividend of ₹7.85 per share was paid to shareholders."
+   },
+   {
+    "date": "2026-07-26",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-29",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-24",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "LT",
+  "name": "Larsen & Toubro Ltd",
+  "isin": "INESMP000006",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Construction & Engineering",
+  "industry": "Engineering and Construction",
+  "sizeBand": "LARGE",
+  "marketCapRank": 9,
+  "isFinancial": false,
+  "sharesOutstanding": 1375816632,
+  "lastPrice": 3612.4,
+  "about": "builds roads, plants, buildings and defence equipment, and also runs technology and finance businesses.",
+  "revenueSegments": [
+   {
+    "name": "Infrastructure projects",
+    "sharePct": 48.0,
+    "prevSharePct": 47.0
+   },
+   {
+    "name": "Energy projects",
+    "sharePct": 15.0,
+    "prevSharePct": 15.5
+   },
+   {
+    "name": "Technology services",
+    "sharePct": 16.0,
+    "prevSharePct": 17.0
+   },
+   {
+    "name": "Other businesses",
+    "sharePct": 21.0,
+    "prevSharePct": 20.5
+   }
+  ],
+  "peerGroup": {
+   "name": "Engineering and construction",
+   "members": [
+    {
+     "name": "Siemens Ltd",
+     "symbol": "SIEMENS"
+    },
+    {
+     "name": "Hindustan Aeronautics Ltd",
+     "symbol": "HAL"
+    },
+    {
+     "name": "Bharat Electronics Ltd",
+     "symbol": "BEL"
+    }
+   ],
+   "medians": {
+    "pe": 34.0,
+    "pb": 6.0,
+    "roePct": 15.5,
+    "operatingMarginPct": 12.0,
+    "revenueCagr3yPct": 14.0,
+    "profitCagr3yPct": 16.0,
+    "debtToEquity": 0.6,
+    "interestCoverage": 4.8,
+    "debtToProfit": 3.8,
+    "dividendYieldPct": 0.7,
+    "avgDailyTradedValueInr": 1400000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 2750000000000,
+    "operatingProfitInr": 302500000000,
+    "netProfitInr": 167750000000,
+    "totalDebtInr": 700000000000,
+    "cashInr": 340000000000,
+    "netWorthInr": 1120000000000,
+    "interestInr": 44000000000,
+    "eps": 121.93
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 2455357142857,
+    "operatingProfitInr": 261434585595,
+    "netProfitInr": 150019081532,
+    "totalDebtInr": 665263532113,
+    "cashInr": 327169600465,
+    "netWorthInr": 1041109621978,
+    "interestInr": 41170405579,
+    "eps": 109.04
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 2135093167702,
+    "operatingProfitInr": 225608007121,
+    "netProfitInr": 117552866327,
+    "totalDebtInr": 605135703007,
+    "cashInr": 307229373092,
+    "netWorthInr": 923193110526,
+    "interestInr": 39596319915,
+    "eps": 85.44
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 1764539808018,
+    "operatingProfitInr": 188661272209,
+    "netProfitInr": 95435136419,
+    "totalDebtInr": 571069896721,
+    "cashInr": 293870316080,
+    "netWorthInr": 854124957296,
+    "interestInr": 36085028463,
+    "eps": 69.37
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 1508153682067,
+    "operatingProfitInr": 151712999741,
+    "netProfitInr": 79280789890,
+    "totalDebtInr": 520000000000,
+    "cashInr": 270000000000,
+    "netWorthInr": 760000000000,
+    "interestInr": 33000000000,
+    "eps": 57.62
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-22",
+    "revenueInr": 740235417383,
+    "netProfitInr": 44604174999
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-08-05",
+    "revenueInr": 722094938495,
+    "netProfitInr": 44764448201
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-24",
+    "revenueInr": 729586624057,
+    "netProfitInr": 44155592023
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-21",
+    "revenueInr": 703182118284,
+    "netProfitInr": 44393084331
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-21",
+    "revenueInr": 666785877681,
+    "netProfitInr": 39529642212
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-14",
+    "revenueInr": 650445379979,
+    "netProfitInr": 39671681435
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-18",
+    "revenueInr": 663459486371,
+    "netProfitInr": 40559628989
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-21",
+    "revenueInr": 614613118717,
+    "netProfitInr": 36333796626
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 21.0,
+    "diiPct": 41.0,
+    "publicPct": 38.0
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 21.2,
+    "diiPct": 40.8,
+    "publicPct": 38.0
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 21.4,
+    "diiPct": 40.5,
+    "publicPct": 38.1
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 21.6,
+    "diiPct": 40.3,
+    "publicPct": 38.1
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 21.8,
+    "diiPct": 40.0,
+    "publicPct": 38.2
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 34.4,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 36.5,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 33.6,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 35.7,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 35.8,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 37.6,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 38.3,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 40.8,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 39.4,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 42.1,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 41.8,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 39.6,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 39.1,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 37.6,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 43.6,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 42.7,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 39.2,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 39.3,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 40.6,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 36.9,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 38.0,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 39.9,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 41.7,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 41.5,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 39.1,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 41.0,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 43.8,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 45.0,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 45.6,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 44.0,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 48.9,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 48.7,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 49.1,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 40.4,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 42.3,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 36.9,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 42.8,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 41.7,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 36.1,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 35.1,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 34.3,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 30.8,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 29.0,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 29.1,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 29.7,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 30.7,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 30.0,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 30.6,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 29.4,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 30.4,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 32.2,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 35.4,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 36.9,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 35.4,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 32.4,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 33.0,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 28.4,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 25.1,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 25.5,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 26.4,
+    "pb": 4.0
+   }
+  ],
+  "dividendYieldPct": 0.9,
+  "events": [
+   {
+    "date": "2026-10-22",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-09-18",
+    "type": "ORDER_WIN",
+    "text": "A large order was won for an infrastructure project."
+   },
+   {
+    "date": "2026-08-05",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-24",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-21",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "SUNPHARMA",
+  "name": "Sun Pharmaceutical Industries Ltd",
+  "isin": "INESMP000007",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Healthcare",
+  "industry": "Pharmaceuticals",
+  "sizeBand": "LARGE",
+  "marketCapRank": 10,
+  "isFinancial": false,
+  "sharesOutstanding": 2398010539,
+  "lastPrice": 1688.9,
+  "about": "makes medicines for common and specialised conditions and supplies them in India and abroad.",
+  "revenueSegments": [
+   {
+    "name": "India medicines",
+    "sharePct": 32.0,
+    "prevSharePct": 31.5
+   },
+   {
+    "name": "United States medicines",
+    "sharePct": 31.0,
+    "prevSharePct": 32.5
+   },
+   {
+    "name": "Emerging markets",
+    "sharePct": 19.0,
+    "prevSharePct": 18.5
+   },
+   {
+    "name": "Rest of the world and APIs",
+    "sharePct": 18.0,
+    "prevSharePct": 17.5
+   }
+  ],
+  "peerGroup": {
+   "name": "Pharmaceuticals",
+   "members": [
+    {
+     "name": "Dr. Reddy's Laboratories Ltd",
+     "symbol": "DRREDDY"
+    },
+    {
+     "name": "Cipla Ltd",
+     "symbol": "CIPLA"
+    },
+    {
+     "name": "Lupin Ltd",
+     "symbol": "LUPIN"
+    }
+   ],
+   "medians": {
+    "pe": 28.5,
+    "pb": 4.6,
+    "roePct": 17.0,
+    "operatingMarginPct": 24.0,
+    "revenueCagr3yPct": 10.5,
+    "profitCagr3yPct": 14.0,
+    "debtToEquity": 0.15,
+    "interestCoverage": 16.0,
+    "debtToProfit": 0.9,
+    "dividendYieldPct": 0.8,
+    "avgDailyTradedValueInr": 1500000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 570000000000,
+    "operatingProfitInr": 161310000000,
+    "netProfitInr": 112860000000,
+    "totalDebtInr": 84000000000,
+    "cashInr": 220000000000,
+    "netWorthInr": 520000000000,
+    "interestInr": 4500000000,
+    "eps": 47.06
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 522935779817,
+    "operatingProfitInr": 145594189246,
+    "netProfitInr": 98982447773,
+    "totalDebtInr": 86842075567,
+    "cashInr": 191450722573,
+    "netWorthInr": 476262761413,
+    "interestInr": 4227820983,
+    "eps": 41.28
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 477566922207,
+    "operatingProfitInr": 128664542009,
+    "netProfitInr": 84335648757,
+    "totalDebtInr": 92004701101,
+    "cashInr": 166067097615,
+    "netWorthInr": 415312865666,
+    "interestInr": 4085182858,
+    "eps": 35.17
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 430240470457,
+    "operatingProfitInr": 113897448236,
+    "netProfitInr": 70367549881,
+    "totalDebtInr": 93421933480,
+    "cashInr": 139116765336,
+    "netWorthInr": 360936277740,
+    "interestInr": 3947229267,
+    "eps": 29.34
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 370896957290,
+    "operatingProfitInr": 95220342108,
+    "netProfitInr": 58002140950,
+    "totalDebtInr": 98000000000,
+    "cashInr": 110000000000,
+    "netWorthInr": 310000000000,
+    "interestInr": 3800000000,
+    "eps": 24.19
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-26",
+    "revenueInr": 148393270244,
+    "netProfitInr": 30570997091
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-29",
+    "revenueInr": 151118368665,
+    "netProfitInr": 30664688264
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-26",
+    "revenueInr": 142565975087,
+    "netProfitInr": 28445261301
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-22",
+    "revenueInr": 140783578409,
+    "netProfitInr": 27153842856
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-24",
+    "revenueInr": 135532077839,
+    "netProfitInr": 26596207579
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-30",
+    "revenueInr": 138514386196,
+    "netProfitInr": 25748784089
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-23",
+    "revenueInr": 130556772710,
+    "netProfitInr": 25603518029
+   },
+   {
+    "label": "July–September 2024",
+    "periodEnd": "2024-09-30",
+    "resultsDate": "2024-10-22",
+    "revenueInr": 128566259767,
+    "netProfitInr": 23796674319
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 54.5,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 17.9,
+    "diiPct": 19.0,
+    "publicPct": 8.6
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 54.5,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 18.0,
+    "diiPct": 18.9,
+    "publicPct": 8.6
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 54.5,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 18.1,
+    "diiPct": 18.8,
+    "publicPct": 8.6
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 54.5,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 18.2,
+    "diiPct": 18.6,
+    "publicPct": 8.7
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 54.6,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 18.3,
+    "diiPct": 18.5,
+    "publicPct": 8.6
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 41.6,
+    "pb": 7.8
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 40.9,
+    "pb": 7.7
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 38.3,
+    "pb": 7.2
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 41.8,
+    "pb": 7.8
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 36.9,
+    "pb": 6.9
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 34.6,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 36.8,
+    "pb": 6.9
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 34.5,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 32.3,
+    "pb": 6.1
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 33.9,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 35.4,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 37.6,
+    "pb": 7.2
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 33.3,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 32.0,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 35.9,
+    "pb": 6.9
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 37.1,
+    "pb": 7.2
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 34.1,
+    "pb": 6.6
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 33.8,
+    "pb": 6.6
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 35.6,
+    "pb": 7.0
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 35.6,
+    "pb": 7.0
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 30.7,
+    "pb": 6.1
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 30.4,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 31.5,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 33.5,
+    "pb": 6.7
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 31.7,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 35.3,
+    "pb": 7.1
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 36.0,
+    "pb": 7.2
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 33.3,
+    "pb": 6.7
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 31.8,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 34.7,
+    "pb": 7.0
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 33.6,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 34.4,
+    "pb": 7.0
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 33.8,
+    "pb": 6.9
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 33.2,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 31.5,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 33.1,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 33.8,
+    "pb": 7.0
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 30.4,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 30.2,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 30.0,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 26.5,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 26.8,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 24.7,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 23.2,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 23.2,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 21.6,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 22.1,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 21.4,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 21.2,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 23.3,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 23.9,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 24.5,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 24.4,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 24.2,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 24.0,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 25.6,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 26.9,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 29.8,
+    "pb": 6.6
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 29.9,
+    "pb": 6.6
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 29.7,
+    "pb": 6.6
+   }
+  ],
+  "dividendYieldPct": 0.8,
+  "events": [
+   {
+    "date": "2026-07-26",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-29",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-26",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "MARUTI",
+  "name": "Maruti Suzuki India Ltd",
+  "isin": "INESMP000008",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Automobile & Auto Components",
+  "industry": "Passenger Vehicles",
+  "sizeBand": "LARGE",
+  "marketCapRank": 11,
+  "isFinancial": false,
+  "sharesOutstanding": 314343164,
+  "lastPrice": 14920.0,
+  "about": "makes and supplies cars in India and exports them to other countries.",
+  "revenueSegments": [
+   {
+    "name": "Compact cars",
+    "sharePct": 31.0,
+    "prevSharePct": 33.0
+   },
+   {
+    "name": "Utility vehicles",
+    "sharePct": 42.0,
+    "prevSharePct": 38.5
+   },
+   {
+    "name": "Vans and others",
+    "sharePct": 12.0,
+    "prevSharePct": 13.5
+   },
+   {
+    "name": "Exports and parts",
+    "sharePct": 15.0,
+    "prevSharePct": 15.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Passenger vehicles",
+   "members": [
+    {
+     "name": "Mahindra & Mahindra Ltd",
+     "symbol": "MAHMOTORS"
+    },
+    {
+     "name": "Tata Motors Passenger Vehicles Ltd",
+     "symbol": "TMPV"
+    },
+    {
+     "name": "Hyundai Motor India Ltd",
+     "symbol": "HYUNDAI"
+    }
+   ],
+   "medians": {
+    "pe": 26.0,
+    "pb": 4.4,
+    "roePct": 17.5,
+    "operatingMarginPct": 11.0,
+    "revenueCagr3yPct": 12.0,
+    "profitCagr3yPct": 18.0,
+    "debtToEquity": 0.2,
+    "interestCoverage": 22.0,
+    "debtToProfit": 0.6,
+    "dividendYieldPct": 0.9,
+    "avgDailyTradedValueInr": 1800000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 1520000000000,
+    "operatingProfitInr": 188480000000,
+    "netProfitInr": 136800000000,
+    "totalDebtInr": 4500000000,
+    "cashInr": 330000000000,
+    "netWorthInr": 840000000000,
+    "interestInr": 1900000000,
+    "eps": 435.19
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 1407407407407,
+    "operatingProfitInr": 159970204215,
+    "netProfitInr": 112135526616,
+    "totalDebtInr": 4239921192,
+    "cashInr": 299585697476,
+    "netWorthInr": 762121309857,
+    "interestInr": 1706069857,
+    "eps": 356.73
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 1309216192937,
+    "operatingProfitInr": 138230777803,
+    "netProfitInr": 95792858931,
+    "totalDebtInr": 3795497003,
+    "cashInr": 277811646744,
+    "netWorthInr": 691964404425,
+    "interestInr": 1653830277,
+    "eps": 304.74
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 1091013494114,
+    "operatingProfitInr": 101298388469,
+    "netProfitInr": 64756481359,
+    "totalDebtInr": 3340914315,
+    "cashInr": 247254104145,
+    "netWorthInr": 604860204912,
+    "interestInr": 1502127420,
+    "eps": 206.01
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 845746894662,
+    "operatingProfitInr": 69720645552,
+    "netProfitInr": 45944432819,
+    "totalDebtInr": 3000000000,
+    "cashInr": 210000000000,
+    "netWorthInr": 530000000000,
+    "interestInr": 1300000000,
+    "eps": 146.16
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-25",
+    "revenueInr": 389433245590,
+    "netProfitInr": 39494255283
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-15",
+    "revenueInr": 405774646783,
+    "netProfitInr": 36299875018
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-16",
+    "revenueInr": 384424796169,
+    "netProfitInr": 34396860819
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-26",
+    "revenueInr": 369129682142,
+    "netProfitInr": 33789122167
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-15",
+    "revenueInr": 360670874906,
+    "netProfitInr": 32314141995
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-21",
+    "revenueInr": 373786933308,
+    "netProfitInr": 29101495437
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-30",
+    "revenueInr": 361042947078,
+    "netProfitInr": 29110216748
+   },
+   {
+    "label": "July–September 2024",
+    "periodEnd": "2024-09-30",
+    "resultsDate": "2024-10-29",
+    "revenueInr": 338521832440,
+    "netProfitInr": 27213443662
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 58.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.6,
+    "diiPct": 15.8,
+    "publicPct": 5.4
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 58.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.5,
+    "diiPct": 15.9,
+    "publicPct": 5.4
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 58.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.4,
+    "diiPct": 16.0,
+    "publicPct": 5.4
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 58.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.3,
+    "diiPct": 16.1,
+    "publicPct": 5.4
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 58.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 20.1,
+    "diiPct": 16.3,
+    "publicPct": 5.4
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 66.6,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 63.9,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 64.7,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 71.4,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 70.6,
+    "pb": 6.1
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 68.1,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 66.8,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 61.3,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 56.3,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 55.3,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 51.8,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 53.3,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 47.1,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 46.9,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 49.8,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 49.2,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 49.4,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 49.9,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 48.4,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 42.4,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 38.8,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 41.4,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 37.3,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 36.0,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 34.3,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 36.3,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 34.2,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 30.5,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 36.8,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 35.2,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 30.7,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 30.2,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 30.7,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 31.1,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 32.3,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 32.5,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 32.4,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 32.6,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 33.8,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 31.1,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 30.5,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 30.9,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 29.0,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 29.3,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 29.9,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 27.7,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 29.3,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 32.5,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 33.0,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 35.6,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 39.9,
+    "pb": 6.4
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 44.2,
+    "pb": 7.1
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 42.0,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 36.8,
+    "pb": 6.0
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 35.2,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 33.3,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 30.8,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 30.7,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 30.0,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 30.4,
+    "pb": 5.2
+   }
+  ],
+  "dividendYieldPct": 0.7,
+  "events": [
+   {
+    "date": "2026-08-05",
+    "type": "DIVIDEND",
+    "text": "A dividend of ₹135 per share was paid to shareholders."
+   },
+   {
+    "date": "2026-07-25",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-15",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-16",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "ASIANPAINT",
+  "name": "Asian Paints Ltd",
+  "isin": "INESMP000009",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Consumer Durables",
+  "industry": "Paints",
+  "sizeBand": "LARGE",
+  "marketCapRank": 14,
+  "isFinancial": false,
+  "sharesOutstanding": 959097320,
+  "lastPrice": 2481.5,
+  "about": "makes and supplies paints, wall coatings and home decor products in India and nearby countries.",
+  "revenueSegments": [
+   {
+    "name": "Decorative paints in India",
+    "sharePct": 83.0,
+    "prevSharePct": 84.0
+   },
+   {
+    "name": "Home decor",
+    "sharePct": 5.0,
+    "prevSharePct": 4.5
+   },
+   {
+    "name": "International",
+    "sharePct": 9.0,
+    "prevSharePct": 8.5
+   },
+   {
+    "name": "Industrial coatings",
+    "sharePct": 3.0,
+    "prevSharePct": 3.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Paints and coatings",
+   "members": [
+    {
+     "name": "Berger Paints India Ltd",
+     "symbol": "BERGEPAINT"
+    },
+    {
+     "name": "Kansai Nerolac Paints Ltd",
+     "symbol": "KANSAINER"
+    },
+    {
+     "name": "Pidilite Industries Ltd",
+     "symbol": "PIDILITIND"
+    }
+   ],
+   "medians": {
+    "pe": 52.0,
+    "pb": 11.0,
+    "roePct": 21.0,
+    "operatingMarginPct": 17.0,
+    "revenueCagr3yPct": 5.5,
+    "profitCagr3yPct": 4.0,
+    "debtToEquity": 0.1,
+    "interestCoverage": 25.0,
+    "debtToProfit": 0.5,
+    "dividendYieldPct": 0.9,
+    "avgDailyTradedValueInr": 800000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 350000000000,
+    "operatingProfitInr": 59500000000,
+    "netProfitInr": 39550000000,
+    "totalDebtInr": 23000000000,
+    "cashInr": 29000000000,
+    "netWorthInr": 205000000000,
+    "interestInr": 2800000000,
+    "eps": 41.24
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 344827586207,
+    "operatingProfitInr": 58116465047,
+    "netProfitInr": 39977159832,
+    "totalDebtInr": 19875103909,
+    "cashInr": 29750983062,
+    "netWorthInr": 185002561289,
+    "interestInr": 2515410106,
+    "eps": 41.68
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 348310693138,
+    "operatingProfitInr": 58959205743,
+    "netProfitInr": 40290803514,
+    "totalDebtInr": 17099792566,
+    "cashInr": 30714257793,
+    "netWorthInr": 174125115075,
+    "interestInr": 2024926641,
+    "eps": 42.01
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 331724469656,
+    "operatingProfitInr": 57090771824,
+    "netProfitInr": 39146412848,
+    "totalDebtInr": 15143151032,
+    "cashInr": 30321889200,
+    "netWorthInr": 156122604345,
+    "interestInr": 1689822818,
+    "eps": 40.82
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 249416894478,
+    "operatingProfitInr": 43428678196,
+    "netProfitInr": 29309276038,
+    "totalDebtInr": 12000000000,
+    "cashInr": 31000000000,
+    "netWorthInr": 140000000000,
+    "interestInr": 1300000000,
+    "eps": 30.56
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-27",
+    "revenueInr": 87743539875,
+    "netProfitInr": 9633741745
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-29",
+    "revenueInr": 85364133237,
+    "netProfitInr": 9698839101
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-14",
+    "revenueInr": 92732270067,
+    "netProfitInr": 10807873994
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-18",
+    "revenueInr": 86763784340,
+    "netProfitInr": 9531223572
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-22",
+    "revenueInr": 86423781685,
+    "netProfitInr": 9573107399
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-25",
+    "revenueInr": 84080163908,
+    "netProfitInr": 9637795035
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-27",
+    "revenueInr": 92465629434,
+    "netProfitInr": 11093624834
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-22",
+    "revenueInr": 86297769144,
+    "netProfitInr": 10223342107
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 52.1,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 13.5,
+    "diiPct": 17.0,
+    "publicPct": 17.4
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 52.4,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 13.6,
+    "diiPct": 16.8,
+    "publicPct": 17.2
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 52.8,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 13.5,
+    "diiPct": 16.9,
+    "publicPct": 16.8
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 53.1,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 13.2,
+    "diiPct": 17.1,
+    "publicPct": 16.6
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 53.5,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 13.0,
+    "diiPct": 17.2,
+    "publicPct": 16.3
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 103.3,
+    "pb": 21.6
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 102.5,
+    "pb": 21.5
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 101.7,
+    "pb": 21.3
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 95.2,
+    "pb": 19.9
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 90.5,
+    "pb": 18.9
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 84.2,
+    "pb": 17.6
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 88.3,
+    "pb": 18.8
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 84.3,
+    "pb": 18.3
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 82.0,
+    "pb": 18.1
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 86.0,
+    "pb": 19.3
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 88.0,
+    "pb": 20.0
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 87.1,
+    "pb": 20.1
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 85.5,
+    "pb": 20.1
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 85.3,
+    "pb": 20.3
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 88.7,
+    "pb": 21.4
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 87.7,
+    "pb": 21.5
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 90.9,
+    "pb": 22.5
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 88.1,
+    "pb": 22.1
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 93.0,
+    "pb": 23.1
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 95.1,
+    "pb": 23.5
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 97.4,
+    "pb": 23.9
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 91.4,
+    "pb": 22.3
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 84.5,
+    "pb": 20.5
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 82.2,
+    "pb": 19.8
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 80.0,
+    "pb": 19.1
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 82.8,
+    "pb": 19.7
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 86.5,
+    "pb": 20.4
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 90.6,
+    "pb": 21.2
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 85.6,
+    "pb": 19.9
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 94.0,
+    "pb": 21.8
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 92.4,
+    "pb": 21.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 94.7,
+    "pb": 21.7
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 94.5,
+    "pb": 21.5
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 86.0,
+    "pb": 19.4
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 87.4,
+    "pb": 19.6
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 85.7,
+    "pb": 19.1
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 87.2,
+    "pb": 19.4
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 88.7,
+    "pb": 19.6
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 92.7,
+    "pb": 20.4
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 89.2,
+    "pb": 19.5
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 83.2,
+    "pb": 18.1
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 88.4,
+    "pb": 19.1
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 83.1,
+    "pb": 17.8
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 78.3,
+    "pb": 16.6
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 75.0,
+    "pb": 15.7
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 74.7,
+    "pb": 15.5
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 68.0,
+    "pb": 14.0
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 65.6,
+    "pb": 13.4
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 62.8,
+    "pb": 12.7
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 62.9,
+    "pb": 12.6
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 61.5,
+    "pb": 12.2
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 66.7,
+    "pb": 13.1
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 67.2,
+    "pb": 13.1
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 69.5,
+    "pb": 13.4
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 62.9,
+    "pb": 12.1
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 58.7,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 57.4,
+    "pb": 10.9
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 53.3,
+    "pb": 10.1
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 51.6,
+    "pb": 9.7
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 54.8,
+    "pb": 10.3
+   }
+  ],
+  "dividendYieldPct": 1.3,
+  "events": [
+   {
+    "date": "2026-10-27",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-07-29",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-14",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-18",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "TATASTEEL",
+  "name": "Tata Steel Ltd",
+  "isin": "INESMP000010",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Metals & Mining",
+  "industry": "Steel",
+  "sizeBand": "LARGE",
+  "marketCapRank": 24,
+  "isFinancial": false,
+  "sharesOutstanding": 12439320388,
+  "lastPrice": 164.8,
+  "about": "makes steel and supplies it to builders, carmakers and other industries in India and Europe.",
+  "revenueSegments": [
+   {
+    "name": "India steel",
+    "sharePct": 55.0,
+    "prevSharePct": 52.0
+   },
+   {
+    "name": "Europe steel",
+    "sharePct": 31.0,
+    "prevSharePct": 34.0
+   },
+   {
+    "name": "Other businesses",
+    "sharePct": 14.0,
+    "prevSharePct": 14.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Steel",
+   "members": [
+    {
+     "name": "JSW Steel Ltd",
+     "symbol": "JSWSTEEL"
+    },
+    {
+     "name": "Steel Authority of India Ltd",
+     "symbol": "SAIL"
+    },
+    {
+     "name": "Jindal Steel Ltd",
+     "symbol": "JINDALSTEL"
+    }
+   ],
+   "medians": {
+    "pe": 18.0,
+    "pb": 2.2,
+    "roePct": 11.0,
+    "operatingMarginPct": 14.0,
+    "revenueCagr3yPct": 4.0,
+    "profitCagr3yPct": 3.0,
+    "debtToEquity": 0.9,
+    "interestCoverage": 3.4,
+    "debtToProfit": 9.0,
+    "dividendYieldPct": 1.5,
+    "avgDailyTradedValueInr": 1100000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 2150000000000,
+    "operatingProfitInr": 225750000000,
+    "netProfitInr": 38700000000,
+    "totalDebtInr": 920000000000,
+    "cashInr": 95000000000,
+    "netWorthInr": 780000000000,
+    "interestInr": 84000000000,
+    "eps": 3.11
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 2087378640777,
+    "operatingProfitInr": 274380186655,
+    "netProfitInr": 101179012008,
+    "totalDebtInr": 885944568069,
+    "cashInr": 93655020299,
+    "netWorthInr": 793921460047,
+    "interestInr": 72853290975,
+    "eps": 8.13
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 2119166132768,
+    "operatingProfitInr": 339534044438,
+    "netProfitInr": 161133098435,
+    "totalDebtInr": 851608826628,
+    "cashInr": 89415350940,
+    "netWorthInr": 809555972922,
+    "interestInr": 68251178113,
+    "eps": 12.95
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 2207464721634,
+    "operatingProfitInr": 414108307349,
+    "netProfitInr": 238359816825,
+    "totalDebtInr": 814856374098,
+    "cashInr": 83275517203,
+    "netWorthInr": 849497532140,
+    "interestInr": 58264358928,
+    "eps": 19.16
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 2082513888334,
+    "operatingProfitInr": 435192289272,
+    "netProfitInr": 284231938801,
+    "totalDebtInr": 780000000000,
+    "cashInr": 80000000000,
+    "netWorthInr": 870000000000,
+    "interestInr": 49000000000,
+    "eps": 22.85
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-27",
+    "revenueInr": 529693058724,
+    "netProfitInr": 6386658361
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-22",
+    "revenueInr": 575563165368,
+    "netProfitInr": 10097646446
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-29",
+    "revenueInr": 542918525093,
+    "netProfitInr": 9534688615
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-26",
+    "revenueInr": 521326096311,
+    "netProfitInr": 9780598270
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-14",
+    "revenueInr": 510192213228,
+    "netProfitInr": 9287066670
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-20",
+    "revenueInr": 559198101790,
+    "netProfitInr": 27696559741
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-24",
+    "revenueInr": 534219780317,
+    "netProfitInr": 26100775677
+   },
+   {
+    "label": "July–September 2024",
+    "periodEnd": "2024-09-30",
+    "resultsDate": "2024-10-20",
+    "revenueInr": 500387291021,
+    "netProfitInr": 23530957937
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 33.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.8,
+    "diiPct": 21.0,
+    "publicPct": 30.0
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 33.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.7,
+    "diiPct": 20.9,
+    "publicPct": 30.2
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 33.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.6,
+    "diiPct": 20.8,
+    "publicPct": 30.4
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 33.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.8,
+    "diiPct": 20.5,
+    "publicPct": 30.5
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 33.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 16.0,
+    "diiPct": 20.3,
+    "publicPct": 30.5
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 6.8,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 6.6,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 5.7,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 5.9,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 5.6,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 5.5,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 5.2,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 4.4,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 4.5,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 4.0,
+    "pb": 1.3
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 4.0,
+    "pb": 1.2
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 4.7,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 4.2,
+    "pb": 1.3
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 4.1,
+    "pb": 1.2
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 5.1,
+    "pb": 1.5
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 5.0,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 4.9,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 5.4,
+    "pb": 1.5
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 5.6,
+    "pb": 1.5
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 5.4,
+    "pb": 1.4
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 5.8,
+    "pb": 1.5
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 6.2,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 6.6,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 7.8,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 7.5,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 7.8,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 7.9,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 7.5,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 10.5,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 10.8,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 11.7,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 11.8,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 13.4,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 14.5,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 14.2,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 13.3,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 18.6,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 22.9,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 22.7,
+    "pb": 3.3
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 22.0,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 22.7,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 20.3,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 19.0,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 23.6,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 25.5,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 25.8,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 28.8,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 27.0,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 27.4,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 35.2,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 41.1,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 43.5,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 45.8,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 50.6,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 54.4,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 52.5,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 51.3,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 48.4,
+    "pb": 2.4
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 45.1,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 45.9,
+    "pb": 2.2
+   }
+  ],
+  "dividendYieldPct": 2.2,
+  "events": [
+   {
+    "date": "2026-09-05",
+    "type": "MANAGEMENT_CHANGE",
+    "text": "A new chief financial officer was appointed."
+   },
+   {
+    "date": "2026-07-27",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-22",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-29",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "BHARTIARTL",
+  "name": "Bharti Airtel Ltd",
+  "isin": "INESMP000011",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Telecommunication",
+  "industry": "Telecom Services",
+  "sizeBand": "LARGE",
+  "marketCapRank": 4,
+  "isFinancial": false,
+  "sharesOutstanding": 6003127680,
+  "lastPrice": 1982.3,
+  "about": "provides mobile, broadband and digital TV services in India and parts of Africa.",
+  "revenueSegments": [
+   {
+    "name": "India mobile services",
+    "sharePct": 58.0,
+    "prevSharePct": 57.0
+   },
+   {
+    "name": "Africa operations",
+    "sharePct": 18.0,
+    "prevSharePct": 19.0
+   },
+   {
+    "name": "Home broadband and enterprise",
+    "sharePct": 12.0,
+    "prevSharePct": 12.0
+   },
+   {
+    "name": "Towers and other",
+    "sharePct": 12.0,
+    "prevSharePct": 12.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Telecom services",
+   "members": [
+    {
+     "name": "Vodafone Idea Ltd",
+     "symbol": "IDEA"
+    },
+    {
+     "name": "Tata Communications Ltd",
+     "symbol": "TATACOMM"
+    },
+    {
+     "name": "Indus Towers Ltd",
+     "symbol": "INDUSTOWER"
+    }
+   ],
+   "medians": {
+    "pe": 31.0,
+    "pb": 6.5,
+    "roePct": 14.0,
+    "operatingMarginPct": 45.0,
+    "revenueCagr3yPct": 12.0,
+    "profitCagr3yPct": 20.0,
+    "debtToEquity": 1.8,
+    "interestCoverage": 3.0,
+    "debtToProfit": 7.5,
+    "dividendYieldPct": 0.6,
+    "avgDailyTradedValueInr": 900000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 1950000000000,
+    "operatingProfitInr": 1092000000000,
+    "netProfitInr": 273000000000,
+    "totalDebtInr": 2100000000000,
+    "cashInr": 140000000000,
+    "netWorthInr": 980000000000,
+    "interestInr": 205000000000,
+    "eps": 45.48
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 1666666666667,
+    "operatingProfitInr": 895043703778,
+    "netProfitInr": 185466702586,
+    "totalDebtInr": 2083222429459,
+    "cashInr": 124976350691,
+    "netWorthInr": 889727554199,
+    "interestInr": 188564631079,
+    "eps": 30.9
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 1436781609195,
+    "operatingProfitInr": 741839251347,
+    "netProfitInr": 119121839972,
+    "totalDebtInr": 1969029322476,
+    "cashInr": 115096741879,
+    "netWorthInr": 767505657956,
+    "interestInr": 182535011646,
+    "eps": 19.84
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 1342786550650,
+    "operatingProfitInr": 657734255561,
+    "netProfitInr": 74075199626,
+    "totalDebtInr": 1840423090206,
+    "cashInr": 100507150300,
+    "netWorthInr": 662362412349,
+    "interestInr": 168632005237,
+    "eps": 12.34
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 1118988792208,
+    "operatingProfitInr": 525967876414,
+    "netProfitInr": 27092578885,
+    "totalDebtInr": 1800000000000,
+    "cashInr": 90000000000,
+    "netWorthInr": 550000000000,
+    "interestInr": 150000000000,
+    "eps": 4.51
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-29",
+    "revenueInr": 559575703781,
+    "netProfitInr": 91213370883
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-31",
+    "revenueInr": 531288795751,
+    "netProfitInr": 88693535327
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-18",
+    "revenueInr": 528214043257,
+    "netProfitInr": 75474048583
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-26",
+    "revenueInr": 493580582655,
+    "netProfitInr": 69308821335
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-24",
+    "revenueInr": 476137206483,
+    "netProfitInr": 65006490780
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-30",
+    "revenueInr": 452068167605,
+    "netProfitInr": 63210639302
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-24",
+    "revenueInr": 448922597953,
+    "netProfitInr": 50925095456
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-16",
+    "revenueInr": 420060176330,
+    "netProfitInr": 46949371691
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 50.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.0,
+    "diiPct": 17.8,
+    "publicPct": 6.0
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 50.2,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.2,
+    "diiPct": 17.6,
+    "publicPct": 6.0
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.4,
+    "diiPct": 17.4,
+    "publicPct": 5.9
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 50.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.5,
+    "diiPct": 17.3,
+    "publicPct": 5.9
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 50.4,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.7,
+    "diiPct": 17.1,
+    "publicPct": 5.8
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 199.2,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 205.7,
+    "pb": 10.1
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 203.4,
+    "pb": 10.0
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 213.5,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 209.6,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 227.1,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 186.2,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 169.2,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 159.4,
+    "pb": 10.7
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 139.0,
+    "pb": 10.1
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 121.3,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 119.2,
+    "pb": 10.0
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 106.9,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 97.0,
+    "pb": 9.1
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 111.0,
+    "pb": 10.9
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 102.8,
+    "pb": 10.6
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 104.0,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 105.1,
+    "pb": 11.8
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 97.5,
+    "pb": 11.3
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 84.6,
+    "pb": 10.2
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 84.2,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 83.8,
+    "pb": 10.7
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 79.3,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 72.2,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 59.8,
+    "pb": 8.3
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 63.5,
+    "pb": 9.0
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 61.7,
+    "pb": 9.0
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 64.0,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 68.8,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 67.2,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 65.3,
+    "pb": 10.5
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 63.2,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 60.9,
+    "pb": 10.4
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 58.9,
+    "pb": 10.3
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 54.9,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 48.6,
+    "pb": 8.9
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 48.7,
+    "pb": 9.2
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 50.4,
+    "pb": 9.7
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 50.4,
+    "pb": 9.9
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 48.7,
+    "pb": 9.8
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 52.8,
+    "pb": 10.8
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 46.6,
+    "pb": 9.7
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 42.6,
+    "pb": 9.2
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 40.0,
+    "pb": 8.8
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 36.5,
+    "pb": 8.3
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 31.5,
+    "pb": 7.3
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 32.0,
+    "pb": 7.7
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 34.2,
+    "pb": 8.4
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 34.3,
+    "pb": 8.6
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 37.1,
+    "pb": 9.5
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 41.7,
+    "pb": 11.0
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 42.8,
+    "pb": 11.5
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 43.2,
+    "pb": 11.8
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 43.8,
+    "pb": 12.2
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 40.0,
+    "pb": 11.2
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 41.6,
+    "pb": 11.8
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 40.2,
+    "pb": 11.5
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 39.4,
+    "pb": 11.3
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 36.9,
+    "pb": 10.7
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 36.2,
+    "pb": 10.6
+   }
+  ],
+  "dividendYieldPct": 0.5,
+  "events": [
+   {
+    "date": "2026-10-29",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-07-31",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-18",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-26",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "VOLTAS",
+  "name": "Voltas Ltd",
+  "isin": "INESMP000012",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Consumer Durables",
+  "industry": "Air Conditioners and Cooling Products",
+  "sizeBand": "MID",
+  "marketCapRank": 170,
+  "isFinancial": false,
+  "sharesOutstanding": 330898152,
+  "lastPrice": 1396.2,
+  "about": "makes and supplies air conditioners and cooling products and also runs engineering projects.",
+  "revenueSegments": [
+   {
+    "name": "Cooling products",
+    "sharePct": 70.0,
+    "prevSharePct": 66.0
+   },
+   {
+    "name": "Engineering projects",
+    "sharePct": 24.0,
+    "prevSharePct": 28.0
+   },
+   {
+    "name": "Other products",
+    "sharePct": 6.0,
+    "prevSharePct": 6.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Cooling and consumer durables",
+   "members": [
+    {
+     "name": "Blue Star Ltd",
+     "symbol": "BLUESTARCO"
+    },
+    {
+     "name": "Havells India Ltd",
+     "symbol": "HAVELLS"
+    },
+    {
+     "name": "Whirlpool of India Ltd",
+     "symbol": "WHIRLPOOL"
+    }
+   ],
+   "medians": {
+    "pe": 58.0,
+    "pb": 7.5,
+    "roePct": 13.0,
+    "operatingMarginPct": 8.0,
+    "revenueCagr3yPct": 15.0,
+    "profitCagr3yPct": 16.0,
+    "debtToEquity": 0.2,
+    "interestCoverage": 11.0,
+    "debtToProfit": 1.2,
+    "dividendYieldPct": 0.5,
+    "avgDailyTradedValueInr": 300000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 168000000000,
+    "operatingProfitInr": 12096000000,
+    "netProfitInr": 8232000000,
+    "totalDebtInr": 11000000000,
+    "cashInr": 30000000000,
+    "netWorthInr": 79000000000,
+    "interestInr": 1200000000,
+    "eps": 24.88
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 147368421053,
+    "operatingProfitInr": 10601352688,
+    "netProfitInr": 7491929596,
+    "totalDebtInr": 9788401228,
+    "cashInr": 28221663248,
+    "netWorthInr": 73525354118,
+    "interestInr": 960528427,
+    "eps": 22.64
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 124888492417,
+    "operatingProfitInr": 9677853175,
+    "netProfitInr": 6398818684,
+    "totalDebtInr": 8881241380,
+    "cashInr": 25919867851,
+    "netWorthInr": 66399908758,
+    "interestInr": 771042773,
+    "eps": 19.34
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 117819332469,
+    "operatingProfitInr": 9639372479,
+    "netProfitInr": 6301426874,
+    "totalDebtInr": 8029529110,
+    "cashInr": 23088648686,
+    "netWorthInr": 61240530069,
+    "interestInr": 578221480,
+    "eps": 19.04
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 94255465975,
+    "operatingProfitInr": 7563965673,
+    "netProfitInr": 5103453370,
+    "totalDebtInr": 7000000000,
+    "cashInr": 22000000000,
+    "netWorthInr": 56000000000,
+    "interestInr": 400000000,
+    "eps": 15.42
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-21",
+    "revenueInr": 46546024888,
+    "netProfitInr": 2264995931
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-26",
+    "revenueInr": 45507807518,
+    "netProfitInr": 2112203796
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-26",
+    "revenueInr": 44947224057,
+    "netProfitInr": 2196833546
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-29",
+    "revenueInr": 41888568360,
+    "netProfitInr": 2010364884
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-24",
+    "revenueInr": 41039803856,
+    "netProfitInr": 2082646383
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-30",
+    "revenueInr": 40124403727,
+    "netProfitInr": 1942155187
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-25",
+    "revenueInr": 39258402431,
+    "netProfitInr": 2000485958
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-17",
+    "revenueInr": 36713749819,
+    "netProfitInr": 1823609861
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 30.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.0,
+    "diiPct": 26.0,
+    "publicPct": 28.7
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 30.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.2,
+    "diiPct": 25.8,
+    "publicPct": 28.7
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 30.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.3,
+    "diiPct": 25.6,
+    "publicPct": 28.8
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 30.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.5,
+    "diiPct": 25.4,
+    "publicPct": 28.8
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 30.3,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 15.4,
+    "diiPct": 25.5,
+    "publicPct": 28.8
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 49.7,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 59.0,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 53.7,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 60.5,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 55.6,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 50.7,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 54.3,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 51.8,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 43.5,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 47.0,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 45.2,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 50.4,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 48.4,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 52.8,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 57.4,
+    "pb": 5.8
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 49.5,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 40.7,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 39.4,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 43.2,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 43.5,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 43.1,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 44.5,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 40.8,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 47.1,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 41.3,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 45.5,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 50.1,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 46.3,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 51.1,
+    "pb": 5.0
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 50.8,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 44.9,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 47.8,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 42.5,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 37.6,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 34.5,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 36.5,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 38.1,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 36.0,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 35.2,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 39.4,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 43.5,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 38.6,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 33.4,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 34.3,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 39.0,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 40.6,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 41.3,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 41.3,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 37.7,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 37.4,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 39.5,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 46.7,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 49.9,
+    "pb": 5.2
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 43.7,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 44.7,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 49.2,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 48.7,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 45.2,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 45.5,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 45.4,
+    "pb": 4.7
+   }
+  ],
+  "dividendYieldPct": 0.6,
+  "events": [
+   {
+    "date": "2026-10-21",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-07-26",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-26",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-29",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "FEDERALBNK",
+  "name": "The Federal Bank Ltd",
+  "isin": "INESMP000013",
+  "exchange": "NSE",
+  "fictional": false,
+  "sector": "Financial Services",
+  "industry": "Private Sector Bank",
+  "sizeBand": "MID",
+  "marketCapRank": 150,
+  "isFinancial": true,
+  "sharesOutstanding": 2464973730,
+  "lastPrice": 228.4,
+  "about": "takes deposits and lends to people and small businesses, with a strong base in Kerala.",
+  "revenueSegments": [
+   {
+    "name": "Retail banking",
+    "sharePct": 42.0,
+    "prevSharePct": 41.0
+   },
+   {
+    "name": "Corporate and wholesale banking",
+    "sharePct": 33.0,
+    "prevSharePct": 34.5
+   },
+   {
+    "name": "Treasury",
+    "sharePct": 15.0,
+    "prevSharePct": 15.5
+   },
+   {
+    "name": "Other banking",
+    "sharePct": 10.0,
+    "prevSharePct": 9.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Private sector banks",
+   "members": [
+    {
+     "name": "City Union Bank Ltd",
+     "symbol": "CUB"
+    },
+    {
+     "name": "South Indian Bank Ltd",
+     "symbol": "SOUTHBANK"
+    },
+    {
+     "name": "IDFC First Bank Ltd",
+     "symbol": "IDFCFIRSTB"
+    }
+   ],
+   "medians": {
+    "pe": 12.5,
+    "pb": 1.4,
+    "roePct": 11.8,
+    "operatingMarginPct": 29.0,
+    "revenueCagr3yPct": 19.0,
+    "profitCagr3yPct": 21.0,
+    "debtToEquity": 8.4,
+    "interestCoverage": 1.3,
+    "debtToProfit": 14.0,
+    "dividendYieldPct": 0.8,
+    "avgDailyTradedValueInr": 420000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 260000000000,
+    "operatingProfitInr": 79300000000,
+    "netProfitInr": 40300000000,
+    "totalDebtInr": 2500000000000,
+    "cashInr": 210000000000,
+    "netWorthInr": 290000000000,
+    "interestInr": 165000000000,
+    "eps": 16.35
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 232142857143,
+    "operatingProfitInr": 71093254646,
+    "netProfitInr": 34373285083,
+    "totalDebtInr": 2301803899603,
+    "cashInr": 192508351089,
+    "netWorthInr": 252041947397,
+    "interestInr": 146393602335,
+    "eps": 13.94
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 196731234867,
+    "operatingProfitInr": 59819927069,
+    "netProfitInr": 28087006608,
+    "totalDebtInr": 1993093169050,
+    "cashInr": 169941131071,
+    "netWorthInr": 225838669268,
+    "interestInr": 123990298596,
+    "eps": 11.39
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 147918221704,
+    "operatingProfitInr": 44567814731,
+    "netProfitInr": 20265025748,
+    "totalDebtInr": 1796095099842,
+    "cashInr": 154491535181,
+    "netWorthInr": 189680529444,
+    "interestInr": 99070810944,
+    "eps": 8.22
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 128624540613,
+    "operatingProfitInr": 39097895099,
+    "netProfitInr": 16550214579,
+    "totalDebtInr": 1500000000000,
+    "cashInr": 140000000000,
+    "netWorthInr": 155000000000,
+    "interestInr": 78000000000,
+    "eps": 6.71
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-19",
+    "revenueInr": 70216231137,
+    "netProfitInr": 11199053917
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-28",
+    "revenueInr": 69668602211,
+    "netProfitInr": 11151421168
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-24",
+    "revenueInr": 69174420754,
+    "netProfitInr": 11099992494
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-17",
+    "revenueInr": 65039966638,
+    "netProfitInr": 9843439748
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-14",
+    "revenueInr": 63139022560,
+    "netProfitInr": 9698909985
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-28",
+    "revenueInr": 62646590048,
+    "netProfitInr": 9657657773
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-24",
+    "revenueInr": 62939967611,
+    "netProfitInr": 9511280845
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-14",
+    "revenueInr": 59421734519,
+    "netProfitInr": 8940859165
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.0,
+    "diiPct": 37.0,
+    "publicPct": 37.0
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.4,
+    "diiPct": 36.7,
+    "publicPct": 36.9
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 26.7,
+    "diiPct": 36.5,
+    "publicPct": 36.8
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 27.0,
+    "diiPct": 36.2,
+    "publicPct": 36.8
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 0.0,
+    "pledgedPctOfPromoter": 0.0,
+    "fiiPct": 27.4,
+    "diiPct": 36.0,
+    "publicPct": 36.6
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 16.1,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 18.4,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 17.9,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 18.5,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 19.2,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 19.5,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 18.7,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 16.8,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 16.0,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 15.7,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 18.1,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 19.0,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 18.8,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 17.7,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 18.7,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 19.7,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 18.2,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 15.6,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 17.5,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 16.0,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 15.4,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 14.0,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 14.1,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 14.3,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 13.9,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 14.3,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 15.4,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 12.0,
+    "pb": 1.5
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 13.9,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 14.9,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 15.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 15.6,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 15.4,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 14.4,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 15.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 13.9,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 13.3,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 12.6,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 13.0,
+    "pb": 1.7
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 11.7,
+    "pb": 1.6
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 13.8,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 14.0,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 14.2,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 14.5,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 14.9,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 16.1,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 17.9,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 16.3,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 15.5,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 15.7,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 15.1,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 16.8,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 15.8,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 14.2,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 15.0,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 13.7,
+    "pb": 1.9
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 14.5,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 12.9,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 12.7,
+    "pb": 1.8
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 11.3,
+    "pb": 1.6
+   }
+  ],
+  "dividendYieldPct": 0.6,
+  "events": [
+   {
+    "date": "2026-10-19",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-07-28",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-24",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-17",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "DECCANINF",
+  "name": "Deccan Infra Projects Ltd",
+  "isin": "INESMP000014",
+  "exchange": "NSE",
+  "fictional": true,
+  "sector": "Construction & Engineering",
+  "industry": "Infrastructure Contracting",
+  "sizeBand": "SMALL",
+  "marketCapRank": 620,
+  "isFinancial": false,
+  "sharesOutstanding": 232339089,
+  "lastPrice": 318.5,
+  "about": "builds roads, bridges and water pipelines for state governments and public agencies.",
+  "revenueSegments": [
+   {
+    "name": "Roads and bridges",
+    "sharePct": 55.0,
+    "prevSharePct": 58.0
+   },
+   {
+    "name": "Water supply projects",
+    "sharePct": 30.0,
+    "prevSharePct": 28.0
+   },
+   {
+    "name": "Other construction",
+    "sharePct": 15.0,
+    "prevSharePct": 14.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Infrastructure contractors",
+   "members": [
+    {
+     "name": "Ashoka Buildcon Ltd",
+     "symbol": "ASHOKA"
+    },
+    {
+     "name": "PNC Infratech Ltd",
+     "symbol": "PNCINFRA"
+    },
+    {
+     "name": "KNR Constructions Ltd",
+     "symbol": "KNRCON"
+    }
+   ],
+   "medians": {
+    "pe": 15.0,
+    "pb": 1.9,
+    "roePct": 13.5,
+    "operatingMarginPct": 13.0,
+    "revenueCagr3yPct": 14.0,
+    "profitCagr3yPct": 15.0,
+    "debtToEquity": 0.8,
+    "interestCoverage": 3.1,
+    "debtToProfit": 3.2,
+    "dividendYieldPct": 0.4,
+    "avgDailyTradedValueInr": 95000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 52000000000,
+    "operatingProfitInr": 6500000000,
+    "netProfitInr": 2184000000,
+    "totalDebtInr": 29000000000,
+    "cashInr": 2100000000,
+    "netWorthInr": 19500000000,
+    "interestInr": 3300000000,
+    "eps": 9.4
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 44067796610,
+    "operatingProfitInr": 5418546896,
+    "netProfitInr": 1736332191,
+    "totalDebtInr": 26216964426,
+    "cashInr": 2044821635,
+    "netWorthInr": 17824507361,
+    "interestInr": 2942637973,
+    "eps": 7.47
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 36121144762,
+    "operatingProfitInr": 4130801074,
+    "netProfitInr": 1356390340,
+    "totalDebtInr": 21648092708,
+    "cashInr": 1897880812,
+    "netWorthInr": 16074653272,
+    "interestInr": 2388857111,
+    "eps": 5.84
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 31409691098,
+    "operatingProfitInr": 3491857257,
+    "netProfitInr": 1114292528,
+    "totalDebtInr": 18079443911,
+    "cashInr": 1793328990,
+    "netWorthInr": 14806342027,
+    "interestInr": 1942772111,
+    "eps": 4.8
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 28044367052,
+    "operatingProfitInr": 3105913583,
+    "netProfitInr": 834746217,
+    "totalDebtInr": 15000000000,
+    "cashInr": 1600000000,
+    "netWorthInr": 13000000000,
+    "interestInr": 1500000000,
+    "eps": 3.59
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "July–September 2026",
+    "periodEnd": "2026-09-30",
+    "resultsDate": "2026-10-14",
+    "revenueInr": 15048169339,
+    "netProfitInr": 655993645
+   },
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-07-31",
+    "revenueInr": 14438023511,
+    "netProfitInr": 642001701
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-25",
+    "revenueInr": 14150681415,
+    "netProfitInr": 598012455
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-27",
+    "revenueInr": 12982957830,
+    "netProfitInr": 555003342
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-28",
+    "revenueInr": 12690455136,
+    "netProfitInr": 521048929
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-20",
+    "revenueInr": 12175905619,
+    "netProfitInr": 509935274
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-18",
+    "revenueInr": 12039702863,
+    "netProfitInr": 468067664
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-25",
+    "revenueInr": 10915635177,
+    "netProfitInr": 434829927
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 58.4,
+    "pledgedPctOfPromoter": 38.4,
+    "fiiPct": 4.0,
+    "diiPct": 6.3,
+    "publicPct": 31.3
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 58.4,
+    "pledgedPctOfPromoter": 36.0,
+    "fiiPct": 4.1,
+    "diiPct": 6.4,
+    "publicPct": 31.1
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 58.6,
+    "pledgedPctOfPromoter": 34.1,
+    "fiiPct": 4.3,
+    "diiPct": 6.2,
+    "publicPct": 30.9
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 58.9,
+    "pledgedPctOfPromoter": 31.5,
+    "fiiPct": 4.6,
+    "diiPct": 6.0,
+    "publicPct": 30.5
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 59.0,
+    "pledgedPctOfPromoter": 30.2,
+    "fiiPct": 4.8,
+    "diiPct": 5.9,
+    "publicPct": 30.3
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 35.6,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 45.5,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 47.8,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 55.4,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 49.6,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 57.1,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 53.7,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 38.6,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 33.7,
+    "pb": 2.3
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 32.2,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 40.0,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 37.2,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 35.8,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 39.9,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 42.6,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 44.1,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 51.8,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 59.6,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 61.6,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 45.4,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 38.6,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 40.3,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 42.9,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 44.1,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 37.7,
+    "pb": 3.0
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 32.5,
+    "pb": 2.6
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 34.3,
+    "pb": 2.8
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 37.8,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 38.7,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 31.6,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 37.5,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 43.7,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 45.6,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 47.7,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 54.8,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": 46.4,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": 53.3,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": 63.4,
+    "pb": 5.9
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": 59.5,
+    "pb": 5.6
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": 72.1,
+    "pb": 6.9
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": 58.8,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": 68.2,
+    "pb": 6.6
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": 55.1,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": 51.1,
+    "pb": 5.1
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": 44.1,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": 38.4,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": 39.2,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": 40.4,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": 38.1,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": 38.1,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 40.3,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 36.0,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 33.6,
+    "pb": 3.7
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 31.2,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 30.0,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 29.7,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 35.3,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 32.5,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 27.4,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 25.0,
+    "pb": 2.9
+   }
+  ],
+  "dividendYieldPct": 0.3,
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "RESULTS",
+    "text": "Results for July–September 2026 announced."
+   },
+   {
+    "date": "2026-09-22",
+    "type": "ORDER_WIN",
+    "text": "A road project order worth ₹410 crore was received."
+   },
+   {
+    "date": "2026-07-31",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-25",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-27",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ },
+ {
+  "symbol": "SHIVAGRO",
+  "name": "Shivalik Agro Polymers Ltd",
+  "isin": "INESMP000015",
+  "exchange": "NSE",
+  "fictional": true,
+  "sector": "Chemicals",
+  "industry": "Agricultural Polymers",
+  "sizeBand": "MICRO",
+  "marketCapRank": 1850,
+  "isFinancial": false,
+  "sharesOutstanding": 246252677,
+  "lastPrice": 46.7,
+  "about": "makes plastic films and pipes used in farming and irrigation.",
+  "revenueSegments": [
+   {
+    "name": "Irrigation pipes",
+    "sharePct": 48.0,
+    "prevSharePct": 52.0
+   },
+   {
+    "name": "Farm films",
+    "sharePct": 37.0,
+    "prevSharePct": 33.0
+   },
+   {
+    "name": "Other polymer products",
+    "sharePct": 15.0,
+    "prevSharePct": 15.0
+   }
+  ],
+  "peerGroup": {
+   "name": "Agricultural polymers",
+   "members": [
+    {
+     "name": "Jain Irrigation Systems Ltd",
+     "symbol": "JISLJALEQS"
+    },
+    {
+     "name": "Finolex Industries Ltd",
+     "symbol": "FINPIPE"
+    },
+    {
+     "name": "Supreme Industries Ltd",
+     "symbol": "SUPREMEIND"
+    }
+   ],
+   "medians": {
+    "pe": 22.0,
+    "pb": 2.4,
+    "roePct": 10.5,
+    "operatingMarginPct": 11.0,
+    "revenueCagr3yPct": 9.0,
+    "profitCagr3yPct": 6.0,
+    "debtToEquity": 0.5,
+    "interestCoverage": 3.8,
+    "debtToProfit": 2.8,
+    "dividendYieldPct": 0.5,
+    "avgDailyTradedValueInr": 15000000
+   }
+  },
+  "annual": [
+   {
+    "fy": "FY2026",
+    "periodStart": "2025-04-01",
+    "periodEnd": "2026-03-31",
+    "revenueInr": 6400000000,
+    "operatingProfitInr": 448000000,
+    "netProfitInr": 76800000,
+    "totalDebtInr": 3300000000,
+    "cashInr": 90000000,
+    "netWorthInr": 3550000000,
+    "interestInr": 410000000,
+    "eps": 0.31
+   },
+   {
+    "fy": "FY2025",
+    "periodStart": "2024-04-01",
+    "periodEnd": "2025-03-31",
+    "revenueInr": 5871559633,
+    "operatingProfitInr": 446184918,
+    "netProfitInr": -205504587,
+    "totalDebtInr": 2949433723,
+    "cashInr": 105557646,
+    "netWorthInr": 3462875316,
+    "interestInr": 382135782,
+    "eps": -0.83
+   },
+   {
+    "fy": "FY2024",
+    "periodStart": "2023-04-01",
+    "periodEnd": "2024-03-31",
+    "revenueInr": 6246340035,
+    "operatingProfitInr": 513055449,
+    "netProfitInr": 175905948,
+    "totalDebtInr": 2675087008,
+    "cashInr": 111773715,
+    "netWorthInr": 3320009822,
+    "interestInr": 312777160,
+    "eps": 0.71
+   },
+   {
+    "fy": "FY2023",
+    "periodStart": "2022-04-01",
+    "periodEnd": "2023-03-31",
+    "revenueInr": 5627333365,
+    "operatingProfitInr": 510488551,
+    "netProfitInr": 194572205,
+    "totalDebtInr": 2404994526,
+    "cashInr": 125629043,
+    "netWorthInr": 3334570971,
+    "interestInr": 280091063,
+    "eps": 0.79
+   },
+   {
+    "fy": "FY2022",
+    "periodStart": "2021-04-01",
+    "periodEnd": "2022-03-31",
+    "revenueInr": 4936257338,
+    "operatingProfitInr": 498783985,
+    "netProfitInr": 187455256,
+    "totalDebtInr": 2100000000,
+    "cashInr": 140000000,
+    "netWorthInr": 3200000000,
+    "interestInr": 240000000,
+    "eps": 0.76
+   }
+  ],
+  "quarterly": [
+   {
+    "label": "April–June 2026",
+    "periodEnd": "2026-06-30",
+    "resultsDate": "2026-08-09",
+    "revenueInr": 1661370905,
+    "netProfitInr": 19665961
+   },
+   {
+    "label": "January–March 2026",
+    "periodEnd": "2026-03-31",
+    "resultsDate": "2026-04-19",
+    "revenueInr": 1730406161,
+    "netProfitInr": 21224575
+   },
+   {
+    "label": "October–December 2025",
+    "periodEnd": "2025-12-31",
+    "resultsDate": "2026-01-24",
+    "revenueInr": 1598574524,
+    "netProfitInr": 19395131
+   },
+   {
+    "label": "July–September 2025",
+    "periodEnd": "2025-09-30",
+    "resultsDate": "2025-10-17",
+    "revenueInr": 1543476776,
+    "netProfitInr": 18210420
+   },
+   {
+    "label": "April–June 2025",
+    "periodEnd": "2025-06-30",
+    "resultsDate": "2025-07-20",
+    "revenueInr": 1527542539,
+    "netProfitInr": 17969875
+   },
+   {
+    "label": "January–March 2025",
+    "periodEnd": "2025-03-31",
+    "resultsDate": "2025-04-15",
+    "revenueInr": 1594023787,
+    "netProfitInr": -55087838
+   },
+   {
+    "label": "October–December 2024",
+    "periodEnd": "2024-12-31",
+    "resultsDate": "2025-01-24",
+    "revenueInr": 1496910660,
+    "netProfitInr": -54878811
+   },
+   {
+    "label": "July–September 2024",
+    "periodEnd": "2024-09-30",
+    "resultsDate": "2024-10-24",
+    "revenueInr": 1416065035,
+    "netProfitInr": -48192129
+   }
+  ],
+  "shareholding": [
+   {
+    "quarterEnd": "2026-09-30",
+    "promoterPct": 41.0,
+    "pledgedPctOfPromoter": 4.2,
+    "fiiPct": 0.4,
+    "diiPct": 0.8,
+    "publicPct": 57.8
+   },
+   {
+    "quarterEnd": "2026-06-30",
+    "promoterPct": 41.0,
+    "pledgedPctOfPromoter": 4.2,
+    "fiiPct": 0.4,
+    "diiPct": 0.8,
+    "publicPct": 57.8
+   },
+   {
+    "quarterEnd": "2026-03-31",
+    "promoterPct": 41.2,
+    "pledgedPctOfPromoter": 3.8,
+    "fiiPct": 0.5,
+    "diiPct": 0.9,
+    "publicPct": 57.4
+   },
+   {
+    "quarterEnd": "2025-12-31",
+    "promoterPct": 41.5,
+    "pledgedPctOfPromoter": 3.8,
+    "fiiPct": 0.5,
+    "diiPct": 0.9,
+    "publicPct": 57.1
+   },
+   {
+    "quarterEnd": "2025-09-30",
+    "promoterPct": 41.5,
+    "pledgedPctOfPromoter": 3.5,
+    "fiiPct": 0.6,
+    "diiPct": 1.0,
+    "publicPct": 56.9
+   }
+  ],
+  "valuationHistory": [
+   {
+    "monthEnd": "2021-10-31",
+    "pe": 91.4,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2021-11-30",
+    "pe": 94.1,
+    "pb": 5.5
+   },
+   {
+    "monthEnd": "2021-12-31",
+    "pe": 97.1,
+    "pb": 5.7
+   },
+   {
+    "monthEnd": "2022-01-31",
+    "pe": 124.3,
+    "pb": 7.3
+   },
+   {
+    "monthEnd": "2022-02-28",
+    "pe": 105.7,
+    "pb": 6.2
+   },
+   {
+    "monthEnd": "2022-03-31",
+    "pe": 110.8,
+    "pb": 6.5
+   },
+   {
+    "monthEnd": "2022-04-30",
+    "pe": 107.5,
+    "pb": 6.3
+   },
+   {
+    "monthEnd": "2022-05-31",
+    "pe": 92.9,
+    "pb": 5.4
+   },
+   {
+    "monthEnd": "2022-06-30",
+    "pe": 81.6,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2022-07-31",
+    "pe": 75.3,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2022-08-31",
+    "pe": 84.3,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2022-09-30",
+    "pe": 68.1,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2022-10-31",
+    "pe": 61.0,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2022-11-30",
+    "pe": 55.2,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2022-12-31",
+    "pe": 70.4,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-01-31",
+    "pe": 65.4,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2023-02-28",
+    "pe": 75.6,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2023-03-31",
+    "pe": 65.0,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2023-04-30",
+    "pe": 73.6,
+    "pb": 4.3
+   },
+   {
+    "monthEnd": "2023-05-31",
+    "pe": 78.6,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2023-06-30",
+    "pe": 57.2,
+    "pb": 3.3
+   },
+   {
+    "monthEnd": "2023-07-31",
+    "pe": 68.7,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-08-31",
+    "pe": 69.4,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2023-09-30",
+    "pe": 74.6,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2023-10-31",
+    "pe": 73.6,
+    "pb": 4.1
+   },
+   {
+    "monthEnd": "2023-11-30",
+    "pe": 83.1,
+    "pb": 4.6
+   },
+   {
+    "monthEnd": "2023-12-31",
+    "pe": 88.4,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2024-01-31",
+    "pe": 98.0,
+    "pb": 5.3
+   },
+   {
+    "monthEnd": "2024-02-29",
+    "pe": 126.9,
+    "pb": 6.8
+   },
+   {
+    "monthEnd": "2024-03-31",
+    "pe": 88.9,
+    "pb": 4.7
+   },
+   {
+    "monthEnd": "2024-04-30",
+    "pe": 110.0,
+    "pb": 4.8
+   },
+   {
+    "monthEnd": "2024-05-31",
+    "pe": 147.5,
+    "pb": 4.9
+   },
+   {
+    "monthEnd": "2024-06-30",
+    "pe": 184.7,
+    "pb": 4.4
+   },
+   {
+    "monthEnd": "2024-07-31",
+    "pe": 292.4,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2024-08-31",
+    "pe": 943.9,
+    "pb": 4.5
+   },
+   {
+    "monthEnd": "2024-09-30",
+    "pe": null,
+    "pb": 3.5
+   },
+   {
+    "monthEnd": "2024-10-31",
+    "pe": null,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2024-11-30",
+    "pe": null,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2024-12-31",
+    "pe": null,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2025-01-31",
+    "pe": null,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2025-02-28",
+    "pe": null,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2025-03-31",
+    "pe": null,
+    "pb": 2.5
+   },
+   {
+    "monthEnd": "2025-04-30",
+    "pe": null,
+    "pb": 2.1
+   },
+   {
+    "monthEnd": "2025-05-31",
+    "pe": null,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-06-30",
+    "pe": null,
+    "pb": 2.0
+   },
+   {
+    "monthEnd": "2025-07-31",
+    "pe": null,
+    "pb": 2.2
+   },
+   {
+    "monthEnd": "2025-08-31",
+    "pe": null,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2025-09-30",
+    "pe": null,
+    "pb": 3.1
+   },
+   {
+    "monthEnd": "2025-10-31",
+    "pe": null,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2025-11-30",
+    "pe": null,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2025-12-31",
+    "pe": 1761.3,
+    "pb": 3.6
+   },
+   {
+    "monthEnd": "2026-01-31",
+    "pe": 459.4,
+    "pb": 4.0
+   },
+   {
+    "monthEnd": "2026-02-28",
+    "pe": 227.2,
+    "pb": 3.4
+   },
+   {
+    "monthEnd": "2026-03-31",
+    "pe": 146.2,
+    "pb": 3.2
+   },
+   {
+    "monthEnd": "2026-04-30",
+    "pe": 123.6,
+    "pb": 2.7
+   },
+   {
+    "monthEnd": "2026-05-31",
+    "pe": 135.4,
+    "pb": 2.9
+   },
+   {
+    "monthEnd": "2026-06-30",
+    "pe": 180.2,
+    "pb": 3.9
+   },
+   {
+    "monthEnd": "2026-07-31",
+    "pe": 196.3,
+    "pb": 4.2
+   },
+   {
+    "monthEnd": "2026-08-31",
+    "pe": 177.7,
+    "pb": 3.8
+   },
+   {
+    "monthEnd": "2026-09-30",
+    "pe": 141.4,
+    "pb": 3.1
+   }
+  ],
+  "dividendYieldPct": 0.0,
+  "events": [
+   {
+    "date": "2026-08-14",
+    "type": "OTHER",
+    "text": "The stock was placed in the long-term additional surveillance measure (ASM) framework, stage II."
+   },
+   {
+    "date": "2026-08-09",
+    "type": "RESULTS",
+    "text": "Results for April–June 2026 announced."
+   },
+   {
+    "date": "2026-04-19",
+    "type": "RESULTS",
+    "text": "Results for January–March 2026 announced."
+   },
+   {
+    "date": "2026-01-24",
+    "type": "RESULTS",
+    "text": "Results for October–December 2025 announced."
+   }
+  ]
+ }
+]

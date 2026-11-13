@@ -90,3 +90,22 @@ class DiskCache:
             tmp.replace(p)
         except (OSError, TypeError, ValueError):
             pass  # cache failures never break a request
+
+
+def today_ist():
+    """Today's date in Asia/Kolkata (live adapters)."""
+    from datetime import datetime, timedelta, timezone
+
+    try:
+        from zoneinfo import ZoneInfo
+
+        return datetime.now(ZoneInfo("Asia/Kolkata")).date()
+    except Exception:
+        return datetime.now(timezone(timedelta(hours=5, minutes=30))).date()
+
+
+def unavailable(message: str, **details):
+    """ApiError UPSTREAM_UNAVAILABLE with a user-safe message (never put secrets in details)."""
+    from ..errors import ApiError
+
+    return ApiError("UPSTREAM_UNAVAILABLE", message, details or None)
