@@ -1,0 +1,88 @@
+# Defaults mirror config/app-config.example.yaml (all adapters mock). The shared file, when present, is imported
+# below and overrides these values. Env overrides use relaxed binding, e.g. SERVICES_PYTHONBASEURL.
+spring:
+  application:
+    name: stock-analyzer-java
+  config:
+    import: "optional:file:${APP_CONFIG:../config/app-config.yaml}"
+  datasource:
+    url: "jdbc:h2:file:${storage.h2Path};AUTO_SERVER=FALSE"
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  jackson:
+    default-property-inclusion: always
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: ${ports.java}
+
+app:
+  sampleAsOf: "2026-10-30"
+  defaultIllustrativeAmountInr: 100000
+  disclaimer: "Information only, not investment advice."
+ports:
+  frontend: 5173
+  java: 8080
+  python: 8000
+services:
+  pythonBaseUrl: "http://localhost:8000"
+  frontendBaseUrl: "http://localhost:5173"
+adapters:
+  broker: mock
+  fundamentals: mock
+  prices: mock
+  surveillance: mock
+  fundNav: mock
+  fundMeta: mock
+  fundHoldings: mock
+  statement: auto
+kite:
+  mcpUrl: "https://mcp.kite.trade/mcp"
+  apiKey: ""
+  apiSecret: ""
+  redirectUrl: "http://localhost:8080/api/connect/kite/callback"
+  loginTimeoutSeconds: 300
+screener:
+  baseUrl: "https://www.screener.in"
+  sessionCookie: ""
+  minIntervalSeconds: 3
+nse:
+  baseUrl: "https://www.nseindia.com"
+  asmCsvUrl: "https://nsearchives.nseindia.com/content/equities/asm_lt.csv"
+  gsmCsvUrl: "https://nsearchives.nseindia.com/content/equities/gsm.csv"
+  esmCsvUrl: "https://nsearchives.nseindia.com/content/equities/esm.csv"
+  minIntervalSeconds: 2
+mfapi:
+  baseUrl: "https://api.mfapi.in"
+amfi:
+  navAllUrl: "https://www.amfiindia.com/spages/NAVAll.txt"
+mfdata:
+  baseUrl: "https://mfdata.in/api/v1"
+llm:
+  provider: none
+  model: ""
+  apiKey: ""
+  timeoutSeconds: 20
+cache:
+  dir: ".cache"
+  fundamentalsHours: 24
+  pricesHours: 12
+  fundDataHours: 24
+  surveillanceHours: 24
+  javaResponseMinutes: 30
+storage:
+  h2Path: "./data/stockanalyzer"
+sizeBands:
+  largeMinCrore: 100000
+  midMinCrore: 33000
+  smallMinCrore: 6000
