@@ -37,6 +37,28 @@ START_TIMEOUT = 30.0
 
 # ---------- pure helpers ----------
 
+def _leaf_errors(e: BaseException) -> list[BaseException]:
+    """Flatten an ExceptionGroup into the errors that actually happened."""
+    inner = getattr(e, "exceptions", None)
+    if not inner:
+        return [e]
+    out: list[BaseException] = []
+    for x in inner:
+        out.extend(_leaf_errors(x))
+    return out
+
+
+def _reason(e: BaseException | None) -> str:
+    if e is None:
+        return "timeout"
+    return ", ".join(dict.fromkeys(type(x).__name__ for x in _leaf_errors(e)))
+
+
+def _log_error(where: str, e: BaseException) -> None:
+    import sys
+    for x in _leaf_errors(e):
+        print(f"[kite-mcp] {where}: {type(x).__name__}: {str(x)[:500]}", file=sys.stderr, flush=True)
+
 def _attr(obj: Any, *names: str) -> Any:
     """SDK v2 uses snake_case attributes, v1 camelCase; accept both."""
     for n in names:
@@ -174,6 +196,7 @@ class KiteMcpBroker:
             asyncio.run(self._runner())
         except BaseException as e:  # noqa: BLE001 - surfaced through _start_error
             self._start_error = e
+            _log_error("session", e)
         finally:
             self._session = None
             self._loop = None
@@ -212,7 +235,7 @@ class KiteMcpBroker:
         if not self._ready.wait(START_TIMEOUT) or self._session is None:
             self._shutdown()
             raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
-                              reason=type(self._start_error).__name__ if self._start_error else "timeout")
+                              reason=_reason(self._start_error))
 
     def _shutdown(self) -> None:
         with self._lock:
@@ -240,10 +263,11 @@ class KiteMcpBroker:
             return fut.result(timeout=CALL_TIMEOUT)
         except Exception as e:  # network drop, timeout, protocol error
             fut.cancel()
+            _log_error(f"tool {name}", e)
             self._shutdown()
             self._status = "NOT_CONNECTED" if self._status != "PENDING_LOGIN" else self._status
             raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
-                              reason=type(e).__name__)
+                              reason=_reason(e))
 
     def _info(self, status: str, message: str, **extra: Any) -> dict:
         d = {"sampleData": False, "brokerMode": self.mode, "status": status, "message": message}

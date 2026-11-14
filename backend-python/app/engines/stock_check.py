@@ -11,8 +11,10 @@ from .stock_answers import build_answers, last_price, market_cap_now, price_asof
 from .stock_facts import BAND_TITLE, build_facts
 
 
-def stock_subtitle(sector: str, band: str) -> str:
-    return f"{sector} · {BAND_TITLE[band]}"
+def stock_subtitle(sector: str | None, band: str | None) -> str:
+    """Live search results carry no sector or size yet, so either part may be missing."""
+    parts = [p for p in (sector, BAND_TITLE.get(band) if band else None) if p]
+    return " · ".join(parts) if parts else "Listed company"
 
 
 def build_stock_check(si: StockInputs, sample: bool) -> dict:
