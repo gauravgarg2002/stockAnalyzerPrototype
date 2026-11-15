@@ -36,10 +36,16 @@ if [ ! -x "$VENV/bin/python" ]; then
   "$PY" -m venv "$VENV"
 fi
 
-if ! "$VENV/bin/python" -c 'import uvicorn, fastapi, pydantic, yaml, requests, pypdf, pdfplumber' 2>/dev/null; then
+# The MCP SDK is pinned below 2.x (the 2.x handshake failed against Kite's hosted server),
+# so a venv that already holds mcp 2.x is reinstalled too.
+if ! "$VENV/bin/python" -c '
+import importlib.metadata as m
+import uvicorn, fastapi, pydantic, yaml, requests, pypdf, pdfplumber, mcp
+assert m.version("mcp").startswith("1."), "mcp 1.x needed"
+' 2>/dev/null; then
   echo "  installing Python packages"
   "$VENV/bin/pip" install -q --upgrade pip
-  "$VENV/bin/pip" install -q -r "$PY_DIR/requirements.txt"
+  "$VENV/bin/pip" install -q -r "$PY_DIR/requirements.txt" --upgrade
   "$VENV/bin/pip" install -q -r "$PY_DIR/requirements-optional.txt" \
     || echo "  optional packages not installed (statement parsing uses the built-in fallback)"
 fi

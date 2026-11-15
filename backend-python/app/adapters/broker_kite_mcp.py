@@ -57,7 +57,9 @@ def _reason(e: BaseException | None) -> str:
 def _log_error(where: str, e: BaseException) -> None:
     import sys
     for x in _leaf_errors(e):
-        print(f"[kite-mcp] {where}: {type(x).__name__}: {str(x)[:500]}", file=sys.stderr, flush=True)
+        extra = getattr(x, "error", None) or getattr(x, "status_code", None) or getattr(x, "response", None)
+        print(f"[kite-mcp] {where}: {type(x).__name__}: {str(x)[:500]} | {str(extra)[:500] if extra else ''}",
+              file=sys.stderr, flush=True)
 
 def _attr(obj: Any, *names: str) -> Any:
     """SDK v2 uses snake_case attributes, v1 camelCase; accept both."""
