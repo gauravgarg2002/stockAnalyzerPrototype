@@ -8,11 +8,16 @@ import re
 
 from ..errors import ApiError
 
-MCP_ALLOWED_TOOLS: frozenset[str] = frozenset({
-    "login", "get_profile", "get_margins", "get_holdings", "get_mf_holdings", "get_positions",
-    "get_quotes", "get_ltp", "get_ohlc", "get_historical_data", "search_instruments",
-    "get_orders", "get_trades", "get_gtts",
-})
+# The hosted Kite MCP server exposes a few broad tools that take a `mode`; only these read-only modes may run.
+MCP_ALLOWED_CALLS: dict[str, frozenset[str]] = {
+    "portfolio": frozenset({"profile", "margins", "holdings", "positions"}),
+    "market": frozenset({"quote", "ltp", "ohlc", "historical", "search"}),
+    "mutual_funds": frozenset({"holdings"}),
+    "orders": frozenset({"list", "history", "trades", "all_trades"}),
+    "gtt": frozenset({"list"}),
+    "session": frozenset({"status"}),
+}
+MCP_ALLOWED_TOOLS: frozenset[str] = frozenset(MCP_ALLOWED_CALLS)
 
 # (method, anchored path regex). Paths are matched without query string and without a leading API host.
 KITE_CONNECT_ALLOWED: tuple[tuple[str, re.Pattern], ...] = tuple(
@@ -44,9 +49,12 @@ def _forbidden(what: str, details: dict) -> ApiError:
     )
 
 
-def assert_allowed_mcp_tool(name: object) -> str:
-    if not isinstance(name, str) or name not in MCP_ALLOWED_TOOLS:
-        raise _forbidden("mcp_tool", {"tool": str(name)})
+def assert_allowed_mcp_tool(name: object, arguments: object = None) -> str:
+    """Allow only (tool, mode) pairs on the read-only list. Raises BEFORE any network I/O."""
+    modes = MCP_ALLOWED_CALLS.get(name) if isinstance(name, str) else None
+    mode = arguments.get("mode") if isinstance(arguments, dict) else None
+    if modes is None or not isinstance(mode, str) or mode not in modes:
+        raise _forbidden("mcp_tool", {"tool": str(name), "mode": str(mode)})
     return name
 
 

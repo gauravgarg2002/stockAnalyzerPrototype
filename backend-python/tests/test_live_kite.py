@@ -243,31 +243,27 @@ def loopback_mcp(monkeypatch):
     srv = MCPServer("fake-kite")
 
     @srv.tool()
-    def get_profile() -> str:
-        state["calls"].append("get_profile")
+    def portfolio(mode: str, type: str = "full", limit: int = 100) -> str:
+        state["calls"].append(f"portfolio:{mode}")
         if not state["logged_in"]:
             raise ValueError("Please login first")
-        return json.dumps({"user_id": "AB1234"})
+        if mode == "profile":
+            return json.dumps({"data": {"user_id": "AB1234"}})
+        if mode == "holdings":
+            return json.dumps({"data": HOLDINGS["data"], "pagination": {"total": 3}})
+        if mode == "margins":
+            return json.dumps(MARGINS["data"])
+        return "[]"
 
     @srv.tool()
-    def get_holdings() -> str:
-        state["calls"].append("get_holdings")
-        return json.dumps(HOLDINGS["data"])
-
-    @srv.tool()
-    def get_mf_holdings() -> str:
-        state["calls"].append("get_mf_holdings")
+    def mutual_funds(mode: str) -> str:
+        state["calls"].append(f"mutual_funds:{mode}")
         return json.dumps(MF["data"])
 
     @srv.tool()
-    def get_margins() -> str:
-        state["calls"].append("get_margins")
-        return json.dumps(MARGINS["data"])
-
-    @srv.tool()
-    def place_order() -> str:
-        state["calls"].append("place_order")
-        return "ORDER PLACED"
+    def orders(mode: str) -> str:
+        state["calls"].append(f"orders:{mode}")
+        return "ORDER PLACED" if mode == "place" else "[]"
 
     port = _free_port()
     try:
@@ -330,9 +326,9 @@ def test_mcp_session_flow_on_loopback(loopback_mcp):
         assert [s["symbol"] for s in p.stocks] == ["TCS", "NEWBUY", "ITC"] and p.idleCashInr == 42350.75
         assert p.funds[0]["schemeCode"] == "900301" and p.unmatched[0]["isin"] == "INF000X01ABC"
         with pytest.raises(ApiError) as fe:
-            b._call_tool("place_order", {})
+            b._call_tool("orders", {"mode": "place"})
         assert fe.value.code == "BROKER_FORBIDDEN_CALL"
-        assert "place_order" not in state["calls"]  # never reached the server
+        assert "orders:place" not in state["calls"]  # never reached the server
         with pytest.raises(ApiError):
             b.login_complete("again", "s1")  # nothing is waiting any more
     finally:

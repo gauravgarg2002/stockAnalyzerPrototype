@@ -3,23 +3,28 @@ import pytest
 from app.adapters import broker_guard as g
 from app.errors import ApiError
 
-MCP_OK = ["login", "get_profile", "get_margins", "get_holdings", "get_mf_holdings", "get_positions",
-          "get_quotes", "get_ltp", "get_ohlc", "get_historical_data", "search_instruments",
-          "get_orders", "get_trades", "get_gtts"]
+OK_CALLS = [("portfolio", m) for m in ("profile", "margins", "holdings", "positions")] + [
+    ("market", m) for m in ("quote", "ltp", "ohlc", "historical", "search")] + [
+    ("mutual_funds", "holdings"), ("gtt", "list"), ("session", "status")] + [
+    ("orders", m) for m in ("list", "history", "trades", "all_trades")]
 
 
-def test_mcp_allow_list_is_exact():
-    assert sorted(g.MCP_ALLOWED_TOOLS) == sorted(MCP_OK)
-    for t in MCP_OK:
-        assert g.assert_allowed_mcp_tool(t) == t
+@pytest.mark.parametrize("tool,mode", OK_CALLS)
+def test_mcp_read_modes_allowed(tool, mode):
+    assert g.assert_allowed_mcp_tool(tool, {"mode": mode}) == tool
 
 
-@pytest.mark.parametrize("tool", ["place_order", "modify_order", "cancel_order", "place_gtt_order",
-                                  "modify_gtt_order", "delete_gtt_order", "", "GET_HOLDINGS", "get_holdings ",
-                                  "get_holdings;place_order", None, 5])
-def test_mcp_forbidden(tool):
+@pytest.mark.parametrize("tool,args", [
+    ("orders", {"mode": "place"}), ("orders", {"mode": "modify"}), ("orders", {"mode": "cancel"}),
+    ("orders", {"mode": "permissions"}), ("orders", {"mode": "approval_status"}),
+    ("gtt", {"mode": "place"}), ("gtt", {"mode": "modify"}), ("gtt", {"mode": "delete"}),
+    ("alerts", {"mode": "get"}), ("alerts", {"mode": "create"}), ("session", {"mode": "logout"}),
+    ("market", {"mode": "option_chain"}), ("portfolio", {}), ("portfolio", None), ("portfolio", {"mode": 5}),
+    ("portfolio", {"mode": "Holdings"}), ("help", {"key": "/"}), ("place_order", {"mode": "holdings"}),
+    ("", {"mode": "list"}), (None, {"mode": "list"}), (5, {"mode": "list"}), ("orders ", {"mode": "list"})])
+def test_mcp_forbidden(tool, args):
     with pytest.raises(ApiError) as e:
-        g.assert_allowed_mcp_tool(tool)
+        g.assert_allowed_mcp_tool(tool, args)
     assert e.value.code == "BROKER_FORBIDDEN_CALL" and e.value.status == 403
 
 
@@ -75,8 +80,8 @@ def test_mcp_adapter_guard_before_io():
     from app.adapters.broker_kite_mcp import KiteMcpBroker
 
     b = KiteMcpBroker({"kite": {"mcpUrl": "https://mcp.kite.trade/mcp", "loginTimeoutSeconds": 5}})
-    for tool in ("place_order", "cancel_order", "modify_gtt_order"):
+    for tool, mode in (("orders", "place"), ("orders", "cancel"), ("gtt", "modify"), ("place_order", "x")):
         with pytest.raises(ApiError) as e:
-            b._call_tool(tool, {})
+            b._call_tool(tool, {"mode": mode})
         assert e.value.code == "BROKER_FORBIDDEN_CALL"
     assert b._thread is None  # no background thread / session was started

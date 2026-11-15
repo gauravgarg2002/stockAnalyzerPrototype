@@ -299,15 +299,6 @@ class KiteMcpBroker:
                     self._tool_schemas = {}
                 import sys
                 print(f"[kite-mcp] tools: {sorted(self._tool_schemas)}", file=sys.stderr, flush=True)
-<<<<<<< HEAD
-=======
-                try:
-                    for t in tools.tools:
-                        print("[kite-mcp] schema " + json.dumps({"name": t.name, "description": (t.description or "")[:600],
-                              "input": self._tool_schemas.get(t.name)}, default=str)[:3000], file=sys.stderr, flush=True)
-                except Exception:  # noqa: BLE001 - diagnostics only
-                    pass
->>>>>>> 86b31d9adf99f1ef68acf39b75d35aba4cd84124
                 self._session = session
                 self._ready.set()
                 await self._stop.wait()
@@ -350,7 +341,7 @@ class KiteMcpBroker:
 
     # -- guarded tool call
     def _call_tool(self, name: str, arguments: dict | None = None) -> Any:
-        broker_guard.assert_allowed_mcp_tool(name)  # raises BEFORE any I/O or thread start
+        broker_guard.assert_allowed_mcp_tool(name, arguments)  # raises BEFORE any I/O or thread start
         self._ensure_session()
         loop, session = self._loop, self._session
         if loop is None or session is None:
@@ -403,15 +394,11 @@ class KiteMcpBroker:
                     return self._info("FAILED", "Login timed out. Please try connecting again.", accountLabel=None)
                 return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
             return self._info("NOT_CONNECTED", NOT_CONNECTED_MSG, accountLabel=None)
-        probe = next((t for t in ("get_profile", "get_margins", "get_holdings") if t in self._tool_schemas), None)
-        if probe is None:  # the server lists none of the usual read tools: the session itself is the proof
+        if "portfolio" not in self._tool_schemas:  # unexpected server: the session itself is the proof
             self._status, self._label = "CONNECTED", "Your Zerodha account"
             return self._info("CONNECTED", "Connected.", accountLabel=self._label)
-        res = self._call_tool(probe, {})
+        res = self._call_tool("portfolio", {"mode": "profile"})
         text = result_text(res)
-        if probe != "get_profile" and not is_error(res):
-            self._status, self._label = "CONNECTED", "Your Zerodha account"
-            return self._info("CONNECTED", "Connected.", accountLabel=self._label)
         if is_error(res) or (looks_like_auth_error(text) and profile_label(parse_tool_payload(res)) is None):
             self._status = "PENDING_LOGIN"
             return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
@@ -461,55 +448,73 @@ class KiteMcpBroker:
             raise unavailable("Zerodha Kite returned an error.", tool=name)
         return parse_tool_payload(res)
 
+    def _paged_rows(self, tool: str, base: dict, *keys: str, page: int = 500, max_pages: int = 10) -> list[dict]:
+        rows: list[dict] = []
+        for i in range(max_pages):
+            got = unwrap_rows(self._data_call(tool, {**base, "from": i * page, "limit": page}), *keys)
+            rows.extend(got)
+            if len(got) < page:
+                break
+        return rows
+
     def portfolio(self) -> BrokerPortfolio:
         self._require_connected()
-        holdings = self._data_call("get_holdings")
-        stocks = map_stock_holdings(unwrap_rows(holdings, "holdings"))
+        holdings = self._paged_rows("portfolio", {"mode": "holdings", "type": "full"}, "holdings")
+        stocks = map_stock_holdings(holdings)
         try:
-            funds, unmatched = map_mf_holdings(unwrap_rows(self._data_call("get_mf_holdings"), "holdings", "mf_holdings"),
-                                               self._fund_meta)
+            funds, unmatched = map_mf_holdings(
+                unwrap_rows(self._data_call("mutual_funds", {"mode": "holdings"}), "holdings", "mf_holdings"),
+                self._fund_meta)
         except ApiError as e:
             if e.code == "BROKER_NOT_CONNECTED":
                 raise
             funds, unmatched = [], []
         cash = None
         try:
-            cash = margins_cash(self._data_call("get_margins"))
+            cash = margins_cash(self._data_call("portfolio", {"mode": "margins"}))
         except ApiError as e:
             if e.code == "BROKER_NOT_CONNECTED":
                 raise
         return BrokerPortfolio(source=SOURCE, asOf=today_ist().isoformat(), accountLabel=self._label,
                                stocks=stocks, funds=funds, idleCashInr=cash, unmatched=unmatched, sampleData=False)
 
+    def _find_token(self, query: str, symbol: str) -> int | None:
+        args = {"mode": "search", "query": query}
+        props = ((self._tool_schemas.get("market") or {}).get("properties") or {})
+        if "verbosity" in props:
+            args["verbosity"] = "compact"
+        return find_nse_token(parse_tool_payload(self._call_tool("market", args)), symbol)
+
+    def _candles(self, token: int, start: date, end: date) -> list[PricePoint]:
+        """Daily candles in chunks (Kite limits one request to about 2000 days)."""
+        pts: dict[date, PricePoint] = {}
+        cur = start
+        while cur <= end:
+            stop = min(end, date.fromordinal(cur.toordinal() + 1800))
+            payload = parse_tool_payload(self._call_tool("market", {
+                "mode": "historical", "instrument_token": token, "interval": "day",
+                "from_date": cur.isoformat(), "to_date": stop.isoformat()}))
+            for p in parse_candles(payload if isinstance(payload, dict) else {"candles": payload}):
+                pts[p[0]] = p
+            cur = date.fromordinal(stop.toordinal() + 1)
+        return [pts[k] for k in sorted(pts)]
+
     def historical(self, symbol: str, start: date, end: date) -> list[PricePoint]:
         if self._status != "CONNECTED" or self._session is None:
             return []
-        try:  # UNVERIFIED AGAINST LIVE SERVICE (argument names come from the advertised schema)
-            q = pick_args(self._tool_schemas.get("search_instruments"), {"query": symbol})
-            token = find_nse_token(parse_tool_payload(self._call_tool("search_instruments", q)), symbol)
-            if token is None:
-                return []
-            a = pick_args(self._tool_schemas.get("get_historical_data"),
-                          {"token": token, "from": start.isoformat(), "to": end.isoformat(), "interval": "day"})
-            payload = parse_tool_payload(self._call_tool("get_historical_data", a))
-            pts = parse_candles(payload if isinstance(payload, dict) else {"candles": payload})
-            return pts
+        try:  # UNVERIFIED AGAINST LIVE SERVICE: the search result shape is parsed tolerantly
+            token = self._find_token(symbol, symbol)
+            return self._candles(token, start, end) if token is not None else []
         except ApiError:
             return []
 
-
     # -- extras (read-only): live quote, today's activity, index history
-    def _arg_name(self, tool: str, needle: str, default: str) -> str:
-        props = ((self._tool_schemas.get(tool) or {}).get("properties") or {}).keys()
-        return next((p for p in props if needle in p.lower()), default)
-
     def quote(self, symbol: str) -> dict:
         sym = symbol.strip().upper()
         if self._status != "CONNECTED" or self._session is None:
             return unavailable_quote(sym, "Connect your Zerodha account to see the live price.", False)
-        try:  # UNVERIFIED AGAINST LIVE SERVICE: argument name taken from the advertised schema
-            arg = self._arg_name("get_quotes", "instrument", "instruments")
-            row = pick_quote_row(self._data_call("get_quotes", {arg: [f"NSE:{sym}"]}), sym)
+        try:  # UNVERIFIED AGAINST LIVE SERVICE
+            row = pick_quote_row(self._data_call("market", {"mode": "quote", "instruments": [f"NSE:{sym}"]}), sym)
         except ApiError as e:
             if e.code == "BROKER_NOT_CONNECTED":
                 return unavailable_quote(sym, "Your Zerodha session has ended. Please connect again.", False)
@@ -521,9 +526,9 @@ class KiteMcpBroker:
     def activity(self) -> dict:
         connected = self._status == "CONNECTED" and self._session is not None
 
-        def part(tool: str, mapper):
+        def part(tool: str, args: dict, mapper):
             try:
-                return mapper(self._data_call(tool))
+                return mapper(self._data_call(tool, args))
             except ApiError:
                 return None
 
@@ -531,8 +536,10 @@ class KiteMcpBroker:
             return build_activity(sample=False, connected=False, source=SOURCE, as_of=today_ist().isoformat(),
                                   positions=None, orders=None, trades=None, gtts=None)
         return build_activity(sample=False, connected=True, source=SOURCE, as_of=today_ist().isoformat(),
-                              positions=part("get_positions", map_positions), orders=part("get_orders", summarize_orders),
-                              trades=part("get_trades", count_trades), gtts=part("get_gtts", map_gtts))
+                              positions=part("portfolio", {"mode": "positions"}, map_positions),
+                              orders=part("orders", {"mode": "list"}, summarize_orders),
+                              trades=part("orders", {"mode": "all_trades"}, count_trades),
+                              gtts=part("gtt", {"mode": "list"}, map_gtts))
 
     def index_history(self, index_id: str, start: date, end: date) -> list[PricePoint]:
         if index_id != "NIFTY50" or self._status != "CONNECTED" or self._session is None:
@@ -540,18 +547,15 @@ class KiteMcpBroker:
         try:  # UNVERIFIED AGAINST LIVE SERVICE
             token = NIFTY50_TOKEN
             try:
-                q = pick_args(self._tool_schemas.get("search_instruments"), {"query": "NIFTY 50"})
-                rows = unwrap_rows(parse_tool_payload(self._call_tool("search_instruments", q)), "instruments", "results")
+                args = {"mode": "search", "query": "NIFTY 50"}
+                rows = unwrap_rows(parse_tool_payload(self._call_tool("market", args)), "instruments", "results")
                 for r in rows:
                     if str(r.get("tradingsymbol") or "").upper() == "NIFTY 50" and r.get("instrument_token"):
                         token = int(r["instrument_token"])
                         break
             except (ApiError, TypeError, ValueError):
                 pass
-            a = pick_args(self._tool_schemas.get("get_historical_data"),
-                          {"token": token, "from": start.isoformat(), "to": end.isoformat(), "interval": "day"})
-            payload = parse_tool_payload(self._call_tool("get_historical_data", a))
-            return parse_candles(payload if isinstance(payload, dict) else {"candles": payload})
+            return self._candles(token, start, end)
         except ApiError:
             return []
 
