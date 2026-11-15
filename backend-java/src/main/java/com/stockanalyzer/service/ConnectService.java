@@ -82,13 +82,13 @@ public class ConnectService {
      * Kite Connect redirect. Returns the frontend URL to send the browser to: /connect?kite=connected, or
      * ?kite=failed when the login did not succeed or the token exchange failed.
      */
-    public String completeLogin(String requestToken, String status) {
+    public String completeLogin(String requestToken, String state, String status) {
         String base = props.services().frontendBaseUrl();
         if (base.endsWith("/")) base = base.substring(0, base.length() - 1);
         boolean ok = false;
         if ("success".equalsIgnoreCase(status) && requestToken != null && !requestToken.isBlank()) {
             try {
-                BrokerStatus s = python.brokerLoginComplete(requestToken);
+                BrokerStatus s = python.brokerLoginComplete(requestToken, state);
                 ok = "CONNECTED".equals(s.status());
             } catch (ApiException e) {
                 LOG.warn("Kite login could not be completed: {} {}", e.code(), e.getMessage());

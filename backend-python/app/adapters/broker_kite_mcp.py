@@ -1,5 +1,9 @@
 """Broker adapter: MCP client to Zerodha's hosted Kite MCP server (streamable HTTP, read tools only).
 
+Zerodha's hosted server needs no API key. It is an OAuth 2.1 protected resource: the MCP SDK registers a public
+client, sends the user to the authorisation page (loginUrl), and exchanges the code we receive on our callback
+(login_complete) for a bearer token that lives in memory only. Tokens cannot be refreshed, so expect a daily login.
+
 The MCP session must stay open across requests, so it lives in a dedicated background thread with its own
 asyncio/anyio event loop. Every tool call passes through broker_guard.assert_allowed_mcp_tool BEFORE any
 network I/O. Importing this module performs no network I/O (the `mcp` SDK is imported lazily).
@@ -60,6 +64,27 @@ def _log_error(where: str, e: BaseException) -> None:
         extra = getattr(x, "error", None) or getattr(x, "status_code", None) or getattr(x, "response", None)
         print(f"[kite-mcp] {where}: {type(x).__name__}: {str(x)[:500]} | {str(extra)[:500] if extra else ''}",
               file=sys.stderr, flush=True)
+
+class _with_client:
+    """Async context manager that closes the httpx client after the MCP transport that uses it."""
+
+    def __init__(self, client: Any, transport: Any) -> None:
+        self._client, self._transport = client, transport
+
+    async def __aenter__(self) -> Any:
+        await self._client.__aenter__()
+        try:
+            return await self._transport.__aenter__()
+        except BaseException:
+            await self._client.__aexit__(None, None, None)
+            raise
+
+    async def __aexit__(self, *exc: Any) -> Any:
+        try:
+            return await self._transport.__aexit__(*exc)
+        finally:
+            await self._client.__aexit__(*exc)
+
 
 def _attr(obj: Any, *names: str) -> Any:
     """SDK v2 uses snake_case attributes, v1 camelCase; accept both."""
@@ -170,6 +195,26 @@ def find_nse_token(payload: Any, symbol: str) -> int | None:
     return None
 
 
+class _MemoryStorage:
+    """OAuth token + registered-client store. In memory only: nothing about the login is written to disk."""
+
+    def __init__(self) -> None:
+        self.tokens: Any = None
+        self.client_info: Any = None
+
+    async def get_tokens(self) -> Any:
+        return self.tokens
+
+    async def set_tokens(self, tokens: Any) -> None:
+        self.tokens = tokens
+
+    async def get_client_info(self) -> Any:
+        return self.client_info
+
+    async def set_client_info(self, client_info: Any) -> None:
+        self.client_info = client_info
+
+
 # ---------- adapter ----------
 
 class KiteMcpBroker:
@@ -191,6 +236,30 @@ class KiteMcpBroker:
         self._label: str | None = None
         self._login_started: float | None = None
         self._tool_schemas: dict[str, dict] = {}
+        self._redirect_uri = str(k.get("redirectUrl") or "http://localhost:8080/api/connect/kite/callback")
+        self._storage = _MemoryStorage()
+        self._auth_url: str | None = None
+        self._auth_event = threading.Event()
+        self._code_future: Any = None
+
+    # -- OAuth hooks (run on the session thread's event loop)
+    def _build_auth(self) -> Any:
+        from mcp.client.auth import OAuthClientProvider
+        from mcp.shared.auth import OAuthClientMetadata
+
+        meta = OAuthClientMetadata(client_name="Stock Analyzer (local prototype)", redirect_uris=[self._redirect_uri],
+                                   grant_types=["authorization_code"], response_types=["code"],
+                                   token_endpoint_auth_method="none")
+        return OAuthClientProvider(server_url=self._url, client_metadata=meta, storage=self._storage,
+                                   redirect_handler=self._on_redirect, callback_handler=self._on_callback)
+
+    async def _on_redirect(self, url: str) -> None:
+        self._code_future = asyncio.get_running_loop().create_future()
+        self._auth_url = url
+        self._auth_event.set()
+
+    async def _on_callback(self) -> tuple[str, str | None]:
+        return await asyncio.wait_for(self._code_future, self._timeout_s)
 
     # -- background session
     def _thread_main(self) -> None:
@@ -207,14 +276,20 @@ class KiteMcpBroker:
     async def _runner(self) -> None:
         from mcp import ClientSession
 
-        try:
-            from mcp.client.streamable_http import streamable_http_client as open_stream
-        except ImportError:  # older SDKs
-            from mcp.client.streamable_http import streamablehttp_client as open_stream  # type: ignore
-
         self._loop = asyncio.get_running_loop()
         self._stop = asyncio.Event()
-        async with open_stream(self._url) as streams:
+        auth = self._build_auth()
+        try:
+            from mcp.client.streamable_http import streamable_http_client
+            from mcp.shared._httpx_utils import create_mcp_http_client
+        except ImportError:  # older SDKs: the transport takes the auth object directly
+            from mcp.client.streamable_http import streamablehttp_client
+
+            transport = streamablehttp_client(self._url, auth=auth)
+        else:
+            http_client = create_mcp_http_client(auth=auth)
+            transport = _with_client(http_client, streamable_http_client(self._url, http_client=http_client))
+        async with transport as streams:
             async with ClientSession(streams[0], streams[1]) as session:
                 await session.initialize()
                 try:
@@ -227,24 +302,32 @@ class KiteMcpBroker:
                 await self._stop.wait()
 
     def _ensure_session(self) -> None:
+        """Data calls never start a login: they need the session that login_start / login_complete opened."""
         with self._lock:
             if self._thread is not None and self._thread.is_alive() and self._session is not None:
                 return
+        raise ApiError("BROKER_NOT_CONNECTED", NOT_CONNECTED_MSG)
+
+    def _begin(self) -> None:
+        """Start the session thread and wait until it either connects or needs the user to authorise."""
+        with self._lock:
             self._ready.clear()
-            self._start_error = None
+            self._auth_event.clear()
+            self._auth_url, self._code_future, self._start_error = None, None, None
             self._thread = threading.Thread(target=self._thread_main, name="kite-mcp", daemon=True)
             self._thread.start()
-        if not self._ready.wait(START_TIMEOUT) or self._session is None:
-            self._shutdown()
-            raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
-                              reason=_reason(self._start_error))
+        end = time.monotonic() + START_TIMEOUT
+        while time.monotonic() < end and not (self._ready.is_set() or self._auth_event.is_set()):
+            time.sleep(0.05)
 
     def _shutdown(self) -> None:
         with self._lock:
-            loop, stop, th = self._loop, self._stop, self._thread
+            loop, stop, th, fut = self._loop, self._stop, self._thread, self._code_future
             if loop is not None and stop is not None:
                 try:
                     loop.call_soon_threadsafe(stop.set)
+                    if fut is not None:
+                        loop.call_soon_threadsafe(fut.cancel)
                 except RuntimeError:
                     pass
             if th is not None and th.is_alive() and th is not threading.current_thread():
@@ -252,6 +335,7 @@ class KiteMcpBroker:
             self._thread = None
             self._session = None
             self._loop = None
+            self._auth_url, self._code_future = None, None
 
     # -- guarded tool call
     def _call_tool(self, name: str, arguments: dict | None = None) -> Any:
@@ -267,7 +351,7 @@ class KiteMcpBroker:
             fut.cancel()
             _log_error(f"tool {name}", e)
             self._shutdown()
-            self._status = "NOT_CONNECTED" if self._status != "PENDING_LOGIN" else self._status
+            self._status = "NOT_CONNECTED"
             raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
                               reason=_reason(e))
 
@@ -278,40 +362,68 @@ class KiteMcpBroker:
 
     # -- login
     def login_start(self) -> dict:
-        res = self._call_tool("login", {})
-        text = result_text(res)
-        url = first_url(text)
-        if url is None and not is_error(res):
-            # already logged in on this MCP session? confirm with the profile
+        if self._session is not None and self._thread is not None and self._thread.is_alive():
             st = self.login_status()
             if st["status"] == "CONNECTED":
                 return self._info("CONNECTED", "Connected.", loginUrl=None)
-        if url is None:
-            raise unavailable("Zerodha Kite did not give a login link. Please try again.")
-        self._status = "PENDING_LOGIN"
-        self._login_started = time.monotonic()
-        return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", loginUrl=url)
+        self._shutdown()
+        self._begin()
+        if self._auth_url:
+            self._status = "PENDING_LOGIN"
+            self._login_started = time.monotonic()
+            return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", loginUrl=self._auth_url)
+        if self._session is not None:  # a token from an earlier login in this run was still valid
+            st = self.login_status()
+            return self._info(st["status"], st["message"], loginUrl=None)
+        err = self._start_error
+        self._shutdown()
+        self._status = "NOT_CONNECTED"
+        raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.", reason=_reason(err))
 
     def login_status(self) -> dict:
-        if self._thread is None or self._session is None:
+        alive = self._thread is not None and self._thread.is_alive()
+        if self._session is None:
+            if alive and self._auth_url:
+                if self._login_started is not None and time.monotonic() - self._login_started > self._timeout_s:
+                    self._shutdown()
+                    self._status = "FAILED"
+                    return self._info("FAILED", "Login timed out. Please try connecting again.", accountLabel=None)
+                return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
             return self._info("NOT_CONNECTED", NOT_CONNECTED_MSG, accountLabel=None)
         res = self._call_tool("get_profile", {})
         text = result_text(res)
         if is_error(res) or (looks_like_auth_error(text) and profile_label(parse_tool_payload(res)) is None):
-            if self._login_started is not None and time.monotonic() - self._login_started > self._timeout_s:
-                self._status = "FAILED"
-                return self._info("FAILED", "Login timed out. Please try connecting again.", accountLabel=None)
             self._status = "PENDING_LOGIN"
             return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
         self._status = "CONNECTED"
         self._label = profile_label(parse_tool_payload(res)) or "Your Zerodha account"
         return self._info("CONNECTED", "Connected.", accountLabel=self._label)
 
-    def login_complete(self, request_token: str) -> dict:
-        raise ApiError("BAD_REQUEST", "This connection mode does not use a request token.")
+    def login_complete(self, request_token: str, state: str | None = None) -> dict:
+        """Hand the OAuth authorisation code (our callback's `code` + `state`) to the waiting session."""
+        loop, fut = self._loop, self._code_future
+        if not request_token or loop is None or fut is None or fut.done():
+            raise ApiError("BAD_REQUEST", "No Kite login is waiting for a code. Start the connection again.")
+
+        def deliver() -> None:
+            if not fut.done():
+                fut.set_result((request_token, state))
+
+        loop.call_soon_threadsafe(deliver)
+        end = time.monotonic() + START_TIMEOUT
+        while time.monotonic() < end and self._session is None and self._thread is not None and self._thread.is_alive():
+            time.sleep(0.05)
+        if self._session is None:
+            err = self._start_error
+            self._shutdown()
+            self._status = "NOT_CONNECTED"
+            raise unavailable("Zerodha Kite did not accept the login. Please try connecting again.",
+                              reason=_reason(err))
+        return self.login_status()
 
     def logout(self) -> dict:
         self._shutdown()
+        self._storage = _MemoryStorage()
         self._status, self._label, self._login_started = "NOT_CONNECTED", None, None
         return self._info("NOT_CONNECTED", "Disconnected. Imported holdings are kept.", loginUrl=None)
 

@@ -157,8 +157,8 @@ public class PythonClient {
         return call(() -> restLong.get().uri("/internal/broker/login/status").retrieve().body(BrokerStatus.class));
     }
 
-    public BrokerStatus brokerLoginComplete(String requestToken) {
-        return post(restLong, "/internal/broker/login/complete", new LoginCompleteRequest(requestToken), BrokerStatus.class);
+    public BrokerStatus brokerLoginComplete(String requestToken, String state) {
+        return post(restLong, "/internal/broker/login/complete", new LoginCompleteRequest(requestToken, state), BrokerStatus.class);
     }
 
     public BrokerStatus brokerLogout() {

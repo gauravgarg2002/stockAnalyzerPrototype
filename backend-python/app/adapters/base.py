@@ -153,7 +153,7 @@ class BrokerAdapter(Protocol):
     def login_status(self) -> dict:
         """{sampleData, brokerMode, status, accountLabel, message}."""
 
-    def login_complete(self, request_token: str) -> dict:
+    def login_complete(self, request_token: str, state: str | None = None) -> dict:
         """kite_connect only; same shape as status. Other modes raise BAD_REQUEST."""
 
     def logout(self) -> dict:

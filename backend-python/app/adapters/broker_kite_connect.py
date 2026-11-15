@@ -225,7 +225,7 @@ class KiteConnectBroker:
             # transient failure: keep the session, report it as connected but unverified
         return self._info("CONNECTED", "Connected.", accountLabel=self._label())
 
-    def login_complete(self, request_token: str) -> dict:
+    def login_complete(self, request_token: str, state: str | None = None) -> dict:
         if not request_token or not self._api_key or not self._api_secret:
             raise ApiError("BAD_REQUEST", "A request token and the Kite API key and secret are required.")
         form = {"api_key": self._api_key, "request_token": request_token,

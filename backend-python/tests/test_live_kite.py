@@ -6,6 +6,10 @@ import threading
 import time
 from datetime import date
 
+try:
+    import httpx
+except ImportError:  # SDK 2.x ships httpx2
+    import httpx2 as httpx
 import pytest
 
 from app.adapters import broker_kite_connect as kc
@@ -226,7 +230,10 @@ def _free_port():
 @pytest.fixture()
 def loopback_mcp(monkeypatch):
     import uvicorn
-    from mcp.server.mcpserver import MCPServer
+    try:
+        from mcp.server.mcpserver import MCPServer
+    except ImportError:  # SDK 1.x
+        from mcp.server.fastmcp import FastMCP as MCPServer
 
     monkeypatch.setenv("NO_PROXY", "127.0.0.1,localhost")
     monkeypatch.setenv("no_proxy", "127.0.0.1,localhost")
@@ -234,11 +241,6 @@ def loopback_mcp(monkeypatch):
         monkeypatch.delenv(k, raising=False)
     state = {"logged_in": False, "calls": []}
     srv = MCPServer("fake-kite")
-
-    @srv.tool()
-    def login() -> str:
-        state["calls"].append("login")
-        return "Please open https://kite.zerodha.com/connect/login?api_key=abc&v=3 to log in."
 
     @srv.tool()
     def get_profile() -> str:
@@ -268,7 +270,10 @@ def loopback_mcp(monkeypatch):
         return "ORDER PLACED"
 
     port = _free_port()
-    app = srv.streamable_http_app(host="127.0.0.1")
+    try:
+        app = srv.streamable_http_app(host="127.0.0.1")
+    except TypeError:  # SDK 1.x takes the host in the constructor
+        app = srv.streamable_http_app()
     server = uvicorn.Server(uvicorn.Config(app, host="127.0.0.1", port=port, log_level="error"))
     th = threading.Thread(target=server.run, daemon=True)
     th.start()
@@ -282,19 +287,44 @@ def loopback_mcp(monkeypatch):
     th.join(timeout=5)
 
 
+class _FakeOAuth(httpx.Auth):
+    """Stands in for the SDK's OAuth provider: asks for the redirect once, then waits for the code."""
+
+    def __init__(self, redirect, callback):
+        self.redirect, self.callback, self.done, self.got = redirect, callback, False, None
+
+    async def async_auth_flow(self, request):
+        if not self.done:
+            await self.redirect("https://mcp.example/authorize?client_id=c1&state=s1")
+            self.got = await self.callback()
+            self.done = True
+        yield request
+
+
+def test_oauth_provider_builds_without_network():
+    b = km.KiteMcpBroker({"kite": {"mcpUrl": "https://mcp.example/mcp"}})
+    assert b._build_auth() is not None
+
+
 def test_mcp_session_flow_on_loopback(loopback_mcp):
     url, state = loopback_mcp
     b = km.KiteMcpBroker({"kite": {"mcpUrl": url, "loginTimeoutSeconds": 300}}, fund_meta=Meta())
+    fake = _FakeOAuth(b._on_redirect, b._on_callback)
+    b._build_auth = lambda: fake
     try:
         assert b.login_status()["status"] == "NOT_CONNECTED"
         with pytest.raises(ApiError) as e:
             b.portfolio()
         assert e.value.code == "BROKER_NOT_CONNECTED"
+        with pytest.raises(ApiError) as nl:
+            b.login_complete("abc", "s1")
+        assert nl.value.code == "BAD_REQUEST"
         st = b.login_start()
-        assert st["status"] == "PENDING_LOGIN" and st["loginUrl"].startswith("https://kite.zerodha.com/connect/login")
-        assert b.login_status()["status"] == "PENDING_LOGIN"  # session stays open across requests
+        assert st["status"] == "PENDING_LOGIN" and st["loginUrl"].startswith("https://mcp.example/authorize")
+        assert b.login_status()["status"] == "PENDING_LOGIN"  # session thread stays alive while we wait
         state["logged_in"] = True
-        s2 = b.login_status()
+        s2 = b.login_complete("abc", "s1")
+        assert fake.got == ("abc", "s1")
         assert s2["status"] == "CONNECTED" and s2["accountLabel"] == "Your Zerodha account (AB1234)"
         p = b.portfolio()
         assert [s["symbol"] for s in p.stocks] == ["TCS", "NEWBUY", "ITC"] and p.idleCashInr == 42350.75
@@ -304,7 +334,7 @@ def test_mcp_session_flow_on_loopback(loopback_mcp):
         assert fe.value.code == "BROKER_FORBIDDEN_CALL"
         assert "place_order" not in state["calls"]  # never reached the server
         with pytest.raises(ApiError):
-            b.login_complete("x")
+            b.login_complete("again", "s1")  # nothing is waiting any more
     finally:
         out = b.logout()
     assert out["status"] == "NOT_CONNECTED" and b._thread is None

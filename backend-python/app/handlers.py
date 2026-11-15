@@ -264,7 +264,8 @@ def broker_login_complete(ctx: AppContext, p: dict) -> dict:
     token = body.get("requestToken") if isinstance(body, dict) else None
     if not isinstance(token, str) or not token:
         raise errors.bad_request("'requestToken' is required.", {"field": "requestToken"})
-    return ctx.broker.login_complete(token)
+    state = body.get("state") if isinstance(body, dict) else None
+    return ctx.broker.login_complete(token, state if isinstance(state, str) else None)
 
 
 def broker_logout(ctx: AppContext, p: dict) -> dict:

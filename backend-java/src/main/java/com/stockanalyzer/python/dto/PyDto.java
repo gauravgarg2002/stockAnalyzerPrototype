@@ -63,7 +63,7 @@ public final class PyDto {
     public record BrokerStatus(boolean sampleData, String brokerMode, String status, String loginUrl,
                                String accountLabel, String message) { }
 
-    public record LoginCompleteRequest(String requestToken) { }
+    public record LoginCompleteRequest(String requestToken, String state) { }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Unmatched(String name, String isin, String reason) { }

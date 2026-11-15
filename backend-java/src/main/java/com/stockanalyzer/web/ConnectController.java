@@ -34,12 +34,20 @@ public class ConnectController {
     @PostMapping("/connect/kite/disconnect")
     public StartResponse disconnect() { return service.disconnect(); }
 
-    /** Kite Connect redirect target (kite.redirectUrl). Answers 302 to the frontend connect page. */
+    /**
+     * Login redirect target (kite.redirectUrl). Kite Connect sends request_token + status=success; the hosted Kite
+     * MCP server's OAuth sends code + state (or error). Answers 302 to the frontend connect page.
+     */
     @GetMapping("/connect/kite/callback")
     public ResponseEntity<Void> callback(@RequestParam(name = "request_token", required = false) String requestToken,
+                                         @RequestParam(name = "code", required = false) String code,
+                                         @RequestParam(name = "state", required = false) String state,
+                                         @RequestParam(name = "error", required = false) String error,
                                          @RequestParam(name = "action", required = false) String action,
                                          @RequestParam(name = "status", required = false) String status) {
-        String target = service.completeLogin(requestToken, status);
+        String token = requestToken != null ? requestToken : code;
+        String outcome = error != null ? "error" : (status != null ? status : (code != null ? "success" : null));
+        String target = service.completeLogin(token, state, outcome);
         return ResponseEntity.status(HttpStatus.FOUND).location(URI.create(target)).build();
     }
 }

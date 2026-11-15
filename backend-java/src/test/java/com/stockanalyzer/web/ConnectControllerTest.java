@@ -1,6 +1,7 @@
 package com.stockanalyzer.web;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -51,7 +52,7 @@ class ConnectControllerTest {
 
     @Test
     void callbackRedirectsToTheFrontendConnectPage() throws Exception {
-        when(service.completeLogin("tok123", "success")).thenReturn("http://localhost:5173/connect?kite=connected");
+        when(service.completeLogin("tok123", null, "success")).thenReturn("http://localhost:5173/connect?kite=connected");
 
         mvc.perform(get("/api/connect/kite/callback")
                         .param("request_token", "tok123").param("action", "login").param("status", "success"))
@@ -60,8 +61,17 @@ class ConnectControllerTest {
     }
 
     @Test
+    void oauthCallbackPassesCodeAndStateThrough() throws Exception {
+        when(service.completeLogin("abc", "s1", "success")).thenReturn("http://localhost:5173/connect?kite=connected");
+
+        mvc.perform(get("/api/connect/kite/callback").param("code", "abc").param("state", "s1"))
+                .andExpect(status().isFound())
+                .andExpect(header().string("Location", "http://localhost:5173/connect?kite=connected"));
+    }
+
+    @Test
     void callbackWithoutParametersStillRedirects() throws Exception {
-        when(service.completeLogin(null, null)).thenReturn("http://localhost:5173/connect?kite=failed");
+        when(service.completeLogin(null, null, null)).thenReturn("http://localhost:5173/connect?kite=failed");
 
         mvc.perform(get("/api/connect/kite/callback"))
                 .andExpect(status().isFound())
@@ -92,10 +102,10 @@ class ConnectControllerTest {
     @Test
     void completeLoginReportsConnectedWhenPythonSaysConnected() {
         PythonClient python = mock(PythonClient.class);
-        when(python.brokerLoginComplete("tok")).thenReturn(
+        when(python.brokerLoginComplete("tok", null)).thenReturn(
                 new BrokerStatus(false, "kite_connect", "CONNECTED", null, "Your Zerodha account (AB1234)", "Connected."));
 
-        String url = serviceWith(python).completeLogin("tok", "success");
+        String url = serviceWith(python).completeLogin("tok", null, "success");
 
         assertEquals("http://localhost:5173/connect?kite=connected", url);
     }
@@ -104,19 +114,19 @@ class ConnectControllerTest {
     void completeLoginFailsWithoutCallingPythonWhenKiteSaidNoSuccess() {
         PythonClient python = mock(PythonClient.class);
 
-        String url = serviceWith(python).completeLogin("tok", "error");
+        String url = serviceWith(python).completeLogin("tok", null, "error");
 
         assertEquals("http://localhost:5173/connect?kite=failed", url);
-        verify(python, never()).brokerLoginComplete(anyString());
+        verify(python, never()).brokerLoginComplete(anyString(), any());
     }
 
     @Test
     void completeLoginFailsWhenPythonRaisesAnError() {
         PythonClient python = mock(PythonClient.class);
-        when(python.brokerLoginComplete("tok")).thenThrow(
+        when(python.brokerLoginComplete("tok", null)).thenThrow(
                 new ApiException(400, "BAD_REQUEST", "Only available with kite_connect.", null));
 
-        String url = serviceWith(python).completeLogin("tok", "success");
+        String url = serviceWith(python).completeLogin("tok", null, "success");
 
         assertEquals("http://localhost:5173/connect?kite=failed", url);
     }

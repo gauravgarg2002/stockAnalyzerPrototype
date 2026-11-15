@@ -26,7 +26,7 @@ class MockBroker:
             return {"sampleData": True, "brokerMode": "mock", "status": "CONNECTED", "accountLabel": LABEL, "message": "Connected."}
         return {"sampleData": True, "brokerMode": "mock", "status": "NOT_CONNECTED", "accountLabel": None, "message": "Not connected."}
 
-    def login_complete(self, request_token: str) -> dict:
+    def login_complete(self, request_token: str, state: str | None = None) -> dict:
         raise errors.bad_request("Login completion is only used with kite_connect mode.")
 
     def logout(self) -> dict:
