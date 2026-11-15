@@ -297,6 +297,8 @@ class KiteMcpBroker:
                     self._tool_schemas = {t.name: (_attr(t, "input_schema", "inputSchema") or {}) for t in tools.tools}
                 except Exception:
                     self._tool_schemas = {}
+                import sys
+                print(f"[kite-mcp] tools: {sorted(self._tool_schemas)}", file=sys.stderr, flush=True)
                 self._session = session
                 self._ready.set()
                 await self._stop.wait()
@@ -350,6 +352,8 @@ class KiteMcpBroker:
         except Exception as e:  # network drop, timeout, protocol error
             fut.cancel()
             _log_error(f"tool {name}", e)
+            if type(e).__name__ == "McpError":  # the server answered; the session itself is fine
+                raise unavailable("Zerodha Kite returned an error.", tool=name)
             self._shutdown()
             self._status = "NOT_CONNECTED"
             raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
@@ -390,8 +394,15 @@ class KiteMcpBroker:
                     return self._info("FAILED", "Login timed out. Please try connecting again.", accountLabel=None)
                 return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
             return self._info("NOT_CONNECTED", NOT_CONNECTED_MSG, accountLabel=None)
-        res = self._call_tool("get_profile", {})
+        probe = next((t for t in ("get_profile", "get_margins", "get_holdings") if t in self._tool_schemas), None)
+        if probe is None:  # the server lists none of the usual read tools: the session itself is the proof
+            self._status, self._label = "CONNECTED", "Your Zerodha account"
+            return self._info("CONNECTED", "Connected.", accountLabel=self._label)
+        res = self._call_tool(probe, {})
         text = result_text(res)
+        if probe != "get_profile" and not is_error(res):
+            self._status, self._label = "CONNECTED", "Your Zerodha account"
+            return self._info("CONNECTED", "Connected.", accountLabel=self._label)
         if is_error(res) or (looks_like_auth_error(text) and profile_label(parse_tool_payload(res)) is None):
             self._status = "PENDING_LOGIN"
             return self._info("PENDING_LOGIN", "Waiting for you to finish logging in to Kite.", accountLabel=None)
