@@ -299,6 +299,12 @@ class KiteMcpBroker:
                     self._tool_schemas = {}
                 import sys
                 print(f"[kite-mcp] tools: {sorted(self._tool_schemas)}", file=sys.stderr, flush=True)
+                try:
+                    for t in tools.tools:
+                        print("[kite-mcp] schema " + json.dumps({"name": t.name, "description": (t.description or "")[:600],
+                              "input": self._tool_schemas.get(t.name)}, default=str)[:3000], file=sys.stderr, flush=True)
+                except Exception:  # noqa: BLE001 - diagnostics only
+                    pass
                 self._session = session
                 self._ready.set()
                 await self._stop.wait()
