@@ -349,3 +349,27 @@ def test_mcp_unreachable_gives_upstream_error():
         b.login_start()
     assert e.value.code == "UPSTREAM_UNAVAILABLE"
     assert b.login_status()["status"] == "NOT_CONNECTED"
+
+
+def test_find_instrument_prefers_nse_then_series_then_bse():
+    kronox = {"data": [
+        {"exchange": "BSE", "instrument_token": 139311876, "name": "KRONOX LAB SCIENCES", "tradingsymbol": "KRONOX"},
+        {"exchange": "NSE", "instrument_token": 6150657, "name": "KRONOX LAB SCIENCES", "tradingsymbol": "KRONOX-BE"}]}
+    hit = km.find_instrument(kronox, "kronox")
+    assert (hit["exchange"], hit["tradingsymbol"], hit["token"]) == ("NSE", "KRONOX-BE", 6150657)
+    bse_only = {"data": [{"exchange": "BSE", "instrument_token": 511700 << 8 | 1, "tradingsymbol": "STANCAP"},
+                         {"exchange": "NSE", "instrument_token": 9, "tradingsymbol": "STANCAPX"}]}
+    hit = km.find_instrument(bse_only, "STANCAP")
+    assert hit["exchange"] == "BSE" and hit["token"] >> 8 == 511700
+    both = {"data": [{"exchange": "BSE", "instrument_token": 2, "tradingsymbol": "TCS"},
+                     {"exchange": "NSE", "instrument_token": 1, "tradingsymbol": "TCS"}]}
+    assert km.find_nse_token(both, "TCS") == 1
+    assert km.find_instrument({"data": []}, "TCS") is None and km.find_instrument(None, "TCS") is None
+
+
+def test_ltp_rows_shapes():
+    assert km.ltp_rows({"data": {"NSE:KRONOX-BE": {"last_price": 181.5}, "BSE:X": {"last_price": 0}}}) == {
+        "NSE:KRONOX-BE": 181.5}
+    assert km.ltp_rows({"data": [{"exchange": "BSE", "tradingsymbol": "STANCAP", "last_price": "0.52"}]}) == {
+        "BSE:STANCAP": 0.52}
+    assert km.ltp_rows("nope") == {} and km.ltp_rows({"data": {"A": {"last_price": None}}}) == {}

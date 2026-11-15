@@ -4,6 +4,8 @@ params = path params + query params (strings) for query routes; for json_body ro
 """
 from __future__ import annotations
 
+import dataclasses
+
 import base64
 import binascii
 from dataclasses import asdict
@@ -59,9 +61,23 @@ def search(ctx: AppContext, p: dict) -> dict:
 
 
 # ------------------------------------------------------------------ stock check
+def _fundamentals(ctx: AppContext, sym: str):
+    """Company data for a symbol. A BSE-only holding (e.g. STANCAP) is filed under its BSE code at the
+    data source, so when the symbol is unknown we retry with the code the broker gives for it."""
+    f = ctx.fundamentals.get(sym)
+    if f is None:
+        code_of = getattr(ctx.broker, "bse_code", None)
+        code = code_of(sym) if code_of else None
+        if code:
+            alt = ctx.fundamentals.get(code)
+            if alt is not None:
+                f = dataclasses.replace(alt, symbol=sym)
+    return f
+
+
 def _stock_inputs(ctx: AppContext, symbol: str) -> StockInputs:
     sym = symbol.strip().upper()
-    f = ctx.fundamentals.get(sym)
+    f = _fundamentals(ctx, sym)
     if f is None:
         raise errors.not_found(f"No stock found for symbol {sym}.", {"symbol": sym})
     sz = ctx.config["sizeBands"]
@@ -193,11 +209,18 @@ def bundle(ctx: AppContext, p: dict) -> dict:
     out_stocks, out_funds, nf = [], [], []
     for s in stocks_req:
         sym = str(s).upper()
-        f = ctx.fundamentals.get(sym)
+        f = _fundamentals(ctx, sym)
         if f is None:
             nf.append({"kind": "STOCK", "id": str(s)})
             continue
         out_stocks.append(stock_entry(f, ctx.prices.stock_series(sym), as_of, f.source))
+    unpriced = [e["symbol"] for e in out_stocks if not e.get("lastPrice")]
+    last_prices = getattr(ctx.broker, "last_prices", None)
+    if unpriced and last_prices:  # no history and no price at the data source: use the broker's last price
+        got = last_prices(unpriced)
+        for e in out_stocks:
+            if not e.get("lastPrice") and e["symbol"] in got:
+                e["lastPrice"], e["lastPriceDate"] = got[e["symbol"]], as_of.isoformat()
     checkable = ctx.checkable_symbols()
     universe = {u["symbol"]: u for u in _universe_for_lookup(ctx)}
     for code in funds_req:

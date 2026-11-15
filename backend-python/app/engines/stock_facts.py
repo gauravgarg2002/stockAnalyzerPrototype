@@ -6,13 +6,13 @@ from datetime import timedelta
 from typing import Optional
 
 from ..formatting import format_date, format_pct, format_unit
-from ..narrative.render import S, TemplateError
+from ..narrative.render import TemplateError
 from .figures import comparison as C
 from .figures import detail_table, make_figure
 from .inputs import StockInputs
 from .peers import peer_comparison, peer_median
 from .series import avg_daily_traded_value, fast_on_or_before, pct_change, years_before
-from .stock_answers import annual_rows, last_price, market_cap_now, price_asof
+from .stock_answers import S, _company, annual_rows, guarded, last_price, market_cap_now, price_asof
 
 TXT = "TEXT"
 BAND_LABEL = {"LARGE": "large cap", "MID": "mid cap", "SMALL": "small cap", "MICRO": "micro cap"}
@@ -221,6 +221,20 @@ def fact_surveillance(si: StockInputs) -> dict:
     return _fact("surveillance", 8, title, term, True, s, [fig])
 
 
+_FACTS = [
+    (fact_promoter_holding, "promoter_holding", "Promoter holding", "promoter_holding"),
+    (fact_promoter_pledge, "promoter_pledge", "Promoter pledge", "promoter_pledge"),
+    (fact_profit_last_3y, "profit_last_3y", "Profit or loss in each of the last three years", "net_profit"),
+    (fact_debt_to_earnings, "debt_to_earnings", "Debt against yearly earnings", "debt_to_profit"),
+    (fact_price_move_30d, "price_move_30d", "Price move in the last 30 days", None),
+    (fact_avg_traded_value, "avg_traded_value", "Average daily trading value", "avg_daily_traded_value"),
+    (fact_size_band, "size_band", "Size band", None),
+    (fact_surveillance, "surveillance", "NSE surveillance lists (ASM, GSM, ESM)", "surveillance_asm"),
+]
+
+
 def build_facts(si: StockInputs) -> list[dict]:
-    return [fact_promoter_holding(si), fact_promoter_pledge(si), fact_profit_last_3y(si), fact_debt_to_earnings(si),
-            fact_price_move_30d(si), fact_avg_traded_value(si), fact_size_band(si), fact_surveillance(si)]
+    _company.set(si.f.name or "this company")
+    na = lambda: S("stk.generic.na", companyName=(_company.get(), "TEXT"))  # noqa: E731
+    return [guarded(fn, si, lambda i=i, fid=fid, t=t, term=term: _fact(fid, i, t, term, False, [na()], []))
+            for i, (fn, fid, t, term) in enumerate(_FACTS, start=1)]

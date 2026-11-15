@@ -186,18 +186,58 @@ def pick_args(schema: dict | None, wanted: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def find_nse_token(payload: Any, symbol: str) -> int | None:
+_NSE_SERIES = ("-BE", "-BZ", "-SM", "-ST", "-EQ")  # same company, different NSE trading series
+
+
+def find_instrument(payload: Any, symbol: str) -> dict | None:
+    """Best match for a holding's symbol: NSE exact, then an NSE series variant (KRONOX-BE), then BSE."""
     rows = unwrap_rows(payload, "instruments", "results")
     sym = symbol.upper()
+    best: tuple[int, dict] | None = None
     for r in rows:
         ts = str(r.get("tradingsymbol") or r.get("symbol") or "").upper()
         ex = str(r.get("exchange") or "NSE").upper()
-        if ts == sym and ex == "NSE":
-            try:
-                return int(r.get("instrument_token") or r.get("token"))
-            except (TypeError, ValueError):
-                continue
-    return None
+        try:
+            token = int(r.get("instrument_token") or r.get("token"))
+        except (TypeError, ValueError):
+            continue
+        if ex == "NSE" and ts == sym:
+            rank = 0
+        elif ex == "NSE" and any(ts == sym + sfx for sfx in _NSE_SERIES):
+            rank = 1
+        elif ex == "BSE" and ts == sym:
+            rank = 2
+        else:
+            continue
+        if best is None or rank < best[0]:
+            best = (rank, {"exchange": ex, "tradingsymbol": ts, "token": token, "name": r.get("name")})
+    return best[1] if best else None
+
+
+def find_nse_token(payload: Any, symbol: str) -> int | None:
+    hit = find_instrument(payload, symbol)
+    return hit["token"] if hit else None
+
+
+def ltp_rows(payload: Any) -> dict[str, float]:
+    """{'NSE:INFY': price} from a quote/ltp payload: a dict keyed by instrument, or a list of rows."""
+    data = payload.get("data", payload) if isinstance(payload, dict) else payload
+    out: dict[str, float] = {}
+    if isinstance(data, dict):
+        items = [(k, v) for k, v in data.items() if isinstance(v, dict)]
+    elif isinstance(data, list):
+        items = [(str(r.get("instrument") or r.get("id") or
+                      f"{r.get('exchange', '')}:{r.get('tradingsymbol', '')}"), r) for r in data if isinstance(r, dict)]
+    else:
+        items = []
+    for k, v in items:
+        try:
+            price = float(v.get("last_price"))
+        except (TypeError, ValueError):
+            continue
+        if price > 0:
+            out[str(k).upper()] = price
+    return out
 
 
 class _MemoryStorage:
@@ -241,6 +281,7 @@ class KiteMcpBroker:
         self._label: str | None = None
         self._login_started: float | None = None
         self._tool_schemas: dict[str, dict] = {}
+        self._instruments: dict[str, dict | None] = {}
         self._redirect_uri = str(k.get("redirectUrl") or "http://localhost:8080/api/connect/kite/callback")
         self._storage = _MemoryStorage()
         self._auth_url: str | None = None
@@ -520,15 +561,54 @@ class KiteMcpBroker:
                                stocks=stocks, funds=funds, idleCashInr=cash, unmatched=unmatched, sampleData=False)
 
     def _find_token(self, query: str, symbol: str) -> int | None:
-        args = {"mode": "search", "query": query}
-        props = ((self._tool_schemas.get("market") or {}).get("properties") or {})
-        if "verbosity" in props:
+        hit = self._instrument(symbol)
+        return hit["token"] if hit else None
+
+    def _instrument(self, symbol: str) -> dict | None:
+        sym = symbol.strip().upper()
+        if sym in self._instruments:
+            return self._instruments[sym]
+        args = {"mode": "search", "query": sym}
+        if "verbosity" in ((self._tool_schemas.get("market") or {}).get("properties") or {}):
             args["verbosity"] = "compact"
         payload = parse_tool_payload(self._call_tool("market", args))
-        token = find_nse_token(payload, symbol)
-        if token is None:
-            _note(f"search {query!r}: no NSE token found in {str(payload)[:500]}")
-        return token
+        hit = find_instrument(payload, sym)
+        if hit is None:
+            _note(f"search {sym!r}: no NSE or BSE match in {str(payload)[:500]}")
+        self._instruments[sym] = hit
+        return hit
+
+    def bse_code(self, symbol: str) -> str | None:
+        """BSE scrip code for a BSE-only holding (Kite packs it into the instrument token)."""
+        if self._status != "CONNECTED":
+            return None
+        try:
+            hit = self._instrument(symbol)
+        except ApiError:
+            return None
+        return str(hit["token"] >> 8) if hit and hit["exchange"] == "BSE" else None
+
+    def last_prices(self, symbols: list[str]) -> dict[str, float]:
+        """Last traded price per symbol, for holdings that have no price history."""
+        out: dict[str, float] = {}
+        if self._status != "CONNECTED" or not symbols:
+            return out
+        try:
+            keys = {}
+            for s in symbols:
+                hit = self._instrument(s)
+                if hit:
+                    keys[f"{hit['exchange']}:{hit['tradingsymbol']}"] = s.strip().upper()
+            if keys:
+                got = ltp_rows(self._data_call("market", {"mode": "ltp", "instruments": sorted(keys)}))
+                for k, sym in keys.items():
+                    if k in got:
+                        out[sym] = got[k]
+                if len(out) < len(keys):
+                    _note(f"ltp: asked {sorted(keys)}, got {sorted(got)}")
+        except ApiError as e:
+            _note(f"ltp: {e.code} {e}")
+        return out
 
     def _candles(self, token: int, start: date, end: date) -> list[PricePoint]:
         """Daily candles in chunks (Kite limits one request to about 2000 days)."""
@@ -563,7 +643,9 @@ class KiteMcpBroker:
         if self._status != "CONNECTED":
             return unavailable_quote(sym, "Connect your Zerodha account to see the live price.", False)
         try:  # UNVERIFIED AGAINST LIVE SERVICE
-            row = pick_quote_row(self._data_call("market", {"mode": "quote", "instruments": [f"NSE:{sym}"]}), sym)
+            hit = self._instrument(sym)
+            key = f"{hit['exchange']}:{hit['tradingsymbol']}" if hit else f"NSE:{sym}"
+            row = pick_quote_row(self._data_call("market", {"mode": "quote", "instruments": [key]}), sym)
         except ApiError as e:
             if e.code == "BROKER_NOT_CONNECTED":
                 return unavailable_quote(sym, "Your Zerodha session has ended. Please connect again.", False)

@@ -6,7 +6,35 @@ from datetime import date, timedelta
 from typing import Optional
 
 from ..formatting import format_date, format_pct, format_times, format_unit
-from ..narrative.render import S, TemplateError
+import contextvars
+import sys
+
+from ..narrative.render import S as _strict_S
+from ..narrative.render import TemplateError
+
+_company: contextvars.ContextVar[str] = contextvars.ContextVar("stock_check_company", default="this company")
+
+
+def S(template_id: str, **facts):
+    """Like render.S, but a sentence whose figures are missing in live data becomes the plain
+    'not available' sentence instead of failing the whole page."""
+    try:
+        return _strict_S(template_id, **facts)
+    except TemplateError as e:
+        if getattr(e, "unknown_template", False) or template_id == "stk.generic.na":
+            raise
+        return _strict_S("stk.generic.na", companyName=(_company.get(), "TEXT"))
+
+
+def guarded(build, si, fallback):
+    """Run one answer/fact builder; a gap in live data yields its 'not available' block."""
+    try:
+        return build(si)
+    except Exception as e:  # noqa: BLE001 - one broken block must not take the page down
+        print(f"[stock-check] {si.f.symbol} {getattr(build, '__name__', build)}: {type(e).__name__}: {e}",
+              file=sys.stderr, flush=True)
+        return fallback()
+
 from .figures import comparison as C
 from .figures import detail_table, make_figure
 from .inputs import StockInputs
@@ -319,5 +347,17 @@ def answer_recent(si: StockInputs) -> dict:
     return _answer("recent", 5, q, sentences[:3], figures, details)
 
 
+_QUESTIONS = [
+    (answer_business, "business", "What does the company do and how does it earn money?"),
+    (answer_growth, "growth", "Is it growing and profitable?"),
+    (answer_safety, "safety", "Is it financially safe?"),
+    (answer_price, "price", "How is it priced against its own history and its peers?"),
+    (answer_recent, "recent", "What changed recently?"),
+]
+
+
 def build_answers(si: StockInputs) -> list[dict]:
-    return [answer_business(si), answer_growth(si), answer_safety(si), answer_price(si), answer_recent(si)]
+    _company.set(si.f.name or "this company")
+    na = lambda: S("stk.generic.na", companyName=(_company.get(), "TEXT"))  # noqa: E731
+    return [guarded(fn, si, lambda i=i, aid=aid, q=q: _answer(aid, i, q, [na()], [], None))
+            for i, (fn, aid, q) in enumerate(_QUESTIONS, start=1)]
