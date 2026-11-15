@@ -331,6 +331,12 @@ def test_mcp_session_flow_on_loopback(loopback_mcp):
         assert "orders:place" not in state["calls"]  # never reached the server
         with pytest.raises(ApiError):
             b.login_complete("again", "s1")  # nothing is waiting any more
+        # a dropped session reopens on the next call while the login token is still held
+        b._storage.tokens = object()
+        b._shutdown()
+        assert b._session is None
+        assert [x["symbol"] for x in b.portfolio().stocks] == ["TCS", "NEWBUY", "ITC"]
+        assert b.login_status()["status"] == "CONNECTED"
     finally:
         out = b.logout()
     assert out["status"] == "NOT_CONNECTED" and b._thread is None

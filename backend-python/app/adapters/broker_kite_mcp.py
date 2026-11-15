@@ -245,6 +245,11 @@ class KiteMcpBroker:
         self._storage = _MemoryStorage()
         self._auth_url: str | None = None
         self._auth_event = threading.Event()
+        # Kite rate-limits bursts (HTTP 429 drops the whole session): one call at a time, spaced out.
+        self._call_lock = threading.Lock()
+        self._min_gap_s = float(k.get("mcpMinGapSeconds", 0.4))
+        self._last_call = 0.0
+        self._retry_after = 0.0  # monotonic time before which we do not reconnect on our own
         self._code_future: Any = None
 
     # -- OAuth hooks (run on the session thread's event loop)
@@ -313,6 +318,23 @@ class KiteMcpBroker:
         with self._lock:
             if self._thread is not None and self._thread.is_alive() and self._session is not None:
                 return
+        # The session dropped but today's login token is still in memory: reopen it quietly (never a new login).
+        if self._storage.tokens is not None and self._auth_url is None:
+            if time.monotonic() < self._retry_after:
+                raise unavailable("Zerodha Kite is limiting requests. Please try again in a minute.")
+            self._shutdown()
+            self._begin()
+            if self._session is not None:
+                self._status = "CONNECTED"
+                return
+            needs_login = self._auth_url is not None
+            self._shutdown()
+            if needs_login:  # the token was rejected: the user has to sign in again
+                self._storage.tokens = None
+                self._status = "NOT_CONNECTED"
+            else:
+                self._retry_after = time.monotonic() + 60
+                raise unavailable("Zerodha Kite could not be reached. Please try again in a minute.")
         raise ApiError("BROKER_NOT_CONNECTED", NOT_CONNECTED_MSG)
 
     def _begin(self) -> None:
@@ -347,22 +369,29 @@ class KiteMcpBroker:
     # -- guarded tool call
     def _call_tool(self, name: str, arguments: dict | None = None) -> Any:
         broker_guard.assert_allowed_mcp_tool(name, arguments)  # raises BEFORE any I/O or thread start
-        self._ensure_session()
-        loop, session = self._loop, self._session
-        if loop is None or session is None:
-            raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.")
-        fut = asyncio.run_coroutine_threadsafe(session.call_tool(name, arguments or {}), loop)
-        try:
-            return fut.result(timeout=CALL_TIMEOUT)
-        except Exception as e:  # network drop, timeout, protocol error
-            fut.cancel()
-            _log_error(f"tool {name}", e)
-            if type(e).__name__ == "McpError":  # the server answered; the session itself is fine
-                raise unavailable("Zerodha Kite returned an error.", tool=name)
-            self._shutdown()
-            self._status = "NOT_CONNECTED"
-            raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
-                              reason=_reason(e))
+        with self._call_lock:
+            self._ensure_session()
+            loop, session = self._loop, self._session
+            if loop is None or session is None:
+                raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.")
+            wait = self._last_call + self._min_gap_s - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            fut = asyncio.run_coroutine_threadsafe(session.call_tool(name, arguments or {}), loop)
+            try:
+                return fut.result(timeout=CALL_TIMEOUT)
+            except Exception as e:  # network drop, timeout, protocol error
+                fut.cancel()
+                _log_error(f"tool {name}", e)
+                if type(e).__name__ == "McpError":  # the server answered; the session itself is fine
+                    raise unavailable("Zerodha Kite returned an error.", tool=name)
+                # Keep the login token: the next call reopens the session after a pause.
+                self._shutdown()
+                self._retry_after = time.monotonic() + 20
+                raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.",
+                                  reason=_reason(e))
+            finally:
+                self._last_call = time.monotonic()
 
     def _info(self, status: str, message: str, **extra: Any) -> dict:
         d = {"sampleData": False, "brokerMode": self.mode, "status": status, "message": message}
@@ -390,6 +419,13 @@ class KiteMcpBroker:
         raise unavailable("Zerodha Kite could not be reached. Please try again in a moment.", reason=_reason(err))
 
     def login_status(self) -> dict:
+        if self._session is None and self._storage.tokens is not None and self._auth_url is None:
+            try:
+                self._ensure_session()  # today's token is still held: reopen the dropped session
+            except ApiError as e:
+                if e.code != "BROKER_NOT_CONNECTED":
+                    return self._info("CONNECTED", "Connected. Zerodha Kite is busy; data will refresh shortly.",
+                                      accountLabel=self._label)
         alive = self._thread is not None and self._thread.is_alive()
         if self._session is None:
             if alive and self._auth_url:
@@ -441,7 +477,7 @@ class KiteMcpBroker:
 
     # -- data
     def _require_connected(self) -> None:
-        if self._status != "CONNECTED" or self._session is None:
+        if self._status != "CONNECTED":
             raise ApiError("BROKER_NOT_CONNECTED", NOT_CONNECTED_MSG)
 
     def _data_call(self, name: str, arguments: dict | None = None) -> Any:
@@ -499,7 +535,7 @@ class KiteMcpBroker:
         pts: dict[date, PricePoint] = {}
         cur = start
         while cur <= end:
-            stop = min(end, date.fromordinal(cur.toordinal() + 1800))
+            stop = min(end, date.fromordinal(cur.toordinal() + 1990))
             payload = parse_tool_payload(self._call_tool("market", {
                 "mode": "historical", "instrument_token": token, "interval": "day",
                 "from_date": cur.isoformat(), "to_date": stop.isoformat()}))
@@ -512,7 +548,7 @@ class KiteMcpBroker:
         return [pts[k] for k in sorted(pts)]
 
     def historical(self, symbol: str, start: date, end: date) -> list[PricePoint]:
-        if self._status != "CONNECTED" or self._session is None:
+        if self._status != "CONNECTED":
             return []
         try:  # UNVERIFIED AGAINST LIVE SERVICE: the search result shape is parsed tolerantly
             token = self._find_token(symbol, symbol)
@@ -524,7 +560,7 @@ class KiteMcpBroker:
     # -- extras (read-only): live quote, today's activity, index history
     def quote(self, symbol: str) -> dict:
         sym = symbol.strip().upper()
-        if self._status != "CONNECTED" or self._session is None:
+        if self._status != "CONNECTED":
             return unavailable_quote(sym, "Connect your Zerodha account to see the live price.", False)
         try:  # UNVERIFIED AGAINST LIVE SERVICE
             row = pick_quote_row(self._data_call("market", {"mode": "quote", "instruments": [f"NSE:{sym}"]}), sym)
@@ -537,7 +573,7 @@ class KiteMcpBroker:
         return map_quote(row, sym, "NSE, live via your Zerodha account", False)
 
     def activity(self) -> dict:
-        connected = self._status == "CONNECTED" and self._session is not None
+        connected = self._status == "CONNECTED"
 
         def part(tool: str, args: dict, mapper):
             try:
@@ -555,7 +591,7 @@ class KiteMcpBroker:
                               gtts=part("gtt", {"mode": "list"}, map_gtts))
 
     def index_history(self, index_id: str, start: date, end: date) -> list[PricePoint]:
-        if index_id != "NIFTY50" or self._status != "CONNECTED" or self._session is None:
+        if index_id != "NIFTY50" or self._status != "CONNECTED":
             return []
         try:  # UNVERIFIED AGAINST LIVE SERVICE
             token = NIFTY50_TOKEN

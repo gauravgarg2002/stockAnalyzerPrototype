@@ -1,6 +1,8 @@
 """broker_then_nse_eod composition: broker candles first, exchange end-of-day files as fallback."""
 from __future__ import annotations
 
+import sys
+import time
 from typing import Optional
 
 from ..errors import ApiError
@@ -12,23 +14,27 @@ from .prices_nse_eod import NseEodPrices
 class ChainPrices:
     mode = "broker_then_nse_eod"
 
-    def __init__(self, primary: PriceAdapter, fallback: PriceAdapter):
+    def __init__(self, primary: PriceAdapter, fallback: PriceAdapter, fail_ttl_s: float = 600.0):
         self._chain = [primary, fallback]
+        self._fail_ttl_s = fail_ttl_s
+        self._down: dict[int, float] = {}  # adapter position -> time until which it is skipped
 
     def _first(self, method: str, key: str) -> Optional[PriceSeries]:
-        last_err: ApiError | None = None
-        for a in self._chain:
+        """First non-empty series. An adapter that errors is skipped for a while, so a blocked source
+        is not hit once per stock per page. None means prices are unavailable; pages still load."""
+        for i, a in enumerate(self._chain):
+            if time.monotonic() < self._down.get(i, 0.0):
+                continue
             try:
                 s = getattr(a, method)(key)
             except ApiError as e:
-                last_err = e
+                if e.code != "BROKER_NOT_CONNECTED":
+                    self._down[i] = time.monotonic() + self._fail_ttl_s
+                    print(f"[prices] {method} {key}: {e.code}: {e} (source paused for {int(self._fail_ttl_s)}s)",
+                          file=sys.stderr, flush=True)
                 continue
             if s is not None and s.points:
                 return s
-        if last_err is not None and last_err.code not in ("BROKER_NOT_CONNECTED",):
-            # A missing price series must not break the whole page: callers treat None as "prices unavailable".
-            import sys
-            print(f"[prices] {method} {key}: no series ({last_err.code}: {last_err})", file=sys.stderr, flush=True)
         return None
 
     def stock_series(self, symbol: str) -> Optional[PriceSeries]:
