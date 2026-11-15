@@ -65,6 +65,11 @@ def _log_error(where: str, e: BaseException) -> None:
         print(f"[kite-mcp] {where}: {type(x).__name__}: {str(x)[:500]} | {str(extra)[:500] if extra else ''}",
               file=sys.stderr, flush=True)
 
+def _note(msg: str) -> None:
+    import sys
+    print(f"[kite-mcp] {msg}", file=sys.stderr, flush=True)
+
+
 class _with_client:
     """Async context manager that closes the httpx client after the MCP transport that uses it."""
 
@@ -483,7 +488,11 @@ class KiteMcpBroker:
         props = ((self._tool_schemas.get("market") or {}).get("properties") or {})
         if "verbosity" in props:
             args["verbosity"] = "compact"
-        return find_nse_token(parse_tool_payload(self._call_tool("market", args)), symbol)
+        payload = parse_tool_payload(self._call_tool("market", args))
+        token = find_nse_token(payload, symbol)
+        if token is None:
+            _note(f"search {query!r}: no NSE token found in {str(payload)[:500]}")
+        return token
 
     def _candles(self, token: int, start: date, end: date) -> list[PricePoint]:
         """Daily candles in chunks (Kite limits one request to about 2000 days)."""
@@ -494,7 +503,10 @@ class KiteMcpBroker:
             payload = parse_tool_payload(self._call_tool("market", {
                 "mode": "historical", "instrument_token": token, "interval": "day",
                 "from_date": cur.isoformat(), "to_date": stop.isoformat()}))
-            for p in parse_candles(payload if isinstance(payload, dict) else {"candles": payload}):
+            got = parse_candles(payload if isinstance(payload, dict) else {"candles": payload})
+            if not got:
+                _note(f"historical token={token} {cur}..{stop}: no candles parsed from {str(payload)[:500]}")
+            for p in got:
                 pts[p[0]] = p
             cur = date.fromordinal(stop.toordinal() + 1)
         return [pts[k] for k in sorted(pts)]
@@ -505,7 +517,8 @@ class KiteMcpBroker:
         try:  # UNVERIFIED AGAINST LIVE SERVICE: the search result shape is parsed tolerantly
             token = self._find_token(symbol, symbol)
             return self._candles(token, start, end) if token is not None else []
-        except ApiError:
+        except ApiError as e:
+            _note(f"historical {symbol}: {e.code} {e}")
             return []
 
     # -- extras (read-only): live quote, today's activity, index history
