@@ -17,6 +17,11 @@ def stock_subtitle(sector: str | None, band: str | None) -> str:
     return " · ".join(parts) if parts else "Listed company"
 
 
+def _note(f, what: str, e: Exception) -> None:
+    import sys
+    print(f"[stock-check] {f.symbol} {what}: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+
+
 def build_stock_check(si: StockInputs, sample: bool) -> dict:
     f = si.f
     asof = si.as_of.isoformat()
@@ -34,8 +39,17 @@ def build_stock_check(si: StockInputs, sample: bool) -> dict:
     pts = [(p[0], p[1]) for p in si.prices.points] if si.prices else []
     bpts = [(p[0], p[1]) for p in si.benchmark.points] if si.benchmark else []
     start = years_before(si.as_of, 5)
-    ph = build_price_history(pts, bpts, "NIFTY50", si.benchmark_name, start, psrc, si.as_of) or empty_history("NIFTY50", si.benchmark_name, psrc, si.as_of)
-    dd = build_drawdown("stk", "5Y", "the last five years", pts, bpts, si.benchmark_name, start, psrc, si.as_of)
+    try:
+        ph = build_price_history(pts, bpts, "NIFTY50", si.benchmark_name, start, psrc, si.as_of)
+    except Exception as e:  # noqa: BLE001 - a gap in live prices must not fail the page
+        _note(f, "price history", e)
+        ph = None
+    ph = ph or empty_history("NIFTY50", si.benchmark_name, psrc, si.as_of)
+    try:
+        dd = build_drawdown("stk", "5Y", "the last five years", pts, bpts, si.benchmark_name, start, psrc, si.as_of)
+    except Exception as e:  # noqa: BLE001
+        _note(f, "drawdown", e)
+        dd = build_drawdown("stk", "5Y", "the last five years", [], [], si.benchmark_name, start, psrc, si.as_of)
     peers = {"groupName": f.peerGroup.get("name", ""), "members": [
         {"name": m["name"], "symbol": m.get("symbol"), "checkAvailable": bool(m.get("symbol") and m["symbol"] in si.checkable_symbols)}
         for m in f.peerGroup.get("members", [])]}

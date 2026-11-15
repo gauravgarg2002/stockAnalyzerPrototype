@@ -100,3 +100,30 @@ def test_unknown_stock_404(ctx):
 def test_no_screener_word_anywhere(stock):
     for sym in ALL_STOCKS:
         assert not any("screener" in s.lower() for _, s in walk_strings(stock(sym)))
+
+
+def test_stock_check_survives_gaps_in_live_data(ctx):
+    """Live fundamentals lack fields the sample data always has (cash, pledge, shares, prices)."""
+    import copy
+    import dataclasses
+
+    from app import handlers
+    from app.engines.stock_check import build_stock_check
+
+    si = handlers._stock_inputs(ctx, "TCS")
+    f = copy.deepcopy(si.f)
+    for row in f.annual:
+        row["cashInr"] = None
+        row["interestInr"] = None
+    for row in f.shareholding:
+        row["pledgedPctOfPromoter"] = None
+        row["promoterPct"] = None
+    for row in f.quarterly:
+        row["netProfitInr"] = None
+    f = dataclasses.replace(f, sharesOutstanding=None, lastPrice=None, about=None, valuationHistory=[],
+                            peerGroup={}, revenueSegments=[], sector=None, sizeBand=None)
+    bare = dataclasses.replace(si, f=f, prices=None, benchmark=None, surveillance=None)
+    out = build_stock_check(bare, False)
+    assert [a["id"] for a in out["answers"]] == ["business", "growth", "safety", "price", "recent"]
+    assert len(out["facts"]) == 8 and out["priceHistory"] is not None and out["drawdown"] is not None
+    assert all(a["sentences"] for a in out["answers"]) and all(x["sentences"] for x in out["facts"])
