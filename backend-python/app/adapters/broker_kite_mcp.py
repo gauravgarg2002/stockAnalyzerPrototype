@@ -503,7 +503,7 @@ class KiteMcpBroker:
             payload = parse_tool_payload(self._call_tool("market", {
                 "mode": "historical", "instrument_token": token, "interval": "day",
                 "from_date": cur.isoformat(), "to_date": stop.isoformat()}))
-            got = parse_candles(payload if isinstance(payload, dict) else {"candles": payload})
+            got = parse_candles(payload)
             if not got:
                 _note(f"historical token={token} {cur}..{stop}: no candles parsed from {str(payload)[:500]}")
             for p in got:

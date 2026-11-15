@@ -279,8 +279,8 @@ def test_chain_prefers_primary_then_falls_back():
     nc = ApiError("BROKER_NOT_CONNECTED", "x")
     assert ChainPrices(StubPrices(err=nc), StubPrices(other)).stock_series("TCS").points[0][1] == 2.0
     up = ApiError("UPSTREAM_UNAVAILABLE", "down")
-    with pytest.raises(ApiError):
-        ChainPrices(StubPrices(None), StubPrices(err=up)).stock_series("TCS")
+    # a failing fallback means "no prices", not a failed page
+    assert ChainPrices(StubPrices(None), StubPrices(err=up)).stock_series("TCS") is None
     assert ChainPrices(StubPrices(None), StubPrices(None)).stock_series("TCS") is None
 
 
@@ -321,3 +321,18 @@ def test_import_and_build_do_no_network(monkeypatch, tmp_path):
         built.setdefault(key, a)
     from app.adapters import prices_broker
     assert isinstance(prices_broker.build(cfg, built), base.PriceAdapter)
+
+
+def test_parse_candles_accepts_hosted_mcp_rows():
+    from app.adapters.broker_kite_connect import parse_candles
+    payload = {"data": [{"date": "2021-11-16T00:00:00+05:30", "open": 146.15, "high": 146.65, "low": 143.95,
+                         "close": 144.4, "volume": 8505431, "oi": 0},
+                        {"date": "2021-11-15T00:00:00+05:30", "open": 149.05, "high": 152.1, "low": 144.75,
+                         "close": 144.95, "volume": 19400018, "oi": 0}, {"date": "bad"}]}
+    pts = parse_candles(payload)
+    assert [(p[0].isoformat(), p[1], p[2]) for p in pts] == [("2021-11-15", 144.95, 19400018),
+                                                             ("2021-11-16", 144.4, 8505431)]
+    assert parse_candles(payload["data"]) == pts
+    old = {"data": {"candles": [["2024-01-02T00:00:00+0530", 1, 2, 0.5, 1.5, 10]]}}
+    assert parse_candles(old)[0][1:] == (1.5, 10)
+    assert parse_candles("nope") == [] and parse_candles(None) == []

@@ -130,18 +130,23 @@ def parse_instruments_csv(text: str) -> dict[str, int]:
 
 
 def parse_candles(obj: Any) -> list[PricePoint]:
-    """{'data': {'candles': [[ts, o, h, l, c, v], ...]}} -> [(date, close, volume)] ascending."""
-    candles = []
-    if isinstance(obj, dict):
-        d = obj.get("data") if isinstance(obj.get("data"), dict) else obj
-        candles = d.get("candles") or []
+    """Candles -> [(date, close, volume)] ascending. Accepts Kite Connect's {'data': {'candles': [[ts, o, h, l, c, v]]}}
+    and the hosted MCP server's {'data': [{'date', 'open', 'high', 'low', 'close', 'volume'}]} (or a bare list)."""
+    candles: Any = obj
+    for _ in range(3):
+        if isinstance(candles, dict):
+            candles = candles.get("candles") if "candles" in candles else candles.get("data")
     out: dict[date, PricePoint] = {}
-    for c in candles:
+    for c in candles if isinstance(candles, list) else []:
         try:
-            ts = str(c[0])[:10]
-            d0 = date.fromisoformat(ts)
-            out[d0] = (d0, float(c[4]), int(c[5]) if len(c) > 5 and c[5] is not None else None)
-        except (ValueError, TypeError, IndexError):
+            if isinstance(c, dict):
+                d0 = date.fromisoformat(str(c.get("date") or c.get("timestamp"))[:10])
+                vol = c.get("volume")
+                out[d0] = (d0, float(c["close"]), int(vol) if vol is not None else None)
+            else:
+                d0 = date.fromisoformat(str(c[0])[:10])
+                out[d0] = (d0, float(c[4]), int(c[5]) if len(c) > 5 and c[5] is not None else None)
+        except (ValueError, TypeError, IndexError, KeyError):
             continue
     return [out[k] for k in sorted(out)]
 

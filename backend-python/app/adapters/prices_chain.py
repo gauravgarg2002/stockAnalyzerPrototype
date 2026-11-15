@@ -26,7 +26,9 @@ class ChainPrices:
             if s is not None and s.points:
                 return s
         if last_err is not None and last_err.code not in ("BROKER_NOT_CONNECTED",):
-            raise last_err
+            # A missing price series must not break the whole page: callers treat None as "prices unavailable".
+            import sys
+            print(f"[prices] {method} {key}: no series ({last_err.code}: {last_err})", file=sys.stderr, flush=True)
         return None
 
     def stock_series(self, symbol: str) -> Optional[PriceSeries]:
